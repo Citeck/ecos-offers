@@ -1,0 +1,147 @@
+{
+  "id" : "offer-reject-candidate-form",
+  "formKey" : "offer-reject-candidate-form",
+  "title" : {
+    "en" : "Offer Reject Candidate Form"
+  },
+  "description" : { },
+  "customModule" : null,
+  "typeRef" : "",
+  "width" : "lg",
+  "system" : false,
+  "i18n" : { },
+  "definition" : {
+    "components" : [ {
+      "label" : {
+        "ru" : "Columns"
+      },
+      "key" : "columns3",
+      "columns" : [ {
+        "components" : [ {
+          "label" : {
+            "ru" : "Комментарий"
+          },
+          "key" : "comment",
+          "defaultValue" : "",
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "textarea",
+          "input" : true,
+          "addAnother" : "ecos.forms.btn.add-another"
+        }, {
+          "label" : {
+            "ru" : "Причина"
+          },
+          "key" : "reason",
+          "validate" : {
+            "required" : true
+          },
+          "clearOnHide" : false,
+          "dataSrc" : "values",
+          "data" : {
+            "values" : [ {
+              "label" : "Кандидату отказано",
+              "value" : "offer-candidate-rejected"
+            }, {
+              "label" : "Отказано со стороны кандидата",
+              "value" : "offer-reject-from-candidate"
+            } ]
+          },
+          "customOptions" : "",
+          "defaultValue" : "offer-candidate-rejected",
+          "optionalWhenDisabled" : false,
+          "type" : "ecosSelect",
+          "input" : true,
+          "addAnother" : "ecos.forms.btn.add-another"
+        } ],
+        "md" : 12,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 0
+      } ],
+      "oneColumnInViewMode" : false,
+      "type" : "columns",
+      "input" : false,
+      "addAnother" : "ecos.forms.btn.add-another"
+    }, {
+      "label" : {
+        "ru" : "Columns"
+      },
+      "key" : "columns2",
+      "columns" : [ {
+        "components" : [ {
+          "label" : "Cancel",
+          "action" : "event",
+          "state" : "",
+          "showValidations" : false,
+          "event" : "cancel",
+          "block" : true,
+          "type" : "button",
+          "input" : true,
+          "key" : "submit2",
+          "conditional" : {
+            "show" : null,
+            "when" : null
+          }
+        } ],
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "md" : 4,
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 0
+      }, {
+        "components" : [ ],
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 1,
+        "md" : 4
+      }, {
+        "md" : 4,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "components" : [ {
+          "label" : {
+            "en" : "Submit",
+            "ru" : "Подтвердить"
+          },
+          "key" : "submit",
+          "state" : "",
+          "theme" : "primary",
+          "block" : true,
+          "disableOnInvalid" : true,
+          "refreshOn" : [ ],
+          "customDefaultValue" : "\"offer-reject\"",
+          "optionalWhenDisabled" : false,
+          "type" : "button",
+          "input" : true
+        } ],
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 2
+      } ],
+      "oneColumnInViewMode" : false,
+      "type" : "columns",
+      "input" : false
+    } ]
+  },
+  "attributes" : { }
+}

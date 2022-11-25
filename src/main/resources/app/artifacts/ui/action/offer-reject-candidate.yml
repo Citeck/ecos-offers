@@ -1,0 +1,19 @@
+---
+id: offer-workflow-reject
+name:
+  ru: Отклонить
+  en: Reject
+
+key: offer-workflow-reject
+type: fetch
+confirm:
+  title:
+    ru: Отклонить
+    en: Reject
+  formRef: uiserv/form@offer-reject-candidate-form
+  attributesMapping:
+    body.reason: reason
+record:
+  id: "${recordRef}"
+  attributes:
+    _status: reason

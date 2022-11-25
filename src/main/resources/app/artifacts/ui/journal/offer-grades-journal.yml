@@ -1,0 +1,33 @@
+---
+id: offer-grades-journal
+name:
+  ru: Грейды
+typeRef: emodel/type@offer-grade-type
+actions:
+  - uiserv/action@delete
+  - uiserv/action@edit
+columns:
+  - id: gradesSimpleRoleTypeAssoc
+    name:
+      ru: Должность
+    type: ASSOC
+  - id: gradesNumber
+    name:
+      ru: Номер
+    type: TEXT
+  - id: gradesRequirements
+    name:
+      ru: Требования к сотруднику
+    type: TEXT
+  - id: gradesResponsibilities
+    name:
+      ru: Обязанности
+    type: TEXT
+  - id: gradesSalary
+    name:
+      ru: Вилка оклада
+    type: TEXT
+  - id: gradesPrize
+    name:
+      ru: Премия
+    type: TEXT

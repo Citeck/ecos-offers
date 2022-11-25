@@ -1,0 +1,15 @@
+---
+id: offer-experience-journal
+name:
+  ru: Опыт работы
+typeRef: emodel/type@offer-experience-type
+actions:
+  - uiserv/action@delete
+  - uiserv/action@edit
+columns:
+  - id: experienceStart
+    name:
+      ru: От
+  - id: experienceEnd
+    name:
+      ru: До

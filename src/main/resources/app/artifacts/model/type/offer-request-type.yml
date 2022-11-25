@@ -1,0 +1,137 @@
+---
+id: offer-request-type
+name:
+  ru: Запрос
+storageType: ECOS_MODEL
+parentRef: emodel/type@case
+formRef: uiserv/form@offer-request-form
+journalRef: uiserv/journal@offer-request-journal
+dispNameTemplate:
+  ru: Запрос №${idocs:registrationNumber}
+  en: Request №${idocs:registrationNumber}
+numTemplateRef: emodel/num-template@offer-number-template
+actions:
+  - uiserv/action@delete-offer
+  - uiserv/action@edit
+  - uiserv/action@offer-workflow-reject
+defaultCreateVariant: true
+model:
+  roles:
+    - id: offer-initiator-role
+      name:
+        ru: Инициатор
+      attributes:
+        - idocs:initiator
+    - id: offer-director-role
+      name:
+        ru: Директор
+      assignees:
+        - GROUP_company_director
+    - id: offer-technologist-role
+      name:
+        ru: Технолог
+      assignees:
+        - GROUP_hr-manager
+    - id: offer-hr-role
+      name:
+        ru: HR
+    - id: offer-manager-subdivision
+      name:
+        ru: Руководитель подразделения
+  statuses:
+    - id: draft
+      name:
+        ru: Черновик
+    - id: offer-director-approve
+      name:
+        ru: Согласование директором
+    - id: offer-rework
+      name:
+        ru: Доработка
+    - id: offer-reject
+      name:
+        ru: Отклонена
+    - id: offer-selection-candidates
+      name:
+        ru: Подбор кандидатов
+    - id: offer-on-work
+      name:
+        ru: Вышел на работу
+    - id: offer-not-on-work
+      name:
+        ru: Не вышел на работу
+  attributes:
+    - id: idocs:registrationNumber
+      name:
+        ru: Регистрационный номер
+      computed:
+        type: TEMPLATE
+        config:
+          template: '${_docNum}'
+        storingType: ON_EMPTY
+    - id: offer_issueDate
+      name:
+        ru: Дата создания
+      type: DATE
+    - id: reg_number_counter
+      name:
+        ru: Счетчик регномера
+      computed:
+        type: COUNTER
+        config:
+          numTemplateRef: emodel/num-template@offer-number-template
+        storingType: ON_CREATE
+    - id: idocs:initiator
+      name:
+        ru: Инициатор
+      type: ASSOC
+    - id: offerPosition
+      name:
+        ru: Должность
+      type: ASSOC
+    - id: offerSubdivision
+      name:
+        ru: Подразделение
+      type: ASSOC
+    - id: offerGrade
+      name:
+        ru: Грейд
+      type: ASSOC
+    - id: offerCity
+      name:
+        ru: Город
+      type: ASSOC
+    - id: offerExperience
+      name:
+        ru: Опыт работы
+      type: ASSOC
+    - id: offerManagerSubdivision
+      name:
+        ru: Руководитель подразделения
+      type: ASSOC
+    - id: offerSelectedCandidate
+      name:
+        ru: Выбранный кандидат
+      type: ASSOC
+    - id: offerSalaryAndPrize
+      name:
+        ru: Зарплатная вилка и премия
+      type: ASSOC
+    - id: offerComment
+      name:
+        ru: Комментарий
+    - id: offerTerm
+      name:
+        ru: Срок
+      type: DATE
+    - id: offerApproveStage
+      name:
+        ru: Номер этапа согласования
+      type: NUMBER
+    - id: offerSelectionCandidate
+      name:
+        ru: Подбор кандидата
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-selection-candidate-type
+        child: true

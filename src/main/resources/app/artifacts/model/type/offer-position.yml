@@ -1,0 +1,17 @@
+---
+id: offer-position
+name:
+  ru: offer-position
+sourceType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@DEFAULT_FORM
+journalRef: uiserv/journal@DEFAULT_JOURNAL
+inheritForm: false
+dispNameTemplate:
+  ru: offer-position
+defaultCreateVariant: true
+model:
+  attributes:
+    - id: offerPositionName
+      name:
+        ru: Название

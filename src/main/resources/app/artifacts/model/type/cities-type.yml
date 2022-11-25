@@ -1,0 +1,20 @@
+---
+id: cities-type
+name:
+  ru: Город
+sourceType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@DEFAULT_FORM
+journalRef: uiserv/journal@DEFAULT_JOURNAL
+inheritActions: false
+dispNameTemplate:
+  ru: '${cityName}'
+defaultCreateVariant: true
+model:
+  attributes:
+    - id: cityCode
+      name:
+        ru: Код
+    - id: cityName
+      name:
+        ru: Название

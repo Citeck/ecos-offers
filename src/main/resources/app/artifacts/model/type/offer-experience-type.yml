@@ -1,0 +1,20 @@
+---
+id: offer-experience-type
+name:
+  ru: Город
+sourceType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@DEFAULT_FORM
+journalRef: uiserv/journal@offer-experience-journal
+inheritActions: false
+dispNameTemplate:
+  ru: ${experienceStart} - ${experienceEnd}
+defaultCreateVariant: true
+model:
+  attributes:
+    - id: experienceStart
+      name:
+        ru: От
+    - id: experienceEnd
+      name:
+        ru: До

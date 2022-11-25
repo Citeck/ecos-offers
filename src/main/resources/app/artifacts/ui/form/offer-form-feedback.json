@@ -1,0 +1,79 @@
+{
+  "id" : "offer-form-feedback",
+  "formKey" : "offer-form-feedback",
+  "title" : {
+    "en" : "Offer Form Feedback"
+  },
+  "description" : { },
+  "customModule" : null,
+  "typeRef" : "",
+  "width" : null,
+  "system" : false,
+  "i18n" : {
+    "en" : {
+      "Send Reject" : "Send Reject",
+      "Send Offer" : "Send Offer"
+    },
+    "ru" : {
+      "Send Reject" : "Отправить отказ",
+      "Send Offer" : "Отправить оффер"
+    }
+  },
+  "definition" : {
+    "components" : [ {
+      "label" : "Comment",
+      "defaultValue" : "",
+      "key" : "comment",
+      "type" : "textarea",
+      "input" : true
+    }, {
+      "columns" : [ {
+        "components" : [ {
+          "label" : "Send Reject",
+          "state" : "",
+          "key" : "outcome_Reject",
+          "type" : "button",
+          "input" : true
+        } ],
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 0
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 1,
+        "components" : [ {
+          "label" : "Send Offer",
+          "state" : "",
+          "theme" : "primary",
+          "disableOnInvalid" : true,
+          "key" : "outcome_Offer",
+          "type" : "button",
+          "input" : true
+        } ]
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 2,
+        "components" : [ ]
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 3,
+        "components" : [ ]
+      } ],
+      "key" : "columns2",
+      "type" : "columns",
+      "input" : false
+    } ]
+  },
+  "attributes" : { }
+}

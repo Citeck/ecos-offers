@@ -1,0 +1,89 @@
+{
+  "id" : "offer-form-approve",
+  "formKey" : "offer-form-approve",
+  "title" : {
+    "en" : "Offer Form Approve"
+  },
+  "description" : { },
+  "customModule" : null,
+  "typeRef" : "",
+  "width" : null,
+  "system" : false,
+  "i18n" : {
+    "en" : {
+      "Submit" : "Approve",
+      "Rework" : "Rework",
+      "Reject" : "Reject"
+    },
+    "ru" : {
+      "Submit" : "Согласовать",
+      "Rework" : "На доработку",
+      "Reject" : "Отказать"
+    }
+  },
+  "definition" : {
+    "components" : [ {
+      "label" : "Comment",
+      "defaultValue" : "",
+      "key" : "comment",
+      "type" : "textarea",
+      "input" : true
+    }, {
+      "columns" : [ {
+        "components" : [ {
+          "label" : "Reject",
+          "state" : "",
+          "block" : true,
+          "key" : "outcome_Reject",
+          "type" : "button",
+          "input" : true
+        } ],
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 0
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 1,
+        "components" : [ {
+          "label" : "Rework",
+          "state" : "",
+          "block" : true,
+          "key" : "outcome_Rework",
+          "type" : "button",
+          "input" : true
+        } ]
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 2,
+        "components" : [ {
+          "state" : "",
+          "theme" : "primary",
+          "block" : true,
+          "disableOnInvalid" : true,
+          "key" : "outcome_Approve",
+          "type" : "button",
+          "input" : true
+        } ]
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 3,
+        "components" : [ ]
+      } ],
+      "key" : "columns2",
+      "type" : "columns",
+      "input" : false
+    } ]
+  },
+  "attributes" : { }
+}

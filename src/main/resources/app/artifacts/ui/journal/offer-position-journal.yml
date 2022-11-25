@@ -1,0 +1,13 @@
+---
+id: offer-position-journal
+name:
+  ru: Тип должности
+typeRef: emodel/type@offer-position
+actions:
+  - uiserv/action@delete
+  - uiserv/action@edit
+columns:
+  - id: offerPositionName
+    name:
+      ru: Название
+    type: TEXT

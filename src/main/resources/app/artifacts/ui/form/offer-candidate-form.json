@@ -1,0 +1,405 @@
+{
+  "id" : "offer-candidate-form",
+  "formKey" : "offer-candidate-form",
+  "title" : {
+    "en" : "Кандидаты"
+  },
+  "description" : { },
+  "customModule" : null,
+  "typeRef" : "emodel/type@offer-candidate-type",
+  "width" : "lg",
+  "system" : false,
+  "i18n" : { },
+  "definition" : {
+    "components" : [ {
+      "scrollableContent" : true,
+      "key" : "panel2",
+      "type" : "panel",
+      "input" : false,
+      "components" : [ {
+        "label" : {
+          "ru" : "Columns"
+        },
+        "key" : "objectObject",
+        "columns" : [ {
+          "components" : [ {
+            "label" : {
+              "ru" : "Код"
+            },
+            "key" : "candidatesCode",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ],
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 0
+        }, {
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 1,
+          "components" : [ {
+            "label" : {
+              "ru" : "Фамилия"
+            },
+            "key" : "candidatesLastName",
+            "validate" : {
+              "required" : true
+            },
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        }, {
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 2,
+          "components" : [ {
+            "label" : {
+              "ru" : "Имя"
+            },
+            "key" : "candidatesFirstName",
+            "validate" : {
+              "required" : true
+            },
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        }, {
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 3,
+          "components" : [ {
+            "label" : {
+              "ru" : "Отчество"
+            },
+            "key" : "candidatesMiddleName",
+            "validate" : {
+              "required" : true
+            },
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        }, {
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 4,
+          "components" : [ {
+            "label" : {
+              "ru" : "Дата рождения"
+            },
+            "key" : "candidatesBirthDate",
+            "validate" : {
+              "required" : true
+            },
+            "format" : "yyyy-MM-dd",
+            "datePicker" : {
+              "minDate" : "",
+              "maxDate" : ""
+            },
+            "enableTime" : false,
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "datetime",
+            "input" : true,
+            "suffix" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        }, {
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 5,
+          "components" : [ {
+            "label" : {
+              "ru" : "Пол"
+            },
+            "key" : "candidatesGender",
+            "validate" : {
+              "required" : true
+            },
+            "dataSrc" : "values",
+            "data" : {
+              "values" : [ {
+                "label" : "Мужской",
+                "value" : "мужской"
+              }, {
+                "label" : "Женский",
+                "value" : "женский"
+              } ]
+            },
+            "defaultValue" : "",
+            "optionalWhenDisabled" : false,
+            "type" : "ecosSelect",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        }, {
+          "md" : 12,
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 6,
+          "components" : [ {
+            "label" : {
+              "ru" : "Город"
+            },
+            "key" : "candidatesCityAssoc",
+            "validate" : {
+              "required" : true
+            },
+            "modalTitle" : "",
+            "journalId" : "scan-cities",
+            "queryData" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "selectJournal",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        } ],
+        "oneColumnInViewMode" : false,
+        "type" : "columns",
+        "input" : false,
+        "addAnother" : "ecos.forms.btn.add-another"
+      }, {
+        "label" : {
+          "ru" : "Columns"
+        },
+        "key" : "columns",
+        "columns" : [ {
+          "components" : [ {
+            "label" : {
+              "ru" : "Опыт работы"
+            },
+            "key" : "candidateExperience",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ],
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 0
+        }, {
+          "index" : 1,
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "components" : [ {
+            "label" : {
+              "ru" : "Заробатная плата"
+            },
+            "key" : "candidateSalary",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ]
+        } ],
+        "oneColumnInViewMode" : false,
+        "type" : "columns",
+        "input" : false,
+        "addAnother" : "ecos.forms.btn.add-another"
+      }, {
+        "label" : {
+          "ru" : "Columns"
+        },
+        "key" : "columns3",
+        "columns" : [ {
+          "components" : [ {
+            "label" : {
+              "ru" : "Hard skills"
+            },
+            "key" : "candidateHardSkills",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textfield",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ],
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 0
+        }, {
+          "index" : 1,
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "components" : [ ]
+        } ],
+        "oneColumnInViewMode" : false,
+        "type" : "columns",
+        "input" : false,
+        "addAnother" : "ecos.forms.btn.add-another"
+      }, {
+        "label" : {
+          "ru" : "Columns"
+        },
+        "key" : "columns4",
+        "columns" : [ {
+          "components" : [ {
+            "label" : {
+              "ru" : "Резюме"
+            },
+            "key" : "candidateResume",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textarea",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ],
+          "md" : 12,
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 0
+        } ],
+        "oneColumnInViewMode" : false,
+        "type" : "columns",
+        "input" : false,
+        "addAnother" : "ecos.forms.btn.add-another"
+      }, {
+        "label" : {
+          "ru" : "Columns"
+        },
+        "key" : "objectObject2",
+        "columns" : [ {
+          "components" : [ {
+            "label" : {
+              "ru" : "Оценка кандидата"
+            },
+            "key" : "candidateRating",
+            "defaultValue" : "",
+            "refreshOn" : [ ],
+            "optionalWhenDisabled" : false,
+            "type" : "textarea",
+            "input" : true,
+            "addAnother" : "ecos.forms.btn.add-another"
+          } ],
+          "md" : 12,
+          "type" : "column",
+          "input" : false,
+          "key" : "column",
+          "index" : 0
+        } ],
+        "oneColumnInViewMode" : false,
+        "type" : "columns",
+        "input" : false,
+        "addAnother" : "ecos.forms.btn.add-another"
+      } ]
+    }, {
+      "label" : {
+        "ru" : "Columns"
+      },
+      "key" : "columns2",
+      "columns" : [ {
+        "components" : [ {
+          "label" : "Cancel",
+          "action" : "event",
+          "state" : "",
+          "showValidations" : false,
+          "event" : "cancel",
+          "block" : true,
+          "type" : "button",
+          "input" : true,
+          "key" : "submit2",
+          "conditional" : {
+            "show" : null,
+            "when" : null
+          }
+        } ],
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "md" : 3,
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 0
+      }, {
+        "components" : [ ],
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 1,
+        "md" : 3
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "components" : [ ],
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "index" : 2
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "index" : 3,
+        "components" : [ {
+          "label" : {
+            "ru" : "Создать",
+            "en" : "Submit"
+          },
+          "key" : "submit",
+          "state" : "",
+          "theme" : "primary",
+          "block" : true,
+          "disableOnInvalid" : true,
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "button",
+          "input" : true
+        } ]
+      } ],
+      "oneColumnInViewMode" : false,
+      "type" : "columns",
+      "input" : false
+    } ]
+  },
+  "attributes" : { }
+}

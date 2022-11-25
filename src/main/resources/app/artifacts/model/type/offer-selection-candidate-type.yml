@@ -1,0 +1,193 @@
+---
+id: offer-selection-candidate-type
+name:
+  ru: Подбор кандидата
+storageType: ECOS_MODEL
+parentRef: emodel/type@case
+formRef: uiserv/form@offer-selection-candidate-form
+journalRef: uiserv/journal@offer-selection-candidate-journal
+dispNameTemplate:
+  ru: Подбор кандидата №${idocs:registrationNumber}
+  en: Selection candidate №${idocs:registrationNumber}
+numTemplateRef: emodel/num-template@offer-number-template
+actions:
+  - uiserv/action@edit
+  - uiserv/action@delete
+defaultCreateVariant: true
+model:
+  roles:
+    - id: offer-initiator-role
+      name:
+        ru: Инициатор
+      attributes:
+        - idocs:initiator
+    - id: offer-chief-role
+      name:
+        ru: Руководитель
+    - id: offer-additional-chief-role
+      name:
+        ru: Доп. согласующий
+    - id: offer-director-role
+      name:
+        ru: Директор
+      assignees:
+        - GROUP_company_director
+    - id: offer-technologist-role
+      name:
+        ru: Технолог
+      assignees:
+        - GROUP_hr-manager
+    - id: offer-hr-role
+      name:
+        ru: HR
+      assignees:
+        - admin
+    - id: offer-tech-interviewer-role
+      name:
+        ru: Технический интервьюер
+    - id: offer-accountary-role
+      name:
+        ru: Бухгалтерия
+    - id: offer-manager-subdivision
+      name:
+        ru: Руководитель подразделения
+  statuses:
+    - id: draft
+      name:
+        ru: Черновик
+    - id: offer-reject
+      name:
+        ru: Отклонена
+    - id: offer-selection-candidates
+      name:
+        ru: Подбор кандидатов
+    - id: offer-resume-response
+      name:
+        ru: Направлен отклик на резюме
+    - id: offer-reject-from-candidate
+      name:
+        ru: Отказано со стороны кандидата
+    - id: offer-introductory-interview
+      name:
+        ru: Вводное интервью
+    - id: offer-candidate-rejected
+      name:
+        ru: Кандидату отказано
+    - id: offer-tech-interview
+      name:
+        ru: Техническое интервью
+    - id: offer-approve-condition
+      name:
+        ru: Согласование условий оффера
+    - id: offer-wait-candidate-response
+      name:
+        ru: Ожидание ответа кандидата
+    - id: offer-approved
+      name:
+        ru: Оффер принят
+    - id: offer-on-work
+      name:
+        ru: Вышел на работу
+    - id: offer-not-on-work
+      name:
+        ru: Не вышел на работу
+  attributes:
+    - id: idocs:registrationNumber
+      name:
+        ru: Регистрационный номер
+      computed:
+        type: TEMPLATE
+        config:
+          template: '${_docNum}'
+        storingType: ON_EMPTY
+    - id: offer_issueDate
+      name:
+        ru: Дата создания
+      type: DATE
+    - id: reg_number_counter
+      name:
+        ru: Счетчик регномера
+      computed:
+        type: COUNTER
+        config:
+          numTemplateRef: emodel/num-template@offer-number-template
+        storingType: ON_CREATE
+    - id: offerRequest
+      name:
+        ru: Запрос
+      type: ASSOC
+    - id: idocs:initiator
+      name:
+        ru: Инициатор
+      type: ASSOC
+    - id: offerCandidate
+      name:
+        ru: Кандидат
+      type: ASSOC
+    - id: offerPosition
+      name:
+        ru: Должность
+      type: ASSOC
+    - id: offerSubdivision
+      name:
+        ru: Подразделение
+      type: ASSOC
+    - id: offerGrade
+      name:
+        ru: Грейд
+      type: ASSOC
+    - id: offerComment
+      name:
+        ru: Комменатрий
+    - id: offerTechFeedback
+      name:
+        ru: Фидбэк по техническому собеседованию
+    - id: offerIntroductoryFeedback
+      name:
+        ru: Фидбэк по вводному собеседованию
+    - id: offerSalaryAndPrize
+      name:
+        ru: Зарплатная вилка и премия
+      type: ASSOC
+    - id: offerSalary
+      name:
+        ru: Оклад
+      type: NUMBER
+    - id: offerPrize
+      name:
+        ru: Премия
+    - id: offerSchedule
+      name:
+        ru: График работы
+    - id: cm:content
+      name:
+        ru: Содержимое
+      type: CONTENT
+    - id: offerDateWork
+      name:
+        ru: Дата выхода на работу
+      type: DATE
+    - id: offerTerm
+      name:
+        ru: Срок
+      type: DATE
+    - id: offerExperience
+      name:
+        ru: Опыт работы
+      type: ASSOC
+    - id: offerTermResponse
+      name:
+        ru: Дедлайн ответа
+      type: ASSOC
+    - id: offerManagerSubdivision
+      name:
+        ru: Руководитель подразделения
+      type: ASSOC
+    - id: offerApproveStage
+      name:
+        ru: Номер этапа согласования
+      type: NUMBER
+    - id: offerResume
+      name:
+        ru: Резюме
+      type: CONTENT

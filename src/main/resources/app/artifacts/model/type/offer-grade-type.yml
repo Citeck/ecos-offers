@@ -1,0 +1,33 @@
+---
+id: offer-grade-type
+name:
+  ru: Грейды
+sourceType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@DEFAULT_FORM
+journalRef: uiserv/journal@DEFAULT_JOURNAL
+inheritActions: false
+defaultCreateVariant: true
+model:
+  attributes:
+    - id: gradesSimpleRoleTypeAssoc
+      name:
+        ru: Должность
+      type: ASSOC
+      config:
+        typeRef: emodel/type@orgstruct-simple-role-type
+    - id: gradesNumber
+      name:
+        ru: Номер
+    - id: gradesRequirements
+      name:
+        ru: Требования к сотруднику
+    - id: gradesResponsibilities
+      name:
+        ru: Обязанности
+    - id: gradesSalary
+      name:
+        ru: Вилка оклада
+    - id: gradesPrize
+      name:
+        ru: Премия
