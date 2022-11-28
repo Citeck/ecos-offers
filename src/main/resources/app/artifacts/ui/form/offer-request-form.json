@@ -1,413 +1,477 @@
 {
-  "id" : "offer-request-form",
-  "formKey" : "offer-request-form",
-  "title" : {
-    "en" : "Offer Request Form"
+  "id": "offer-request-form",
+  "formKey": "offer-request-form",
+  "title": {
+    "en": "Offer Request Form"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "emodel/type@offer-request-type",
-  "width" : "lg",
-  "system" : false,
-  "i18n" : {
-    "ru" : {
-      "idocs:registrationNumber" : "Регистрационный номер",
-      "Save" : "Сохранить",
-      "Cancel" : "Отмена",
-      "generateNumber" : "Сгенерировать номер",
-      "Create" : "Подтвердить",
-      "cm:created" : "Дата создания",
-      "idocs:initiator" : "Инициатор",
-      "cm:content" : "Содержимое"
+  "description": {},
+  "customModule": null,
+  "typeRef": "emodel/type@offer-request-type",
+  "width": "lg",
+  "system": false,
+  "i18n": {
+    "ru": {
+      "idocs:registrationNumber": "Регистрационный номер",
+      "Save": "Сохранить",
+      "Cancel": "Отмена",
+      "generateNumber": "Сгенерировать номер",
+      "Create": "Подтвердить",
+      "cm:created": "Дата создания",
+      "idocs:initiator": "Инициатор",
+      "cm:content": "Содержимое"
     }
   },
-  "definition" : {
-    "components" : [ {
-      "scrollableContent" : true,
-      "key" : "panel6",
-      "type" : "panel",
-      "input" : false,
-      "components" : [ {
-        "title" : "Регистрация",
-        "key" : "panel5",
-        "type" : "panel",
-        "input" : false,
-        "components" : [ {
-          "columns" : [ {
-            "components" : [ {
-              "label" : "idocs:registrationNumber",
-              "defaultValue" : "",
-              "key" : "idocs_registrationNumber",
-              "properties" : {
-                "attribute" : "idocs:registrationNumber"
-              },
-              "logic" : [ {
-                "name" : "disable-reg-number",
-                "trigger" : {
-                  "type" : "javascript",
-                  "javascript" : "const { generateNumber = {} } = data || {};\nresult = (instance.options.formMode === 'CREATE') && generateNumber;"
-                },
-                "actions" : [ {
-                  "name" : "disabled",
-                  "type" : "property",
-                  "property" : {
-                    "label" : "Disabled",
-                    "value" : "disabled",
-                    "type" : "boolean"
+  "definition": {
+    "components": [
+      {
+        "scrollableContent": true,
+        "key": "panel6",
+        "type": "panel",
+        "input": false,
+        "components": [
+          {
+            "title": "Регистрация",
+            "key": "panel5",
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": "idocs:registrationNumber",
+                        "defaultValue": "",
+                        "key": "idocs_registrationNumber",
+                        "properties": {
+                          "attribute": "idocs:registrationNumber"
+                        },
+                        "logic": [
+                          {
+                            "name": "disable-reg-number",
+                            "trigger": {
+                              "type": "javascript",
+                              "javascript": "const { generateNumber = {} } = data || {};\nresult = (instance.options.formMode === 'CREATE') && generateNumber;"
+                            },
+                            "actions": [
+                              {
+                                "name": "disabled",
+                                "type": "property",
+                                "property": {
+                                  "label": "Disabled",
+                                  "value": "disabled",
+                                  "type": "boolean"
+                                },
+                                "state": "true"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "mandatory-reg-number",
+                            "trigger": {
+                              "type": "javascript",
+                              "javascript": "const { generateNumber = {} } = data || {};\nresult = (instance.options.formMode !== 'CREATE') || !generateNumber;"
+                            },
+                            "actions": [
+                              {
+                                "name": "set-mandatory-true",
+                                "type": "property",
+                                "property": {
+                                  "label": "Required",
+                                  "value": "validate.required",
+                                  "type": "boolean"
+                                },
+                                "state": "true"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": "generateNumber",
+                        "labelPosition": "right-right",
+                        "persistent": "client-only",
+                        "clearOnHide": false,
+                        "defaultValue": true,
+                        "key": "generateNumber",
+                        "customConditional": "show = instance.options.formMode === 'CREATE'",
+                        "type": "checkbox",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
                   },
-                  "state" : "true"
-                } ]
-              }, {
-                "name" : "mandatory-reg-number",
-                "trigger" : {
-                  "type" : "javascript",
-                  "javascript" : "const { generateNumber = {} } = data || {};\nresult = (instance.options.formMode !== 'CREATE') || !generateNumber;"
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": "cm:created",
+                        "format": "dd.MM.yyyy",
+                        "disabled": true,
+                        "enableDate": false,
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "defaultDate": "moment();",
+                        "defaultValue": "",
+                        "key": "cm_created",
+                        "properties": {
+                          "attribute": "cm:created"
+                        },
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true
+                      }
+                    ]
+                  }
+                ],
+                "key": "columns8",
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "title": "Основное",
+            "key": "panel2",
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
                 },
-                "actions" : [ {
-                  "name" : "set-mandatory-true",
-                  "type" : "property",
-                  "property" : {
-                    "label" : "Required",
-                    "value" : "validate.required",
-                    "type" : "boolean"
+                "key": "columns5",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": "idocs:initiator",
+                        "allowedAuthorityType": "USER",
+                        "currentUserByDefault": true,
+                        "defaultValue": "",
+                        "validate": {
+                          "required": true
+                        },
+                        "key": "idocs_initiator",
+                        "properties": {
+                          "attribute": "idocs:initiator"
+                        },
+                        "type": "selectOrgstruct",
+                        "input": true
+                      },
+                      {
+                        "label": "Подразделение",
+                        "allowedAuthorityType": "GROUP",
+                        "isIncludedAdminGroup": true,
+                        "defaultValue": "",
+                        "validate": {
+                          "required": true
+                        },
+                        "key": "offerSubdivision",
+                        "type": "selectOrgstruct",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Руководитель подразделения"
+                        },
+                        "key": "offerManagerSubdivision",
+                        "validate": {
+                          "required": true
+                        },
+                        "allowedAuthorityType": "USER",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectOrgstruct",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Город"
+                        },
+                        "key": "offerCity",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "cities-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
                   },
-                  "state" : "true"
-                } ]
-              } ],
-              "type" : "textfield",
-              "input" : true
-            }, {
-              "label" : "generateNumber",
-              "labelPosition" : "right-right",
-              "persistent" : "client-only",
-              "clearOnHide" : false,
-              "defaultValue" : true,
-              "key" : "generateNumber",
-              "customConditional" : "show = instance.options.formMode === 'CREATE'",
-              "type" : "checkbox",
-              "input" : true
-            } ],
-            "type" : "column",
-            "input" : false,
-            "key" : "column",
-            "index" : 0
-          }, {
-            "index" : 1,
-            "type" : "column",
-            "input" : false,
-            "key" : "column",
-            "components" : [ {
-              "label" : "cm:created",
-              "format" : "dd.MM.yyyy",
-              "disabled" : true,
-              "enableDate" : false,
-              "datePicker" : {
-                "minDate" : "",
-                "maxDate" : ""
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": "Должность",
+                        "journalId": "orgstruct-simple-role-type",
+                        "validate": {
+                          "required": true
+                        },
+                        "key": "offerPosition",
+                        "type": "selectJournal",
+                        "input": true
+                      },
+                      {
+                        "label": "Грейд",
+                        "journalId": "hr-grades-journal",
+                        "refreshOn": "offerPosition",
+                        "customDefaultValue": "value = \"\";",
+                        "calculateValue": "value = data.asyncDataForGrade.records[0].id || {};",
+                        "allowCalculateOverride": true,
+                        "validate": {
+                          "required": true
+                        },
+                        "key": "offerGrade",
+                        "type": "selectJournal",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Опыт работы"
+                        },
+                        "key": "offerExperience",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-experience-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Зарплатная вилка и премия"
+                        },
+                        "key": "offerSalaryAndPrize",
+                        "validate": {
+                          "maxLength": 30
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [
+                          "offerPosition"
+                        ],
+                        "calculateValue": "value = data.asyncDataForSalaryAndPrize.records[0].gradesSalary + \"; \" + data.asyncDataForSalaryAndPrize.records[0].gradesPrize;",
+                        "allowCalculateOverride": true,
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Срок"
+                        },
+                        "key": "offerTerm",
+                        "format": "yyyy-MM-dd",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
               },
-              "enableTime" : false,
-              "defaultDate" : "moment();",
-              "defaultValue" : "",
-              "key" : "cm_created",
-              "properties" : {
-                "attribute" : "cm:created"
-              },
-              "type" : "datetime",
-              "input" : true,
-              "suffix" : true
-            } ]
-          } ],
-          "key" : "columns8",
-          "type" : "columns",
-          "input" : false
-        } ]
-      }, {
-        "title" : "Основное",
-        "key" : "panel2",
-        "type" : "panel",
-        "input" : false,
-        "components" : [ {
-          "label" : {
-            "ru" : "Columns"
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Комментарий"
+                        },
+                        "key": "offerComment",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textarea",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Кандидаты"
+                        },
+                        "key": "offerSelectionCandidate",
+                        "modalTitle": "",
+                        "journalId": "offer-candidate-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0,
+                    "md": 12
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "AsyncData",
+        "source": {
+          "type": "recordsQuery",
+          "recordsQuery": {
+            "query": "const {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
+            "attributes": {},
+            "isSingle": false
           },
-          "key" : "columns5",
-          "columns" : [ {
-            "components" : [ {
-              "label" : "idocs:initiator",
-              "allowedAuthorityType" : "USER",
-              "currentUserByDefault" : true,
-              "defaultValue" : "",
-              "validate" : {
-                "required" : true
-              },
-              "key" : "idocs_initiator",
-              "properties" : {
-                "attribute" : "idocs:initiator"
-              },
-              "type" : "selectOrgstruct",
-              "input" : true
-            }, {
-              "label" : "Подразделение",
-              "allowedAuthorityType" : "GROUP",
-              "isIncludedAdminGroup" : true,
-              "defaultValue" : "",
-              "validate" : {
-                "required" : true
-              },
-              "key" : "offerSubdivision",
-              "type" : "selectOrgstruct",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "Руководитель подразделения"
-              },
-              "key" : "offerManagerSubdivision",
-              "validate" : {
-                "required" : true
-              },
-              "allowedAuthorityType" : "USER",
-              "defaultValue" : "",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "selectOrgstruct",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "Город"
-              },
-              "key" : "offerCity",
-              "validate" : {
-                "required" : true
-              },
-              "modalTitle" : "",
-              "journalId" : "cities-journal",
-              "queryData" : "",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "selectJournal",
-              "input" : true
-            } ],
-            "type" : "column",
-            "input" : false,
-            "key" : "column",
-            "index" : 0
-          }, {
-            "index" : 1,
-            "type" : "column",
-            "input" : false,
-            "key" : "column",
-            "components" : [ {
-              "label" : "Должность",
-              "journalId" : "orgstruct-simple-role-type",
-              "validate" : {
-                "required" : true
-              },
-              "key" : "offerPosition",
-              "type" : "selectJournal",
-              "input" : true
-            }, {
-              "label" : "Грейд",
-              "journalId" : "hr-grades-journal",
-              "refreshOn" : "offerPosition",
-              "customDefaultValue" : "value = \"\";",
-              "calculateValue" : "value = data.asyncDataForGrade.records[0].id || {};",
-              "allowCalculateOverride" : true,
-              "validate" : {
-                "required" : true
-              },
-              "key" : "offerGrade",
-              "type" : "selectJournal",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "Опыт работы"
-              },
-              "key" : "offerExperience",
-              "validate" : {
-                "required" : true
-              },
-              "modalTitle" : "",
-              "journalId" : "offer-experience-journal",
-              "queryData" : "",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "selectJournal",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "Зарплатная вилка и премия"
-              },
-              "key" : "offerSalaryAndPrize",
-              "validate" : {
-                "maxLength" : 30
-              },
-              "defaultValue" : "",
-              "refreshOn" : [ "offerPosition" ],
-              "calculateValue" : "value = data.asyncDataForSalaryAndPrize.records[0].gradesSalary + \"; \" + data.asyncDataForSalaryAndPrize.records[0].gradesPrize;",
-              "allowCalculateOverride" : true,
-              "optionalWhenDisabled" : false,
-              "type" : "textfield",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "Срок"
-              },
-              "key" : "offerTerm",
-              "format" : "yyyy-MM-dd",
-              "datePicker" : {
-                "minDate" : "",
-                "maxDate" : ""
-              },
-              "enableTime" : false,
-              "defaultValue" : "",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "datetime",
-              "input" : true,
-              "suffix" : true
-            } ]
-          } ],
-          "oneColumnInViewMode" : false,
-          "type" : "columns",
-          "input" : false
-        }, {
-          "label" : {
-            "ru" : "Columns"
-          },
-          "key" : "columns",
-          "columns" : [ {
-            "components" : [ {
-              "label" : {
-                "ru" : "Комментарий"
-              },
-              "key" : "offerComment",
-              "defaultValue" : "",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "textarea",
-              "input" : true
-            }, {
-              "label" : {
-                "ru" : "SelectJournal"
-              },
-              "key" : "offerSelectionCandidate",
-              "modalTitle" : "",
-              "journalId" : "offer-selection-candidate-journal",
-              "refreshOn" : [ ],
-              "optionalWhenDisabled" : false,
-              "type" : "selectJournal",
-              "input" : true,
-              "queryData" : ""
-            } ],
-            "type" : "column",
-            "input" : false,
-            "key" : "column",
-            "index" : 0,
-            "md" : 12
-          } ],
-          "oneColumnInViewMode" : false,
-          "type" : "columns",
-          "input" : false
-        } ]
-      } ]
-    }, {
-      "label" : "AsyncData",
-      "source" : {
-        "type" : "recordsQuery",
-        "recordsQuery" : {
-          "query" : "const {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
-          "attributes" : { },
-          "isSingle" : false
+          "forceLoad": false
         },
-        "forceLoad" : false
-      },
-      "update" : {
-        "type" : "disabled"
-      },
-      "refreshOn" : [ {
-        "label" : "offerPosition",
-        "value" : "offerPosition"
-      } ],
-      "key" : "asyncDataForGrade",
-      "type" : "asyncData",
-      "input" : true
-    }, {
-      "label" : "AsyncData2",
-      "source" : {
-        "type" : "recordsQuery",
-        "recordsQuery" : {
-          "attributes" : {
-            "gradesSalary" : "gradesSalary",
-            "gradesPrize" : "gradesPrize"
-          },
-          "query" : "console.log(data);\r\nconst {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
-          "isSingle" : false
+        "update": {
+          "type": "disabled"
         },
-        "forceLoad" : false
+        "refreshOn": [
+          {
+            "label": "offerPosition",
+            "value": "offerPosition"
+          }
+        ],
+        "key": "asyncDataForGrade",
+        "type": "asyncData",
+        "input": true
       },
-      "update" : {
-        "type" : "disabled"
+      {
+        "label": "AsyncData2",
+        "source": {
+          "type": "recordsQuery",
+          "recordsQuery": {
+            "attributes": {
+              "gradesSalary": "gradesSalary",
+              "gradesPrize": "gradesPrize"
+            },
+            "query": "console.log(data);\r\nconst {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
+            "isSingle": false
+          },
+          "forceLoad": false
+        },
+        "update": {
+          "type": "disabled"
+        },
+        "refreshOn": [
+          {
+            "label": "offerPosition",
+            "value": "offerPosition"
+          }
+        ],
+        "key": "asyncDataForSalaryAndPrize",
+        "type": "asyncData",
+        "input": true
       },
-      "refreshOn" : [ {
-        "label" : "offerPosition",
-        "value" : "offerPosition"
-      } ],
-      "key" : "asyncDataForSalaryAndPrize",
-      "type" : "asyncData",
-      "input" : true
-    }, {
-      "columns" : [ {
-        "components" : [ {
-          "label" : "Cancel",
-          "action" : "event",
-          "state" : "",
-          "block" : true,
-          "key" : "submit2",
-          "type" : "button",
-          "input" : true,
-          "showValidations" : false,
-          "event" : "cancel"
-        } ],
-        "md" : 4,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 0
-      }, {
-        "md" : 4,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 1,
-        "components" : [ {
-          "label" : "Save",
-          "state" : "draft",
-          "block" : true,
-          "key" : "submit2",
-          "type" : "button",
-          "input" : true
-        } ]
-      }, {
-        "md" : 4,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 2,
-        "components" : [ {
-          "label" : "Create",
-          "state" : "",
-          "theme" : "primary",
-          "block" : true,
-          "disableOnInvalid" : true,
-          "key" : "submit",
-          "type" : "button",
-          "input" : true
-        } ]
-      } ],
-      "key" : "columns9",
-      "type" : "columns",
-      "input" : false
-    } ]
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": "Cancel",
+                "action": "event",
+                "state": "",
+                "block": true,
+                "key": "submit2",
+                "type": "button",
+                "input": true,
+                "showValidations": false,
+                "event": "cancel"
+              }
+            ],
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": [
+              {
+                "label": "Save",
+                "state": "draft",
+                "block": true,
+                "key": "submit2",
+                "type": "button",
+                "input": true
+              }
+            ]
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": [
+              {
+                "label": "Create",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "key": "submit",
+                "type": "button",
+                "input": true
+              }
+            ]
+          }
+        ],
+        "key": "columns9",
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-request-form"
   },
-  "attributes" : { }
+  "attributes": {}
 }
