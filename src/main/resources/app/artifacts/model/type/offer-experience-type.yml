@@ -1,8 +1,8 @@
 ---
 id: offer-experience-type
 name:
-  ru: Город
-sourceType: ECOS_MODEL
+  ru: Опыт
+storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@DEFAULT_FORM
 journalRef: uiserv/journal@offer-experience-journal

@@ -1,405 +1,492 @@
 {
-  "id" : "offer-candidate-form",
-  "formKey" : "offer-candidate-form",
-  "title" : {
-    "en" : "Кандидаты"
+  "id": "offer-candidate-form",
+  "formKey": "offer-candidate-form",
+  "title": {
+    "en": "Кандидаты"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "emodel/type@offer-candidate-type",
-  "width" : "lg",
-  "system" : false,
-  "i18n" : { },
-  "definition" : {
-    "components" : [ {
-      "scrollableContent" : true,
-      "key" : "panel2",
-      "type" : "panel",
-      "input" : false,
-      "components" : [ {
-        "label" : {
-          "ru" : "Columns"
-        },
-        "key" : "objectObject",
-        "columns" : [ {
-          "components" : [ {
-            "label" : {
-              "ru" : "Код"
+  "description": {},
+  "customModule": null,
+  "typeRef": "emodel/type@offer-candidate-type",
+  "width": "lg",
+  "system": false,
+  "i18n": {},
+  "definition": {
+    "components": [
+      {
+        "scrollableContent": true,
+        "key": "panel2",
+        "type": "panel",
+        "input": false,
+        "components": [
+          {
+            "label": {
+              "ru": "Panel"
             },
-            "key" : "candidatesCode",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ],
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 0
-        }, {
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 1,
-          "components" : [ {
-            "label" : {
-              "ru" : "Фамилия"
+            "key": "panel3",
+            "title": {
+              "ru": "Основная информация"
             },
-            "key" : "candidatesLastName",
-            "validate" : {
-              "required" : true
-            },
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        }, {
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 2,
-          "components" : [ {
-            "label" : {
-              "ru" : "Имя"
-            },
-            "key" : "candidatesFirstName",
-            "validate" : {
-              "required" : true
-            },
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        }, {
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 3,
-          "components" : [ {
-            "label" : {
-              "ru" : "Отчество"
-            },
-            "key" : "candidatesMiddleName",
-            "validate" : {
-              "required" : true
-            },
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        }, {
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 4,
-          "components" : [ {
-            "label" : {
-              "ru" : "Дата рождения"
-            },
-            "key" : "candidatesBirthDate",
-            "validate" : {
-              "required" : true
-            },
-            "format" : "yyyy-MM-dd",
-            "datePicker" : {
-              "minDate" : "",
-              "maxDate" : ""
-            },
-            "enableTime" : false,
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "datetime",
-            "input" : true,
-            "suffix" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        }, {
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 5,
-          "components" : [ {
-            "label" : {
-              "ru" : "Пол"
-            },
-            "key" : "candidatesGender",
-            "validate" : {
-              "required" : true
-            },
-            "dataSrc" : "values",
-            "data" : {
-              "values" : [ {
-                "label" : "Мужской",
-                "value" : "мужской"
-              }, {
-                "label" : "Женский",
-                "value" : "женский"
-              } ]
-            },
-            "defaultValue" : "",
-            "optionalWhenDisabled" : false,
-            "type" : "ecosSelect",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        }, {
-          "md" : 12,
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 6,
-          "components" : [ {
-            "label" : {
-              "ru" : "Город"
-            },
-            "key" : "candidatesCityAssoc",
-            "validate" : {
-              "required" : true
-            },
-            "modalTitle" : "",
-            "journalId" : "scan-cities",
-            "queryData" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "selectJournal",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        } ],
-        "oneColumnInViewMode" : false,
-        "type" : "columns",
-        "input" : false,
-        "addAnother" : "ecos.forms.btn.add-another"
-      }, {
-        "label" : {
-          "ru" : "Columns"
-        },
-        "key" : "columns",
-        "columns" : [ {
-          "components" : [ {
-            "label" : {
-              "ru" : "Опыт работы"
-            },
-            "key" : "candidateExperience",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ],
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 0
-        }, {
-          "index" : 1,
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "components" : [ {
-            "label" : {
-              "ru" : "Заробатная плата"
-            },
-            "key" : "candidateSalary",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ]
-        } ],
-        "oneColumnInViewMode" : false,
-        "type" : "columns",
-        "input" : false,
-        "addAnother" : "ecos.forms.btn.add-another"
-      }, {
-        "label" : {
-          "ru" : "Columns"
-        },
-        "key" : "columns3",
-        "columns" : [ {
-          "components" : [ {
-            "label" : {
-              "ru" : "Hard skills"
-            },
-            "key" : "candidateHardSkills",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textfield",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ],
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 0
-        }, {
-          "index" : 1,
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "components" : [ ]
-        } ],
-        "oneColumnInViewMode" : false,
-        "type" : "columns",
-        "input" : false,
-        "addAnother" : "ecos.forms.btn.add-another"
-      }, {
-        "label" : {
-          "ru" : "Columns"
-        },
-        "key" : "columns4",
-        "columns" : [ {
-          "components" : [ {
-            "label" : {
-              "ru" : "Резюме"
-            },
-            "key" : "candidateResume",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textarea",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ],
-          "md" : 12,
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 0
-        } ],
-        "oneColumnInViewMode" : false,
-        "type" : "columns",
-        "input" : false,
-        "addAnother" : "ecos.forms.btn.add-another"
-      }, {
-        "label" : {
-          "ru" : "Columns"
-        },
-        "key" : "objectObject2",
-        "columns" : [ {
-          "components" : [ {
-            "label" : {
-              "ru" : "Оценка кандидата"
-            },
-            "key" : "candidateRating",
-            "defaultValue" : "",
-            "refreshOn" : [ ],
-            "optionalWhenDisabled" : false,
-            "type" : "textarea",
-            "input" : true,
-            "addAnother" : "ecos.forms.btn.add-another"
-          } ],
-          "md" : 12,
-          "type" : "column",
-          "input" : false,
-          "key" : "column",
-          "index" : 0
-        } ],
-        "oneColumnInViewMode" : false,
-        "type" : "columns",
-        "input" : false,
-        "addAnother" : "ecos.forms.btn.add-another"
-      } ]
-    }, {
-      "label" : {
-        "ru" : "Columns"
-      },
-      "key" : "columns2",
-      "columns" : [ {
-        "components" : [ {
-          "label" : "Cancel",
-          "action" : "event",
-          "state" : "",
-          "showValidations" : false,
-          "event" : "cancel",
-          "block" : true,
-          "type" : "button",
-          "input" : true,
-          "key" : "submit2",
-          "conditional" : {
-            "show" : null,
-            "when" : null
-          }
-        } ],
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "md" : 3,
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
-        },
-        "index" : 0
-      }, {
-        "components" : [ ],
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
-        },
-        "index" : 1,
-        "md" : 3
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "components" : [ ],
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
-        },
-        "index" : 2
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 3,
-        "components" : [ {
-          "label" : {
-            "ru" : "Создать",
-            "en" : "Submit"
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns3",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Запрос"
+                        },
+                        "key": "offerRequest",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-request-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 1,
+                    "components": []
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns4",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Опыт работы"
+                        },
+                        "key": "candidateExperience",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Заробатная плата"
+                        },
+                        "key": "candidateSalary",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Hard skills"
+                        },
+                        "key": "candidateHardSkills",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textarea",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Резюме"
+                        },
+                        "key": "candidateResume",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "file",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Фамилия"
+                        },
+                        "key": "candidatesLastName",
+                        "validate": {
+                          "required": true
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Имя"
+                        },
+                        "key": "candidatesFirstName",
+                        "validate": {
+                          "required": true
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Отчество"
+                        },
+                        "key": "candidatesMiddleName",
+                        "validate": {
+                          "required": true
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Пол"
+                        },
+                        "key": "candidatesGender",
+                        "dataSrc": "values",
+                        "data": {
+                          "values": [
+                            {
+                              "label": "Мужской",
+                              "value": "мужской"
+                            },
+                            {
+                              "label": "Женский",
+                              "value": "женский"
+                            }
+                          ]
+                        },
+                        "defaultValue": "",
+                        "optionalWhenDisabled": false,
+                        "type": "ecosSelect",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Дата рождения"
+                        },
+                        "key": "candidatesBirthDate",
+                        "format": "yyyy-MM-dd",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Город"
+                        },
+                        "key": "candidatesCityAssoc",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "scan-cities",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
           },
-          "key" : "submit",
-          "state" : "",
-          "theme" : "primary",
-          "block" : true,
-          "disableOnInvalid" : true,
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "type" : "button",
-          "input" : true
-        } ]
-      } ],
-      "oneColumnInViewMode" : false,
-      "type" : "columns",
-      "input" : false
-    } ]
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel",
+            "title": {
+              "ru": "Собеседование"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns5",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Фидбэк по вводному собеседованию"
+                        },
+                        "key": "offerIntroductoryFeedback",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textarea",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "Фидбэк по техническому собеседованию"
+                        },
+                        "key": "offerTechFeedback",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textarea",
+                        "input": true
+                      }
+                    ],
+                    "md": 12,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel1",
+            "title": {
+              "ru": "Оффер"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Оклад"
+                        },
+                        "key": "offerSalary",
+                        "validate": {
+                          "integer": false
+                        },
+                        "isBigNumber": false,
+                        "delimiterValue": " ",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "defaultValue": "",
+                        "type": "number",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Дата выхода на работу"
+                        },
+                        "key": "offerDateWork",
+                        "format": "yyyy-MM-dd",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns2",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": "Cancel",
+                "action": "event",
+                "state": "",
+                "showValidations": false,
+                "event": "cancel",
+                "block": true,
+                "type": "button",
+                "input": true,
+                "key": "submit2",
+                "conditional": {
+                  "show": null,
+                  "when": null
+                }
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "md": 3,
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 0
+          },
+          {
+            "components": [],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 1,
+            "md": 3
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "components": [
+              {
+                "label": {
+                  "ru": "Сохранить"
+                },
+                "key": "save",
+                "state": "draft",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 2
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": [
+              {
+                "label": {
+                  "ru": "Создать",
+                  "en": "Submit"
+                },
+                "key": "submit",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-candidate-form"
   },
-  "attributes" : { }
+  "attributes": {}
 }

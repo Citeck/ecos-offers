@@ -196,22 +196,6 @@
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
                         "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "Город"
-                        },
-                        "key": "offerCity",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "cities-journal",
-                        "queryData": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
                       }
                     ],
                     "type": "column",
@@ -226,26 +210,39 @@
                     "key": "column",
                     "components": [
                       {
-                        "label": "Должность",
-                        "journalId": "orgstruct-simple-role-type",
+                        "label": {
+                          "ru": "Должность"
+                        },
+                        "key": "offerPosition",
                         "validate": {
                           "required": true
                         },
-                        "key": "offerPosition",
+                        "modalTitle": "",
+                        "journalId": "offer-position-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "type": "selectJournal",
                         "input": true
                       },
                       {
-                        "label": "Грейд",
-                        "journalId": "hr-grades-journal",
-                        "refreshOn": "offerPosition",
-                        "customDefaultValue": "value = \"\";",
-                        "calculateValue": "value = data.asyncDataForGrade.records[0].id || {};",
-                        "allowCalculateOverride": true,
+                        "label": {
+                          "ru": "Грейд"
+                        },
+                        "key": "offerGrade",
                         "validate": {
                           "required": true
                         },
-                        "key": "offerGrade",
+                        "modalTitle": "",
+                        "journalId": "offer-grades-journal",
+                        "queryData": "",
+                        "refreshOn": [
+                          "offerPosition"
+                        ],
+                        "customDefaultValue": "value = \"\";",
+                        "calculateValue": "value = data.asyncDataForGrade.records[0].id || {};",
+                        "allowCalculateOverride": true,
+                        "optionalWhenDisabled": false,
                         "type": "selectJournal",
                         "input": true
                       },
@@ -267,20 +264,18 @@
                       },
                       {
                         "label": {
-                          "ru": "Зарплатная вилка и премия"
+                          "ru": "Город"
                         },
-                        "key": "offerSalaryAndPrize",
+                        "key": "offerCity",
                         "validate": {
-                          "maxLength": 30
+                          "required": true
                         },
-                        "defaultValue": "",
-                        "refreshOn": [
-                          "offerPosition"
-                        ],
-                        "calculateValue": "value = data.asyncDataForSalaryAndPrize.records[0].gradesSalary + \"; \" + data.asyncDataForSalaryAndPrize.records[0].gradesPrize;",
-                        "allowCalculateOverride": true,
+                        "modalTitle": "",
+                        "journalId": "cities-journal",
+                        "queryData": "",
+                        "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "type": "textfield",
+                        "type": "selectJournal",
                         "input": true
                       },
                       {
@@ -377,33 +372,6 @@
           }
         ],
         "key": "asyncDataForGrade",
-        "type": "asyncData",
-        "input": true
-      },
-      {
-        "label": "AsyncData2",
-        "source": {
-          "type": "recordsQuery",
-          "recordsQuery": {
-            "attributes": {
-              "gradesSalary": "gradesSalary",
-              "gradesPrize": "gradesPrize"
-            },
-            "query": "console.log(data);\r\nconst {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
-            "isSingle": false
-          },
-          "forceLoad": false
-        },
-        "update": {
-          "type": "disabled"
-        },
-        "refreshOn": [
-          {
-            "label": "offerPosition",
-            "value": "offerPosition"
-          }
-        ],
-        "key": "asyncDataForSalaryAndPrize",
         "type": "asyncData",
         "input": true
       },

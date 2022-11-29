@@ -1,9 +1,0 @@
-{
-  "id" : "citeck-offers",
-  "name" : {
-    "en" : "citeck-offers"
-  },
-  "version" : "1.0.0-snapshot",
-  "typeRefs" : [ "emodel/type@offer-candidate-type", "emodel/type@offer-request-type", "emodel/type@cities-type", "emodel/type@offer-experience-type", "emodel/type@offer-position", "emodel/type@offer-selection-candidate-type", "emodel/type@offer-grade-type" ],
-  "artifacts" : [ "eapps/artifact@ui/form$offer-candidate-form", "eapps/artifact@ui/form$offer-form-search", "eapps/artifact@ui/form$offer-form-done", "eapps/artifact@ui/form$offer-selection-candidate-form", "eapps/artifact@ui/form$offer-request-form", "eapps/artifact@process/bpmn$offer-selection-candidates.bpmn.xml", "eapps/artifact@process/bpmn-section$DEFAULT", "eapps/artifact@ui/journal$offer-grades-journal", "eapps/artifact@ui/journal$offer-candidate-journal", "eapps/artifact@ui/journal$cities-journal", "eapps/artifact@ui/form$offer-reject-candidate-form", "eapps/artifact@ui/form$offer-grade-form", "eapps/artifact@ui/form$offer-form-response", "eapps/artifact@ui/form$cities-form", "eapps/artifact@ui/form$offer-form-feedback-from-candidate", "eapps/artifact@ui/form$offer-form-rework", "eapps/artifact@model/num-template$offer-number-template", "eapps/artifact@notification/sender$default-firebase-sender", "eapps/artifact@notification/sender$default-email-sender", "eapps/artifact@ui/journal$offer-position-journal", "eapps/artifact@ui/journal$offer-request-journal", "eapps/artifact@process/bpmn$offer-request.bpmn.xml", "eapps/artifact@ui/journal$offer-experience-journal", "eapps/artifact@ui/form$offer-form-approve", "eapps/artifact@ui/journal$offer-selection-candidate-journal", "eapps/artifact@ui/action$offer-workflow-reject", "eapps/artifact@ui/form$offer-form-feedback", "eapps/artifact@ui/form$offer-form-draft" ]
-}

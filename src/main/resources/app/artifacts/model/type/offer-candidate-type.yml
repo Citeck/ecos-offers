@@ -10,9 +10,16 @@ inheritActions: false
 defaultCreateVariant: true
 model:
   attributes:
-    - id: candidateCode
+    - id: offerRequest
       name:
-        ru: Код
+        ru: Запрос
+      type: ASSOC
+    - id: offerTechFeedback
+      name:
+        ru: Фидбэк по техническому собеседованию
+    - id: offerIntroductoryFeedback
+      name:
+        ru: Фидбэк по вводному собеседованию
     - id: candidateLastName
       name:
         ru: Фамилия
@@ -48,8 +55,14 @@ model:
     - id: candidateResume
       name:
         ru: Резюме
-      type: TEXT
-    - id: candidateRating
+      type: CONTENT
+
+    - id: offerSalary
       name:
-        ru: Оценка кандидата
-      type: TEXT
+        ru: Оклад
+      type: NUMBER
+
+    - id: offerDateWork
+      name:
+        ru: Дата выхода на работу
+      type: DATE

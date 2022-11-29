@@ -128,10 +128,3 @@ model:
       name:
         ru: Номер этапа согласования
       type: NUMBER
-    - id: offerSelectionCandidate
-      name:
-        ru: Подбор кандидата
-      type: ASSOC
-      config:
-        typeRef: emodel/type@offer-selection-candidate-type
-        child: true
