@@ -2,13 +2,86 @@
 id: offer-candidate-type
 name:
   ru: Кандидат
-sourceType: ECOS_MODEL
-parentRef: emodel/type@data-list
-formRef: uiserv/form@DEFAULT_FORM
-journalRef: uiserv/journal@offer-candidate-type
+storageType: ECOS_MODEL
+parentRef: emodel/type@case
+formRef: uiserv/form@offer-candidate-form
+journalRef: uiserv/journal@offer-candidate-journal
 inheritActions: false
+dispNameTemplate:
+  ru: ${candidateLastName} ${candidateFirstName}
+actions:
+  - uiserv/action@offer-workflow-reject
+  - uiserv/action@delete
+  - uiserv/action@edit
 defaultCreateVariant: true
 model:
+  roles:
+    - id: offer-initiator-role
+      name:
+        ru: Инициатор
+      attributes:
+        - offerInitiator
+    - id: offer-director-role
+      name:
+        ru: Генеральный директор
+      assignees:
+        - anton.ivanov
+        - admin
+    - id: offer-hr-role
+      name:
+        ru: HR
+      assignees:
+        - GROUP_citeck-personnel-department
+    - id: offer-manager-subdivision
+      name:
+        ru: Руководитель подразделения
+      attributes:
+        - offerManagerSubdivision
+    - id: offer-accounting-role
+      name:
+        ru: Бухгалтерия
+      assignees:
+        - GROUP_citeck-accounting-department
+  statuses:
+    - id: draft
+      name:
+        ru: Черновик
+    - id: offer-reject
+      name:
+        ru: Отклонена
+    - id: offer-selection-candidates
+      name:
+        ru: Подбор кандидатов
+    - id: offer-resume-response
+      name:
+        ru: Направлен отклик на резюме
+    - id: offer-reject-from-candidate
+      name:
+        ru: Отказано со стороны кандидата
+    - id: offer-introductory-interview
+      name:
+        ru: Вводное интервью
+    - id: offer-candidate-rejected
+      name:
+        ru: Кандидату отказано
+    - id: offer-tech-interview
+      name:
+        ru: Техническое интервью
+    - id: offer-approve-condition
+      name:
+        ru: Согласование условий оффера
+    - id: offer-wait-candidate-response
+      name:
+        ru: Ожидание ответа кандидата
+    - id: offer-approved
+      name:
+        ru: Оффер принят
+    - id: offer-on-work
+      name:
+        ru: Вышел на работу
+    - id: offer-not-on-work
+      name:
+        ru: Не вышел на работу
   attributes:
     - id: offerRequest
       name:
@@ -43,26 +116,29 @@ model:
     - id: candidateExperience
       name:
         ru: Опыт работы
-      type: TEXT
     - id: candidateSalary
       name:
         ru: Заробатная плата
-      type: TEXT
     - id: candidateHardSkills
       name:
         ru: Hard skills
-      type: TEXT
     - id: candidateResume
       name:
         ru: Резюме
       type: CONTENT
-
     - id: offerSalary
       name:
         ru: Оклад
       type: NUMBER
-
     - id: offerDateWork
       name:
         ru: Дата выхода на работу
       type: DATE
+    - id: offerInitiator
+      name:
+        ru: Инициатор
+      type: AUTHORITY
+    - id: offerManagerSubdivision
+      name:
+        ru: Руководитель подразделения
+      type: AUTHORITY

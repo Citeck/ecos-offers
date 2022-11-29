@@ -1,72 +1,87 @@
 {
-  "id" : "offer-form-done",
-  "formKey" : "offer-form-done",
-  "title" : {
-    "en" : "Offer Form Done"
+  "id": "offer-form-done",
+  "formKey": "offer-form-done",
+  "title": {
+    "en": "Offer Form Done"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "",
-  "width" : "lg",
-  "system" : false,
-  "i18n" : {
-    "en" : {
-      "Done" : "Done"
+  "description": {},
+  "customModule": null,
+  "typeRef": "",
+  "width": "lg",
+  "system": false,
+  "i18n": {
+    "en": {
+      "Done": "Done"
     },
-    "ru" : {
-      "Done" : "Обработано"
+    "ru": {
+      "Done": "Обработано"
     }
   },
-  "definition" : {
-    "components" : [ {
-      "label" : "Comment",
-      "defaultValue" : "",
-      "key" : "comment",
-      "type" : "textarea",
-      "input" : true
-    }, {
-      "columns" : [ {
-        "components" : [ {
-          "label" : "Done",
-          "state" : "",
-          "theme" : "primary",
-          "block" : true,
-          "disableOnInvalid" : true,
-          "key" : "outcome_Done",
-          "type" : "button",
-          "input" : true
-        } ],
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 0
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 1,
-        "components" : [ ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 2,
-        "components" : [ ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 3,
-        "components" : [ ]
-      } ],
-      "key" : "columns2",
-      "type" : "columns",
-      "input" : false
-    } ]
+  "definition": {
+    "components": [
+      {
+        "label": "Comment",
+        "defaultValue": "",
+        "key": "comment",
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Подтвердить"
+                },
+                "key": "outcome_Done",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "key": "columns2",
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-form-done"
   },
-  "attributes" : { }
+  "attributes": {}
 }

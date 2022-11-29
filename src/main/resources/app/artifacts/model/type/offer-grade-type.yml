@@ -7,6 +7,8 @@ parentRef: emodel/type@data-list
 formRef: uiserv/form@DEFAULT_FORM
 journalRef: uiserv/journal@DEFAULT_JOURNAL
 inheritActions: false
+dispNameTemplate:
+  ru: '${gradesNumber}'
 defaultCreateVariant: true
 model:
   attributes:
@@ -17,9 +19,11 @@ model:
       config:
         typeRef: emodel/type@offer-position
         child: false
+      mandatory: true
     - id: gradesNumber
       name:
         ru: Номер
+      mandatory: true
     - id: gradesRequirements
       name:
         ru: Требования к сотруднику

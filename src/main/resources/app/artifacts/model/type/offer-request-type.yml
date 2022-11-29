@@ -24,20 +24,20 @@ model:
         - idocs:initiator
     - id: offer-director-role
       name:
-        ru: Директор
+        ru: Генеральный директор
       assignees:
-        - GROUP_company_director
-    - id: offer-technologist-role
-      name:
-        ru: Технолог
-      assignees:
-        - GROUP_hr-manager
+        - anton.ivanov
+        - admin
     - id: offer-hr-role
       name:
         ru: HR
+      assignees:
+        - GROUP_citeck-personnel-department
     - id: offer-manager-subdivision
       name:
         ru: Руководитель подразделения
+      attributes:
+        - offerManagerSubdivision
   statuses:
     - id: draft
       name:

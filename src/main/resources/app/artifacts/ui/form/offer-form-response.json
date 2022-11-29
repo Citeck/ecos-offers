@@ -1,87 +1,102 @@
 {
-  "id" : "offer-form-response",
-  "formKey" : "offer-form-response",
-  "title" : {
-    "en" : "Offer Form Response"
+  "id": "offer-form-response",
+  "formKey": "offer-form-response",
+  "title": {
+    "en": "Offer Form Response"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "",
-  "width" : "lg",
-  "system" : false,
-  "i18n" : {
-    "en" : {
-      "Send Reject" : "Send Reject",
-      "Send Offer" : "Send Offer"
+  "description": {},
+  "customModule": null,
+  "typeRef": "",
+  "width": "lg",
+  "system": false,
+  "i18n": {
+    "en": {
+      "Send Reject": "Send Reject",
+      "Send Offer": "Send Offer"
     },
-    "ru" : {
-      "Send Reject" : "Отправить отказ",
-      "Send Offer" : "Отправить оффер"
+    "ru": {
+      "Send Reject": "Отправить отказ",
+      "Send Offer": "Отправить оффер"
     }
   },
-  "definition" : {
-    "components" : [ {
-      "label" : "Comment",
-      "defaultValue" : "",
-      "key" : "comment",
-      "type" : "textarea",
-      "input" : true
-    }, {
-      "columns" : [ {
-        "components" : [ {
-          "label" : {
-            "ru" : "Reject"
+  "definition": {
+    "components": [
+      {
+        "label": "Comment",
+        "defaultValue": "",
+        "key": "comment",
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Отменить"
+                },
+                "key": "outcome_Reject",
+                "state": "",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
           },
-          "key" : "outcome_Reject",
-          "state" : "",
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "type" : "button",
-          "input" : true
-        } ],
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 0
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 1,
-        "components" : [ {
-          "label" : {
-            "ru" : "Accept"
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": [
+              {
+                "label": {
+                  "ru": "Подтвердить"
+                },
+                "key": "outcome_Approve",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
           },
-          "key" : "outcome_Accept",
-          "state" : "",
-          "theme" : "primary",
-          "disableOnInvalid" : true,
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "type" : "button",
-          "input" : true
-        } ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 2,
-        "components" : [ ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 3,
-        "components" : [ ]
-      } ],
-      "key" : "columns2",
-      "type" : "columns",
-      "input" : false
-    } ]
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "key": "columns2",
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-form-response"
   },
-  "attributes" : { }
+  "attributes": {}
 }

@@ -171,14 +171,20 @@
                         "input": true
                       },
                       {
-                        "label": "Подразделение",
-                        "allowedAuthorityType": "GROUP",
-                        "isIncludedAdminGroup": true,
-                        "defaultValue": "",
+                        "label": {
+                          "ru": "Подразделение"
+                        },
+                        "key": "offerSubdivision",
                         "validate": {
                           "required": true
                         },
-                        "key": "offerSubdivision",
+                        "allowedAuthorityType": "GROUP",
+                        "allowedGroupType": "ROLE, BRANCH, GROUP",
+                        "rootGroupName": "citeck",
+                        "isIncludedAdminGroup": true,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
                         "input": true
                       },
@@ -192,7 +198,11 @@
                         },
                         "allowedAuthorityType": "USER",
                         "defaultValue": "",
-                        "refreshOn": [],
+                        "refreshOn": [
+                          "getManager"
+                        ],
+                        "clearOnRefresh": true,
+                        "calculateValue": "const { getManager } = data || {};\nconst { records } = getManager || {};\n\nif (Array.isArray(records) && records !== 0) {\n  value = records[0];\n}\n",
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
                         "input": true
@@ -350,6 +360,54 @@
             ]
           }
         ]
+      },
+      {
+        "label": "getHeadGroup",
+        "source": {
+          "type": "recordsQuery",
+          "recordsQuery": {
+            "query": "const { offerSubdivision } = data || {};\n\nvalue = {\n      sourceId: 'emodel/authority-group',\n      query: {\n        \"t\": \"and\",\n        \"val\": [\n          {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": offerSubdivision},\n          {\"t\": \"contains\", \"att\": \"__ext_id\", \"val\": \"head\"}\n        ]\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n};\n",
+            "attributes": {},
+            "isSingle": false
+          },
+          "forceLoad": false
+        },
+        "update": {
+          "type": "any-change"
+        },
+        "refreshOn": [
+          {
+            "label": "offerSubdivision",
+            "value": "offerSubdivision"
+          }
+        ],
+        "key": "getHeadGroup",
+        "type": "asyncData",
+        "input": true
+      },
+      {
+        "label": "getManager",
+        "source": {
+          "type": "recordsQuery",
+          "recordsQuery": {
+            "query": "const { getHeadGroup } = data || {};\nconst { records } = getHeadGroup || {};\n\nif (Array.isArray(records) && records.length !== 0) {\n    value =  {\n      sourceId: 'emodel/person',\n      query: {\n          \"t\": \"and\",\n          \"val\": [\n              {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": records[0]}\n          ]\n          \n     },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n   }\n  }\n  \n\n",
+            "attributes": {},
+            "isSingle": false
+          },
+          "forceLoad": false
+        },
+        "update": {
+          "type": "any-change"
+        },
+        "refreshOn": [
+          {
+            "label": "getHeadGroup",
+            "value": "getHeadGroup"
+          }
+        ],
+        "key": "getManager",
+        "type": "asyncData",
+        "input": true
       },
       {
         "label": "AsyncData",

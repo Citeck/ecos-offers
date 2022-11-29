@@ -203,7 +203,7 @@
             <bpmn:outgoing >Flow_175d9bb</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_0l5y31i" targetRef="Activity_0gs7uoz" name="" id="Flow_0vvldz8" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Согласование" id="Activity_0gs7uoz" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Согласовать&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование&quot;}" ecos:formRef="uiserv/form@offer-form-response" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:multiInstanceConfig="{&quot;sequential&quot;:false,&quot;collection&quot;:&quot;&quot;,&quot;element&quot;:&quot;&quot;,&quot;loopCardinality&quot;:&quot;&quot;,&quot;completionCondition&quot;:&quot;&quot;,&quot;asyncConfig&quot;:{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true},&quot;jobConfig&quot;:{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:&quot;&quot;}}" ecos:assignees="[&quot;offer-accountary-role&quot;,&quot;offer-manager-subdivision&quot;,&quot;offer-director-role&quot;]">
+        <bpmn:userTask name="Согласование" id="Activity_0gs7uoz" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Согласовать&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование&quot;}" ecos:formRef="uiserv/form@offer-form-response" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:multiInstanceConfig="{&quot;sequential&quot;:false,&quot;collection&quot;:&quot;&quot;,&quot;element&quot;:&quot;&quot;,&quot;loopCardinality&quot;:&quot;&quot;,&quot;completionCondition&quot;:&quot;&quot;,&quot;asyncConfig&quot;:{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true},&quot;jobConfig&quot;:{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:&quot;&quot;}}" ecos:assignees="[&quot;offer-manager-subdivision&quot;,&quot;offer-director-role&quot;,&quot;offer-accounting-role&quot;]">
             <bpmn:incoming >Flow_0vvldz8</bpmn:incoming>
             <bpmn:outgoing >Flow_0pxhq50</bpmn:outgoing>
             <bpmn:multiInstanceLoopCharacteristics isSequential="false" camunda:asyncBefore="false" camunda:exclusive="true" camunda:asyncAfter="false">
@@ -231,6 +231,9 @@ parentDoc.save();</bpmn:script>
     </bpmn:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         <bpmndi:BPMNPlane  bpmnElement="offer-candidate-process" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="StartEvent_1ew9rff" isExpanded="true" id="_BPMNShape_StartEvent_2">
+                <dc:Bounds x="1232.0" y="81.0" width="36.0" height="36.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_1ke90zt" isExpanded="true" id="Activity_1ke90zt_di">
                 <dc:Bounds x="1325.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
@@ -359,9 +362,6 @@ parentDoc.save();</bpmn:script>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Gateway_1y794oe" isExpanded="true" id="Gateway_1y794oe_di">
                 <dc:Bounds x="3005.0" y="74.0" width="50.0" height="50.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="StartEvent_1ew9rff" isExpanded="true" id="_BPMNShape_StartEvent_2">
-                <dc:Bounds x="1232.0" y="81.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="Flow_19xct0s" id="Flow_19xct0s_di">
                 <di:waypoint x="1425.0" y="99.0"/>

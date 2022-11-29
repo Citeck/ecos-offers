@@ -1,81 +1,102 @@
 {
-  "id" : "offer-form-feedback-from-candidate",
-  "formKey" : "offer-form-feedback-from-candidate",
-  "title" : {
-    "en" : "Offer Form Feedback From Candidate"
+  "id": "offer-form-feedback-from-candidate",
+  "formKey": "offer-form-feedback-from-candidate",
+  "title": {
+    "en": "Offer Form Feedback From Candidate"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "",
-  "width" : null,
-  "system" : false,
-  "i18n" : {
-    "en" : {
-      "Accept Offer" : "Accept Offer",
-      "Reject Offer" : "Reject Offer"
+  "description": {},
+  "customModule": null,
+  "typeRef": "",
+  "width": "lg",
+  "system": false,
+  "i18n": {
+    "en": {
+      "Accept Offer": "Accept Offer",
+      "Reject Offer": "Reject Offer"
     },
-    "ru" : {
-      "Accept Offer" : "Принять оффер",
-      "Reject Offer" : "Отклонить оффер"
+    "ru": {
+      "Accept Offer": "Принять оффер",
+      "Reject Offer": "Отклонить оффер"
     }
   },
-  "definition" : {
-    "components" : [ {
-      "label" : "Comment",
-      "defaultValue" : "",
-      "key" : "comment",
-      "type" : "textarea",
-      "input" : true
-    }, {
-      "columns" : [ {
-        "components" : [ {
-          "label" : "Reject Offer",
-          "state" : "",
-          "block" : true,
-          "key" : "outcome_Reject",
-          "type" : "button",
-          "input" : true
-        } ],
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 0
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 1,
-        "components" : [ {
-          "label" : "Accept Offer",
-          "state" : "",
-          "theme" : "primary",
-          "block" : true,
-          "disableOnInvalid" : true,
-          "key" : "outcome_Accept",
-          "type" : "button",
-          "input" : true
-        } ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 2,
-        "components" : [ ]
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 3,
-        "components" : [ ]
-      } ],
-      "key" : "columns2",
-      "type" : "columns",
-      "input" : false
-    } ]
+  "definition": {
+    "components": [
+      {
+        "label": "Comment",
+        "defaultValue": "",
+        "key": "comment",
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Оффер отклонен"
+                },
+                "key": "outcome_Reject",
+                "state": "",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": [
+              {
+                "label": {
+                  "ru": "Оффер принят"
+                },
+                "key": "outcome_Accept",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "key": "columns2",
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-form-feedback-from-candidate"
   },
-  "attributes" : { }
+  "attributes": {}
 }

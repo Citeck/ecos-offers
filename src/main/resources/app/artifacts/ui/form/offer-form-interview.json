@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-rework",
-  "formKey": "offer-form-rework",
+  "id": "offer-form-interview",
+  "formKey": "offer-form-interview",
   "title": {
-    "en": "Offer Form Rework"
+    "en": "Offer Form interview"
   },
   "description": {},
   "customModule": null,
@@ -11,10 +11,12 @@
   "system": false,
   "i18n": {
     "en": {
-      "Done": "Done"
+      "Send Reject": "Send Reject",
+      "Send Offer": "Send Offer"
     },
     "ru": {
-      "Done": "Обработано"
+      "Send Reject": "Отправить отказ",
+      "Send Offer": "Отправить оффер"
     }
   },
   "definition": {
@@ -32,13 +34,11 @@
             "components": [
               {
                 "label": {
-                  "ru": "Выполнено"
+                  "ru": "Отказ со стороны Citeck"
                 },
-                "key": "outcome_Done",
+                "key": "outcome_Reject",
                 "state": "",
-                "theme": "primary",
                 "block": true,
-                "disableOnInvalid": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "button",
@@ -57,7 +57,20 @@
             "input": false,
             "key": "column",
             "index": 1,
-            "components": []
+            "components": [
+              {
+                "label": {
+                  "ru": "Отказ кандидата"
+                },
+                "key": "outcome_CandidateReject",
+                "state": "",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
           },
           {
             "md": 3,
@@ -65,7 +78,22 @@
             "input": false,
             "key": "column",
             "index": 2,
-            "components": []
+            "components": [
+              {
+                "label": {
+                  "ru": "Подтвердить"
+                },
+                "key": "outcome_Approve",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
           },
           {
             "md": 3,
@@ -81,7 +109,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-rework"
+    "formId": "offer-form-interview"
   },
   "attributes": {}
 }
