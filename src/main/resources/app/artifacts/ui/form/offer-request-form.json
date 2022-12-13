@@ -5,7 +5,7 @@
     "en": "Offer Request Form"
   },
   "description": {},
-  "customModule": null,
+  "customModule": "",
   "typeRef": "emodel/type@offer-request-type",
   "width": "lg",
   "system": false,
@@ -172,9 +172,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Подразделение"
+                          "ru": "requestSubdivision"
                         },
-                        "key": "offerSubdivision",
+                        "key": "requestSubdivision",
                         "validate": {
                           "required": true
                         },
@@ -190,9 +190,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Руководитель подразделения"
+                          "ru": "requestManagerSubdivision"
                         },
-                        "key": "offerManagerSubdivision",
+                        "key": "requestManagerSubdivision",
                         "validate": {
                           "required": true
                         },
@@ -221,9 +221,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Должность"
+                          "ru": "requestPosition"
                         },
-                        "key": "offerPosition",
+                        "key": "requestPosition",
                         "validate": {
                           "required": true
                         },
@@ -237,9 +237,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Грейд"
+                          "ru": "requestGrade"
                         },
-                        "key": "offerGrade",
+                        "key": "requestGrade",
                         "validate": {
                           "required": true
                         },
@@ -247,10 +247,10 @@
                         "journalId": "offer-grades-journal",
                         "queryData": "",
                         "refreshOn": [
-                          "offerPosition"
+                          "asyncDataForGrade"
                         ],
                         "customDefaultValue": "value = \"\";",
-                        "calculateValue": "value = data.asyncDataForGrade.records[0].id || {};",
+                        "calculateValue": "const { asyncDataForGrade } = data || {};\nconst { records } = asyncDataForGrade || {};\n\nif (Array.isArray(records) && records > 0) {\n  value = records[0].id;\n}",
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
@@ -258,9 +258,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Опыт работы"
+                          "ru": "requestExperience"
                         },
-                        "key": "offerExperience",
+                        "key": "requestExperience",
                         "validate": {
                           "required": true
                         },
@@ -274,9 +274,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Город"
+                          "ru": "requestCity"
                         },
-                        "key": "offerCity",
+                        "key": "requestCity",
                         "validate": {
                           "required": true
                         },
@@ -290,9 +290,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Срок"
+                          "ru": "requestTerm"
                         },
-                        "key": "offerTerm",
+                        "key": "requestTerm",
                         "format": "yyyy-MM-dd",
                         "datePicker": {
                           "minDate": "",
@@ -302,9 +302,49 @@
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
+                        "logic": [
+                          {
+                            "name": "setDisable",
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "show": true,
+                                "when": "requestUrgentSearch",
+                                "eq": "true"
+                              }
+                            },
+                            "actions": [
+                              {
+                                "name": "disable",
+                                "type": "property",
+                                "property": {
+                                  "label": "Disabled",
+                                  "value": "disabled",
+                                  "type": "boolean"
+                                },
+                                "state": "true"
+                              },
+                              {
+                                "name": "clearValue",
+                                "type": "value",
+                                "value": "value = null;"
+                              }
+                            ]
+                          }
+                        ],
                         "type": "datetime",
                         "input": true,
                         "suffix": true
+                      },
+                      {
+                        "label": {
+                          "ru": "requestUrgentSearch"
+                        },
+                        "key": "requestUrgentSearch",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "checkbox",
+                        "input": true
                       }
                     ]
                   }
@@ -323,9 +363,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Комментарий"
+                          "ru": "requestComment"
                         },
-                        "key": "offerComment",
+                        "key": "requestComment",
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -334,14 +374,31 @@
                       },
                       {
                         "label": {
-                          "ru": "Кандидаты"
+                          "ru": "requestCandidates"
                         },
-                        "key": "offerSelectionCandidate",
+                        "key": "requestCandidates",
+                        "multiple": true,
                         "modalTitle": "",
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
+                        "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",
+                        "type": "selectJournal",
+                        "input": true,
+                        "defaultValue": []
+                      },
+                      {
+                        "label": {
+                          "ru": "requestSelectedCandidate"
+                        },
+                        "key": "requestSelectedCandidate",
+                        "modalTitle": "",
+                        "journalId": "offer-candidate-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",
                         "type": "selectJournal",
                         "input": true
                       }
@@ -362,76 +419,169 @@
         ]
       },
       {
-        "label": "getHeadGroup",
-        "source": {
-          "type": "recordsQuery",
-          "recordsQuery": {
-            "query": "const { offerSubdivision } = data || {};\n\nvalue = {\n      sourceId: 'emodel/authority-group',\n      query: {\n        \"t\": \"and\",\n        \"val\": [\n          {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": offerSubdivision},\n          {\"t\": \"contains\", \"att\": \"__ext_id\", \"val\": \"head\"}\n        ]\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n};\n",
-            "attributes": {},
-            "isSingle": false
-          },
-          "forceLoad": false
+        "label": {
+          "ru": "Columns"
         },
-        "update": {
-          "type": "any-change"
-        },
-        "refreshOn": [
+        "key": "columns3",
+        "columns": [
           {
-            "label": "offerSubdivision",
-            "value": "offerSubdivision"
+            "components": [
+              {
+                "label": "caseStatus",
+                "source": {
+                  "type": "record",
+                  "record": {
+                    "id": "{{recordId}}",
+                    "attributes": {
+                      "status": "_status?str"
+                    }
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "once"
+                },
+                "key": "caseStatus",
+                "type": "asyncData",
+                "input": true
+              }
+            ],
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": []
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
           }
         ],
-        "key": "getHeadGroup",
-        "type": "asyncData",
-        "input": true
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
       },
       {
-        "label": "getManager",
-        "source": {
-          "type": "recordsQuery",
-          "recordsQuery": {
-            "query": "const { getHeadGroup } = data || {};\nconst { records } = getHeadGroup || {};\n\nif (Array.isArray(records) && records.length !== 0) {\n    value =  {\n      sourceId: 'emodel/person',\n      query: {\n          \"t\": \"and\",\n          \"val\": [\n              {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": records[0]}\n          ]\n          \n     },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n   }\n  }\n  \n\n",
-            "attributes": {},
-            "isSingle": false
-          },
-          "forceLoad": false
+        "label": {
+          "ru": "Columns"
         },
-        "update": {
-          "type": "any-change"
-        },
-        "refreshOn": [
+        "key": "columns2",
+        "columns": [
           {
-            "label": "getHeadGroup",
-            "value": "getHeadGroup"
+            "components": [
+              {
+                "label": "getHeadGroup",
+                "source": {
+                  "type": "recordsQuery",
+                  "recordsQuery": {
+                    "query": "const { requestSubdivision } = data || {};\n\nvalue = {\n      sourceId: 'emodel/authority-group',\n      query: {\n        \"t\": \"and\",\n        \"val\": [\n          {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": requestSubdivision},\n          {\"t\": \"contains\", \"att\": \"__ext_id\", \"val\": \"head\"}\n        ]\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n};\n",
+                    "attributes": {},
+                    "isSingle": false
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "any-change"
+                },
+                "refreshOn": [
+                  {
+                    "label": "requestSubdivision",
+                    "value": "requestSubdivision"
+                  }
+                ],
+                "key": "getHeadGroup",
+                "type": "asyncData",
+                "input": true
+              }
+            ],
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": [
+              {
+                "label": "getManager",
+                "source": {
+                  "type": "recordsQuery",
+                  "recordsQuery": {
+                    "query": "const { getHeadGroup } = data || {};\nconst { records } = getHeadGroup || {};\n\nif (Array.isArray(records) && records.length !== 0) {\n    value =  {\n      sourceId: 'emodel/person',\n      query: {\n          \"t\": \"and\",\n          \"val\": [\n              {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": records[0]}\n          ]\n          \n     },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n   }\n  }\n  \n\n",
+                    "attributes": {},
+                    "isSingle": false
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "any-change"
+                },
+                "refreshOn": [
+                  {
+                    "label": "getHeadGroup",
+                    "value": "getHeadGroup"
+                  }
+                ],
+                "key": "getManager",
+                "type": "asyncData",
+                "input": true
+              }
+            ]
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": [
+              {
+                "label": "AsyncData",
+                "source": {
+                  "type": "recordsQuery",
+                  "recordsQuery": {
+                    "query": "const {requestPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: requestPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
+                    "attributes": {},
+                    "isSingle": false
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "disabled"
+                },
+                "refreshOn": [
+                  {
+                    "label": "requestPosition",
+                    "value": "requestPosition"
+                  }
+                ],
+                "key": "asyncDataForGrade",
+                "type": "asyncData",
+                "input": true
+              }
+            ]
           }
         ],
-        "key": "getManager",
-        "type": "asyncData",
-        "input": true
-      },
-      {
-        "label": "AsyncData",
-        "source": {
-          "type": "recordsQuery",
-          "recordsQuery": {
-            "query": "const {offerPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: offerPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
-            "attributes": {},
-            "isSingle": false
-          },
-          "forceLoad": false
-        },
-        "update": {
-          "type": "disabled"
-        },
-        "refreshOn": [
-          {
-            "label": "offerPosition",
-            "value": "offerPosition"
-          }
-        ],
-        "key": "asyncDataForGrade",
-        "type": "asyncData",
-        "input": true
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
       },
       {
         "columns": [

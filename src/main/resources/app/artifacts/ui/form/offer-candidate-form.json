@@ -2,10 +2,10 @@
   "id": "offer-candidate-form",
   "formKey": "offer-candidate-form",
   "title": {
-    "en": "Кандидаты"
+    "en": "Форма кандидатов"
   },
   "description": {},
-  "customModule": null,
+  "customModule": "",
   "typeRef": "emodel/type@offer-candidate-type",
   "width": "lg",
   "system": false,
@@ -41,15 +41,18 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Запрос"
+                          "ru": "candidateRequest"
                         },
-                        "key": "offerRequest",
+                        "key": "candidateRequest",
+                        "multiple": true,
                         "validate": {
                           "required": true
                         },
                         "modalTitle": "",
                         "journalId": "offer-request-journal",
                         "queryData": "",
+                        "customPredicateJs": "value = {\n  \"t\":\"contains\",\n  \"att\": \"_status\",\n  \"val\":\"candidate-on-work\"\n};",
+                        "defaultValue": [],
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
@@ -69,9 +72,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "offerInitiator"
+                          "ru": "candidateInitiator"
                         },
-                        "key": "offerInitiator",
+                        "key": "candidateInitiator",
                         "validate": {
                           "required": true
                         },
@@ -90,9 +93,9 @@
                       },
                       {
                         "label": {
-                          "ru": "offerManagerSubdivision"
+                          "ru": "candidateManagerSubdivision"
                         },
-                        "key": "offerManagerSubdivision",
+                        "key": "candidateManagerSubdivision",
                         "validate": {
                           "required": true
                         },
@@ -125,7 +128,23 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Опыт работы"
+                          "ru": "candidatePosition"
+                        },
+                        "key": "candidatePosition",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-position-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "candidateExperience"
                         },
                         "key": "candidateExperience",
                         "defaultValue": "",
@@ -136,9 +155,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Заробатная плата"
+                          "ru": "candidateDesiredSalary"
                         },
-                        "key": "candidateSalary",
+                        "key": "candidateDesiredSalary",
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -147,23 +166,10 @@
                       },
                       {
                         "label": {
-                          "ru": "Hard skills"
-                        },
-                        "key": "candidateHardSkills",
-                        "defaultValue": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "textarea",
-                        "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "Резюме"
+                          "ru": "candidateResume"
                         },
                         "key": "candidateResume",
-                        "storage": "url",
-                        "url": "",
-                        "options": "",
+                        "storage": "base64",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "file",
@@ -183,9 +189,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Фамилия"
+                          "ru": "candidateLastName"
                         },
-                        "key": "candidatesLastName",
+                        "key": "candidateLastName",
                         "validate": {
                           "required": true
                         },
@@ -197,9 +203,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Имя"
+                          "ru": "candidateFirstName"
                         },
-                        "key": "candidatesFirstName",
+                        "key": "candidateFirstName",
                         "validate": {
                           "required": true
                         },
@@ -211,9 +217,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Отчество"
+                          "ru": "candidateMiddleName"
                         },
-                        "key": "candidatesMiddleName",
+                        "key": "candidateMiddleName",
                         "validate": {
                           "required": true
                         },
@@ -225,9 +231,25 @@
                       },
                       {
                         "label": {
-                          "ru": "Пол"
+                          "ru": "candidateCityAssoc"
                         },
-                        "key": "candidatesGender",
+                        "key": "candidateCityAssoc",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "cities-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "candidateGender"
+                        },
+                        "key": "candidateGender",
                         "dataSrc": "values",
                         "data": {
                           "values": [
@@ -248,9 +270,9 @@
                       },
                       {
                         "label": {
-                          "ru": "Дата рождения"
+                          "ru": "candidateBirthDate"
                         },
-                        "key": "candidatesBirthDate",
+                        "key": "candidateBirthDate",
                         "format": "yyyy-MM-dd",
                         "datePicker": {
                           "minDate": "",
@@ -263,22 +285,6 @@
                         "type": "datetime",
                         "input": true,
                         "suffix": true
-                      },
-                      {
-                        "label": {
-                          "ru": "Город"
-                        },
-                        "key": "candidatesCityAssoc",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "cities-journal",
-                        "queryData": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
                       }
                     ]
                   }
@@ -295,10 +301,11 @@
             },
             "key": "panel",
             "title": {
-              "ru": "Собеседование"
+              "ru": "Вводное интервью"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "const { candidateIntroInterviewDate } = data || {};\nconst { candidateIntroFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-introductory-interview\"\n  ];\n\nshow = !!candidateIntroInterviewDate ||\n       !!candidateIntroFeedback ||\n       statusesToShow.includes(status);\n       \n       \n",
             "type": "panel",
             "input": false,
             "components": [
@@ -312,20 +319,56 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Фидбэк по вводному собеседованию"
+                          "ru": "candidateIntroInterviewDate"
                         },
-                        "key": "offerIntroductoryFeedback",
+                        "key": "candidateIntroInterviewDate",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "timePicker": {
+                          "showMeridian": false
+                        },
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "type": "textarea",
-                        "input": true
-                      },
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true,
+                        "format": "yyyy-MM-dd"
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 1,
+                    "components": []
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns10",
+                "columns": [
+                  {
+                    "components": [
                       {
                         "label": {
-                          "ru": "Фидбэк по техническому собеседованию"
+                          "ru": "candidateIntroFeedback"
                         },
-                        "key": "offerTechFeedback",
+                        "key": "candidateIntroFeedback",
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -350,12 +393,122 @@
             "label": {
               "ru": "Panel"
             },
+            "key": "panel4",
+            "title": {
+              "ru": "Техническое интервью"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n\nshow = !!candidateTechFeedback ||\n       !!candidateTechInterviewGrade ||\n       !!candidateTechFeedback ||\n       statusesToShow.includes(status);\n       \n       \n",
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns8",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateTechInterviewDate"
+                        },
+                        "key": "candidateTechInterviewDate",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "timePicker": {
+                          "showMeridian": false
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true,
+                        "format": "yyyy-MM-dd"
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateTechInterviewGrade"
+                        },
+                        "key": "candidateTechInterviewGrade",
+                        "modalTitle": "",
+                        "journalId": "offer-grades-journal",
+                        "queryData": "",
+                        "customPredicateJs": "const { candidatePosition } = data || {};\n\nvalue = {\n  \"t\": \"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": candidatePosition\n}",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns9",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateTechFeedback"
+                        },
+                        "key": "candidateTechFeedback",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textarea",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0,
+                    "md": 12
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
             "key": "panel1",
             "title": {
               "ru": "Оффер"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "const { candidateSalary } = data || {};\n\nshow = !(typeof candidateSalary === \"string\" && \n         candidateSalary.trim().length === 0);",
             "type": "panel",
             "input": false,
             "components": [
@@ -369,9 +522,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Оклад"
+                          "ru": "candidateSalary"
                         },
-                        "key": "offerSalary",
+                        "key": "candidateSalary",
                         "validate": {
                           "integer": false
                         },
@@ -390,6 +543,65 @@
                     "index": 0
                   },
                   {
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 1,
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Upload"
+                        },
+                        "key": "upload",
+                        "storage": "base64",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "file",
+                        "input": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns7",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateResponseExpectedDate"
+                        },
+                        "key": "candidateResponseExpectedDate",
+                        "datePicker": {
+                          "minDate": "",
+                          "maxDate": ""
+                        },
+                        "enableTime": false,
+                        "timePicker": {
+                          "showMeridian": false
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "datetime",
+                        "input": true,
+                        "suffix": true,
+                        "format": "yyyy-MM-dd"
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
                     "index": 1,
                     "type": "column",
                     "input": false,
@@ -397,18 +609,23 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Дата выхода на работу"
+                          "ru": "candidateStartDateOnWork"
                         },
-                        "key": "offerDateWork",
+                        "key": "candidateStartDateOnWork",
                         "format": "yyyy-MM-dd",
+                        "clearOnHide": false,
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
                         },
                         "enableTime": false,
+                        "timePicker": {
+                          "showMeridian": false
+                        },
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
+                        "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-candidate-response-processing\"\n  ];\n\nshow = !!value || statusesToShow.includes(status);",
                         "type": "datetime",
                         "input": true,
                         "suffix": true
@@ -425,30 +642,86 @@
         ]
       },
       {
-        "label": "getDataFromRequest",
-        "source": {
-          "type": "record",
-          "record": {
-            "id": "{{ data.offerRequest }}",
-            "attributes": {
-              "initiator": "idocs:initiator?str",
-              "manager": "offerManagerSubdivision?str"
-            }
-          },
-          "forceLoad": false
+        "label": {
+          "ru": "Columns"
         },
-        "update": {
-          "type": "any-change"
-        },
-        "refreshOn": [
+        "key": "columns6",
+        "columns": [
           {
-            "label": "offerRequest",
-            "value": "offerRequest"
+            "components": [
+              {
+                "label": "getDataFromRequest",
+                "source": {
+                  "type": "record",
+                  "record": {
+                    "id": "{{ data.candidateRequest }}",
+                    "attributes": {
+                      "initiator": "idocs:initiator?str",
+                      "manager": "requestManagerSubdivision?str"
+                    }
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "any-change"
+                },
+                "refreshOn": [
+                  {
+                    "label": "candidateRequest",
+                    "value": "candidateRequest"
+                  }
+                ],
+                "key": "getDataFromRequest",
+                "type": "asyncData",
+                "input": true
+              }
+            ],
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": [
+              {
+                "label": "caseStatus",
+                "source": {
+                  "type": "record",
+                  "record": {
+                    "id": "{{recordId}}",
+                    "attributes": {
+                      "status": "_status?str"
+                    }
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "once"
+                },
+                "key": "caseStatus",
+                "type": "asyncData",
+                "input": true
+              }
+            ]
+          },
+          {
+            "md": 4,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
           }
         ],
-        "key": "getDataFromRequest",
-        "type": "asyncData",
-        "input": true
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
       },
       {
         "label": {

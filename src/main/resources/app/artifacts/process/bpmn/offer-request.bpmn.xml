@@ -53,19 +53,38 @@
         </bpmn:endEvent>
         <bpmn:sequenceFlow sourceRef="Activity_0h88vzc" targetRef="Event_1v1xtn2" name="" id="Flow_0c5qhty" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:endEvent name="" id="Event_0rc956j" ecos:name_ml="{}">
-            <bpmn:incoming >Flow_1voklyi</bpmn:incoming>
+            <bpmn:incoming >Flow_0bn1qo3</bpmn:incoming>
         </bpmn:endEvent>
         <bpmn:task name="Статус &quot;Вышел на работу&quot;" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Вышел на работу\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-on-work">
-            <bpmn:incoming >Flow_0itatcg</bpmn:incoming>
-            <bpmn:outgoing >Flow_1voklyi</bpmn:outgoing>
+            <bpmn:incoming >Flow_1fnx54b</bpmn:incoming>
+            <bpmn:outgoing >Flow_0bn1qo3</bpmn:outgoing>
         </bpmn:task>
-        <bpmn:sequenceFlow sourceRef="Activity_1g96onh" targetRef="Event_0rc956j" name="" id="Flow_1voklyi" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_03llb2t" targetRef="Activity_01jmznm" name="" id="Flow_0h2pwv6" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sequenceFlow sourceRef="Activity_01jmznm" targetRef="Activity_1g96onh" name="" id="Flow_0itatcg" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
+        <bpmn:sequenceFlow sourceRef="Activity_01jmznm" targetRef="Activity_0qo9u8z" name="" id="Flow_0itatcg" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:userTask name="Поиск кандидатов и направление отлика на резюме" id="Activity_01jmznm" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Поиск кандидатов и направление отлика на резюме&quot;}" ecos:formRef="uiserv/form@offer-form-done" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;offer-hr-role&quot;]">
             <bpmn:incoming >Flow_0h2pwv6</bpmn:incoming>
             <bpmn:outgoing >Flow_0itatcg</bpmn:outgoing>
         </bpmn:userTask>
+        <bpmn:sequenceFlow sourceRef="Activity_1g96onh" targetRef="Event_0rc956j" name="" id="Flow_0bn1qo3" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
+        <bpmn:scriptTask scriptFormat="javascript" name="Изменение статуса у других Кандидатов" id="Activity_0qo9u8z" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Изменение статуса у других Кандидатов&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="var candidatesID = document.load(&quot;offerCandidates&quot;);&#10;if (Array.isArray(candidatesID) &amp;&amp; candidatesID.size &gt; 0) {&#10;  print(&quot;IS ARRAY&quot;);&#10;  document.att(&quot;offerSelectedCandidate&quot;, candidatesID[0])&#10;  document.save();&#10;}&#10;&#10;print(&quot;candidatesID&quot; + candidatesID);&#10;&#10;print(&quot;candidatesID: &quot;, candidatesID);&#10;&#10;//var parentDoc = Records.get(parentDocStr);&#10;//parentDoc.att('_status', 'offer-on-work');&#10;//parentDoc.save();">
+            <bpmn:incoming >Flow_0itatcg</bpmn:incoming>
+            <bpmn:outgoing >Flow_1fnx54b</bpmn:outgoing>
+            <bpmn:script>var candidatesID = document.load("offerCandidates");
+if (Array.isArray(candidatesID) &amp;&amp; candidatesID.size &gt; 0) {
+  print("IS ARRAY");
+  document.att("offerSelectedCandidate", candidatesID[0])
+  document.save();
+}
+
+print("candidatesID" + candidatesID);
+
+print("candidatesID: ", candidatesID);
+
+//var parentDoc = Records.get(parentDocStr);
+//parentDoc.att('_status', 'offer-on-work');
+//parentDoc.save();</bpmn:script>
+        </bpmn:scriptTask>
+        <bpmn:sequenceFlow sourceRef="Activity_0qo9u8z" targetRef="Activity_1g96onh" name="" id="Flow_1fnx54b" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
     </bpmn:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         <bpmndi:BPMNPlane  bpmnElement="offer-request" id="BPMNPlane_1">
@@ -99,14 +118,17 @@
             <bpmndi:BPMNShape bpmnElement="Event_1v1xtn2" isExpanded="true" id="Event_1v1xtn2_di">
                 <dc:Bounds x="997.0" y="-78.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Event_0rc956j" isExpanded="true" id="Event_0rc956j_di">
-                <dc:Bounds x="1432.0" y="81.0" width="36.0" height="36.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_1g96onh" isExpanded="true" id="Activity_1g96onh_di">
-                <dc:Bounds x="1290.0" y="59.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_01jmznm" isExpanded="true" id="Activity_12esxig_di">
                 <dc:Bounds x="1130.0" y="59.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Event_0rc956j" isExpanded="true" id="Event_0rc956j_di">
+                <dc:Bounds x="1602.0" y="81.0" width="36.0" height="36.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_1g96onh" isExpanded="true" id="Activity_1g96onh_di">
+                <dc:Bounds x="1450.0" y="59.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_0qo9u8z" isExpanded="true" id="Activity_18504ip_di">
+                <dc:Bounds x="1290.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="Flow_08ksugo" id="Flow_08ksugo_di">
                 <di:waypoint x="387.0" y="99.0"/>
@@ -150,10 +172,6 @@
                 <di:waypoint x="945.0" y="-60.0"/>
                 <di:waypoint x="997.0" y="-60.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_1voklyi" id="Flow_1voklyi_di">
-                <di:waypoint x="1390.0" y="99.0"/>
-                <di:waypoint x="1432.0" y="99.0"/>
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_0h2pwv6" id="Flow_0h2pwv6_di">
                 <di:waypoint x="1085.0" y="99.0"/>
                 <di:waypoint x="1130.0" y="99.0"/>
@@ -161,6 +179,14 @@
             <bpmndi:BPMNEdge bpmnElement="Flow_0itatcg" id="Flow_0itatcg_di">
                 <di:waypoint x="1230.0" y="99.0"/>
                 <di:waypoint x="1290.0" y="99.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_0bn1qo3" id="Flow_0bn1qo3_di">
+                <di:waypoint x="1550.0" y="99.0"/>
+                <di:waypoint x="1602.0" y="99.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_1fnx54b" id="Flow_1fnx54b_di">
+                <di:waypoint x="1390.0" y="99.0"/>
+                <di:waypoint x="1450.0" y="99.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

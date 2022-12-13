@@ -214,13 +214,14 @@
         <bpmn:sequenceFlow sourceRef="Activity_0gs7uoz" targetRef="Gateway_1e8vlhq" name="" id="Flow_0pxhq50" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_0pyl7bt" targetRef="Activity_1noc286" name="" id="Flow_0tm0z8n" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_1noc286" targetRef="Event_1lst258" name="" id="Flow_1l2ifox" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:scriptTask scriptFormat="javascript" name="Изменение статуса у Запроса" id="Activity_1noc286" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Изменение статуса у Запроса&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="var parentDocStr = document.load(&quot;offerRequest?id&quot;);&#10;var parentDoc = Records.get(parentDocStr);&#10;parentDoc.att('_status', 'offer-on-work');&#10;parentDoc.save();">
+        <bpmn:scriptTask scriptFormat="javascript" name="Изменение статуса у Запроса" id="Activity_1noc286" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Изменение статуса у Запроса&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="//var parentDocStr = document.load(&quot;offerRequest?id&quot;);&#10;//var parentDoc = Records.get(parentDocStr);&#10;//parentDoc.att('_status', 'offer-on-work');&#10;//parentDoc.save();&#10;true;">
             <bpmn:incoming >Flow_0tm0z8n</bpmn:incoming>
             <bpmn:outgoing >Flow_1l2ifox</bpmn:outgoing>
-            <bpmn:script>var parentDocStr = document.load("offerRequest?id");
-var parentDoc = Records.get(parentDocStr);
-parentDoc.att('_status', 'offer-on-work');
-parentDoc.save();</bpmn:script>
+            <bpmn:script>//var parentDocStr = document.load("offerRequest?id");
+//var parentDoc = Records.get(parentDocStr);
+//parentDoc.att('_status', 'offer-on-work');
+//parentDoc.save();
+true;</bpmn:script>
         </bpmn:scriptTask>
         <bpmn:exclusiveGateway name="" id="Gateway_1y794oe" ecos:name_ml="{}">
             <bpmn:incoming >Flow_0iplrf3</bpmn:incoming>

@@ -16,28 +16,27 @@ actions:
 defaultCreateVariant: true
 model:
   roles:
-    - id: offer-initiator-role
+    - id: candidate-initiator-role
       name:
         ru: Инициатор
       attributes:
-        - offerInitiator
-    - id: offer-director-role
+        - candidateInitiator
+    - id: candidate-director-role
       name:
         ru: Генеральный директор
       assignees:
-        - anton.ivanov
-        - admin
-    - id: offer-hr-role
+        - GROUP_citeck-ceo
+    - id: candidate-hr-role
       name:
         ru: HR
       assignees:
         - GROUP_citeck-personnel-department
-    - id: offer-manager-subdivision
+    - id: candidate-manager-subdivision
       name:
         ru: Руководитель подразделения
       attributes:
-        - offerManagerSubdivision
-    - id: offer-accounting-role
+        - candidateManagerSubdivision
+    - id: candidate-accounting-role
       name:
         ru: Бухгалтерия
       assignees:
@@ -46,51 +45,55 @@ model:
     - id: draft
       name:
         ru: Черновик
-    - id: offer-reject
+    - id: candidate-reject
       name:
         ru: Отклонена
-    - id: offer-selection-candidates
+    - id: candidate-selection-candidates
       name:
         ru: Подбор кандидатов
-    - id: offer-resume-response
+    - id: candidate-schedule-intro-interview
       name:
-        ru: Направлен отклик на резюме
-    - id: offer-reject-from-candidate
+        ru: Назначение вводного интервью
+    - id: candidate-reject-from-candidate
       name:
         ru: Отказано со стороны кандидата
-    - id: offer-introductory-interview
+    - id: candidate-introductory-interview
       name:
         ru: Вводное интервью
-    - id: offer-candidate-rejected
+    - id: candidate-candidate-rejected
       name:
         ru: Кандидату отказано
-    - id: offer-tech-interview
+    - id: candidate-tech-interview
       name:
         ru: Техническое интервью
-    - id: offer-approve-condition
+    - id: candidate-approve-condition
       name:
         ru: Согласование условий оффера
-    - id: offer-wait-candidate-response
+    - id: candidate-wait-candidate-response
       name:
         ru: Ожидание ответа кандидата
-    - id: offer-approved
+    - id: candidate-candidate-response-processing
+      name:
+        ru: Обработка ответа кандидата
+    - id: candidate-approved
       name:
         ru: Оффер принят
-    - id: offer-on-work
+    - id: candidate-on-work
       name:
         ru: Вышел на работу
-    - id: offer-not-on-work
+    - id: candidate-not-on-work
       name:
         ru: Не вышел на работу
   attributes:
-    - id: offerRequest
+    - id: candidateRequest
       name:
         ru: Запрос
       type: ASSOC
-    - id: offerTechFeedback
+      multiple: true
+    - id: candidateTechFeedback
       name:
         ru: Фидбэк по техническому собеседованию
-    - id: offerIntroductoryFeedback
+    - id: candidateIntroFeedback
       name:
         ru: Фидбэк по вводному собеседованию
     - id: candidateLastName
@@ -115,30 +118,57 @@ model:
       type: ASSOC
     - id: candidateExperience
       name:
-        ru: Опыт работы
-    - id: candidateSalary
+        ru: Релевантыный опыт
+    - id: candidateDesiredSalary
       name:
-        ru: Заробатная плата
-    - id: candidateHardSkills
-      name:
-        ru: Hard skills
+        ru: Желаемая ЗП
     - id: candidateResume
       name:
         ru: Резюме
       type: CONTENT
-    - id: offerSalary
+    - id: candidateSalary
       name:
         ru: Оклад
       type: NUMBER
-    - id: offerDateWork
+    - id: candidateDateWork
       name:
         ru: Дата выхода на работу
       type: DATE
-    - id: offerInitiator
+    - id: candidateInitiator
       name:
         ru: Инициатор
       type: AUTHORITY
-    - id: offerManagerSubdivision
+    - id: candidateManagerSubdivision
       name:
         ru: Руководитель подразделения
       type: AUTHORITY
+    - id: candidateTechInterviewGrade
+      name:
+        ru: Грейд по результатам тех. интервью
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-grade-type
+        child: false
+    - id: candidatePosition
+      name:
+        ru: Должность
+      type: ASSOC
+      config:
+        typeRef: ''
+        child: false
+    - id: candidateIntroInterviewDate
+      name:
+        ru: Дата вводного интервью
+      type: DATE
+    - id: candidateTechInterviewDate
+      name:
+        ru: Дата технического интервью
+      type: DATE
+    - id: candidateResponseExpectedDate
+      name:
+        ru: Дата ожидаемого ответа
+      type: DATE
+    - id: candidateStartDateOnWork
+      name:
+        ru: Дата выхода на работу
+      type: DATE

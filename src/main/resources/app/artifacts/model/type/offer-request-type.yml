@@ -17,49 +17,45 @@ actions:
 defaultCreateVariant: true
 model:
   roles:
-    - id: offer-initiator-role
+    - id: request-initiator-role
       name:
         ru: Инициатор
       attributes:
         - idocs:initiator
-    - id: offer-director-role
+    - id: request-director-role
       name:
         ru: Генеральный директор
       assignees:
-        - anton.ivanov
-        - admin
-    - id: offer-hr-role
+        - GROUP_citeck-ceo
+    - id: request-hr-role
       name:
         ru: HR
       assignees:
         - GROUP_citeck-personnel-department
-    - id: offer-manager-subdivision
+    - id: request-manager-subdivision
       name:
         ru: Руководитель подразделения
       attributes:
-        - offerManagerSubdivision
+        - requestManagerSubdivision
   statuses:
     - id: draft
       name:
         ru: Черновик
-    - id: offer-director-approve
+    - id: request-director-approve
       name:
         ru: Согласование директором
-    - id: offer-rework
+    - id: request-rework
       name:
         ru: Доработка
-    - id: offer-reject
+    - id: request-reject
       name:
         ru: Отклонена
-    - id: offer-selection-candidates
+    - id: request-selection-candidates
       name:
         ru: Подбор кандидатов
-    - id: offer-on-work
+    - id: request-on-work
       name:
         ru: Вышел на работу
-    - id: offer-not-on-work
-      name:
-        ru: Не вышел на работу
   attributes:
     - id: idocs:registrationNumber
       name:
@@ -69,7 +65,7 @@ model:
         config:
           template: '${_docNum}'
         storingType: ON_EMPTY
-    - id: offer_issueDate
+    - id: request_issueDate
       name:
         ru: Дата создания
       type: DATE
@@ -85,46 +81,61 @@ model:
       name:
         ru: Инициатор
       type: ASSOC
-    - id: offerPosition
+    - id: requestPosition
       name:
         ru: Должность
       type: ASSOC
-    - id: offerSubdivision
+    - id: requestSubdivision
       name:
         ru: Подразделение
       type: ASSOC
-    - id: offerGrade
+    - id: requestGrade
       name:
         ru: Грейд
       type: ASSOC
-    - id: offerCity
+    - id: requestCity
       name:
         ru: Город
       type: ASSOC
-    - id: offerExperience
+    - id: requestExperience
       name:
         ru: Опыт работы
       type: ASSOC
-    - id: offerManagerSubdivision
+    - id: requestManagerSubdivision
       name:
         ru: Руководитель подразделения
       type: ASSOC
-    - id: offerSelectedCandidate
+    - id: requestSelectedCandidate
       name:
         ru: Выбранный кандидат
       type: ASSOC
-    - id: offerSalaryAndPrize
+      config:
+        typeRef: emodel/type@offer-candidate-type
+        child: false
+    - id: requestSalaryAndPrize
       name:
         ru: Зарплатная вилка и премия
       type: ASSOC
-    - id: offerComment
+    - id: requestComment
       name:
         ru: Комментарий
-    - id: offerTerm
+    - id: requestTerm
       name:
-        ru: Срок
+        ru: Планируемая дата выхода
       type: DATE
-    - id: offerApproveStage
+    - id: requestApproveStage
       name:
         ru: Номер этапа согласования
       type: NUMBER
+    - id: requestCandidates
+      name:
+        ru: Кандидаты
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-candidate-type
+        child: false
+      multiple: true
+    - id: requestUrgentSearch
+      name:
+        ru: Срочный поиск
+      type: BOOLEAN
