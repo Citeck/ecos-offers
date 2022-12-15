@@ -42,11 +42,6 @@ model:
         ru: Бухгалтерия
       assignees:
         - GROUP_citeck-accounting-department
-    - id: candidate-tech-interviewrs
-      name:
-        ru: Интервьюеры тех. интервью
-      attributes:
-        - candidateTechInterviewrs
   statuses:
     - id: draft
       name:
@@ -175,8 +170,3 @@ model:
       name:
         ru: Дата выхода на работу
       type: DATE
-    - id: candidateTechInterviewrs
-      name:
-        ru: Интервьюеры тех. интервью
-      type: PERSON
-      multiple: true

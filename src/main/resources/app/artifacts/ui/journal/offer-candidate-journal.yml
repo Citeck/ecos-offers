@@ -7,46 +7,17 @@ actions:
   - uiserv/action@delete
   - uiserv/action@edit
 columns:
-  - id: candidateCode
-    name:
-      ru: Код
   - id: candidateLastName
-    name:
-      ru: Фамилия
   - id: candidateFirstName
-    name:
-      ru: Имя
   - id: candidateMiddleName
-    name:
-      ru: Отчество
   - id: candidateBirthDate
-    name:
-      ru: Дата рождения
     type: DATE
   - id: candidateGender
-    name:
-      ru: Пол
   - id: candidateCityAssoc
-    name:
-      ru: Город
     type: ASSOC
   - id: candidateExperience
-    name:
-      ru: Опыт работы
     type: TEXT
   - id: candidateSalary
-    name:
-      ru: Заробатная плата
     type: TEXT
-  - id: candidateHardSkills
-    name:
-      ru: Hard skills
-    type: TEXT
-  - id: candidateResume
-    name:
-      ru: Hard skills
-    type: TEXT
-  - id: candidateRating
-    name:
-      ru: Оценка кандидата
-    type: TEXT
+  - id: candidateTechInterviewGrade
+    type: ASSOC

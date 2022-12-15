@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-done",
-  "formKey": "offer-form-done",
+  "id": "offer-form-intro-interview-appointment",
+  "formKey": "offer-form-intro-interview-appointment",
   "title": {
-    "en": "Offer Form Done"
+    "en": "Offer Form Intro Interview Appointment"
   },
   "description": {},
   "customModule": "",
@@ -19,6 +19,56 @@
   },
   "definition": {
     "components": [
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "candidateIntroInterviewDate"
+                },
+                "key": "_ECM_candidateIntroInterviewDate",
+                "validate": {
+                  "required": true
+                },
+                "format": "yyyy-MM-dd",
+                "datePicker": {
+                  "minDate": "",
+                  "maxDate": ""
+                },
+                "enableTime": false,
+                "timePicker": {
+                  "showMeridian": false
+                },
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "datetime",
+                "input": true,
+                "suffix": true
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "index": 1,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "components": []
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
       {
         "label": "Comment",
         "defaultValue": "",
@@ -81,7 +131,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-done"
+    "formId": "offer-form-intro-interview-appointment"
   },
   "attributes": {}
 }

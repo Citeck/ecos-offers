@@ -399,7 +399,7 @@
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n\nshow = !!candidateTechFeedback ||\n       !!candidateTechInterviewGrade ||\n       !!candidateTechFeedback ||\n       statusesToShow.includes(status);\n       \n       \n",
+            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n\nshow = !!candidateTechFeedback ||\n       !!candidateTechInterviewGrade ||\n       !!candidateTechFeedback ||\n       !!candidateTechInterviewrs ||\n       statusesToShow.includes(status);\n       \n       \n",
             "type": "panel",
             "input": false,
             "components": [
@@ -431,6 +431,20 @@
                         "input": true,
                         "suffix": true,
                         "format": "yyyy-MM-dd"
+                      },
+                      {
+                        "label": {
+                          "ru": "candidateTechInterviewrs"
+                        },
+                        "key": "candidateTechInterviewrs",
+                        "multiple": true,
+                        "allowedAuthorityType": "USER",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectOrgstruct",
+                        "input": true,
+                        "defaultValue": "",
+                        "reorder": false
                       }
                     ],
                     "type": "column",

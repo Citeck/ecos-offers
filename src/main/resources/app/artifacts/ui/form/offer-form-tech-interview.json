@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-approve",
-  "formKey": "offer-form-approve",
+  "id": "offer-form-tech-interview",
+  "formKey": "offer-form-tech-interview",
   "title": {
-    "en": "Offer Form Approve"
+    "en": "Offer Form Tech interview"
   },
   "description": {},
   "customModule": "",
@@ -11,22 +11,62 @@
   "system": false,
   "i18n": {
     "en": {
-      "Submit": "Approve",
-      "Rework": "Rework",
-      "Reject": "Reject"
+      "Send Reject": "Send Reject",
+      "Send Offer": "Send Offer"
     },
     "ru": {
-      "Submit": "Согласовать",
-      "Rework": "На доработку",
-      "Reject": "Отказать"
+      "Send Reject": "Отправить отказ",
+      "Send Offer": "Отправить оффер"
     }
   },
   "definition": {
     "components": [
       {
-        "label": "Comment",
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "candidateTechInterviewGrade"
+                },
+                "key": "_ECM_candidateTechInterviewGrade",
+                "validate": {
+                  "required": true
+                },
+                "modalTitle": "",
+                "journalId": "offer-grades-journal",
+                "queryData": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "selectJournal",
+                "input": true
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
+      {
+        "label": {
+          "ru": "candidateTechFeedback"
+        },
+        "key": "_ECM_candidateTechFeedback",
+        "validate": {
+          "required": true
+        },
         "defaultValue": "",
-        "key": "comment",
+        "refreshOn": [],
+        "optionalWhenDisabled": false,
         "type": "textarea",
         "input": true
       },
@@ -62,27 +102,6 @@
             "components": [
               {
                 "label": {
-                  "ru": "Rework"
-                },
-                "key": "outcome_Rework",
-                "state": "",
-                "block": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ]
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 2,
-            "components": [
-              {
-                "label": {
                   "ru": "Approve"
                 },
                 "key": "outcome_Approve",
@@ -102,6 +121,14 @@
             "type": "column",
             "input": false,
             "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
             "index": 3,
             "components": []
           }
@@ -111,7 +138,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-approve"
+    "formId": "offer-form-tech-interview"
   },
   "attributes": {}
 }

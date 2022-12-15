@@ -10,7 +10,7 @@
             <bpmn:outgoing >Flow_0tlaxxz</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="StartEvent_1ew9rff" targetRef="Gateway_146zco6" name="" id="Flow_08ksugo" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Согласование директором&quot;" id="Activity_10ezfvr" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Согласование директором\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-director-approve">
+        <bpmn:task name="Статус &quot;Согласование директором&quot;" id="Activity_10ezfvr" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Согласование директором\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-director-approve">
             <bpmn:incoming >Flow_0tlaxxz</bpmn:incoming>
             <bpmn:outgoing >Flow_0rmzwyp</bpmn:outgoing>
         </bpmn:task>
@@ -27,7 +27,7 @@
             <bpmn:outgoing >Flow_0ki1zsg</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="Activity_0cotdwb" targetRef="Gateway_0fybwsz" name="" id="Flow_0wx6805" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Доработка&quot;" id="Activity_0u8aw5e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Доработка\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-rework">
+        <bpmn:task name="Статус &quot;Доработка&quot;" id="Activity_0u8aw5e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Доработка\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-rework">
             <bpmn:incoming >Flow_01jed7l</bpmn:incoming>
             <bpmn:outgoing >Flow_1fqnkw8</bpmn:outgoing>
         </bpmn:task>
@@ -38,12 +38,12 @@
             <bpmn:outgoing >Flow_01o8ceq</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_0p1tluj" targetRef="Gateway_146zco6" name="" id="Flow_01o8ceq" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Подбор кандидатов&quot;" id="Activity_03llb2t" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Подбор кандидатов\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-selection-candidates">
+        <bpmn:task name="Статус &quot;Подбор кандидатов&quot;" id="Activity_03llb2t" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Подбор кандидатов\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-selection-candidates">
             <bpmn:incoming >Flow_03zfgxp</bpmn:incoming>
             <bpmn:outgoing >Flow_0h2pwv6</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_03llb2t" name="Ок" id="Flow_03zfgxp" ecos:name_ml="{&quot;en&quot;:&quot;Ок&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Approve&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:task name="Статус &quot;Отклонена&quot;" id="Activity_0h88vzc" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Отклонена\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-reject">
+        <bpmn:task name="Статус &quot;Отклонена&quot;" id="Activity_0h88vzc" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Отклонена\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-reject">
             <bpmn:incoming >Flow_0ki1zsg</bpmn:incoming>
             <bpmn:outgoing >Flow_0c5qhty</bpmn:outgoing>
         </bpmn:task>
@@ -55,7 +55,7 @@
         <bpmn:endEvent name="" id="Event_0rc956j" ecos:name_ml="{}">
             <bpmn:incoming >Flow_0bn1qo3</bpmn:incoming>
         </bpmn:endEvent>
-        <bpmn:task name="Статус &quot;Вышел на работу&quot;" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Вышел на работу\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="offer-on-work">
+        <bpmn:task name="Статус &quot;Вышел на работу&quot;" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Вышел на работу\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-on-work">
             <bpmn:incoming >Flow_1fnx54b</bpmn:incoming>
             <bpmn:outgoing >Flow_0bn1qo3</bpmn:outgoing>
         </bpmn:task>
@@ -118,14 +118,14 @@ print("candidatesID: ", candidatesID);
             <bpmndi:BPMNShape bpmnElement="Event_1v1xtn2" isExpanded="true" id="Event_1v1xtn2_di">
                 <dc:Bounds x="997.0" y="-78.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_01jmznm" isExpanded="true" id="Activity_12esxig_di">
-                <dc:Bounds x="1130.0" y="59.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_0rc956j" isExpanded="true" id="Event_0rc956j_di">
                 <dc:Bounds x="1602.0" y="81.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_1g96onh" isExpanded="true" id="Activity_1g96onh_di">
                 <dc:Bounds x="1450.0" y="59.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_01jmznm" isExpanded="true" id="Activity_12esxig_di">
+                <dc:Bounds x="1130.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_0qo9u8z" isExpanded="true" id="Activity_18504ip_di">
                 <dc:Bounds x="1290.0" y="59.0" width="100.0" height="80.0"/>

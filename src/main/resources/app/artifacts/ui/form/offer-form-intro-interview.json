@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-approve",
-  "formKey": "offer-form-approve",
+  "id": "offer-form-intro-interview",
+  "formKey": "offer-form-intro-interview",
   "title": {
-    "en": "Offer Form Approve"
+    "en": "Offer Form Intro interview"
   },
   "description": {},
   "customModule": "",
@@ -11,22 +11,27 @@
   "system": false,
   "i18n": {
     "en": {
-      "Submit": "Approve",
-      "Rework": "Rework",
-      "Reject": "Reject"
+      "Send Reject": "Send Reject",
+      "Send Offer": "Send Offer"
     },
     "ru": {
-      "Submit": "Согласовать",
-      "Rework": "На доработку",
-      "Reject": "Отказать"
+      "Send Reject": "Отправить отказ",
+      "Send Offer": "Отправить оффер"
     }
   },
   "definition": {
     "components": [
       {
-        "label": "Comment",
+        "label": {
+          "ru": "candidateIntroFeedback"
+        },
+        "key": "_ECM_candidateIntroFeedback",
+        "validate": {
+          "required": true
+        },
         "defaultValue": "",
-        "key": "comment",
+        "refreshOn": [],
+        "optionalWhenDisabled": false,
         "type": "textarea",
         "input": true
       },
@@ -62,9 +67,9 @@
             "components": [
               {
                 "label": {
-                  "ru": "Rework"
+                  "ru": "CandidateReject"
                 },
-                "key": "outcome_Rework",
+                "key": "outcome_CandidateReject",
                 "state": "",
                 "block": true,
                 "refreshOn": [],
@@ -111,7 +116,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-approve"
+    "formId": "offer-form-intro-interview"
   },
   "attributes": {}
 }
