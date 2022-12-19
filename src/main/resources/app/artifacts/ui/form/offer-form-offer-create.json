@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-intro-interview",
-  "formKey": "offer-form-intro-interview",
+  "id": "offer-form-offer-create",
+  "formKey": "offer-form-offer-create",
   "title": {
-    "en": "Offer Form Intro interview"
+    "en": "Offer Form Create Offer"
   },
   "description": {},
   "customModule": "",
@@ -14,17 +14,55 @@
     "components": [
       {
         "label": {
-          "ru": "candidateIntroFeedback"
+          "ru": "Columns"
         },
-        "key": "_ECM_candidateIntroFeedback",
-        "validate": {
-          "required": true
-        },
-        "defaultValue": "",
-        "refreshOn": [],
-        "optionalWhenDisabled": false,
-        "type": "textarea",
-        "input": true
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "candidateSalary"
+                },
+                "key": "_ECM_candidateSalary",
+                "validate": {
+                  "required": true
+                },
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "textfield",
+                "input": true
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "index": 1,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "components": [
+              {
+                "label": {
+                  "ru": "candidateResume"
+                },
+                "key": "_ECM_candidateResume",
+                "storage": "base64",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "file",
+                "input": true
+              }
+            ]
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
       },
       {
         "columns": [
@@ -55,20 +93,7 @@
             "input": false,
             "key": "column",
             "index": 1,
-            "components": [
-              {
-                "label": {
-                  "ru": "CandidateReject"
-                },
-                "key": "outcome_CandidateReject",
-                "state": "",
-                "block": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ]
+            "components": []
           },
           {
             "md": 3,
@@ -76,6 +101,14 @@
             "input": false,
             "key": "column",
             "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
             "components": [
               {
                 "label": {
@@ -92,14 +125,6 @@
                 "input": true
               }
             ]
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 3,
-            "components": []
           }
         ],
         "key": "columns2",
@@ -107,7 +132,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-intro-interview"
+    "formId": "offer-form-offer-create"
   },
   "attributes": {}
 }

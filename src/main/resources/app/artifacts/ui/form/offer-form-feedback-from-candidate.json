@@ -5,20 +5,11 @@
     "en": "Offer Form Feedback From Candidate"
   },
   "description": {},
-  "customModule": null,
+  "customModule": "",
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {
-    "en": {
-      "Accept Offer": "Accept Offer",
-      "Reject Offer": "Reject Offer"
-    },
-    "ru": {
-      "Accept Offer": "Принять оффер",
-      "Reject Offer": "Отклонить оффер"
-    }
-  },
+  "i18n": {},
   "definition": {
     "components": [
       {

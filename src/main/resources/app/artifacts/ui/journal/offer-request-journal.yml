@@ -5,7 +5,8 @@ name:
 actions:
   - uiserv/action@delete
   - uiserv/action@edit
-  - uiserv/action@view-task-in-background
+  - uiserv/action@view-dashboard-in-background
+  - uiserv/action@view-dashboard
 columns:
   - id: _created
     name:

@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-intro-interview",
-  "formKey": "offer-form-intro-interview",
+  "id": "offer-form-processing-request",
+  "formKey": "offer-form-processing-request",
   "title": {
-    "en": "Offer Form Intro interview"
+    "en": "Offer Form Processing Request"
   },
   "description": {},
   "customModule": "",
@@ -14,15 +14,51 @@
     "components": [
       {
         "label": {
-          "ru": "candidateIntroFeedback"
+          "ru": "Columns"
         },
-        "key": "_ECM_candidateIntroFeedback",
-        "validate": {
-          "required": true
-        },
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "candidateStartDateOnWork"
+                },
+                "key": "_ECM_candidateStartDateOnWork",
+                "validate": {
+                  "required": true
+                },
+                "datePicker": {
+                  "minDate": "",
+                  "maxDate": ""
+                },
+                "enableTime": false,
+                "timePicker": {
+                  "showMeridian": false
+                },
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "datetime",
+                "input": true,
+                "suffix": true,
+                "format": "yyyy-MM-dd"
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
+      {
+        "label": "Comment",
         "defaultValue": "",
-        "refreshOn": [],
-        "optionalWhenDisabled": false,
+        "key": "comment",
         "type": "textarea",
         "input": true
       },
@@ -58,9 +94,9 @@
             "components": [
               {
                 "label": {
-                  "ru": "CandidateReject"
+                  "ru": "Rework"
                 },
-                "key": "outcome_CandidateReject",
+                "key": "outcome_Rework",
                 "state": "",
                 "block": true,
                 "refreshOn": [],
@@ -107,7 +143,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-intro-interview"
+    "formId": "offer-form-processing-request"
   },
   "attributes": {}
 }

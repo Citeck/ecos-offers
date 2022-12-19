@@ -17,11 +17,6 @@ actions:
 defaultCreateVariant: true
 model:
   roles:
-    - id: candidate-initiator-role
-      name:
-        ru: Инициатор
-      attributes:
-        - candidateInitiator
     - id: candidate-director-role
       name:
         ru: Генеральный директор
@@ -32,21 +27,21 @@ model:
         ru: HR
       assignees:
         - GROUP_citeck-personnel-department
-    - id: candidate-manager-subdivision
-      name:
-        ru: Руководитель подразделения
-      attributes:
-        - candidateManagerSubdivision
     - id: candidate-accounting-role
       name:
-        ru: Бухгалтерия
+        ru: Руководитель бухгалтерии
       assignees:
-        - GROUP_citeck-accounting-department
+        - GROUP_citeck-head-accounting-department
     - id: candidate-tech-interviewrs
       name:
         ru: Интервьюеры тех. интервью
       attributes:
         - candidateTechInterviewrs
+    - id: candidate-direction-director
+      name:
+        ru: Руководитель направления
+      assignees:
+        - GROUP_citeck-direction-director
   statuses:
     - id: draft
       name:
@@ -137,14 +132,6 @@ model:
       name:
         ru: Дата выхода на работу
       type: DATE
-    - id: candidateInitiator
-      name:
-        ru: Инициатор
-      type: AUTHORITY
-    - id: candidateManagerSubdivision
-      name:
-        ru: Руководитель подразделения
-      type: AUTHORITY
     - id: candidateTechInterviewGrade
       name:
         ru: Грейд по результатам тех. интервью
@@ -180,3 +167,6 @@ model:
         ru: Интервьюеры тех. интервью
       type: PERSON
       multiple: true
+    - id: candidateEmail
+      name:
+        ru: Электронная почта

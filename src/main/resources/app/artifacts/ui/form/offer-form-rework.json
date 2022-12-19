@@ -5,18 +5,11 @@
     "en": "Offer Form Rework"
   },
   "description": {},
-  "customModule": null,
+  "customModule": "",
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {
-    "en": {
-      "Done": "Done"
-    },
-    "ru": {
-      "Done": "Обработано"
-    }
-  },
+  "i18n": {},
   "definition": {
     "components": [
       {

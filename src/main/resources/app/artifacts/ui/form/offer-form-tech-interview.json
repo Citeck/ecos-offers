@@ -9,16 +9,7 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {
-    "en": {
-      "Send Reject": "Send Reject",
-      "Send Offer": "Send Offer"
-    },
-    "ru": {
-      "Send Reject": "Отправить отказ",
-      "Send Offer": "Отправить оффер"
-    }
-  },
+  "i18n": {},
   "definition": {
     "components": [
       {

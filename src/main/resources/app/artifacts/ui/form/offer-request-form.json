@@ -9,18 +9,7 @@
   "typeRef": "emodel/type@offer-request-type",
   "width": "lg",
   "system": false,
-  "i18n": {
-    "ru": {
-      "idocs:registrationNumber": "Регистрационный номер",
-      "Save": "Сохранить",
-      "Cancel": "Отмена",
-      "generateNumber": "Сгенерировать номер",
-      "Create": "Подтвердить",
-      "cm:created": "Дата создания",
-      "idocs:initiator": "Инициатор",
-      "cm:content": "Содержимое"
-    }
-  },
+  "i18n": {},
   "definition": {
     "components": [
       {
@@ -151,7 +140,7 @@
                 "label": {
                   "ru": "Columns"
                 },
-                "key": "columns5",
+                "key": "columns7",
                 "columns": [
                   {
                     "components": [
@@ -169,7 +158,80 @@
                         },
                         "type": "selectOrgstruct",
                         "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": []
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns4",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "requestPosition"
+                        },
+                        "key": "requestPosition",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-position-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
                       },
+                      {
+                        "label": {
+                          "ru": "requestGrade"
+                        },
+                        "key": "requestGrade",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-grades-journal",
+                        "queryData": "",
+                        "customPredicateJs": "const { requestPosition } = data || {};\n\nvalue = {\n  \"t\":\"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": requestPosition\n};\n",
+                        "refreshOn": [],
+                        "customDefaultValue": "value = \"\";",
+                        "allowCalculateOverride": true,
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
                       {
                         "label": {
                           "ru": "requestSubdivision"
@@ -207,55 +269,21 @@
                         "type": "selectOrgstruct",
                         "input": true
                       }
-                    ],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "index": 0
-                  },
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns5",
+                "columns": [
                   {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
                     "components": [
-                      {
-                        "label": {
-                          "ru": "requestPosition"
-                        },
-                        "key": "requestPosition",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "offer-position-journal",
-                        "queryData": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "requestGrade"
-                        },
-                        "key": "requestGrade",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "offer-grades-journal",
-                        "queryData": "",
-                        "refreshOn": [
-                          "asyncDataForGrade"
-                        ],
-                        "customDefaultValue": "value = \"\";",
-                        "calculateValue": "const { asyncDataForGrade } = data || {};\nconst { records } = asyncDataForGrade || {};\n\nif (Array.isArray(records) && records > 0) {\n  value = records[0].id;\n}",
-                        "allowCalculateOverride": true,
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
-                      },
                       {
                         "label": {
                           "ru": "requestExperience"
@@ -293,6 +321,9 @@
                           "ru": "requestTerm"
                         },
                         "key": "requestTerm",
+                        "validate": {
+                          "required": true
+                        },
                         "format": "yyyy-MM-dd",
                         "datePicker": {
                           "minDate": "",
@@ -301,7 +332,7 @@
                         "enableTime": false,
                         "defaultValue": "",
                         "refreshOn": [],
-                        "optionalWhenDisabled": false,
+                        "optionalWhenDisabled": true,
                         "logic": [
                           {
                             "name": "setDisable",
@@ -346,7 +377,18 @@
                         "type": "checkbox",
                         "input": true
                       }
-                    ]
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": []
                   }
                 ],
                 "oneColumnInViewMode": false,
@@ -371,7 +413,42 @@
                         "optionalWhenDisabled": false,
                         "type": "textarea",
                         "input": true
-                      },
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0,
+                    "md": 12
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel",
+            "title": {
+              "ru": "Кандидаты"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns10",
+                "columns": [
+                  {
+                    "components": [
                       {
                         "label": {
                           "ru": "requestCandidates"
@@ -387,7 +464,19 @@
                         "type": "selectJournal",
                         "input": true,
                         "defaultValue": []
-                      },
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
                       {
                         "label": {
                           "ru": "requestSelectedCandidate"
@@ -402,12 +491,7 @@
                         "type": "selectJournal",
                         "input": true
                       }
-                    ],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "index": 0,
-                    "md": 12
+                    ]
                   }
                 ],
                 "oneColumnInViewMode": false,
@@ -551,32 +635,7 @@
             "input": false,
             "key": "column",
             "index": 2,
-            "components": [
-              {
-                "label": "AsyncData",
-                "source": {
-                  "type": "recordsQuery",
-                  "recordsQuery": {
-                    "query": "const {requestPosition = null} = data;\r\nvar value = {\r\n    query: {t: 'and', val: [\r\n        {t: 'eq', att: '_type', val: 'emodel/type@offer-grade-type'},\r\n        {t: \"eq\", att: \"gradesSimpleRoleTypeAssoc\", val: requestPosition},\r\n    ]},\r\n    language: 'predicate'\r\n}",
-                    "attributes": {},
-                    "isSingle": false
-                  },
-                  "forceLoad": false
-                },
-                "update": {
-                  "type": "disabled"
-                },
-                "refreshOn": [
-                  {
-                    "label": "requestPosition",
-                    "value": "requestPosition"
-                  }
-                ],
-                "key": "asyncDataForGrade",
-                "type": "asyncData",
-                "input": true
-              }
-            ]
+            "components": []
           }
         ],
         "oneColumnInViewMode": false,
