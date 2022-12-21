@@ -9,7 +9,20 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "Comment": "Комментарий",
+      "Reject": "Октлонить",
+      "Rework": "Доработать",
+      "Approve": "Согласовать"
+    },
+    "en": {
+      "Comment": "Comment",
+      "Reject": "Reject",
+      "Rework": "Rework",
+      "Approve": "Approve"
+    }
+  },
   "definition": {
     "components": [
       {

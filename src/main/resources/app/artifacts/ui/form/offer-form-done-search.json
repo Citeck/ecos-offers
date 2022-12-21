@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-offer-create",
-  "formKey": "offer-form-offer-create",
+  "id": "offer-form-done-search",
+  "formKey": "offer-form-done-search",
   "title": {
-    "en": "Offer Form Create Offer"
+    "en": "Offer Form Done Search"
   },
   "description": {},
   "customModule": "",
@@ -11,13 +11,13 @@
   "system": false,
   "i18n": {
     "ru": {
-      "candidateSalary": "Оклад",
-      "candidateOfferDocument": "Документ оффера",
+      "Comment": "Комментарий",
+      "requestSelectedCandidate": "Выбранный кандидат",
       "Done": "Подтвердить"
     },
     "en": {
-      "candidateSalary": "Salary",
-      "candidateOfferDocument": "Offer document",
+      "Comment": "Comment",
+      "requestSelectedCandidate": "Selected candidate",
       "Done": "Done"
     }
   },
@@ -33,16 +33,18 @@
             "components": [
               {
                 "label": {
-                  "ru": "candidateSalary"
+                  "ru": "requestSelectedCandidate"
                 },
-                "key": "_ECM_candidateSalary",
+                "key": "_ECM_requestSelectedCandidate",
                 "validate": {
                   "required": true
                 },
-                "defaultValue": "",
+                "modalTitle": "",
+                "journalId": "offer-candidate-journal",
+                "queryData": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
-                "type": "textfield",
+                "type": "selectJournal",
                 "input": true
               }
             ],
@@ -50,33 +52,18 @@
             "input": false,
             "key": "column",
             "index": 0
-          },
-          {
-            "index": 1,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "components": [
-              {
-                "label": {
-                  "ru": "candidateOfferDocument"
-                },
-                "key": "_ECM_candidateOfferDocument",
-                "validate": {
-                  "required": true
-                },
-                "storage": "base64",
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "file",
-                "input": true
-              }
-            ]
           }
         ],
         "oneColumnInViewMode": false,
         "type": "columns",
         "input": false
+      },
+      {
+        "label": "Comment",
+        "defaultValue": "",
+        "key": "comment",
+        "type": "textarea",
+        "input": true
       },
       {
         "columns": [
@@ -133,7 +120,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-offer-create"
+    "formId": "offer-form-done-search"
   },
   "attributes": {}
 }

@@ -11,15 +11,6 @@ actions:
 columns:
   - id: candidateLastName
   - id: candidateFirstName
-  - id: candidateMiddleName
-  - id: candidateBirthDate
-    type: DATE
-  - id: candidateGender
-  - id: candidateCityAssoc
-    type: ASSOC
-  - id: candidateExperience
-    type: TEXT
-  - id: candidateSalary
-    type: TEXT
   - id: candidateTechInterviewGrade
-    type: ASSOC
+  - id: candidateExperience
+  - id: candidateCityAssoc

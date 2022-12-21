@@ -1,41 +1,30 @@
 {
-  "id": "offer-form-offer-create",
-  "formKey": "offer-form-offer-create",
+  "id": "offer-position-form",
+  "formKey": "offer-position-form",
   "title": {
-    "en": "Offer Form Create Offer"
+    "ru": "offer-position"
   },
   "description": {},
   "customModule": "",
-  "typeRef": "",
-  "width": "lg",
+  "typeRef": "emodel/type@offer-position",
+  "width": "m",
   "system": false,
-  "i18n": {
-    "ru": {
-      "candidateSalary": "Оклад",
-      "candidateOfferDocument": "Документ оффера",
-      "Done": "Подтвердить"
-    },
-    "en": {
-      "candidateSalary": "Salary",
-      "candidateOfferDocument": "Offer document",
-      "Done": "Done"
-    }
-  },
+  "i18n": {},
   "definition": {
     "components": [
       {
         "label": {
           "ru": "Columns"
         },
-        "key": "columns3",
+        "key": "columns2",
         "columns": [
           {
             "components": [
               {
                 "label": {
-                  "ru": "candidateSalary"
+                  "ru": "offerPositionName"
                 },
-                "key": "_ECM_candidateSalary",
+                "key": "offerPositionName",
                 "validate": {
                   "required": true
                 },
@@ -59,16 +48,19 @@
             "components": [
               {
                 "label": {
-                  "ru": "candidateOfferDocument"
+                  "ru": "positionSubdivision"
                 },
-                "key": "_ECM_candidateOfferDocument",
+                "key": "positionSubdivision",
                 "validate": {
                   "required": true
                 },
-                "storage": "base64",
+                "allowedAuthorityType": "GROUP",
+                "allowedGroupType": "ROLE, BRANCH, GROUP",
+                "rootGroupName": "",
+                "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
-                "type": "file",
+                "type": "selectOrgstruct",
                 "input": true
               }
             ]
@@ -79,61 +71,71 @@
         "input": false
       },
       {
+        "type": "columns",
+        "key": "buttons-columns",
         "columns": [
           {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 0,
+            "components": [],
+            "key": "column"
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 1,
+            "key": "column",
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 2,
             "components": [
               {
-                "label": {
-                  "ru": "Done"
-                },
-                "key": "outcome_Done",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
                 "type": "button",
+                "key": "cancel",
+                "label": {
+                  "ru": "Отменить",
+                  "en": "Cancel"
+                },
+                "action": "event",
+                "event": "cancel",
+                "block": true,
                 "input": true
               }
             ],
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 0
+            "key": "column"
           },
           {
             "md": 3,
             "type": "column",
             "input": false,
-            "key": "column",
-            "index": 1,
-            "components": []
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 2,
-            "components": []
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
             "index": 3,
-            "components": []
+            "components": [
+              {
+                "type": "button",
+                "theme": "primary",
+                "key": "submit",
+                "label": {
+                  "ru": "Сохранить",
+                  "en": "Save"
+                },
+                "block": true,
+                "input": true
+              }
+            ],
+            "key": "column"
           }
         ],
-        "key": "columns2",
-        "type": "columns",
         "input": false
       }
     ],
-    "formId": "offer-form-offer-create"
+    "formId": "offer-position-form"
   },
   "attributes": {}
 }

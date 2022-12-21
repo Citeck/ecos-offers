@@ -8,31 +8,9 @@ actions:
   - uiserv/action@view-dashboard-in-background
   - uiserv/action@view-dashboard
 columns:
-  - id: _created
-    name:
-      ru: Дата создания
-    type: DATE
-  - id: registrationNumber
-    name:
-      ru: Регистрационный номер
-    type: TEXT
-  - id: offerCandidate
-    name:
-      ru: Кандидат
-    type: ASSOC
-  - id: offerPosition
-    name:
-      ru: Должность
-    type: ASSOC
-  - id: offerSubdivision
-    name:
-      ru: Подразделение
-    type: ASSOC
-  - id: offerGrade
-    name:
-      ru: Грейд
-    type: ASSOC
-  - id: initiator
-    name:
-      ru: Инициатор
-    type: AUTHORITY
+  - id: idocs:registrationNumber
+  - id: requestPosition
+  - id: requestGrade
+  - id: request_issueDate
+  - id: idocs:initiator
+  - id: requestCandidates

@@ -8,6 +8,5 @@ actions:
   - uiserv/action@edit
 columns:
   - id: offerPositionName
-    name:
-      ru: Название
     type: TEXT
+  - id: positionSubdivision

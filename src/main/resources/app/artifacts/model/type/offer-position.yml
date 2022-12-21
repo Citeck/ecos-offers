@@ -4,7 +4,7 @@ name:
   ru: offer-position
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
-formRef: uiserv/form@DEFAULT_FORM
+formRef: uiserv/form@offer-position-form
 journalRef: uiserv/journal@DEFAULT_JOURNAL
 inheritForm: false
 dispNameTemplate:
@@ -15,3 +15,7 @@ model:
     - id: offerPositionName
       name:
         ru: Название
+    - id: positionSubdivision
+      name:
+        ru: Подразделение
+      type: ASSOC

@@ -9,7 +9,20 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "candidateTechInterviewGrade": "Грейд по результатам тех. интервью",
+      "candidateTechFeedback": "Фидбэк по техническому собеседованию",
+      "Reject": "Отказ",
+      "Approve": "Подтвердить"
+    },
+    "en": {
+      "candidateTechInterviewGrade": "Tech interview grade",
+      "candidateTechFeedback": "Tech interview feedback",
+      "Reject": "Reject",
+      "Approve": "Approve"
+    }
+  },
   "definition": {
     "components": [
       {

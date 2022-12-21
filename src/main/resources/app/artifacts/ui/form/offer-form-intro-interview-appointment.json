@@ -9,7 +9,18 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "candidateIntroInterviewDate": "Дата вводного интервью",
+      "Done": "Подтвердить",
+      "Comment": "Комментарий"
+    },
+    "en": {
+      "candidateIntroInterviewDate": "Intro interview date",
+      "Done": "Done",
+      "Comment": "Comment"
+    }
+  },
   "definition": {
     "components": [
       {

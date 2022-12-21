@@ -9,7 +9,16 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "Comment": "Комментарий",
+      "Done": "Подтвердить"
+    },
+    "en": {
+      "Comment": "Comment",
+      "Done": "Done"
+    }
+  },
   "definition": {
     "components": [
       {

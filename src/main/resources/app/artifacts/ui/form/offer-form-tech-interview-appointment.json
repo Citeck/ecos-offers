@@ -9,7 +9,20 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "candidateTechInterviewDate": "Дата технического интервью",
+      "candidateTechInterviewrs": "Технические интервьюеры",
+      "Comment": "Комментарий",
+      "Done": "Подтвердить"
+    },
+    "en": {
+      "candidateTechInterviewDate": "Tech interview date",
+      "candidateTechInterviewrs": "Tech interviewrs",
+      "Comment": "Comment",
+      "Done": "Done"
+    }
+  },
   "definition": {
     "components": [
       {

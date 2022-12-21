@@ -164,9 +164,19 @@ model:
       type: DATE
     - id: candidateTechInterviewrs
       name:
-        ru: Интервьюеры тех. интервью
+        ru: Технические интервьюеры
       type: PERSON
       multiple: true
     - id: candidateEmail
       name:
         ru: Электронная почта
+    - id: candidateTelegram
+      name:
+        ru: Telegram
+    - id: candidatePhoneNumber
+      name:
+        ru: Номер телефона
+    - id: candidateOfferDocument
+      name:
+        ru: Документ оффера
+      type: CONTENT

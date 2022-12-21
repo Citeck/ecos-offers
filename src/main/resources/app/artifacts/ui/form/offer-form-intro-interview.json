@@ -9,7 +9,20 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "candidateIntroFeedback": "Фидбэк по вводному собеседованию",
+      "CandidateReject": "Отказ со стороны кандидата",
+      "Reject": "Кандидату отказано",
+      "Approve": "Подтвердить"
+    },
+    "en": {
+      "candidateIntroFeedback": "Intro interview feedback",
+      "CandidateReject": "Reject from candidate",
+      "Reject": "Кандидату отказано",
+      "Approve": "Approve"
+    }
+  },
   "definition": {
     "components": [
       {

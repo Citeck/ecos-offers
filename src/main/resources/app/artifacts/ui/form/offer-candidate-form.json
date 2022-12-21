@@ -22,9 +22,9 @@
             "label": {
               "ru": "Panel"
             },
-            "key": "panel5",
+            "key": "panel7",
             "title": {
-              "ru": "Основная информация"
+              "ru": "Запросы"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -35,7 +35,7 @@
                 "label": {
                   "ru": "Columns"
                 },
-                "key": "columns4",
+                "key": "columns13",
                 "columns": [
                   {
                     "components": [
@@ -63,24 +63,32 @@
                     "input": false,
                     "key": "column",
                     "index": 0
-                  },
-                  {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "components": []
                   }
                 ],
                 "oneColumnInViewMode": false,
                 "type": "columns",
                 "input": false
-              },
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel5",
+            "title": {
+              "ru": "Основная информация"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
               {
                 "label": {
                   "ru": "Columns"
                 },
-                "key": "columns11",
+                "key": "columns14",
                 "columns": [
                   {
                     "components": [
@@ -100,6 +108,29 @@
                       },
                       {
                         "label": {
+                          "ru": "candidateMiddleName"
+                        },
+                        "key": "candidateMiddleName",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
                           "ru": "candidateFirstName"
                         },
                         "key": "candidateFirstName",
@@ -111,34 +142,22 @@
                         "optionalWhenDisabled": false,
                         "type": "textfield",
                         "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "candidateMiddleName"
-                        },
-                        "key": "candidateMiddleName",
-                        "defaultValue": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "textfield",
-                        "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "candidateCityAssoc"
-                        },
-                        "key": "candidateCityAssoc",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "cities-journal",
-                        "queryData": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
-                      },
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns4",
+                "columns": [
+                  {
+                    "components": [
                       {
                         "label": {
                           "ru": "candidateBirthDate"
@@ -156,7 +175,19 @@
                         "type": "datetime",
                         "input": true,
                         "suffix": true
-                      },
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
                       {
                         "label": {
                           "ru": "candidateGender"
@@ -180,6 +211,37 @@
                         "type": "ecosSelect",
                         "input": true
                       }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              },
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns11",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateCityAssoc"
+                        },
+                        "key": "candidateCityAssoc",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "cities-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
                     ],
                     "type": "column",
                     "input": false,
@@ -191,6 +253,35 @@
                     "type": "column",
                     "input": false,
                     "key": "column",
+                    "components": []
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel6",
+            "title": {
+              "ru": "О работе"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns15",
+                "columns": [
+                  {
                     "components": [
                       {
                         "label": {
@@ -208,6 +299,32 @@
                         "type": "selectJournal",
                         "input": true
                       },
+                      {
+                        "label": {
+                          "ru": "candidateResume"
+                        },
+                        "key": "candidateResume",
+                        "validate": {
+                          "required": true
+                        },
+                        "storage": "base64",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "file",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
                       {
                         "label": {
                           "ru": "candidateExperience"
@@ -229,19 +346,69 @@
                         "optionalWhenDisabled": false,
                         "type": "textfield",
                         "input": true
-                      },
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel3",
+            "title": {
+              "ru": "Контакты"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns3",
+                "columns": [
+                  {
+                    "components": [
                       {
                         "label": {
-                          "ru": "candidateResume"
+                          "ru": "candidatePhoneNumber"
                         },
-                        "key": "candidateResume",
-                        "validate": {
-                          "required": true
-                        },
-                        "storage": "base64",
+                        "key": "candidatePhoneNumber",
+                        "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "type": "file",
+                        "type": "textfield",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateEmail"
+                        },
+                        "key": "candidateEmail",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
                         "input": true
                       }
                     ]
@@ -253,97 +420,33 @@
               },
               {
                 "label": {
-                  "ru": "Panel"
+                  "ru": "Columns"
                 },
-                "key": "panel3",
-                "title": {
-                  "ru": "Контакты"
-                },
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "panel",
-                "input": false,
-                "components": [
+                "key": "columns12",
+                "columns": [
                   {
-                    "label": {
-                      "ru": "Columns"
-                    },
-                    "key": "columns3",
-                    "columns": [
+                    "components": [
                       {
-                        "components": [
-                          {
-                            "label": {
-                              "ru": "candidatePhoneNumber"
-                            },
-                            "key": "candidatePhoneNumber",
-                            "defaultValue": "",
-                            "refreshOn": [],
-                            "optionalWhenDisabled": false,
-                            "type": "textfield",
-                            "input": true
-                          }
-                        ],
-                        "type": "column",
-                        "input": false,
-                        "key": "column",
-                        "index": 0
-                      },
-                      {
-                        "index": 1,
-                        "type": "column",
-                        "input": false,
-                        "key": "column",
-                        "components": [
-                          {
-                            "label": {
-                              "ru": "candidateEmail"
-                            },
-                            "key": "candidateEmail",
-                            "defaultValue": "",
-                            "refreshOn": [],
-                            "optionalWhenDisabled": false,
-                            "type": "textfield",
-                            "input": true
-                          }
-                        ]
+                        "label": {
+                          "ru": "candidateTelegram"
+                        },
+                        "key": "candidateTelegram",
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
                       }
                     ],
-                    "oneColumnInViewMode": false,
-                    "type": "columns",
-                    "input": false
-                  },
-                  {
-                    "label": {
-                      "ru": "Columns"
-                    },
-                    "key": "columns12",
-                    "columns": [
-                      {
-                        "components": [
-                          {
-                            "label": {
-                              "ru": "candidateTelegram"
-                            },
-                            "key": "candidateTelegram",
-                            "defaultValue": "",
-                            "refreshOn": [],
-                            "optionalWhenDisabled": false,
-                            "type": "textfield",
-                            "input": true
-                          }
-                        ],
-                        "type": "column",
-                        "input": false,
-                        "key": "column",
-                        "index": 0
-                      }
-                    ],
-                    "oneColumnInViewMode": false,
-                    "type": "columns",
-                    "input": false
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
                   }
-                ]
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
               }
             ]
           },
@@ -616,9 +719,9 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Upload"
+                          "ru": "candidateOfferDocument"
                         },
-                        "key": "upload",
+                        "key": "candidateOfferDocument",
                         "storage": "base64",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -824,7 +927,7 @@
                   "ru": "Сохранить"
                 },
                 "key": "save",
-                "state": "draft",
+                "state": "",
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,

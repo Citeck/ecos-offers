@@ -9,7 +9,20 @@
   "typeRef": "emodel/type@offer-request-type",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "Create": "Создать",
+      "Save": "Сохранить",
+      "Cancel": "Отменить",
+      "generateNumber": "Сгенерировать номер"
+    },
+    "en": {
+      "Create": "Create",
+      "Save": "Save",
+      "Cancel": "Cancel",
+      "generateNumber": "Generate number"
+    }
+  },
   "definition": {
     "components": [
       {
@@ -158,6 +171,22 @@
                         },
                         "type": "selectOrgstruct",
                         "input": true
+                      },
+                      {
+                        "label": {
+                          "ru": "requestPosition"
+                        },
+                        "key": "requestPosition",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-position-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
                       }
                     ],
                     "type": "column",
@@ -187,37 +216,25 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "requestPosition"
+                          "ru": "requestSubdivision"
                         },
-                        "key": "requestPosition",
+                        "key": "requestSubdivision",
                         "validate": {
                           "required": true
                         },
-                        "modalTitle": "",
-                        "journalId": "offer-position-journal",
-                        "queryData": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
-                      },
-                      {
-                        "label": {
-                          "ru": "requestGrade"
-                        },
-                        "key": "requestGrade",
-                        "validate": {
-                          "required": true
-                        },
-                        "modalTitle": "",
-                        "journalId": "offer-grades-journal",
-                        "queryData": "",
-                        "customPredicateJs": "const { requestPosition } = data || {};\n\nvalue = {\n  \"t\":\"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": requestPosition\n};\n",
-                        "refreshOn": [],
-                        "customDefaultValue": "value = \"\";",
+                        "allowedAuthorityType": "GROUP",
+                        "allowedGroupType": "ROLE, BRANCH, GROUP",
+                        "rootGroupName": "citeck",
+                        "isIncludedAdminGroup": true,
+                        "defaultValue": "",
+                        "refreshOn": [
+                          "getPositionSubdivision"
+                        ],
+                        "clearOnRefresh": true,
+                        "calculateValue": "const { getPositionSubdivision } = data || {};\nconst { subdivision } = getPositionSubdivision || {};\n\nvalue = subdivision;\n",
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
-                        "type": "selectJournal",
+                        "type": "selectOrgstruct",
                         "input": true
                       }
                     ],
@@ -232,24 +249,6 @@
                     "input": false,
                     "key": "column",
                     "components": [
-                      {
-                        "label": {
-                          "ru": "requestSubdivision"
-                        },
-                        "key": "requestSubdivision",
-                        "validate": {
-                          "required": true
-                        },
-                        "allowedAuthorityType": "GROUP",
-                        "allowedGroupType": "ROLE, BRANCH, GROUP",
-                        "rootGroupName": "citeck",
-                        "isIncludedAdminGroup": true,
-                        "defaultValue": "",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "selectOrgstruct",
-                        "input": true
-                      },
                       {
                         "label": {
                           "ru": "requestManagerSubdivision"
@@ -286,16 +285,19 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "requestExperience"
+                          "ru": "requestGrade"
                         },
-                        "key": "requestExperience",
+                        "key": "requestGrade",
                         "validate": {
                           "required": true
                         },
                         "modalTitle": "",
-                        "journalId": "offer-experience-journal",
+                        "journalId": "offer-grades-journal",
                         "queryData": "",
+                        "customPredicateJs": "const { requestPosition } = data || {};\n\nvalue = {\n  \"t\":\"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": requestPosition\n};\n",
                         "refreshOn": [],
+                        "customDefaultValue": "value = \"\";",
+                        "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
                         "input": true
@@ -310,6 +312,34 @@
                         },
                         "modalTitle": "",
                         "journalId": "cities-journal",
+                        "queryData": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "requestExperience"
+                        },
+                        "key": "requestExperience",
+                        "validate": {
+                          "required": true
+                        },
+                        "modalTitle": "",
+                        "journalId": "offer-experience-journal",
                         "queryData": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -377,18 +407,7 @@
                         "type": "checkbox",
                         "input": true
                       }
-                    ],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "index": 0
-                  },
-                  {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "components": []
+                    ]
                   }
                 ],
                 "oneColumnInViewMode": false,
@@ -438,6 +457,7 @@
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",
             "type": "panel",
             "input": false,
             "components": [
@@ -460,7 +480,6 @@
                         "queryData": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",
                         "type": "selectJournal",
                         "input": true,
                         "defaultValue": []
@@ -542,7 +561,33 @@
             "input": false,
             "key": "column",
             "index": 1,
-            "components": []
+            "components": [
+              {
+                "label": "getPositionSubdivision",
+                "source": {
+                  "type": "record",
+                  "record": {
+                    "id": "{{ data.requestPosition }}",
+                    "attributes": {
+                      "subdivision": "positionSubdivision?str"
+                    }
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "any-change"
+                },
+                "refreshOn": [
+                  {
+                    "label": "requestPosition",
+                    "value": "requestPosition"
+                  }
+                ],
+                "key": "getPositionSubdivision",
+                "type": "asyncData",
+                "input": true
+              }
+            ]
           },
           {
             "md": 4,
@@ -672,10 +717,14 @@
             "index": 1,
             "components": [
               {
-                "label": "Save",
-                "state": "draft",
-                "block": true,
+                "label": {
+                  "ru": "Save"
+                },
                 "key": "submit2",
+                "state": "",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
                 "type": "button",
                 "input": true
               }

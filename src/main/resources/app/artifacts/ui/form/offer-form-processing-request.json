@@ -9,7 +9,22 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "candidateStartDateOnWork": "Дата выхода на работу",
+      "Comment": "Комментарий",
+      "Reject": "Отклонить",
+      "Rework": "Доработать",
+      "Approve": "Подтвердить"
+    },
+    "en": {
+      "candidateStartDateOnWork": "Start date on work",
+      "Comment": "Comment",
+      "Reject": "Reject",
+      "Rework": "Rework",
+      "Approve": "Approve"
+    }
+  },
   "definition": {
     "components": [
       {
