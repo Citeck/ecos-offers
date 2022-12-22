@@ -4,16 +4,16 @@ name:
   ru: Отклонить
   en: Reject
 
-key: offer-workflow-reject
-type: fetch
+type: mutate
 confirm:
   title:
     ru: Отклонить
     en: Reject
   formRef: uiserv/form@offer-reject-candidate-form
   attributesMapping:
-    body.reason: reason
-record:
-  id: "${recordRef}"
-  attributes:
-    _status: reason
+    record.attributes._status: reason
+config:
+  record:
+    id: "${recordRef}"
+    attributes:
+      _status: reason

@@ -46,11 +46,11 @@
                   "values": [
                     {
                       "label": "Кандидату отказано",
-                      "value": "offer-candidate-rejected"
+                      "value": "candidate-candidate-rejected"
                     },
                     {
                       "label": "Отказано со стороны кандидата",
-                      "value": "offer-reject-from-candidate"
+                      "value": "candidate-reject-from-candidate"
                     }
                   ]
                 },
