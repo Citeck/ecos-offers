@@ -224,7 +224,7 @@
                         },
                         "allowedAuthorityType": "GROUP",
                         "allowedGroupType": "ROLE, BRANCH, GROUP",
-                        "rootGroupName": "citeck",
+                        "rootGroupName": "",
                         "isIncludedAdminGroup": true,
                         "defaultValue": "",
                         "refreshOn": [
@@ -264,6 +264,7 @@
                         ],
                         "clearOnRefresh": true,
                         "calculateValue": "const { getManager } = data || {};\nconst { records } = getManager || {};\n\nif (Array.isArray(records) && records !== 0) {\n  value = records[0];\n}\n",
+                        "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
                         "input": true
@@ -595,7 +596,31 @@
             "input": false,
             "key": "column",
             "index": 2,
-            "components": []
+            "components": [
+              {
+                "label": "getGroupName",
+                "source": {
+                  "type": "custom",
+                  "custom": {
+                    "syncData": "const { requestSubdivision } = data || {};\nconsole.log(\"requestSubdivision: \", requestSubdivision);\n\nvalue = requestSubdivision;\n",
+                    "asyncData": "\nlet load = () => {\n  if (data.includes(\"workspace://SpacesStore/\")) {\n    return \"cm:name\";\n  }\n  return \"id\";\n};\n\nvalue = Citeck.Records.get(data).load(load());"
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "any-change"
+                },
+                "refreshOn": [
+                  {
+                    "label": "requestSubdivision",
+                    "value": "requestSubdivision"
+                  }
+                ],
+                "key": "getGroupName",
+                "type": "asyncData",
+                "input": true
+              }
+            ]
           }
         ],
         "oneColumnInViewMode": false,
@@ -613,11 +638,10 @@
               {
                 "label": "getHeadGroup",
                 "source": {
-                  "type": "recordsQuery",
-                  "recordsQuery": {
-                    "query": "const { requestSubdivision } = data || {};\n\nvalue = {\n      sourceId: 'emodel/authority-group',\n      query: {\n        \"t\": \"and\",\n        \"val\": [\n          {\"t\": \"eq\", \"att\": \"authorityGroups\", \"val\": requestSubdivision},\n          {\"t\": \"contains\", \"att\": \"__ext_id\", \"val\": \"head\"}\n        ]\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n};\n",
-                    "attributes": {},
-                    "isSingle": false
+                  "type": "custom",
+                  "custom": {
+                    "syncData": "const { getGroupName } = data || {};\nconsole.log(\"getGroupName: \", getGroupName);\n\nif (typeof getGroupName === \"string\" && getGroupName.trim().length === 0) {\n  console.log(\"component getHeadGroup: getGroupName is blank\");\n  value = null;\n}\n\nlet groupName = getGroupName.replace(\"GROUP_\", \"\");\n\nlet headGroup = () => {\n  switch(groupName) {\n    case \"company_chief_accountant\": \n    case \"company_accountant\":\n    case \"company_accountancy\":\n        return \"company_chief_accountant\";\n    case \"production\": \n    case \"software_dev_head\":\n    case \"production_subdivision_1\":\n    case \"production_branch_1\":\n    case \"krasnodaroffice\":\n    case \"saratovoffice\":\n    case \"tomskoffice\":\n    case \"yaroslavloffice\":\n    case \"moscowoffice\":\n        return \"software_dev_head\";\n    case \"qa\":\n    case \"qa_head\":\n    case \"qa_engineer\":\n        return \"qa_head\";\n    case \"hr\":\n    case \"hr_manager\":\n        return \"hr_manager\";\n    case \"it\":\n    case \"marketing_sales\":\n    case \"analyst\":\n    case \"CTO\":\n        return \"production_director\";\n    default:\n        console.log(\"component getHeadGroup: subdivision not includes in orgstruct\");\n        return null;\n  }\n};\n\n\nif (getGroupName.includes(\"GROUP_\")) {\n  value = \"GROUP_\" + headGroup();\n} else {\n  value = headGroup();\n}\n\n",
+                    "asyncData": "let records = () => {\n  if (data === null) {\n    console.log(\"getHeadGroup: data is null\");\n    return;\n  } \n  \n  if (data.includes(\"GROUP_\")) {\n    return Citeck.Records.query({\n        sourceId: 'alfresco/',\n        query: {\n            \"t\": \"and\",\n            \"val\": [\n                {\"t\": \"eq\", \"att\": \"type\", \"val\":\"cm:authorityContainer\"},\n                {\"t\": \"eq\", \"att\": \"cm:name\", \"val\": data}\n            ]\n        },\n        language: 'predicate',\n        consistency: 'EVENTUAL'\n    });\n  }\n  \n  return Citeck.Records.query({\n      sourceId: 'emodel/authority-group',\n      query: {\n          \"t\": \"eq\", \"att\": \"id\", \"val\": \"production_director\"\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n  });\n};\n\nlet recordsResult = records();\n\nif (recordsResult !== null && Array.isArray(recordsResult) && \n    recordsResult.length > 0) {\n  value = recordsResult[0];\n} else {\n  console.log(\"component getHeadGroup: records is empty\")\n}\n\n\n"
                   },
                   "forceLoad": false
                 },
@@ -626,8 +650,8 @@
                 },
                 "refreshOn": [
                   {
-                    "label": "requestSubdivision",
-                    "value": "requestSubdivision"
+                    "label": "getGroupName",
+                    "value": "getGroupName"
                   }
                 ],
                 "key": "getHeadGroup",

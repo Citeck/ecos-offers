@@ -1,152 +1,143 @@
 {
-  "id" : "cities-form",
-  "formKey" : "cities-form",
-  "title" : {
-    "en" : "Город"
+  "id": "cities-form",
+  "formKey": "cities-form",
+  "title": {
+    "en": "Город"
   },
-  "description" : { },
-  "customModule" : null,
-  "typeRef" : "emodel/type@cities-type",
-  "width" : "lg",
-  "system" : false,
-  "i18n" : { },
-  "definition" : {
-    "components" : [ {
-      "label" : {
-        "ru" : "Columns"
-      },
-      "key" : "columns3",
-      "columns" : [ {
-        "components" : [ {
-          "label" : {
-            "ru" : "Код",
-            "en" : "Title"
-          },
-          "key" : "cityCode",
-          "defaultValue" : "",
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "properties" : {
-            "attribute" : "cm:title"
-          },
-          "type" : "textfield",
-          "input" : true
-        } ],
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 0
-      }, {
-        "index" : 1,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "components" : [ {
-          "label" : {
-            "ru" : "Название"
-          },
-          "key" : "cityName",
-          "defaultValue" : "",
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "type" : "textfield",
-          "input" : true,
-          "addAnother" : "ecos.forms.btn.add-another"
-        } ]
-      } ],
-      "oneColumnInViewMode" : false,
-      "type" : "columns",
-      "input" : false,
-      "addAnother" : "ecos.forms.btn.add-another"
-    }, {
-      "scrollableContent" : true,
-      "key" : "panel2",
-      "type" : "panel",
-      "input" : false
-    }, {
-      "label" : {
-        "ru" : "Columns"
-      },
-      "key" : "columns2",
-      "columns" : [ {
-        "components" : [ {
-          "label" : "Cancel",
-          "action" : "event",
-          "state" : "",
-          "showValidations" : false,
-          "event" : "cancel",
-          "block" : true,
-          "type" : "button",
-          "input" : true,
-          "key" : "submit2",
-          "conditional" : {
-            "show" : null,
-            "when" : null
+  "description": {},
+  "customModule": "",
+  "typeRef": "emodel/type@cities-type",
+  "width": "lg",
+  "system": false,
+  "i18n": {},
+  "definition": {
+    "components": [
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Название"
+                },
+                "key": "cityName",
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "textfield",
+                "input": true
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0,
+            "md": 12
           }
-        } ],
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "md" : 3,
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
+      {
+        "label": {
+          "ru": "Columns"
         },
-        "index" : 0
-      }, {
-        "components" : [ ],
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
-        },
-        "index" : 1,
-        "md" : 3
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "label" : "Column",
-        "components" : [ ],
-        "clearOnHide" : true,
-        "conditional" : {
-          "show" : null,
-          "when" : null
-        },
-        "index" : 2
-      }, {
-        "md" : 3,
-        "type" : "column",
-        "input" : false,
-        "key" : "column",
-        "index" : 3,
-        "components" : [ {
-          "label" : {
-            "ru" : "Создать",
-            "en" : "Submit"
+        "key": "columns2",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": "Cancel",
+                "action": "event",
+                "state": "",
+                "showValidations": false,
+                "event": "cancel",
+                "block": true,
+                "type": "button",
+                "input": true,
+                "key": "submit2",
+                "conditional": {
+                  "show": null,
+                  "when": null
+                }
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "md": 3,
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 0
           },
-          "key" : "submit",
-          "state" : "",
-          "theme" : "primary",
-          "block" : true,
-          "disableOnInvalid" : true,
-          "refreshOn" : [ ],
-          "optionalWhenDisabled" : false,
-          "type" : "button",
-          "input" : true
-        } ]
-      } ],
-      "oneColumnInViewMode" : false,
-      "type" : "columns",
-      "input" : false
-    } ]
+          {
+            "components": [],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 1,
+            "md": 3
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "components": [],
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 2
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": [
+              {
+                "label": {
+                  "ru": "Создать",
+                  "en": "Submit"
+                },
+                "key": "submit",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "cities-form"
   },
-  "attributes" : { }
+  "attributes": {}
 }

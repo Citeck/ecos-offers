@@ -1,7 +1,7 @@
 ---
 id: offer-position
 name:
-  ru: offer-position
+  ru: Должность
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-position-form

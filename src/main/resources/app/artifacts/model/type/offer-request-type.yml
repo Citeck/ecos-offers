@@ -26,12 +26,12 @@ model:
       name:
         ru: Генеральный директор
       assignees:
-        - GROUP_citeck-ceo
+        - GROUP_company_director
     - id: request-hr-role
       name:
         ru: HR
       assignees:
-        - GROUP_citeck-personnel-department
+        - GROUP_hr
     - id: request-manager-subdivision
       name:
         ru: Руководитель подразделения

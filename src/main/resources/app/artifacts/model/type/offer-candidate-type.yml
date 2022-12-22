@@ -21,17 +21,17 @@ model:
       name:
         ru: Генеральный директор
       assignees:
-        - GROUP_citeck-ceo
+        - GROUP_company_director
     - id: candidate-hr-role
       name:
         ru: HR
       assignees:
-        - GROUP_citeck-personnel-department
+        - GROUP_hr
     - id: candidate-accounting-role
       name:
-        ru: Руководитель бухгалтерии
+        ru: Главный бухгалтер
       assignees:
-        - GROUP_citeck-head-accounting-department
+        - GROUP_company_chief_accountant
     - id: candidate-tech-interviewrs
       name:
         ru: Интервьюеры тех. интервью
@@ -39,9 +39,9 @@ model:
         - candidateTechInterviewrs
     - id: candidate-direction-director
       name:
-        ru: Руководитель направления
+        ru: Директор по производству
       assignees:
-        - GROUP_citeck-direction-director
+        - GROUP_production_director
   statuses:
     - id: draft
       name:
