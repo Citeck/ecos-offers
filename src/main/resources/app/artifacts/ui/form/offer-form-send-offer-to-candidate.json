@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-tech-interview-appointment",
-  "formKey": "offer-form-tech-interview-appointment",
+  "id": "offer-form-send-offer-to-candidate",
+  "formKey": "offer-form-send-offer-to-candidate",
   "title": {
-    "en": "Offer Form Tech Interview Appointment"
+    "en": "Offer Form Send Offer To Candidate"
   },
   "description": {},
   "customModule": "",
@@ -11,16 +11,14 @@
   "system": false,
   "i18n": {
     "ru": {
-      "candidateTechInterviewDate": "Дата технического интервью",
-      "candidateTechInterviewrs": "Технические интервьюеры",
       "Comment": "Комментарий",
-      "Done": "Подтвердить"
+      "Done": "Подтвердить",
+      "candidateResponseExpectedDate": "Дата ожидаемого ответа"
     },
     "en": {
-      "candidateTechInterviewDate": "Tech interview date",
-      "candidateTechInterviewrs": "Tech interviewrs",
       "Comment": "Comment",
-      "Done": "Done"
+      "Done": "Done",
+      "candidateResponseExpectedDate": "Response expected date"
     }
   },
   "definition": {
@@ -35,13 +33,13 @@
             "components": [
               {
                 "label": {
-                  "ru": "candidateTechInterviewDate"
+                  "ru": "candidateResponseExpectedDate"
                 },
-                "key": "_ECM_candidateTechInterviewDate",
+                "key": "_ECM_candidateResponseExpectedDate",
                 "validate": {
                   "required": true
                 },
-                "format": "dd.MM.yyyy hh:mm",
+                "format": "dd.MM.yyyy",
                 "datePicker": {
                   "minDate": "",
                   "maxDate": ""
@@ -62,31 +60,6 @@
             "input": false,
             "key": "column",
             "index": 0
-          },
-          {
-            "index": 1,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "components": [
-              {
-                "label": {
-                  "ru": "candidateTechInterviewrs"
-                },
-                "key": "_ECM_candidateTechInterviewrs",
-                "multiple": true,
-                "validate": {
-                  "required": true
-                },
-                "allowedAuthorityType": "USER",
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "selectOrgstruct",
-                "input": true,
-                "defaultValue": "",
-                "reorder": false
-              }
-            ]
           }
         ],
         "oneColumnInViewMode": false,
@@ -155,7 +128,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-tech-interview-appointment"
+    "formId": "offer-form-send-offer-to-candidate"
   },
   "attributes": {}
 }

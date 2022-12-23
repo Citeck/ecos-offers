@@ -160,7 +160,7 @@
                           "ru": "candidateBirthDate"
                         },
                         "key": "candidateBirthDate",
-                        "format": "yyyy-MM-dd",
+                        "format": "dd.MM.yyyy",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
@@ -308,6 +308,12 @@
                           "required": true
                         },
                         "storage": "base64",
+                        "fileTypes": [
+                          {
+                            "label": "Резюме",
+                            "value": "offer-candidate-resume"
+                          }
+                        ],
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "file",
@@ -477,7 +483,7 @@
                           "ru": "candidateIntroInterviewDate"
                         },
                         "key": "candidateIntroInterviewDate",
-                        "format": "yyyy-MM-dd HH:mm",
+                        "format": "dd.MM.yyyy hh:mm",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
@@ -570,7 +576,7 @@
                           "ru": "candidateTechInterviewDate"
                         },
                         "key": "candidateTechInterviewDate",
-                        "format": "yyyy-MM-dd HH:mm",
+                        "format": "dd.MM.yyyy hh:mm",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
@@ -721,6 +727,12 @@
                         },
                         "key": "candidateOfferDocument",
                         "storage": "base64",
+                        "fileTypes": [
+                          {
+                            "label": "Оффер",
+                            "value": "offer-candidate-offer"
+                          }
+                        ],
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "file",
@@ -746,6 +758,7 @@
                           "ru": "candidateResponseExpectedDate"
                         },
                         "key": "candidateResponseExpectedDate",
+                        "format": "dd.MM.yyyy",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
@@ -759,8 +772,7 @@
                         "optionalWhenDisabled": false,
                         "type": "datetime",
                         "input": true,
-                        "suffix": true,
-                        "format": "yyyy-MM-dd"
+                        "suffix": true
                       }
                     ],
                     "type": "column",
@@ -779,7 +791,7 @@
                           "ru": "candidateStartDateOnWork"
                         },
                         "key": "candidateStartDateOnWork",
-                        "format": "yyyy-MM-dd",
+                        "format": "dd.MM.yyyy",
                         "clearOnHide": false,
                         "datePicker": {
                           "minDate": "",

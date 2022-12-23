@@ -48,7 +48,7 @@
                   "ru": "Reject"
                 },
                 "key": "outcome_Reject",
-                "state": "",
+                "state": "draft",
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -74,7 +74,7 @@
                   "ru": "CandidateReject"
                 },
                 "key": "outcome_CandidateReject",
-                "state": "",
+                "state": "draft",
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,

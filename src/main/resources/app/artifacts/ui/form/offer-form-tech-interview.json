@@ -83,7 +83,7 @@
                   "ru": "Reject"
                 },
                 "key": "outcome_Reject",
-                "state": "",
+                "state": "draft",
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,

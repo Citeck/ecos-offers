@@ -360,7 +360,7 @@
                         "validate": {
                           "required": true
                         },
-                        "format": "yyyy-MM-dd",
+                        "format": "dd.MM.yyyy",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""

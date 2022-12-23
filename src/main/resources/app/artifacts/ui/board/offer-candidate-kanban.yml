@@ -2,7 +2,7 @@
 id: offer-candidate-kanban
 typeRef: emodel/type@offer-candidate-type
 journalRef: uiserv/journal@offer-candidate-journal
-cardFormRef: uiserv/form@offer-candidate-form
+cardFormRef: uiserv/form@offer-candidate-kanban-form
 readOnly: true
 name:
   en: Board

@@ -11,6 +11,16 @@ dispNameTemplate:
   ru: '${gradesNumber}'
 defaultCreateVariant: true
 model:
+  roles:
+    - id: hr
+      name:
+        ru: HR
+      assignees:
+        - GROUP_hr
+  statuses:
+    - id: EMPTY
+      name:
+        ru: EMPTY
   attributes:
     - id: gradesSimpleRoleTypeAssoc
       name:

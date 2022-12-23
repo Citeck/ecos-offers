@@ -14,3 +14,4 @@ columns:
   - id: candidateTechInterviewGrade
   - id: candidateExperience
   - id: candidateCityAssoc
+  - id: _status
