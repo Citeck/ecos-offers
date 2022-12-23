@@ -45,9 +45,6 @@
                         },
                         "key": "candidateRequest",
                         "multiple": true,
-                        "validate": {
-                          "required": true
-                        },
                         "modalTitle": "",
                         "journalId": "offer-request-journal",
                         "queryData": "",
@@ -169,6 +166,9 @@
                           "maxDate": ""
                         },
                         "enableTime": false,
+                        "timePicker": {
+                          "showMeridian": false
+                        },
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -477,11 +477,11 @@
                           "ru": "candidateIntroInterviewDate"
                         },
                         "key": "candidateIntroInterviewDate",
+                        "format": "yyyy-MM-dd HH:mm",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
                         },
-                        "enableTime": false,
                         "timePicker": {
                           "showMeridian": false
                         },
@@ -490,8 +490,7 @@
                         "optionalWhenDisabled": false,
                         "type": "datetime",
                         "input": true,
-                        "suffix": true,
-                        "format": "yyyy-MM-dd"
+                        "suffix": true
                       }
                     ],
                     "type": "column",
@@ -571,11 +570,11 @@
                           "ru": "candidateTechInterviewDate"
                         },
                         "key": "candidateTechInterviewDate",
+                        "format": "yyyy-MM-dd HH:mm",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
                         },
-                        "enableTime": false,
                         "timePicker": {
                           "showMeridian": false
                         },
@@ -584,8 +583,7 @@
                         "optionalWhenDisabled": false,
                         "type": "datetime",
                         "input": true,
-                        "suffix": true,
-                        "format": "yyyy-MM-dd"
+                        "suffix": true
                       },
                       {
                         "label": {

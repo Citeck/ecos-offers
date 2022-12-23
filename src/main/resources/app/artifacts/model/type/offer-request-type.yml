@@ -69,14 +69,6 @@ model:
       name:
         ru: Дата создания
       type: DATE
-    - id: reg_number_counter
-      name:
-        ru: Счетчик регномера
-      computed:
-        type: COUNTER
-        config:
-          numTemplateRef: emodel/num-template@offer-number-template
-        storingType: ON_CREATE
     - id: idocs:initiator
       name:
         ru: Инициатор

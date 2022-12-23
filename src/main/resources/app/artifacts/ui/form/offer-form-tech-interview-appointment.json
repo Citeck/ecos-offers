@@ -41,11 +41,11 @@
                 "validate": {
                   "required": true
                 },
+                "format": "yyyy-MM-dd HH:mm",
                 "datePicker": {
                   "minDate": "",
                   "maxDate": ""
                 },
-                "enableTime": false,
                 "timePicker": {
                   "showMeridian": false
                 },
@@ -54,8 +54,7 @@
                 "optionalWhenDisabled": false,
                 "type": "datetime",
                 "input": true,
-                "suffix": true,
-                "format": "yyyy-MM-dd"
+                "suffix": true
               }
             ],
             "type": "column",

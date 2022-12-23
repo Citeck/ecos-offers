@@ -149,11 +149,11 @@ model:
     - id: candidateIntroInterviewDate
       name:
         ru: Дата вводного интервью
-      type: DATE
+      type: DATETIME
     - id: candidateTechInterviewDate
       name:
         ru: Дата технического интервью
-      type: DATE
+      type: DATETIME
     - id: candidateResponseExpectedDate
       name:
         ru: Дата ожидаемого ответа

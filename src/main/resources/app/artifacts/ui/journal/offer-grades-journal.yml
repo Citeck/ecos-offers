@@ -6,6 +6,8 @@ typeRef: emodel/type@offer-grade-type
 actions:
   - uiserv/action@delete
   - uiserv/action@edit
+  - uiserv/action@view-dashboard
+  - uiserv/action@view-dashboard-in-background
 columns:
   - id: gradesSimpleRoleTypeAssoc
     name:

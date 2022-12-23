@@ -39,12 +39,11 @@
                 "validate": {
                   "required": true
                 },
-                "format": "yyyy-MM-dd",
+                "format": "yyyy-MM-dd HH:mm",
                 "datePicker": {
                   "minDate": "",
                   "maxDate": ""
                 },
-                "enableTime": false,
                 "timePicker": {
                   "showMeridian": false
                 },

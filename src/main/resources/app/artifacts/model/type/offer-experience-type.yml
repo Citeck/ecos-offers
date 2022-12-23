@@ -4,7 +4,7 @@ name:
   ru: Опыт
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
-formRef: uiserv/form@DEFAULT_FORM
+formRef: uiserv/form@offer-experience-form
 journalRef: uiserv/journal@offer-experience-journal
 inheritActions: false
 dispNameTemplate:

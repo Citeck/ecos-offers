@@ -1,30 +1,43 @@
 {
-  "id": "cities-form",
-  "formKey": "cities-form",
+  "id": "offer-experience-form",
+  "formKey": "",
   "title": {
-    "en": "Город"
+    "ru": "Опыт"
   },
   "description": {},
   "customModule": "",
-  "typeRef": "emodel/type@cities-type",
-  "width": "lg",
+  "typeRef": "",
+  "width": "m",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "ru": {
+      "experienceStart": "От",
+      "experienceEnd": "До",
+      "cancel": "Отменить",
+      "submit": "Сохранить"
+    },
+    "en": {
+      "experienceStart": "From",
+      "experienceEnd": "To",
+      "cancel": "Cancel",
+      "submit": "Save"
+    }
+  },
   "definition": {
     "components": [
       {
         "label": {
           "ru": "Columns"
         },
-        "key": "columns3",
+        "key": "columns2",
         "columns": [
           {
             "components": [
               {
                 "label": {
-                  "ru": "Название"
+                  "ru": "experienceStart"
                 },
-                "key": "cityName",
+                "key": "experienceStart",
                 "validate": {
                   "required": true
                 },
@@ -38,98 +51,26 @@
             "type": "column",
             "input": false,
             "key": "column",
-            "index": 0,
-            "md": 12
-          }
-        ],
-        "oneColumnInViewMode": false,
-        "type": "columns",
-        "input": false
-      },
-      {
-        "label": {
-          "ru": "Columns"
-        },
-        "key": "columns2",
-        "columns": [
-          {
-            "components": [
-              {
-                "label": "Cancel",
-                "action": "event",
-                "state": "",
-                "showValidations": false,
-                "event": "cancel",
-                "block": true,
-                "type": "button",
-                "input": true,
-                "key": "submit2",
-                "conditional": {
-                  "show": null,
-                  "when": null
-                }
-              }
-            ],
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "label": "Column",
-            "md": 3,
-            "clearOnHide": true,
-            "conditional": {
-              "show": null,
-              "when": null
-            },
             "index": 0
           },
           {
-            "components": [],
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "label": "Column",
-            "clearOnHide": true,
-            "conditional": {
-              "show": null,
-              "when": null
-            },
             "index": 1,
-            "md": 3
-          },
-          {
-            "md": 3,
             "type": "column",
             "input": false,
             "key": "column",
-            "label": "Column",
-            "components": [],
-            "clearOnHide": true,
-            "conditional": {
-              "show": null,
-              "when": null
-            },
-            "index": 2
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 3,
             "components": [
               {
                 "label": {
-                  "ru": "Создать",
-                  "en": "Submit"
+                  "ru": "experienceEnd"
                 },
-                "key": "submit",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
+                "key": "experienceEnd",
+                "validate": {
+                  "required": true
+                },
+                "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
-                "type": "button",
+                "type": "textfield",
                 "input": true
               }
             ]
@@ -138,9 +79,78 @@
         "oneColumnInViewMode": false,
         "type": "columns",
         "input": false
+      },
+      {
+        "type": "columns",
+        "key": "buttons-columns",
+        "columns": [
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 0,
+            "components": [
+              {
+                "label": {
+                  "ru": "cancel"
+                },
+                "key": "cancel",
+                "action": "event",
+                "state": "",
+                "showValidations": false,
+                "event": "cancel",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "key": "column"
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 1,
+            "key": "column",
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 2,
+            "components": [],
+            "key": "column"
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 3,
+            "components": [
+              {
+                "label": {
+                  "ru": "submit"
+                },
+                "key": "submit",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "key": "column"
+          }
+        ],
+        "input": false
       }
     ],
-    "formId": "cities-form"
+    "formId": "offer-experience-form"
   },
   "attributes": {}
 }

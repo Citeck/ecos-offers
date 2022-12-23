@@ -75,9 +75,6 @@
                   "ru": "gradesRequirements"
                 },
                 "key": "gradesRequirements",
-                "validate": {
-                  "required": true
-                },
                 "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,

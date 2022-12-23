@@ -14,13 +14,15 @@
       "Create": "Создать",
       "Save": "Сохранить",
       "Cancel": "Отменить",
-      "generateNumber": "Сгенерировать номер"
+      "generateNumber": "Сгенерировать номер",
+      "cm:created": "Дата создания"
     },
     "en": {
       "Create": "Create",
       "Save": "Save",
       "Cancel": "Cancel",
-      "generateNumber": "Generate number"
+      "generateNumber": "Generate number",
+      "cm:created": "Creation date"
     }
   },
   "definition": {
@@ -92,12 +94,15 @@
                         "input": true
                       },
                       {
-                        "label": "generateNumber",
-                        "labelPosition": "right-right",
+                        "label": {
+                          "ru": "generateNumber"
+                        },
+                        "key": "generateNumber",
                         "persistent": "client-only",
                         "clearOnHide": false,
                         "defaultValue": true,
-                        "key": "generateNumber",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "customConditional": "show = instance.options.formMode === 'CREATE'",
                         "type": "checkbox",
                         "input": true
@@ -602,8 +607,8 @@
                 "source": {
                   "type": "custom",
                   "custom": {
-                    "syncData": "const { requestSubdivision } = data || {};\nconsole.log(\"requestSubdivision: \", requestSubdivision);\n\nvalue = requestSubdivision;\n",
-                    "asyncData": "\nlet load = () => {\n  if (data.includes(\"workspace://SpacesStore/\")) {\n    return \"cm:name\";\n  }\n  return \"id\";\n};\n\nvalue = Citeck.Records.get(data).load(load());"
+                    "syncData": "const { requestSubdivision } = data || {};\n\nvalue = requestSubdivision;\n",
+                    "asyncData": "let load = () => {\n  if (data.includes(\"workspace://SpacesStore/\")) {\n    return \"cm:name\";\n  }\n  return \"id\";\n};\n\nvalue = Citeck.Records.get(data).load(load());"
                   },
                   "forceLoad": false
                 },
@@ -640,8 +645,8 @@
                 "source": {
                   "type": "custom",
                   "custom": {
-                    "syncData": "const { getGroupName } = data || {};\nconsole.log(\"getGroupName: \", getGroupName);\n\nif (typeof getGroupName === \"string\" && getGroupName.trim().length === 0) {\n  console.log(\"component getHeadGroup: getGroupName is blank\");\n  value = null;\n}\n\nlet groupName = getGroupName.replace(\"GROUP_\", \"\");\n\nlet headGroup = () => {\n  switch(groupName) {\n    case \"company_chief_accountant\": \n    case \"company_accountant\":\n    case \"company_accountancy\":\n        return \"company_chief_accountant\";\n    case \"production\": \n    case \"software_dev_head\":\n    case \"production_subdivision_1\":\n    case \"production_branch_1\":\n    case \"krasnodaroffice\":\n    case \"saratovoffice\":\n    case \"tomskoffice\":\n    case \"yaroslavloffice\":\n    case \"moscowoffice\":\n        return \"software_dev_head\";\n    case \"qa\":\n    case \"qa_head\":\n    case \"qa_engineer\":\n        return \"qa_head\";\n    case \"hr\":\n    case \"hr_manager\":\n        return \"hr_manager\";\n    case \"it\":\n    case \"marketing_sales\":\n    case \"analyst\":\n    case \"CTO\":\n        return \"production_director\";\n    default:\n        console.log(\"component getHeadGroup: subdivision not includes in orgstruct\");\n        return null;\n  }\n};\n\n\nif (getGroupName.includes(\"GROUP_\")) {\n  value = \"GROUP_\" + headGroup();\n} else {\n  value = headGroup();\n}\n\n",
-                    "asyncData": "let records = () => {\n  if (data === null) {\n    console.log(\"getHeadGroup: data is null\");\n    return;\n  } \n  \n  if (data.includes(\"GROUP_\")) {\n    return Citeck.Records.query({\n        sourceId: 'alfresco/',\n        query: {\n            \"t\": \"and\",\n            \"val\": [\n                {\"t\": \"eq\", \"att\": \"type\", \"val\":\"cm:authorityContainer\"},\n                {\"t\": \"eq\", \"att\": \"cm:name\", \"val\": data}\n            ]\n        },\n        language: 'predicate',\n        consistency: 'EVENTUAL'\n    });\n  }\n  \n  return Citeck.Records.query({\n      sourceId: 'emodel/authority-group',\n      query: {\n          \"t\": \"eq\", \"att\": \"id\", \"val\": \"production_director\"\n      },\n      language: 'predicate',\n      consistency: 'EVENTUAL'\n  });\n};\n\nlet recordsResult = records();\n\nif (recordsResult !== null && Array.isArray(recordsResult) && \n    recordsResult.length > 0) {\n  value = recordsResult[0];\n} else {\n  console.log(\"component getHeadGroup: records is empty\")\n}\n\n\n"
+                    "syncData": "const { getGroupName } = data || {};\r\n\r\nlet calculate = (getGroupName) => {\r\n    if (typeof getGroupName !== \"string\" || getGroupName.trim().length === 0) {\r\n        return null;\r\n    }\r\n\r\n    let groupName = getGroupName.replace(\"GROUP_\", \"\");\r\n\r\n    let getHeadGroup = () => {\r\n        switch(groupName) {\r\n            case \"company_chief_accountant\":\r\n            case \"company_accountant\":\r\n            case \"company_accountancy\":\r\n                return \"company_chief_accountant\";\r\n            case \"production\":\r\n            case \"software_dev_head\":\r\n            case \"production_subdivision_1\":\r\n            case \"production_branch_1\":\r\n            case \"krasnodaroffice\":\r\n            case \"saratovoffice\":\r\n            case \"tomskoffice\":\r\n            case \"yaroslavloffice\":\r\n            case \"moscowoffice\":\r\n                return \"software_dev_head\";\r\n            case \"qa\":\r\n            case \"qa_head\":\r\n            case \"qa_engineer\":\r\n                return \"qa_head\";\r\n            case \"hr\":\r\n            case \"hr_manager\":\r\n                return \"hr_manager\";\r\n            case \"it\":\r\n            case \"marketing_sales\":\r\n            case \"analyst\":\r\n            case \"CTO\":\r\n                return \"production_director\";\r\n            default:\r\n                return null;\r\n        }\r\n    };\r\n\r\n    if (getGroupName.includes(\"GROUP_\")) {\r\n        return \"GROUP_\" + getHeadGroup();\r\n    }\r\n    return getHeadGroup();\r\n};\r\n\r\n\r\nvalue = calculate(getGroupName);\r\n\r\n\r\n",
+                    "asyncData": "let records = (data) => {\r\n    if (data === null) {\r\n        return;\r\n    }\r\n\r\n    if (data.includes(\"GROUP_\")) {\r\n        return Citeck.Records.query({\r\n            sourceId: 'alfresco/',\r\n            query: {\r\n                \"t\": \"and\",\r\n                \"val\": [\r\n                    {\"t\": \"eq\", \"att\": \"type\", \"val\":\"cm:authorityContainer\"},\r\n                    {\"t\": \"eq\", \"att\": \"cm:name\", \"val\": data}\r\n                ]\r\n            },\r\n            language: 'predicate',\r\n            consistency: 'EVENTUAL'\r\n        });\r\n    }\r\n\r\n    return Citeck.Records.query({\r\n        sourceId: 'emodel/authority-group',\r\n        query: {\r\n            \"t\": \"eq\", \"att\": \"id\", \"val\": \"production_director\"\r\n        },\r\n        language: 'predicate',\r\n        consistency: 'EVENTUAL'\r\n    });\r\n};\r\n\r\nvalue = records(data);\r\n\r\n"
                   },
                   "forceLoad": false
                 },
