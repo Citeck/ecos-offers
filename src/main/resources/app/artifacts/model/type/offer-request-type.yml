@@ -1,13 +1,13 @@
 ---
 id: offer-request-type
 name:
-  ru: Запрос
+  ru: Заявка на подбор
 storageType: ECOS_MODEL
 parentRef: emodel/type@case
 formRef: uiserv/form@offer-request-form
 journalRef: uiserv/journal@offer-request-journal
 dispNameTemplate:
-  ru: Запрос №${idocs:registrationNumber}
+  ru: Заявка №${idocs:registrationNumber} на подбор ${requestPosition?disp}, ${requestTerm|fmt("dd.MM.yyyy")}
   en: Request №${idocs:registrationNumber}
 numTemplateRef: emodel/num-template@offer-number-template
 actions:

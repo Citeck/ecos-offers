@@ -25,11 +25,3 @@ columns:
     name:
       ru: Обязанности
     type: TEXT
-  - id: gradesSalary
-    name:
-      ru: Вилка оклада
-    type: TEXT
-  - id: gradesPrize
-    name:
-      ru: Премия
-    type: TEXT

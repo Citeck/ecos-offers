@@ -294,9 +294,6 @@
                           "ru": "requestGrade"
                         },
                         "key": "requestGrade",
-                        "validate": {
-                          "required": true
-                        },
                         "modalTitle": "",
                         "journalId": "offer-grades-journal",
                         "queryData": "",
@@ -510,6 +507,7 @@
                         "modalTitle": "",
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
+                        "customPredicateJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",

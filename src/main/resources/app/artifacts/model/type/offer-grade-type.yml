@@ -17,6 +17,11 @@ model:
         ru: HR
       assignees:
         - GROUP_hr
+    - id: managers
+      name:
+        ru: Менеджеры
+      assignees:
+        - GROUP_analysts_pm
   statuses:
     - id: EMPTY
       name:

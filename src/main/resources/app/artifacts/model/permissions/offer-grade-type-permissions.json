@@ -5,8 +5,78 @@
     "matrix": {
       "hr": {
         "EMPTY": "WRITE"
+      },
+      "managers": {
+        "EMPTY": "READ"
       }
     }
   },
-  "attributes": {}
+  "attributes": {
+    "gradesSimpleRoleTypeAssoc": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "gradesNumber": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "gradesRequirements": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "gradesResponsibilities": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "gradesSalary": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "NONE"
+        }
+      },
+      "rules": []
+    },
+    "gradesPrize": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "managers": {
+          "EMPTY": "NONE"
+        }
+      },
+      "rules": []
+    }
+  }
 }

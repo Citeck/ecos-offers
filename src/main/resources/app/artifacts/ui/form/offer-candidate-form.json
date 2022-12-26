@@ -24,7 +24,7 @@
             },
             "key": "panel7",
             "title": {
-              "ru": "Запросы"
+              "ru": "Регистрационная информация"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -60,6 +60,32 @@
                     "input": false,
                     "key": "column",
                     "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Статус кандидата",
+                          "en": "Candidate status"
+                        },
+                        "key": "candidateStatus",
+                        "disabled": true,
+                        "persistent": false,
+                        "defaultValue": "",
+                        "refreshOn": [
+                          "caseStatusName"
+                        ],
+                        "clearOnRefresh": true,
+                        "calculateValue": "const { caseStatusName } = data || {};\nconst { status } = caseStatusName || {};\n\nvalue = status;",
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      }
+                    ]
                   }
                 ],
                 "oneColumnInViewMode": false,
@@ -844,6 +870,25 @@
                   "type": "once"
                 },
                 "key": "caseStatus",
+                "type": "asyncData",
+                "input": true
+              },
+              {
+                "label": "caseStatusName",
+                "source": {
+                  "type": "record",
+                  "record": {
+                    "id": "{{recordId}}",
+                    "attributes": {
+                      "status": "_status?disp"
+                    }
+                  },
+                  "forceLoad": false
+                },
+                "update": {
+                  "type": "once"
+                },
+                "key": "caseStatusName",
                 "type": "asyncData",
                 "input": true
               }

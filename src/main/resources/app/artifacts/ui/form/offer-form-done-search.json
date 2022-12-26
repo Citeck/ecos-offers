@@ -13,12 +13,14 @@
     "ru": {
       "Comment": "Комментарий",
       "requestSelectedCandidate": "Выбранный кандидат",
-      "Done": "Подтвердить"
+      "Done": "Подтвердить",
+      "requestCandidates": "Кандидаты"
     },
     "en": {
       "Comment": "Comment",
       "requestSelectedCandidate": "Selected candidate",
-      "Done": "Done"
+      "Done": "Done",
+      "requestCandidates": "Candidates"
     }
   },
   "definition": {
@@ -33,12 +35,9 @@
             "components": [
               {
                 "label": {
-                  "ru": "requestSelectedCandidate"
+                  "ru": "requestCandidates"
                 },
-                "key": "_ECM_requestSelectedCandidate",
-                "validate": {
-                  "required": true
-                },
+                "key": "_ECM_requestCandidates",
                 "modalTitle": "",
                 "journalId": "offer-candidate-journal",
                 "queryData": "",
@@ -52,6 +51,31 @@
             "input": false,
             "key": "column",
             "index": 0
+          },
+          {
+            "index": 1,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "components": [
+              {
+                "label": {
+                  "ru": "requestSelectedCandidate"
+                },
+                "key": "_ECM_requestSelectedCandidate",
+                "validate": {
+                  "required": true
+                },
+                "modalTitle": "",
+                "journalId": "offer-candidate-journal",
+                "queryData": "",
+                "customPredicateJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "selectJournal",
+                "input": true
+              }
+            ]
           }
         ],
         "oneColumnInViewMode": false,
