@@ -1,0 +1,12 @@
+{
+  "id": "c3043cdc-0fa2-426c-8292-fee037eace99",
+  "typeRef": "emodel/type@offer-grade-type",
+  "permissions": {
+    "matrix": {
+      "hr": {
+        "EMPTY": "WRITE"
+      }
+    }
+  },
+  "attributes": {}
+}
