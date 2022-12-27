@@ -61,7 +61,7 @@
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Activity_03llb2t" targetRef="Activity_0awkua3" name="" id="Flow_0h2pwv6" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_01jmznm" targetRef="Activity_1g96onh" name="" id="Flow_0itatcg" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Поиск кандидатов и направление отлика на резюме" id="Activity_01jmznm" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Поиск кандидатов и направление отлика на резюме&quot;}" ecos:formRef="uiserv/form@offer-form-done-search" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
+        <bpmn:userTask name="Подбор и выбор кандидатов" id="Activity_01jmznm" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Подбор и выбор кандидатов&quot;}" ecos:formRef="uiserv/form@offer-form-done-search" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
             <bpmn:incoming >Flow_1h735g0</bpmn:incoming>
             <bpmn:outgoing >Flow_0itatcg</bpmn:outgoing>
         </bpmn:userTask>

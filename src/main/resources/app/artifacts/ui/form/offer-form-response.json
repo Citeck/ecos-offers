@@ -36,7 +36,7 @@
             "components": [
               {
                 "label": {
-                  "ru": "Отменить"
+                  "ru": "Reject"
                 },
                 "key": "outcome_Reject",
                 "state": "",
@@ -62,7 +62,7 @@
             "components": [
               {
                 "label": {
-                  "ru": "Подтвердить"
+                  "ru": "Approve"
                 },
                 "key": "outcome_Approve",
                 "state": "",

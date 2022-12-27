@@ -6,7 +6,7 @@
       "hr": {
         "EMPTY": "WRITE"
       },
-      "managers": {
+      "everyone": {
         "EMPTY": "READ"
       }
     }
@@ -17,7 +17,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "READ"
         }
       },
@@ -28,7 +28,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "READ"
         }
       },
@@ -39,7 +39,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "READ"
         }
       },
@@ -50,7 +50,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "READ"
         }
       },
@@ -61,7 +61,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "NONE"
         }
       },
@@ -72,7 +72,7 @@
         "hr": {
           "EMPTY": "WRITE"
         },
-        "managers": {
+        "everyone": {
           "EMPTY": "NONE"
         }
       },

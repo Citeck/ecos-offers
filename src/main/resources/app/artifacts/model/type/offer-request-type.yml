@@ -7,7 +7,7 @@ parentRef: emodel/type@case
 formRef: uiserv/form@offer-request-form
 journalRef: uiserv/journal@offer-request-journal
 dispNameTemplate:
-  ru: Заявка №${idocs:registrationNumber} на подбор ${requestPosition?disp}, ${requestTerm|fmt("dd.MM.yyyy")}
+  ru: Заявка №${idocs:registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDate}
   en: Request №${idocs:registrationNumber}
 numTemplateRef: emodel/num-template@offer-number-template
 actions:
@@ -131,3 +131,22 @@ model:
       name:
         ru: Срочный поиск
       type: BOOLEAN
+    - id: requestShowDate
+      name:
+        ru: Показ даты
+      computed:
+        type: SCRIPT
+        config:
+          fn: |-
+            // function calculate() {
+            //   var urgent = value.load("requestUrgentSearch?bool!");
+            //   if (urgent) {
+            //     return "Срочный поиск";
+            //   }
+            //   return value.load("requestTerm|fmt('dd.MM.yyyy')");
+            // }
+
+            // calculate();
+
+            return value.load("requestUrgentSearch?bool!") ? "Срочный поиск" : value.load("requestTerm|fmt('dd.MM.yyyy')");
+        storingType: ON_EMPTY

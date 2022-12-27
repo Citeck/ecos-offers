@@ -35,12 +35,19 @@
             "components": [
               {
                 "label": {
-                  "ru": "requestCandidates"
+                  "ru": "requestSelectedCandidate"
                 },
-                "key": "_ECM_requestCandidates",
+                "key": "_ECM_requestSelectedCandidate",
+                "validate": {
+                  "required": true
+                },
                 "modalTitle": "",
                 "journalId": "offer-candidate-journal",
                 "queryData": "",
+                "customPredicateJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
+                "computed": {
+                  "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
+                },
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "selectJournal",
@@ -57,25 +64,7 @@
             "type": "column",
             "input": false,
             "key": "column",
-            "components": [
-              {
-                "label": {
-                  "ru": "requestSelectedCandidate"
-                },
-                "key": "_ECM_requestSelectedCandidate",
-                "validate": {
-                  "required": true
-                },
-                "modalTitle": "",
-                "journalId": "offer-candidate-journal",
-                "queryData": "",
-                "customPredicateJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "selectJournal",
-                "input": true
-              }
-            ]
+            "components": []
           }
         ],
         "oneColumnInViewMode": false,

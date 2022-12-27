@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-approve",
-  "formKey": "offer-form-approve",
+  "id": "offer-form-on-work",
+  "formKey": "offer-form-on-work",
   "title": {
-    "en": "Offer Form Approve"
+    "en": "Offer Form On Work"
   },
   "description": {},
   "customModule": "",
@@ -12,15 +12,13 @@
   "i18n": {
     "ru": {
       "Comment": "Комментарий",
-      "Reject": "Отклонить",
-      "Rework": "Доработать",
-      "Approve": "Согласовать"
+      "Approve": "Вышел на работу",
+      "Reject": "Не вышел на работу"
     },
     "en": {
       "Comment": "Comment",
-      "Reject": "Reject",
-      "Rework": "Rework",
-      "Approve": "Approve"
+      "Approve": "Went to work",
+      "Reject": "Didn't show up for work"
     }
   },
   "definition": {
@@ -64,27 +62,6 @@
             "components": [
               {
                 "label": {
-                  "ru": "Rework"
-                },
-                "key": "outcome_Rework",
-                "state": "",
-                "block": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ]
-          },
-          {
-            "md": 3,
-            "type": "column",
-            "input": false,
-            "key": "column",
-            "index": 2,
-            "components": [
-              {
-                "label": {
                   "ru": "Approve"
                 },
                 "key": "outcome_Approve",
@@ -104,6 +81,14 @@
             "type": "column",
             "input": false,
             "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
             "index": 3,
             "components": []
           }
@@ -113,7 +98,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-approve"
+    "formId": "offer-form-response"
   },
   "attributes": {}
 }

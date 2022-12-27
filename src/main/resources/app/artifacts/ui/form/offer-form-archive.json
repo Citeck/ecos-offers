@@ -1,8 +1,8 @@
 {
-  "id": "offer-form-approve",
-  "formKey": "offer-form-approve",
+  "id": "offer-form-archive",
+  "formKey": "offer-form-archive",
   "title": {
-    "en": "Offer Form Approve"
+    "en": "Offer Form Archive"
   },
   "description": {},
   "customModule": "",
@@ -12,15 +12,11 @@
   "i18n": {
     "ru": {
       "Comment": "Комментарий",
-      "Reject": "Отклонить",
-      "Rework": "Доработать",
-      "Approve": "Согласовать"
+      "Done": "Начать процесс заново"
     },
     "en": {
       "Comment": "Comment",
-      "Reject": "Reject",
-      "Rework": "Rework",
-      "Approve": "Approve"
+      "Done": "Start process again"
     }
   },
   "definition": {
@@ -38,11 +34,13 @@
             "components": [
               {
                 "label": {
-                  "ru": "Reject"
+                  "ru": "Done"
                 },
-                "key": "outcome_Reject",
+                "key": "outcome_Done",
                 "state": "",
+                "theme": "primary",
                 "block": true,
+                "disableOnInvalid": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "button",
@@ -61,20 +59,7 @@
             "input": false,
             "key": "column",
             "index": 1,
-            "components": [
-              {
-                "label": {
-                  "ru": "Rework"
-                },
-                "key": "outcome_Rework",
-                "state": "",
-                "block": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ]
+            "components": []
           },
           {
             "md": 3,
@@ -82,22 +67,7 @@
             "input": false,
             "key": "column",
             "index": 2,
-            "components": [
-              {
-                "label": {
-                  "ru": "Approve"
-                },
-                "key": "outcome_Approve",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ]
+            "components": []
           },
           {
             "md": 3,
@@ -113,7 +83,7 @@
         "input": false
       }
     ],
-    "formId": "offer-form-approve"
+    "formId": "offer-form-done"
   },
   "attributes": {}
 }

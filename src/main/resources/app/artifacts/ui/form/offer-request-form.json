@@ -481,11 +481,14 @@
                         "modalTitle": "",
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
+                        "computed": {
+                          "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
+                        },
+                        "defaultValue": [],
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
-                        "input": true,
-                        "defaultValue": []
+                        "input": true
                       }
                     ],
                     "type": "column",
@@ -508,6 +511,9 @@
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
                         "customPredicateJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
+                        "computed": {
+                          "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
+                        },
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",

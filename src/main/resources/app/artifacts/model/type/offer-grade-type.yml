@@ -8,7 +8,7 @@ formRef: uiserv/form@offer-grade-form
 journalRef: uiserv/journal@DEFAULT_JOURNAL
 inheritActions: false
 dispNameTemplate:
-  ru: '${gradesNumber}'
+  ru: Грейд №${gradesNumber}, ${gradesSimpleRoleTypeAssoc?disp}
 defaultCreateVariant: true
 model:
   roles:
@@ -17,11 +17,11 @@ model:
         ru: HR
       assignees:
         - GROUP_hr
-    - id: managers
+    - id: everyone
       name:
-        ru: Менеджеры
+        ru: Все
       assignees:
-        - GROUP_analysts_pm
+        - GROUP_EVERYONE
   statuses:
     - id: EMPTY
       name:
