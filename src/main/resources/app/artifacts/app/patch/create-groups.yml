@@ -1,0 +1,255 @@
+---
+id: create-groups
+date: 2022-02-02T00:00:10Z
+type: mutate
+targetApp: emodel
+config:
+  records:
+    - id: emodel/person@
+      attributes:
+        id: admin
+        firstName: admin
+        email: admin@admin.ru
+        personDisabled: false
+        authorityGroups:
+          - emodel/authority-group@ECOS_ADMINISTRATORS
+          - emodel/authority-group@company
+          - emodel/authority-group@company_director
+          - emodel/authority-group@company_accountancy
+          - emodel/authority-group@company_chief_accountant
+          - emodel/authority-group@company_accountant
+          - emodel/authority-group@production
+          - emodel/authority-group@software_dev_head
+          - emodel/authority-group@hr
+          - emodel/authority-group@hr_manager
+          - emodel/authority-group@qa
+          - emodel/authority-group@qa_head
+          - emodel/authority-group@qa_engineer
+          - emodel/authority-group@it
+          - emodel/authority-group@marketing_sales
+          - emodel/authority-group@production_subdivision_1
+          - emodel/authority-group@production_branch_1
+          - emodel/authority-group@krasnodaroffice
+          - emodel/authority-group@saratovoffice
+          - emodel/authority-group@tomskoffice
+          - emodel/authority-group@yaroslavloffice
+          - emodel/authority-group@moscowoffice
+          - emodel/authority-group@production_director
+          - emodel/authority-group@CTO
+          - emodel/authority-group@analysts_pm
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company
+        name:
+          ru: Citeck
+          en: Citeck
+        authorityGroups:
+          - emodel/authority-group@_orgstruct_home_
+          -
+    - id: emodel/authority-group@
+      attributes:
+        id: analysts_pm
+        name:
+          ru: Аналитики ПМ
+          en: Analysts PM
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_director
+        name:
+          ru: Генеральный директор
+          en: CEO
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_accountancy
+        name:
+          ru: Бухгалтерия
+          en: Accountancy
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_chief_accountant
+        name:
+          ru: Главный бухгалтер
+          en: Chief accountant
+        authorityGroups:
+          - emodel/authority-group@company_accountancy
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_accountant
+        name:
+          ru: Бухгалтер
+          en: Accountant
+        authorityGroups:
+          - emodel/authority-group@company_accountancy
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production
+        name:
+          ru: Департамент разработки и внедрения ПО (производство)
+          en: Production
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: software_dev_head
+        name:
+          ru: Руководитель департамента разработки ПО
+          en: Software dev head
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: hr
+        name:
+          ru: Отдел кадров
+          en: HR
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: hr_manager
+        name:
+          ru: Специалист по работе с персоналом
+          en: HR manager
+        authorityGroups:
+          - emodel/authority-group@hr
+
+    - id: emodel/authority-group@
+      attributes:
+        id: qa
+        name:
+          ru: Отдел QA
+          en: QA
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: qa_head
+        name:
+          ru: Руководитель отдела QA
+          en: QA head
+        authorityGroups:
+          - emodel/authority-group@qa
+
+    - id: emodel/authority-group@
+      attributes:
+        id: qa_engineer
+        name:
+          ru: QA инженер
+          en: QA engineer
+        authorityGroups:
+          - emodel/authority-group@qa
+
+    - id: emodel/authority-group@
+      attributes:
+        id: it
+        name:
+          ru: ИТ-отдел
+          en: IT
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: marketing_sales
+        name:
+          ru: Маркетинг и продажи
+          en: Marketing and sales
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production_subdivision_1
+        name:
+          ru: Подзраделение в г. Магнитогорск
+          en: Magnitogorsk
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production_branch_1
+        name:
+          ru: Подразделение в г. Санкт-Петербург
+          en: Saint-Petersburg
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: krasnodaroffice
+        name:
+          ru: Подразделение в г. Краснодар
+          en: Krasnodar
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: saratovoffice
+        name:
+          ru: Подразделение в г. Саратов
+          en: Saratov
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: tomskoffice
+        name:
+          ru: Подразделение в г. Томск
+          en: Tomsk
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: yaroslavloffice
+        name:
+          ru: Подразделение в г. Ярославль
+          en: Yaroslavl
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: moscowoffice
+        name:
+          ru: Центральный офис в г. Москва
+          en: Moscow
+        authorityGroups:
+          - emodel/authority-group@production
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production_director
+        name:
+          ru: Директор по производству
+          en: Production Director
+        authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: CTO
+        name:
+          ru: Технический директор
+          en: CTO
+        authorityGroups:
+          - emodel/authority-group@company

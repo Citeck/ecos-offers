@@ -1,7 +1,0 @@
----
-id: offer-candidate-resume
-storageType: ECOS_MODEL
-parentRef: emodel/type@attachment
-formRef: uiserv/form@DEFAULT_FORM
-journalRef: uiserv/journal@DEFAULT_JOURNAL
-defaultCreateVariant: true
