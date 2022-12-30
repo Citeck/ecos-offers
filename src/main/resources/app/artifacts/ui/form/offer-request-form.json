@@ -204,7 +204,21 @@
                     "type": "column",
                     "input": false,
                     "key": "column",
-                    "components": []
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "requestProjectAssoc"
+                        },
+                        "key": "requestProjectAssoc",
+                        "modalTitle": "",
+                        "journalId": "offer-project-journal",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true,
+                        "queryData": ""
+                      }
+                    ]
                   }
                 ],
                 "oneColumnInViewMode": false,

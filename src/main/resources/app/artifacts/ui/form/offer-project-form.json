@@ -1,0 +1,123 @@
+{
+  "id": "offer-project-form",
+  "formKey": "offer-project-form",
+  "title": {
+    "ru": "Проект",
+    "en": "Project"
+  },
+  "description": {},
+  "customModule": "",
+  "typeRef": "",
+  "width": "m",
+  "system": false,
+  "i18n": {},
+  "definition": {
+    "components": [
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns2",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Название проекта",
+                  "en": "Project name"
+                },
+                "key": "projectName",
+                "validate": {
+                  "required": true
+                },
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "textfield",
+                "input": true
+              }
+            ],
+            "md": 12,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "buttons-columns",
+        "columns": [
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 0,
+            "components": [
+              {
+                "type": "button",
+                "key": "cancel",
+                "label": {
+                  "ru": "Отменить",
+                  "en": "Cancel"
+                },
+                "action": "event",
+                "event": "cancel",
+                "block": true,
+                "input": true
+              }
+            ],
+            "key": "column"
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "index": 1,
+            "key": "column",
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": [
+              {
+                "type": "button",
+                "theme": "primary",
+                "key": "submit",
+                "label": {
+                  "ru": "Сохранить",
+                  "en": "Save"
+                },
+                "block": true,
+                "input": true
+              }
+            ]
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-project-form"
+  },
+  "attributes": {}
+}

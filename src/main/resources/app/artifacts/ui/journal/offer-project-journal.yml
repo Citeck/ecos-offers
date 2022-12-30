@@ -1,0 +1,16 @@
+---
+id: offer-project-journal
+name:
+  ru: Проекты
+  en: Project
+typeRef: emodel/type@offer-project
+actions:
+  - uiserv/action@view-dashboard
+  - uiserv/action@view-dashboard-in-background
+  - uiserv/action@edit
+columns:
+  - id: projectName
+    name:
+      ru: Название проекта
+      en: Project name
+    type: TEXT

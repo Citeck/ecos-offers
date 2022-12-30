@@ -1,0 +1,15 @@
+{
+  "id": "offer-request-director-notification",
+  "name": "Offer Request Director Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Согласование заявки, документ - ${title}",
+    "en": "Новая задача: Согласование заявки, документ - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "initiator": ".idocs:initiator?disp"
+  },
+  "multiTemplateConfig": [ ]
+}

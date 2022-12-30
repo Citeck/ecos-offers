@@ -13,4 +13,3 @@ columns:
   - id: requestGrade
   - id: request_issueDate
   - id: idocs:initiator
-  - id: requestCandidates

@@ -126,7 +126,7 @@
                           "ru": "candidateTechInterviewDate"
                         },
                         "key": "candidateTechInterviewDate",
-                        "format": "dd.MM.yyyy hh:mm",
+                        "format": "dd.MM.yyyy HH:mm",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""

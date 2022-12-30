@@ -4,7 +4,7 @@ name:
   ru: Город
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
-formRef: uiserv/form@DEFAULT_FORM
+formRef: uiserv/form@cities-form
 journalRef: uiserv/journal@DEFAULT_JOURNAL
 inheritActions: false
 dispNameTemplate:

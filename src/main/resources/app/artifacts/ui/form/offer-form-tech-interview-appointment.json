@@ -41,7 +41,7 @@
                 "validate": {
                   "required": true
                 },
-                "format": "dd.MM.yyyy hh:mm",
+                "format": "dd.MM.yyyy HH:mm",
                 "datePicker": {
                   "minDate": "",
                   "maxDate": ""

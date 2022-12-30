@@ -1,0 +1,19 @@
+---
+id: offer-project
+name:
+  ru: Проект
+  en: Project
+storageType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@offer-project-form
+journalRef: uiserv/journal@offer-project-journal
+inheritForm: false
+dispNameTemplate:
+  ru: '${projectName}'
+defaultCreateVariant: true
+model:
+  attributes:
+    - id: projectName
+      name:
+        ru: Название проекта
+        en: Project name
