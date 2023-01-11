@@ -9,7 +9,11 @@
   "model": {
     "title": "?disp",
     "doc_recordRef": ".id",
-    "initiator": ".idocs:initiator?disp"
+    "initiator": "idocs:initiator?disp",
+    "web_url": "$webUrl",
+    "project": "requestProjectAssoc?disp",
+    "position": "requestPosition?disp",
+    "date": "$now?str"
   },
   "multiTemplateConfig": [ ]
 }

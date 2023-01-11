@@ -1,0 +1,20 @@
+{
+  "id": "offer-candidate-director-notification",
+  "name": "Offer Candidate Director Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Согласование условий оффера, документ - ${title}",
+    "en": "Новая задача: Согласование условий оффера, документ - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "date": "$now?str",
+    "first_name": "candidateFirstName",
+    "last_name": "candidateLastName",
+    "position": "candidatePosition?disp",
+    "experience": "candidateExperience",
+    "salary": "candidateSalary"
+  },
+  "multiTemplateConfig": [ ]
+}
