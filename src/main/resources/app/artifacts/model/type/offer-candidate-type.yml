@@ -91,6 +91,7 @@ model:
     - id: candidateTechFeedback
       name:
         ru: Фидбэк по техническому собеседованию
+      multiple: true
     - id: candidateIntroFeedback
       name:
         ru: Фидбэк по вводному собеседованию
@@ -139,6 +140,7 @@ model:
       config:
         typeRef: emodel/type@offer-grade-type
         child: false
+      multiple: true
     - id: candidatePosition
       name:
         ru: Должность

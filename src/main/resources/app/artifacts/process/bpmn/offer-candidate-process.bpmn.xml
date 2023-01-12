@@ -46,9 +46,12 @@
             <bpmn:outgoing >Flow_0urz239</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_1tdt266" targetRef="Activity_1654322" name="" id="Flow_0urz239" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Техническое интервью" id="Activity_0su3xwk" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Техническое интервью&quot;}" ecos:formRef="uiserv/form@offer-form-tech-interview" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;candidate-tech-interviewrs&quot;]">
+        <bpmn:userTask name="Техническое интервью" id="Activity_0su3xwk" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Техническое интервью&quot;}" ecos:formRef="uiserv/form@offer-form-tech-interview" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:multiInstanceConfig="{&quot;sequential&quot;:false,&quot;collection&quot;:&quot;&quot;,&quot;element&quot;:&quot;&quot;,&quot;loopCardinality&quot;:&quot;&quot;,&quot;completionCondition&quot;:&quot;&quot;,&quot;asyncConfig&quot;:{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true},&quot;jobConfig&quot;:{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:&quot;&quot;}}" ecos:assignees="[&quot;candidate-tech-interviewrs&quot;]">
             <bpmn:incoming >Flow_12kjepw</bpmn:incoming>
             <bpmn:outgoing >Flow_0iplrf3</bpmn:outgoing>
+            <bpmn:multiInstanceLoopCharacteristics isSequential="false" camunda:asyncBefore="false" camunda:exclusive="true" camunda:asyncAfter="false">
+                <bpmn:extensionElements/>
+            </bpmn:multiInstanceLoopCharacteristics>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_0su3xwk" targetRef="Gateway_1y794oe" name="" id="Flow_0iplrf3" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:exclusiveGateway name="" id="Gateway_0fe1l55" ecos:name_ml="{}">

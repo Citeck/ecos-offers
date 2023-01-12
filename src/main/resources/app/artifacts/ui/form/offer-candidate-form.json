@@ -585,7 +585,7 @@
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                          candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       !!candidateTechInterviewGrade ||\n       !!candidateTechFeedback ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);\n",
+            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet feedbackCondition = Array.isArray(candidateTechFeedback) && \n                        candidateTechFeedback.length > 0 && \n                        typeof candidateTechFeedback[0] === 'string' && \n                        candidateTechFeedback[0].trim() !== '';\n\nlet gradeCondition = Array.isArray(candidateTechInterviewGrade) && \n                     candidateTechInterviewGrade.length > 0;\n                        \nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                           candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       gradeCondition ||\n       feedbackCondition ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);\n",
             "type": "panel",
             "input": false,
             "components": [
@@ -648,6 +648,7 @@
                           "ru": "candidateTechInterviewGrade"
                         },
                         "key": "candidateTechInterviewGrade",
+                        "multiple": true,
                         "modalTitle": "",
                         "journalId": "offer-grades-journal",
                         "queryData": "",
@@ -677,11 +678,13 @@
                           "ru": "candidateTechFeedback"
                         },
                         "key": "candidateTechFeedback",
+                        "multiple": true,
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "textarea",
-                        "input": true
+                        "input": true,
+                        "reorder": false
                       }
                     ],
                     "type": "column",
