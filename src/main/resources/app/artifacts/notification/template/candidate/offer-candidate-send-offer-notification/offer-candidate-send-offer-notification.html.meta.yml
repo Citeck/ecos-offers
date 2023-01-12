@@ -1,0 +1,19 @@
+{
+  "id": "offer-candidate-send-offer-notification",
+  "name": "Offer Candidate Send Offer Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Направление оффера кандидату, кандидат - ${title}",
+    "en": "Новая задача: Направление оффера кандидату, кандидат - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "date": "$now?str",
+    "first_name": "candidateFirstName",
+    "last_name": "candidateLastName",
+    "position": "candidatePosition?disp",
+    "experience": "candidateExperience"
+  },
+  "multiTemplateConfig": [ ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "offer-candidate-tech-interview-notification",
+  "name": "Offer Candidate Tech Interview Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Техническое интервью, кандидат - ${title}",
+    "en": "Новая задача: Техническое интервью, кандидат - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "date": "$now?str",
+    "first_name": "candidateFirstName",
+    "last_name": "candidateLastName",
+    "position": "candidatePosition?disp",
+    "experience": "candidateExperience",
+    "interview_date": "candidateTechInterviewDate"
+  },
+  "multiTemplateConfig": [ ]
+}

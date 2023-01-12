@@ -1,0 +1,19 @@
+{
+  "id": "offer-candidate-create-offer-notification",
+  "name": "Offer Candidate Create Offer Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Создание оффера, кандидат - ${title}",
+    "en": "Новая задача: Создание оффера, кандидат - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "date": "$now?str",
+    "first_name": "candidateFirstName",
+    "last_name": "candidateLastName",
+    "position": "candidatePosition?disp",
+    "experience": "candidateExperience"
+  },
+  "multiTemplateConfig": [ ]
+}

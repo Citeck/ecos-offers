@@ -1,0 +1,18 @@
+{
+  "id": "offer-request-search-notification",
+  "name": "Offer Request Search Notification",
+  "notificationTitle": {
+    "ru": "Новая задача: Подбор и выбор кандидатов, документ - ${title}",
+    "en": "Новая задача: Подбор и выбор кандидатов, документ - ${title}"
+  },
+  "tags": [ ],
+  "model": {
+    "title": "?disp",
+    "doc_recordRef": ".id",
+    "initiator": "idocs:initiator?disp",
+    "project": "requestProjectAssoc?disp",
+    "position": "requestPosition?disp",
+    "date": "$now?str"
+  },
+  "multiTemplateConfig": [ ]
+}
