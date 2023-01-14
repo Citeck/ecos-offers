@@ -66,10 +66,10 @@ model:
         config:
           template: '${_docNum}'
         storingType: ON_EMPTY
-    - id: request_issueDate
+    - id: cm:created
       name:
         ru: Дата создания
-      type: DATE
+      type: DATETIME
     - id: idocs:initiator
       name:
         ru: Инициатор
@@ -78,6 +78,9 @@ model:
       name:
         ru: Должность
       type: ASSOC
+      config:
+        typeRef: emodel/type@offer-position
+        child: false
     - id: requestSubdivision
       name:
         ru: Подразделение
@@ -86,6 +89,9 @@ model:
       name:
         ru: Грейд
       type: ASSOC
+      config:
+        typeRef: emodel/type@offer-grade-type
+        child: false
     - id: requestCity
       name:
         ru: Город
@@ -94,6 +100,9 @@ model:
       name:
         ru: Опыт работы
       type: ASSOC
+      config:
+        typeRef: emodel/type@offer-experience-type
+        child: false
     - id: requestManagerSubdivision
       name:
         ru: Руководитель подразделения

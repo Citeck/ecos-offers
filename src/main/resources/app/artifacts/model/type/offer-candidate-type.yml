@@ -87,6 +87,9 @@ model:
       name:
         ru: Запрос
       type: ASSOC
+      config:
+        typeRef: emodel/type@offer-request-type
+        child: false
       multiple: true
     - id: candidateTechFeedback
       name:
@@ -115,9 +118,19 @@ model:
       name:
         ru: Город
       type: ASSOC
+      config:
+        typeRef: emodel/type@cities-type
+        child: false
     - id: candidateExperience
       name:
         ru: Релевантыный опыт
+    - id: candidateExperienceAssoc
+      name:
+        ru: Релевантыный опыт
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-experience-type
+        child: false
     - id: candidateDesiredSalary
       name:
         ru: Желаемая ЗП
@@ -146,7 +159,7 @@ model:
         ru: Должность
       type: ASSOC
       config:
-        typeRef: ''
+        typeRef: emodel/type@offer-position
         child: false
     - id: candidateIntroInterviewDate
       name:

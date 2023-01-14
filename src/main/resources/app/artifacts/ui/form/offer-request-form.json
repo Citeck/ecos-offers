@@ -498,8 +498,14 @@
                         "computed": {
                           "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
                         },
+                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
                         "defaultValue": [],
-                        "refreshOn": [],
+                        "refreshOn": [
+                          "requestPosition",
+                          "requestCity",
+                          "requestExperience",
+                          "requestGrade"
+                        ],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
                         "input": true
@@ -528,6 +534,7 @@
                         "computed": {
                           "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
                         },
+                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",

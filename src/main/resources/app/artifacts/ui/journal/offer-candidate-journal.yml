@@ -12,6 +12,8 @@ columns:
   - id: candidateLastName
   - id: candidateFirstName
   - id: candidateTechInterviewGrade
-  - id: candidateExperience
+  - id: candidateExperienceAssoc
   - id: candidateCityAssoc
   - id: _status
+  - id: candidatePosition
+    hidden: true

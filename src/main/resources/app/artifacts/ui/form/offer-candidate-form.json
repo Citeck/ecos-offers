@@ -49,8 +49,14 @@
                         "journalId": "offer-request-journal",
                         "queryData": "",
                         "customPredicateJs": "value = {\n  \"t\":\"contains\",\n  \"att\": \"_status\",\n  \"val\":\"request-selection-candidates\"\n};",
+                        "presetFilterPredicatesJs": "const { candidateCityAssoc } = data || {};\r\nconst { candidatePosition } = data || {};\r\nconst { candidateExperienceAssoc } = data || {};\r\nconst { candidateTechInterviewGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (Array.isArray(candidateTechInterviewGrade) && candidateTechInterviewGrade.length > 0) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestGrade\",\r\n        \"val\": candidateTechInterviewGrade\r\n    });\r\n}\r\n\r\nif (!!candidateCityAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestCity\",\r\n        \"val\": candidateCityAssoc\r\n    });\r\n}\r\n\r\nif (!!candidatePosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestPosition\",\r\n        \"val\": candidatePosition\r\n    });\r\n}\r\n\r\nif (!!candidateExperienceAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestExperience\",\r\n        \"val\": candidateExperienceAssoc\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
                         "defaultValue": [],
-                        "refreshOn": [],
+                        "refreshOn": [
+                          "candidateCityAssoc",
+                          "candidatePosition",
+                          "candidateTechInterviewGrade",
+                          "candidateExperienceAssoc"
+                        ],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
                         "input": true
@@ -359,13 +365,15 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "candidateExperience"
+                          "ru": "candidateExperienceAssoc"
                         },
-                        "key": "candidateExperience",
-                        "defaultValue": "",
+                        "key": "candidateExperienceAssoc",
+                        "modalTitle": "",
+                        "journalId": "offer-experience-journal",
+                        "queryData": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "type": "textfield",
+                        "type": "selectJournal",
                         "input": true
                       },
                       {

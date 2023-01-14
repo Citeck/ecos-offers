@@ -39,12 +39,11 @@
                 },
                 "key": "_ECM_candidateTechInterviewGrade",
                 "multiple": true,
-                "validate": {
-                  "required": true
-                },
                 "modalTitle": "",
                 "journalId": "offer-grades-journal",
                 "queryData": "",
+                "customPredicateJs": "const { _ECM_candidatePosition } = data || {};\n\nvalue = {\n  \"t\": \"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": _ECM_candidatePosition\n}",
+                "defaultValue": [],
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "selectJournal",
@@ -55,6 +54,28 @@
             "input": false,
             "key": "column",
             "index": 0
+          },
+          {
+            "index": 1,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "components": [
+              {
+                "label": {
+                  "ru": "candidatePosition"
+                },
+                "key": "_ECM_candidatePosition",
+                "hidden": true,
+                "modalTitle": "",
+                "journalId": "offer-position-journal",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "selectJournal",
+                "input": true,
+                "queryData": ""
+              }
+            ]
           }
         ],
         "oneColumnInViewMode": false,

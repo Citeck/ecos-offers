@@ -11,5 +11,9 @@ columns:
   - id: idocs:registrationNumber
   - id: requestPosition
   - id: requestGrade
-  - id: request_issueDate
+  - id: cm:created
   - id: idocs:initiator
+  - id: requestCity
+    hidden: true
+  - id: requestExperience
+    hidden: true
