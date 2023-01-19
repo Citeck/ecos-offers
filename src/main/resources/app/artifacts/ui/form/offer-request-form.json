@@ -15,14 +15,14 @@
       "Save": "Сохранить",
       "Cancel": "Отменить",
       "generateNumber": "Сгенерировать номер",
-      "cm:created": "Дата создания"
+      "created": "Дата создания"
     },
     "en": {
       "Create": "Create",
       "Save": "Save",
       "Cancel": "Cancel",
       "generateNumber": "Generate number",
-      "cm:created": "Creation date"
+      "created": "Creation date"
     }
   },
   "definition": {
@@ -44,11 +44,11 @@
                   {
                     "components": [
                       {
-                        "label": "idocs:registrationNumber",
+                        "label": "registrationNumber",
                         "defaultValue": "",
-                        "key": "idocs_registrationNumber",
+                        "key": "registrationNumber",
                         "properties": {
-                          "attribute": "idocs:registrationNumber"
+                          "attribute": "registrationNumber"
                         },
                         "logic": [
                           {
@@ -120,7 +120,7 @@
                     "key": "column",
                     "components": [
                       {
-                        "label": "cm:created",
+                        "label": "created",
                         "format": "dd.MM.yyyy",
                         "disabled": true,
                         "enableDate": false,
@@ -133,7 +133,7 @@
                         "defaultValue": "",
                         "key": "cm_created",
                         "properties": {
-                          "attribute": "cm:created"
+                          "attribute": "created"
                         },
                         "type": "datetime",
                         "input": true,
@@ -163,16 +163,16 @@
                   {
                     "components": [
                       {
-                        "label": "idocs:initiator",
+                        "label": "initiator",
                         "allowedAuthorityType": "USER",
                         "currentUserByDefault": true,
                         "defaultValue": "",
                         "validate": {
                           "required": true
                         },
-                        "key": "idocs_initiator",
+                        "key": "initiator",
                         "properties": {
-                          "attribute": "idocs:initiator"
+                          "attribute": "initiator"
                         },
                         "type": "selectOrgstruct",
                         "input": true

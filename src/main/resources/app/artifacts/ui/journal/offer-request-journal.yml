@@ -8,11 +8,11 @@ actions:
   - uiserv/action@view-dashboard-in-background
   - uiserv/action@view-dashboard
 columns:
-  - id: idocs:registrationNumber
+  - id: registrationNumber
   - id: requestPosition
   - id: requestGrade
-  - id: cm:created
-  - id: idocs:initiator
+  - id: created
+  - id: initiator
   - id: requestCity
     hidden: true
   - id: requestExperience
