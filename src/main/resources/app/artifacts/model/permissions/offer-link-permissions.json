@@ -1,0 +1,38 @@
+{
+  "id": "9633d99b-c8b1-4cde-bcc3-6d3061190e04",
+  "typeRef": "emodel/type@offer-link",
+  "permissions": {
+    "matrix": {
+      "hr": {
+        "EMPTY": "WRITE"
+      },
+      "everyone": {
+        "EMPTY": "READ"
+      }
+    }
+  },
+  "attributes": {
+    "link": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "linkVacancyAssoc": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    }
+  }
+}

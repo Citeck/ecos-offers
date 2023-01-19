@@ -171,3 +171,12 @@ model:
           fn: "return value.load(\"requestUrgentSearch?bool!\") ? \n    \"Urgent search\"\
             \ : value.load(\"requestTerm|fmt('dd.MM.yyyy')\");"
         storingType: ON_EMPTY
+    - id: requestLinkAssoc
+      name:
+        ru: Ссылки на вакансии
+        en: Links to vacancies
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-link
+        child: false
+      multiple: true

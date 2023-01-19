@@ -1,0 +1,59 @@
+---
+id: offer-vacancy
+name:
+  ru: Вакансия
+storageType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@offer-vacancy-form
+journalRef: uiserv/journal@offer-vacancy-journal
+inheritForm: false
+dispNameTemplate:
+  ru: '${vacancyName}'
+defaultCreateVariant: true
+model:
+  roles:
+    - id: hr
+      name:
+        ru: HR
+      assignees:
+        - GROUP_hr
+    - id: everyone
+      name:
+        ru: Все
+        en: Everyone
+      assignees:
+        - GROUP_EVERYONE
+  statuses:
+    - id: EMPTY
+      name:
+        ru: EMPTY
+  attributes:
+    - id: vacancyName
+      name:
+        ru: Наименование
+        en: Name
+    - id: vacancyMandatoryRequirements
+      name:
+        ru: Обязательные требования
+        en: Mandatory requirements
+    - id: vacancyAdditionalRequirements
+      name:
+        en: Additional requirements
+        ru: Дополнительные требования
+    - id: vacancyJobResponsibilities
+      name:
+        ru: Должностные обязанности
+        en: Job responsibilities
+    - id: vacancyLinkAssoc
+      name:
+        ru: Ссылка
+        en: Link
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-link
+        child: true
+      multiple: true
+    - id: vacancySalaryLevel
+      name:
+        ru: Уровень зарплаты
+        en: Salary level

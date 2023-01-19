@@ -1,0 +1,15 @@
+---
+id: offer-link-journal
+name:
+  ru: Ссылки
+  en: Links
+typeRef: emodel/type@offer-link
+actions:
+  - uiserv/action@delete
+  - uiserv/action@edit
+  - uiserv/action@view-dashboard-in-background
+  - uiserv/action@view-dashboard
+editable: false
+columns:
+  - id: link
+  - id: linkVacancyAssoc

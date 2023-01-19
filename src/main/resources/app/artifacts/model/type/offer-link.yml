@@ -1,0 +1,43 @@
+---
+id: offer-link
+name:
+  ru: Ссылка
+  en: Link
+storageType: ECOS_MODEL
+parentRef: emodel/type@data-list
+formRef: uiserv/form@offer-link-form
+journalRef: uiserv/journal@offer-link-journal
+inheritForm: false
+dispNameTemplate:
+  ru: '${link}'
+defaultCreateVariant: true
+model:
+  roles:
+    - id: hr
+      name:
+        ru: HR
+      assignees:
+        - GROUP_hr
+    - id: everyone
+      name:
+        ru: Все
+        en: Everyone
+      assignees:
+        - GROUP_EVERYONE
+  statuses:
+    - id: EMPTY
+      name:
+        ru: EMPTY
+  attributes:
+    - id: link
+      name:
+        ru: Ссылка
+        en: Link
+    - id: linkVacancyAssoc
+      name:
+        ru: Вакансия
+        en: Vacancy
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-vacancy
+        child: false

@@ -1,0 +1,82 @@
+{
+  "id": "89fc11e2-a416-4fe8-9a86-495341216598",
+  "typeRef": "emodel/type@offer-vacancy",
+  "permissions": {
+    "matrix": {
+      "hr": {
+        "EMPTY": "WRITE"
+      },
+      "everyone": {
+        "EMPTY": "READ"
+      }
+    }
+  },
+  "attributes": {
+    "vacancyName": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "vacancyMandatoryRequirements": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "vacancyAdditionalRequirements": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "vacancyJobResponsibilities": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "vacancyLinkAssoc": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "READ"
+        }
+      },
+      "rules": []
+    },
+    "vacancySalaryLevel": {
+      "matrix": {
+        "hr": {
+          "EMPTY": "WRITE"
+        },
+        "everyone": {
+          "EMPTY": "NONE"
+        }
+      },
+      "rules": []
+    }
+  }
+}
