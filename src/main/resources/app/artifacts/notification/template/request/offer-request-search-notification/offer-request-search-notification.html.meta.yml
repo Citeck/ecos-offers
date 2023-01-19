@@ -9,7 +9,7 @@
   "model": {
     "title": "?disp",
     "doc_recordRef": ".id",
-    "initiator": "idocs:initiator?disp",
+    "initiator": "initiator?disp",
     "project": "requestProjectAssoc?disp",
     "position": "requestPosition?disp",
     "date": "$now?str"

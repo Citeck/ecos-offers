@@ -8,8 +8,8 @@ parentRef: emodel/type@case
 formRef: uiserv/form@offer-request-form
 journalRef: uiserv/journal@offer-request-journal
 dispNameTemplate:
-  ru: Заявка №${idocs:registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
-  en: Заявка №${idocs:registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
+  ru: Заявка №${registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
+  en: Заявка №${registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
 numTemplateRef: emodel/num-template@offer-number-template
 actions:
   - uiserv/action@delete-offer
@@ -22,7 +22,7 @@ model:
       name:
         ru: Инициатор
       attributes:
-        - idocs:initiator
+        - initiator
     - id: request-director-role
       name:
         ru: Генеральный директор
@@ -58,7 +58,7 @@ model:
       name:
         ru: Вышел на работу
   attributes:
-    - id: idocs:registrationNumber
+    - id: registrationNumber
       name:
         ru: Регистрационный номер
       computed:
@@ -66,11 +66,15 @@ model:
         config:
           template: '${_docNum}'
         storingType: ON_EMPTY
-    - id: cm:created
+    - id: created
       name:
         ru: Дата создания
       type: DATETIME
     - id: idocs:initiator
+      name:
+        ru: Инициатор
+      type: ASSOC
+    - id: initiator
       name:
         ru: Инициатор
       type: ASSOC
