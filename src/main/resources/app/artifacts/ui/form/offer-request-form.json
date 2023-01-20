@@ -15,14 +15,18 @@
       "Save": "Сохранить",
       "Cancel": "Отменить",
       "generateNumber": "Сгенерировать номер",
-      "created": "Дата создания"
+      "created": "Дата создания",
+      "linkVacancyAssoc": "Вакансия",
+      "link": "Ссылка"
     },
     "en": {
       "Create": "Create",
       "Save": "Save",
       "Cancel": "Cancel",
       "generateNumber": "Generate number",
-      "created": "Creation date"
+      "created": "Creation date",
+      "linkVacancyAssoc": "Vacancy",
+      "link": "Link"
     }
   },
   "definition": {
@@ -456,6 +460,80 @@
                     "key": "column",
                     "index": 0,
                     "md": 12
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
+              }
+            ]
+          },
+          {
+            "label": {
+              "ru": "Panel"
+            },
+            "key": "panel3",
+            "title": {
+              "ru": "Вакансии",
+              "en": "Vacancies"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\",\n  \"request-attach-vacancy\"\n  ];\n\nshow = statusesToShow.includes(status);",
+            "type": "panel",
+            "input": false,
+            "components": [
+              {
+                "label": {
+                  "ru": "Columns"
+                },
+                "key": "columns6",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "requestLinkAssoc"
+                        },
+                        "key": "requestLinkAssoc",
+                        "multiple": true,
+                        "reorder": false,
+                        "source": {
+                          "type": "custom",
+                          "custom": {
+                            "columns": [
+                              {
+                                "name": "link",
+                                "formatter": "",
+                                "setAttributesManually": true,
+                                "title": "link",
+                                "type": "text",
+                                "multiple": false
+                              },
+                              {
+                                "name": "linkVacancyAssoc",
+                                "formatter": "value = {\r\n  type: 'script', \r\n  config: {\r\n    fn: ({ Records, cell, _ }) => {\r\n      const result = Records.get(cell).toJson().attributes[\"\"];\r\n\r\n      return _.isUndefined(result) ? cell : result;\r\n    }\r\n  }\r\n}",
+                                "setAttributesManually": true,
+                                "title": "linkVacancyAssoc",
+                                "type": "assoc",
+                                "multiple": false
+                              }
+                            ],
+                            "record": null,
+                            "attribute": null
+                          }
+                        },
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "tableForm",
+                        "input": true
+                      }
+                    ],
+                    "md": 12,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
                   }
                 ],
                 "oneColumnInViewMode": false,

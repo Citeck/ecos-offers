@@ -9,6 +9,13 @@ journalRef: uiserv/journal@offer-vacancy-journal
 inheritForm: false
 dispNameTemplate:
   ru: '${vacancyName}'
+associations:
+  - id: vacancyLinkAssoc
+    name:
+      ru: Ссылки
+    attribute: vacancyLinkAssoc
+    target: emodel/type@offer-link
+    journalsFromTarget: false
 defaultCreateVariant: true
 model:
   roles:

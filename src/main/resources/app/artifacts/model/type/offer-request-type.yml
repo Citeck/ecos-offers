@@ -51,6 +51,9 @@ model:
     - id: request-reject
       name:
         ru: Отклонена
+    - id: request-attach-vacancy
+      name:
+        ru: Прикрепление вакансии
     - id: request-selection-candidates
       name:
         ru: Подбор кандидатов
@@ -173,8 +176,8 @@ model:
         storingType: ON_EMPTY
     - id: requestLinkAssoc
       name:
-        ru: Ссылки на вакансии
-        en: Links to vacancies
+        en: Vacancies
+        ru: Вакансии
       type: ASSOC
       config:
         typeRef: emodel/type@offer-link

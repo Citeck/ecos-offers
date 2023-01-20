@@ -1,0 +1,155 @@
+{
+  "id": "offer-form-attach-vacancy",
+  "formKey": "offer-form-attach-vacancy",
+  "title": {
+    "en": "Offer Form Attach Vacancy"
+  },
+  "description": {},
+  "customModule": "",
+  "typeRef": "",
+  "width": "lg",
+  "system": false,
+  "i18n": {
+    "ru": {
+      "Comment": "Комментарий",
+      "Done": "Подтвердить",
+      "requestLinkAssoc": "Вакансии",
+      "link": "Ссылка",
+      "linkVacancyAssoc": "Вакансия"
+    },
+    "en": {
+      "Comment": "Comment",
+      "Done": "Done",
+      "requestLinkAssoc": "Vacancies",
+      "link": "Link",
+      "linkVacancyAssoc": "Vacancy"
+    }
+  },
+  "definition": {
+    "components": [
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns3",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "requestLinkAssoc"
+                },
+                "key": "_ECM_requestLinkAssoc",
+                "multiple": true,
+                "validate": {
+                  "required": true
+                },
+                "source": {
+                  "type": "custom",
+                  "custom": {
+                    "columns": [
+                      {
+                        "name": "link",
+                        "formatter": "",
+                        "setAttributesManually": true,
+                        "title": "link",
+                        "type": "text",
+                        "multiple": false
+                      },
+                      {
+                        "name": "linkVacancyAssoc",
+                        "formatter": "",
+                        "setAttributesManually": true,
+                        "title": "linkVacancyAssoc",
+                        "type": "assoc",
+                        "multiple": false
+                      }
+                    ],
+                    "record": null,
+                    "attribute": null
+                  }
+                },
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "tableForm",
+                "input": true,
+                "reorder": false
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0,
+            "md": 12
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      },
+      {
+        "label": "Comment",
+        "defaultValue": "",
+        "key": "comment",
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Done"
+                },
+                "key": "outcome_Done",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ],
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 0
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 1,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 2,
+            "components": []
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "key": "columns2",
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "offer-form-attach-vacancy"
+  },
+  "attributes": {}
+}

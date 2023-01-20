@@ -18,7 +18,7 @@
 
 <div style="font-size: 16px; margin: 12px 0px 24px 0px; padding-top: 10px; border-top: 1px solid #aaaaaa;">
     Вам назначена следующая задача:
-    <p><b>Подбор и выбор кандидатов</b></p>
+    <p><b>Прикрепление вакансии</b></p>
 
     <p>
         <#if title??>
