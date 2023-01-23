@@ -44,6 +44,7 @@
                 "validate": {
                   "required": true
                 },
+                "reorder": false,
                 "source": {
                   "type": "custom",
                   "custom": {
@@ -58,7 +59,7 @@
                       },
                       {
                         "name": "linkVacancyAssoc",
-                        "formatter": "",
+                        "formatter": "value = {\r\n  type: 'script', \r\n  config: {\r\n    fn: ({ Records, cell, _ }) => {\r\n      const result = Records.get(cell).toJson().attributes[\"vacancyName\"];;\r\n      return _.isUndefined(result) ? cell : result;\r\n    }\r\n  }\r\n}",
                         "setAttributesManually": true,
                         "title": "linkVacancyAssoc",
                         "type": "assoc",
@@ -69,11 +70,12 @@
                     "attribute": null
                   }
                 },
+                "customCreateVariantsJs": "value = [\r\n{\r\n  \"recordRef\": \"emodel/offer-link@\",\r\n  \"typeRef\": \"emodel/type@offer-link\",\r\n  \"formRef\": \"uiserv/form@offer-link-form\",\r\n  \"label\": {\"ru\":\"Создать\", \"en\":\"Create\"}\r\n}\r\n]",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
+                "displayElementsJS": "value = {create: true, view: true, edit: true, delete: true, clone: false, preview: false};",
                 "type": "tableForm",
-                "input": true,
-                "reorder": false
+                "input": true
               }
             ],
             "type": "column",

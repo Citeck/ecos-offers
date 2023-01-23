@@ -94,20 +94,6 @@
           "description": "Основное"
         },
         {
-          "dndId": "951e31ba-70c0-4cab-988b-9d271cfa3632",
-          "name": "doc-associations",
-          "label": "dashboard-settings.widget.doc-associations",
-          "id": "c0a9aeee-a536-400d-ae80-326e77ce5202",
-          "props": {
-            "id": "c0a9aeee-a536-400d-ae80-326e77ce5202",
-            "config": {
-              "widgetDisplayCondition": "",
-              "elementsDisplayCondition": {}
-            }
-          },
-          "description": "Основное"
-        },
-        {
           "name": "events-history",
           "label": "dashboard-settings.widget.events-history",
           "dndId": "57bd94df-7533-47ce-890a-5a83edce9614",
@@ -184,8 +170,7 @@
               "widgets": [
                 "b4bcb077-ed4f-498a-b152-97798fddd8fb",
                 "6d9d1e54-0c77-4990-9aed-228bec1614f4",
-                "6cb0726f-07c2-4388-84bc-6651823e2ba9",
-                "c0a9aeee-a536-400d-ae80-326e77ce5202"
+                "6cb0726f-07c2-4388-84bc-6651823e2ba9"
               ],
               "width": "25%"
             }
@@ -298,9 +283,7 @@
           "type": "mobile",
           "columns": [
             {
-              "widgets": [
-                "c0a9aeee-a536-400d-ae80-326e77ce5202"
-              ]
+              "widgets": []
             }
           ]
         },
