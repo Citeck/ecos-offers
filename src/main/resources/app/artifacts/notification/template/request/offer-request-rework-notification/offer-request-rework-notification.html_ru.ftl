@@ -10,16 +10,13 @@
 <body>
 
 <div style="font-size: 22px; padding-bottom: 4px;">
-    Вам назначена задача
+    Задача: Доработка заявки
 </div>
 <div style="font-size: 14px;">
     ${date?datetime.iso?string.full}
 </div>
 
 <div style="font-size: 16px; margin: 12px 0px 24px 0px; padding-top: 10px; border-top: 1px solid #aaaaaa;">
-    Вам назначена следующая задача:
-    <p><b>Доработка заявки</b></p>
-
     <p>
         <#if title??>
             Название заявки:&nbsp;&nbsp;<b>${title!''}</b>

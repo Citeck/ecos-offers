@@ -2,12 +2,13 @@
   "id": "offer-request-reject-notification",
   "name": "Offer Request Reject Notification",
   "notificationTitle": {
-    "ru": "Отклонена заявка, документ - ${title}",
-    "en": "Отклонена заявка, документ - ${title}"
+    "ru": "[Офферы - Заявка] Отклонена заявка №${registrationNumber} на подбор ${position}",
+    "en": "[Офферы - Заявка] Отклонена заявка №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {
     "title": "?disp",
+    "registrationNumber": "registrationNumber",
     "doc_recordRef": ".id",
     "project": "requestProjectAssoc?disp",
     "position": "requestPosition?disp",

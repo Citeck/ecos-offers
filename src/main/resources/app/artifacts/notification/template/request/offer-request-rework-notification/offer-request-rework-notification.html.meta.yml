@@ -2,12 +2,13 @@
   "id": "offer-request-rework-notification",
   "name": "Offer Request Rework Notification",
   "notificationTitle": {
-    "ru": "Новая задача: Доработка заявки, документ - ${title}",
-    "en": "Новая задача: Доработка заявки, документ - ${title}"
+    "ru": "[Офферы - Заявка] Доработка заявки №${registrationNumber} на подбор ${position}",
+    "en": "[Офферы - Заявка] Доработка заявки №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {
     "title": "?disp",
+    "registrationNumber": "registrationNumber",
     "doc_recordRef": ".id",
     "project": "requestProjectAssoc?disp",
     "position": "requestPosition?disp",

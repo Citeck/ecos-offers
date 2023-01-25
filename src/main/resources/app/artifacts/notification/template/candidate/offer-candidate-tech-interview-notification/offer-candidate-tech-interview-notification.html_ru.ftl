@@ -10,18 +10,14 @@
 <body>
 
 <div style="font-size: 22px; padding-bottom: 4px;">
-    Вам назначена задача
+    Задача: Техническое интервью
 </div>
 <div style="font-size: 14px;">
     ${date?datetime.iso?string.full}
 </div>
 
 <div style="font-size: 16px; margin: 12px 0px 24px 0px; padding-top: 10px; border-top: 1px solid #aaaaaa;">
-    Вам назначена следующая задача:
-    <p><b>Техническое интервью</b></p>
     <p>
-        Название оффера:&nbsp;&nbsp;<b>${title!''}</b>
-        <br>
         Кандидат:&nbsp;&nbsp;<b>${first_name!""} ${last_name!""}</b>
         <br>
         Должность:&nbsp;&nbsp;<b>${position!"(Должность не указана)"}.</b>
