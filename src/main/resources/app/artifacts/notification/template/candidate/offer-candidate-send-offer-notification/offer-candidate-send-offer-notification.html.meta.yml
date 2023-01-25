@@ -2,8 +2,8 @@
   "id": "offer-candidate-send-offer-notification",
   "name": "Offer Candidate Send Offer Notification",
   "notificationTitle": {
-    "ru": "Новая задача: Направление оффера кандидату, кандидат - ${title}",
-    "en": "Новая задача: Направление оффера кандидату, кандидат - ${title}"
+    "ru": "[Оффера - Кандидат] Направление оффера кандидату ${title}",
+    "en": "[Оффера - Кандидат] Направление оффера кандидату ${title}"
   },
   "tags": [ ],
   "model": {

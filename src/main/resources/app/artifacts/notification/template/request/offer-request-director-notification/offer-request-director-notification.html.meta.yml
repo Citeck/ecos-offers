@@ -2,12 +2,13 @@
   "id": "offer-request-director-notification",
   "name": "Offer Request Director Notification",
   "notificationTitle": {
-    "ru": "Новая задача: Согласование заявки, документ - ${title}",
-    "en": "Новая задача: Согласование заявки, документ - ${title}"
+    "ru": "[Офферы - Заявка] Согласование заявки №${registrationNumber} на подбор ${position}",
+    "en": "[Офферы - Заявка] Согласование заявки №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {
     "title": "?disp",
+    "registrationNumber": "registrationNumber",
     "doc_recordRef": ".id",
     "initiator": "initiator?disp",
     "project": "requestProjectAssoc?disp",
