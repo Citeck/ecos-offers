@@ -2,8 +2,8 @@
   "id" : "offer-request-attach-vacancy-notification",
   "name" : "Offer Request Attach Vacancy Notification",
   "notificationTitle" : {
-    "ru" : "[Офферы - Заявка] Прикрепление вакансии заявке №${registrationNumber} на подбор ${position}",
-    "en" : "[Офферы - Заявка] Прикрепление вакансии заявке №${registrationNumber} на подбор ${position}"
+    "ru" : "Прикрепление вакансии заявке №${registrationNumber} на подбор ${position}",
+    "en" : "Прикрепление вакансии заявке №${registrationNumber} на подбор ${position}"
   },
   "tags" : [ ],
   "model" : {

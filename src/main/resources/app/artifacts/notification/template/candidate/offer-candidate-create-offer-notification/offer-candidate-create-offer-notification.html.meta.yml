@@ -2,8 +2,8 @@
   "id": "offer-candidate-create-offer-notification",
   "name": "Offer Candidate Create Offer Notification",
   "notificationTitle": {
-    "ru": "[Оффера - Кандидат] Создание оффера кандидату ${title}",
-    "en": "[Оффера - Кандидат] Создание оффера кандидату ${title}"
+    "ru": "Создание оффера кандидату ${title}",
+    "en": "Создание оффера кандидату ${title}"
   },
   "tags": [ ],
   "model": {

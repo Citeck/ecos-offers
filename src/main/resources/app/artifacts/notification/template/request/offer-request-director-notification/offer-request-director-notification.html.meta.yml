@@ -2,8 +2,8 @@
   "id": "offer-request-director-notification",
   "name": "Offer Request Director Notification",
   "notificationTitle": {
-    "ru": "[Офферы - Заявка] Согласование заявки №${registrationNumber} на подбор ${position}",
-    "en": "[Офферы - Заявка] Согласование заявки №${registrationNumber} на подбор ${position}"
+    "ru": "Согласование заявки №${registrationNumber} на подбор ${position}",
+    "en": "Согласование заявки №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {
