@@ -46,7 +46,7 @@ config:
           en: Citeck
         authorityGroups:
           - emodel/authority-group@_orgstruct_home_
-          -
+
     - id: emodel/authority-group@
       attributes:
         id: analysts_pm
