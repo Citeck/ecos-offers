@@ -259,19 +259,7 @@
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
                         "input": true
-                      }
-                    ],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "index": 0
-                  },
-                  {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "components": [
+                      },
                       {
                         "label": {
                           "ru": "requestManagerSubdivision"
@@ -292,7 +280,18 @@
                         "type": "selectOrgstruct",
                         "input": true
                       }
-                    ]
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": []
                   }
                 ],
                 "oneColumnInViewMode": false,
@@ -889,5 +888,6 @@
     ],
     "formId": "offer-request-form"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

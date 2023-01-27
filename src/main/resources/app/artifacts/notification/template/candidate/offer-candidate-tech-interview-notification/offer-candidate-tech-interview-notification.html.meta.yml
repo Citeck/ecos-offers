@@ -2,8 +2,8 @@
   "id": "offer-candidate-tech-interview-notification",
   "name": "Offer Candidate Tech Interview Notification",
   "notificationTitle": {
-    "ru": "[Оффера - Кандидат] Техническое интервью кандидата ${title}",
-    "en": "[Оффера - Кандидат] Техническое интервью кандидата ${title}"
+    "ru": "Техническое интервью кандидата ${title}",
+    "en": "Техническое интервью кандидата ${title}"
   },
   "tags": [ ],
   "model": {

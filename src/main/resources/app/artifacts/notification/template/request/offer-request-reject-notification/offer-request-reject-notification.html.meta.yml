@@ -2,8 +2,8 @@
   "id": "offer-request-reject-notification",
   "name": "Offer Request Reject Notification",
   "notificationTitle": {
-    "ru": "[Офферы - Заявка] Отклонена заявка №${registrationNumber} на подбор ${position}",
-    "en": "[Офферы - Заявка] Отклонена заявка №${registrationNumber} на подбор ${position}"
+    "ru": "Отклонена заявка №${registrationNumber} на подбор ${position}",
+    "en": "Отклонена заявка №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {

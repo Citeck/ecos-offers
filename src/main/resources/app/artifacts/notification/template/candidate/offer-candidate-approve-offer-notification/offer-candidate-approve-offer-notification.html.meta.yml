@@ -2,8 +2,8 @@
   "id": "offer-candidate-approve-offer-notification",
   "name": "Offer Candidate Approve Offer Notification",
   "notificationTitle": {
-    "ru": "[Оффера - Кандидат] Согласование оффера кандидату ${title}",
-    "en": "[Оффера - Кандидат] Согласование оффера кандидату ${title}"
+    "ru": "Согласование оффера кандидату ${title}",
+    "en": "Согласование оффера кандидату ${title}"
   },
   "tags": [ ],
   "model": {
