@@ -7,7 +7,7 @@
 
     <groupId>ru.citeck.ecos.eapps.citeck-offers</groupId>
     <artifactId>citeck-offers</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2-SNAPSHOT</version>
 
     <parent>
         <groupId>ru.citeck.ecos.eapps.project</groupId>
