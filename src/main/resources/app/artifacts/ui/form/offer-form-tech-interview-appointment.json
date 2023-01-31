@@ -46,7 +46,6 @@
                   "minDate": "",
                   "maxDate": ""
                 },
-                "enableTime": false,
                 "timePicker": {
                   "showMeridian": false
                 },
