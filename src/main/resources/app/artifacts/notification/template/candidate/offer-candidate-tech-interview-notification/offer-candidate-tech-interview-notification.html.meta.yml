@@ -13,7 +13,7 @@
     "first_name": "candidateFirstName",
     "last_name": "candidateLastName",
     "position": "candidatePosition?disp",
-    "experience": "candidateExperience",
+    "experience": "candidateExperienceAssoc?disp",
     "interview_date": "candidateTechInterviewDate"
   },
   "multiTemplateConfig": [ ]
