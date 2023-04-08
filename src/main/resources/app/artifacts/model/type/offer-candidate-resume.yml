@@ -1,7 +1,9 @@
 ---
 id: offer-candidate-resume
+name:
+  ru: Резюме
+  en: Resume
 storageType: ECOS_MODEL
 parentRef: emodel/type@attachment
-formRef: uiserv/form@DEFAULT_FORM
 journalRef: uiserv/journal@DEFAULT_JOURNAL
 defaultCreateVariant: true

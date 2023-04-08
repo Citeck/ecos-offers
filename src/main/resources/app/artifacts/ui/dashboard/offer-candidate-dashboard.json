@@ -133,18 +133,28 @@
               "elementsDisplayCondition": {},
               "types": [
                 {
-                  "formId": null,
-                  "multiple": false,
                   "type": "emodel/type@category-document-type/kind-d-scan-documents",
-                  "mandatory": false
+                  "multiple": false,
+                  "mandatory": false,
+                  "canUpload": true,
+                  "journalId": ""
                 },
                 {
-                  "formId": null,
-                  "multiple": false,
                   "type": "emodel/type@category-document-type/kind-d-counterparty-documents",
-                  "mandatory": false
+                  "multiple": false,
+                  "mandatory": false,
+                  "canUpload": true,
+                  "journalId": ""
+                },
+                {
+                  "type": "emodel/type@offer-candidate-resume",
+                  "multiple": true,
+                  "mandatory": false,
+                  "canUpload": true,
+                  "journalId": ""
                 }
-              ]
+              ],
+              "isLoadChecklist": true
             }
           },
           "description": "Документы"
