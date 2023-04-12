@@ -148,6 +148,31 @@
             }
           },
           "description": "Документы"
+        },
+        {
+          "name": "kanban-board",
+          "label": "dashboard-settings.widget.kanbanBoard",
+          "dndId": "4ed43b4c-2d6d-45f4-b536-f8cc95c5ac1a",
+          "id": "da88a3dc-5b1f-482c-ab65-946f789cd007",
+          "props": {
+            "id": "da88a3dc-5b1f-482c-ab65-946f789cd007",
+            "config": {
+              "widgetDisplayCondition": null,
+              "elementsDisplayCondition": {},
+              "offer-request-type": {
+                "title": {
+                  "ru": "Кандидаты",
+                  "en": "Candidates"
+                },
+                "journalId": "uiserv/journal@offer-candidate-journal",
+                "boardId": "uiserv/board@offer-candidate-kanban"
+              }
+            },
+            "widgetDisplayCondition": null,
+            "elementsDisplayCondition": {},
+            "journalSettingId": "BBBBBBSAHJFSHGFHAGFHJGDF"
+          },
+          "description": "Канбан-доска"
         }
       ],
       "desktop": [
@@ -208,6 +233,21 @@
             {
               "widgets": [
                 "4b5571a3-256d-4bcd-b970-5c52a68e4944"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697",
+          "tab": {
+            "label": "Канбан-доска",
+            "idLayout": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697"
+          },
+          "type": "1-column",
+          "columns": [
+            {
+              "widgets": [
+                "da88a3dc-5b1f-482c-ab65-946f789cd007"
               ]
             }
           ]
