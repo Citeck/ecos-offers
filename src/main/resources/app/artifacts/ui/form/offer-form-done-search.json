@@ -41,6 +41,7 @@
                 "validate": {
                   "required": true
                 },
+                "hideCreateButton": true,
                 "modalTitle": "",
                 "journalId": "offer-candidate-journal",
                 "queryData": "",
@@ -48,7 +49,7 @@
                 "computed": {
                   "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
                 },
-                "presetFilterPredicatesJs": "const { _ECM_requestCity } = data || {};\r\nconst { _ECM_requestPosition } = data || {};\r\nconst { _ECM_requestExperience } = data || {};\r\nconst { _ECM_requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!_ECM_requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": _ECM_requestGrade\r\n    });\r\n}\r\n\r\nif (!!_ECM_requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": _ECM_requestCity\r\n    });\r\n}\r\n\r\nif (!!_ECM_requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": _ECM_requestPosition\r\n    });\r\n}\r\n\r\nif (!!_ECM_requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": _ECM_requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
+                "presetFilterPredicatesJs": "value = {\n  \"t\": \"eq\",\n  \"att\": \"_status\",\n  \"val\": \"candidate-on-work\"\n}",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "selectJournal",
