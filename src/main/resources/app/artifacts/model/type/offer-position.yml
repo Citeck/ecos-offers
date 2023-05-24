@@ -5,7 +5,7 @@ name:
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-position-form
-journalRef: uiserv/journal@DEFAULT_JOURNAL
+journalRef: uiserv/journal@offer-position-journal
 inheritForm: false
 dispNameTemplate:
   ru: '${offerPositionName}'
