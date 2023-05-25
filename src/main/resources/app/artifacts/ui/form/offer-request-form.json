@@ -48,9 +48,20 @@
                   {
                     "components": [
                       {
-                        "label": "registrationNumber",
-                        "defaultValue": "",
+                        "label": {
+                          "ru": "registrationNumber"
+                        },
                         "key": "registrationNumber",
+                        "inputMasks": [
+                          {
+                            "label": "",
+                            "mask": ""
+                          }
+                        ],
+                        "disableInlineEdit": true,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "properties": {
                           "attribute": "registrationNumber"
                         },
@@ -102,6 +113,7 @@
                           "ru": "generateNumber"
                         },
                         "key": "generateNumber",
+                        "disableInlineEdit": true,
                         "persistent": "client-only",
                         "clearOnHide": false,
                         "defaultValue": true,
@@ -124,9 +136,13 @@
                     "key": "column",
                     "components": [
                       {
-                        "label": "created",
-                        "format": "dd.MM.yyyy",
+                        "label": {
+                          "ru": "created"
+                        },
+                        "key": "cm_created",
                         "disabled": true,
+                        "format": "dd.MM.yyyy",
+                        "disableInlineEdit": true,
                         "enableDate": false,
                         "datePicker": {
                           "minDate": "",
@@ -135,7 +151,8 @@
                         "enableTime": false,
                         "defaultDate": "moment();",
                         "defaultValue": "",
-                        "key": "cm_created",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "properties": {
                           "attribute": "created"
                         },
@@ -167,14 +184,19 @@
                   {
                     "components": [
                       {
-                        "label": "initiator",
-                        "allowedAuthorityType": "USER",
-                        "currentUserByDefault": true,
-                        "defaultValue": "",
+                        "label": {
+                          "ru": "initiator"
+                        },
+                        "key": "initiator",
                         "validate": {
                           "required": true
                         },
-                        "key": "initiator",
+                        "disableInlineEdit": true,
+                        "allowedAuthorityType": "USER",
+                        "currentUserByDefault": true,
+                        "defaultValue": "",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
                         "properties": {
                           "attribute": "initiator"
                         },
@@ -189,6 +211,9 @@
                         "validate": {
                           "required": true
                         },
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-position-journal",
                         "queryData": "",
@@ -214,13 +239,16 @@
                           "ru": "requestProjectAssoc"
                         },
                         "key": "requestProjectAssoc",
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-project-journal",
+                        "queryData": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
-                        "input": true,
-                        "queryData": ""
+                        "input": true
                       }
                     ]
                   }
@@ -245,6 +273,7 @@
                         "validate": {
                           "required": true
                         },
+                        "disableInlineEdit": true,
                         "allowedAuthorityType": "GROUP",
                         "allowedGroupType": "ROLE, BRANCH, GROUP",
                         "rootGroupName": "",
@@ -254,7 +283,7 @@
                           "getPositionSubdivision"
                         ],
                         "clearOnRefresh": true,
-                        "calculateValue": "const { getPositionSubdivision } = data || {};\nconst { subdivision } = getPositionSubdivision || {};\n\nvalue = subdivision;\n",
+                        "calculateValue": "const { getPositionSubdivision } = data || {};\nconst { subdivision } = getPositionSubdivision || {};\n\nvalue = subdivision;",
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
@@ -268,13 +297,14 @@
                         "validate": {
                           "required": true
                         },
+                        "disableInlineEdit": true,
                         "allowedAuthorityType": "USER",
                         "defaultValue": "",
                         "refreshOn": [
                           "getManager"
                         ],
                         "clearOnRefresh": true,
-                        "calculateValue": "const { getManager } = data || {};\nconst { records } = getManager || {};\n\nif (Array.isArray(records) && records !== 0) {\n  value = records[0];\n}\n",
+                        "calculateValue": "const { getManager } = data || {};\nconst { records } = getManager || {};\n\nif (Array.isArray(records) && records !== 0) {\n  value = records[0];\n}",
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectOrgstruct",
@@ -311,10 +341,13 @@
                           "ru": "requestGrade"
                         },
                         "key": "requestGrade",
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-grades-journal",
                         "queryData": "",
-                        "customPredicateJs": "const { requestPosition } = data || {};\n\nvalue = {\n  \"t\":\"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": requestPosition\n};\n",
+                        "customPredicateJs": "const { requestPosition } = data || {};\n\nvalue = {\n  \"t\":\"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": requestPosition\n};",
                         "refreshOn": [],
                         "customDefaultValue": "value = \"\";",
                         "allowCalculateOverride": true,
@@ -330,6 +363,9 @@
                         "validate": {
                           "required": true
                         },
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "cities-journal",
                         "queryData": "",
@@ -358,6 +394,9 @@
                         "validate": {
                           "required": true
                         },
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-experience-journal",
                         "queryData": "",
@@ -375,6 +414,7 @@
                           "required": true
                         },
                         "format": "dd.MM.yyyy",
+                        "disableInlineEdit": true,
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
@@ -422,6 +462,7 @@
                           "ru": "requestUrgentSearch"
                         },
                         "key": "requestUrgentSearch",
+                        "disableInlineEdit": true,
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "checkbox",
@@ -447,6 +488,7 @@
                           "ru": "requestComment"
                         },
                         "key": "requestComment",
+                        "disableInlineEdit": true,
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -496,6 +538,7 @@
                         },
                         "key": "requestLinkAssoc",
                         "multiple": true,
+                        "disableInlineEdit": true,
                         "reorder": false,
                         "source": {
                           "type": "custom",
@@ -569,13 +612,16 @@
                         },
                         "key": "requestCandidates",
                         "multiple": true,
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
                         "computed": {
                           "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
                         },
-                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
+                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}",
                         "defaultValue": [],
                         "refreshOn": [
                           "requestPosition",
@@ -604,6 +650,9 @@
                           "ru": "requestSelectedCandidate"
                         },
                         "key": "requestSelectedCandidate",
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-candidate-journal",
                         "queryData": "",
@@ -611,7 +660,7 @@
                         "computed": {
                           "valueDisplayName": "disp = value.load({\n  firstName: 'candidateFirstName',\n  lastName: 'candidateLastName',\n  status: '_status'\n}).then(res => `${res.firstName} ${res.lastName}, ${res.status}`);"
                         },
-                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
+                        "presetFilterPredicatesJs": "const { requestCity } = data || {};\r\nconst { requestPosition } = data || {};\r\nconst { requestExperience } = data || {};\r\nconst { requestGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (!!requestGrade) {\r\n    conditions.push({\r\n        \"t\": \"contains\",\r\n        \"att\": \"candidateTechInterviewGrade\",\r\n        \"val\": requestGrade\r\n    });\r\n}\r\n\r\nif (!!requestCity) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateCityAssoc\",\r\n        \"val\": requestCity\r\n    });\r\n}\r\n\r\nif (!!requestPosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidatePosition\",\r\n        \"val\": requestPosition\r\n    });\r\n}\r\n\r\nif (!!requestExperience) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"candidateExperienceAssoc\",\r\n        \"val\": requestExperience\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "customConditional": "const { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"request-selection-candidates\",\n  \"request-on-work\"\n  ];\n\nshow = statusesToShow.includes(status);",
