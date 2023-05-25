@@ -45,11 +45,12 @@
                         },
                         "key": "candidateRequest",
                         "multiple": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-request-journal",
                         "queryData": "",
                         "customPredicateJs": "value = {\n  \"t\":\"contains\",\n  \"att\": \"_status\",\n  \"val\":\"request-selection-candidates\"\n};",
-                        "presetFilterPredicatesJs": "const { candidateCityAssoc } = data || {};\r\nconst { candidatePosition } = data || {};\r\nconst { candidateExperienceAssoc } = data || {};\r\nconst { candidateTechInterviewGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (Array.isArray(candidateTechInterviewGrade) && candidateTechInterviewGrade.length > 0) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestGrade\",\r\n        \"val\": candidateTechInterviewGrade\r\n    });\r\n}\r\n\r\nif (!!candidateCityAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestCity\",\r\n        \"val\": candidateCityAssoc\r\n    });\r\n}\r\n\r\nif (!!candidatePosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestPosition\",\r\n        \"val\": candidatePosition\r\n    });\r\n}\r\n\r\nif (!!candidateExperienceAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestExperience\",\r\n        \"val\": candidateExperienceAssoc\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}\r\n",
+                        "presetFilterPredicatesJs": "const { candidateCityAssoc } = data || {};\r\nconst { candidatePosition } = data || {};\r\nconst { candidateExperienceAssoc } = data || {};\r\nconst { candidateTechInterviewGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (Array.isArray(candidateTechInterviewGrade) && candidateTechInterviewGrade.length > 0) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestGrade\",\r\n        \"val\": candidateTechInterviewGrade\r\n    });\r\n}\r\n\r\nif (!!candidateCityAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestCity\",\r\n        \"val\": candidateCityAssoc\r\n    });\r\n}\r\n\r\nif (!!candidatePosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestPosition\",\r\n        \"val\": candidatePosition\r\n    });\r\n}\r\n\r\nif (!!candidateExperienceAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestExperience\",\r\n        \"val\": candidateExperienceAssoc\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}",
                         "defaultValue": [],
                         "refreshOn": [
                           "candidateCityAssoc",
@@ -129,6 +130,12 @@
                         "validate": {
                           "required": true
                         },
+                        "inputMasks": [
+                          {
+                            "label": "",
+                            "mask": ""
+                          }
+                        ],
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
@@ -266,6 +273,9 @@
                         "validate": {
                           "required": true
                         },
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "cities-journal",
                         "queryData": "",
@@ -323,6 +333,9 @@
                         "validate": {
                           "required": true
                         },
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-position-journal",
                         "queryData": "",
@@ -368,6 +381,9 @@
                           "ru": "candidateExperienceAssoc"
                         },
                         "key": "candidateExperienceAssoc",
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-experience-journal",
                         "queryData": "",
@@ -657,10 +673,14 @@
                         },
                         "key": "candidateTechInterviewGrade",
                         "multiple": true,
+                        "hideCreateButton": true,
+                        "hideEditRowButton": true,
+                        "disableInlineEdit": true,
                         "modalTitle": "",
                         "journalId": "offer-grades-journal",
                         "queryData": "",
                         "customPredicateJs": "const { candidatePosition } = data || {};\n\nvalue = {\n  \"t\": \"eq\",\n  \"att\": \"gradesSimpleRoleTypeAssoc\",\n  \"val\": candidatePosition\n}",
+                        "defaultValue": [],
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
@@ -1040,5 +1060,6 @@
     ],
     "formId": "offer-candidate-form"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }
