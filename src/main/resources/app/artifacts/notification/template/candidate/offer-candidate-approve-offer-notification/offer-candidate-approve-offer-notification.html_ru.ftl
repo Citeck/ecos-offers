@@ -36,7 +36,7 @@
         Сумма оклада:&nbsp;&nbsp;<b>${salary!"(Сумма оклада не указана)"}.</b>
         <br>
     </p>
-    <p>С информацией вы можете ознакомиться в системе: <a href="https://citeck.ecos24.ru/v2/dashboard?recordRef=${doc_recordRef}">ссылка на кандидата</a><p>
+    <p>С информацией вы можете ознакомиться в системе: <a href="${link.getRecordLink(doc_recordRef)}">ссылка на кандидата</a><p>
 </div>
 
 </body>
