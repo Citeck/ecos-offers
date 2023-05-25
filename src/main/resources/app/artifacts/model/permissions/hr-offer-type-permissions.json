@@ -1,0 +1,1270 @@
+{
+  "id": "hr-offer-permissions",
+  "typeRef": "emodel/type@hr-offer-type",
+  "permissions": {
+    "matrix": {
+      "offer-initiator-role": {
+        "draft": "WRITE",
+        "hr-offer-approve": "READ",
+        "hr-offer-rework": "WRITE",
+        "hr-offer-feedback": "WRITE",
+        "hr-offer-feedback-from-candidate": "WRITE",
+        "hr-offer-reject": "READ",
+        "hr-offer-accept-offer": "READ",
+        "hr-offer-reject-offer": "READ"
+      },
+      "offer-chief-role": {
+        "draft": "READ",
+        "hr-offer-approve": "WRITE",
+        "hr-offer-rework": "READ",
+        "hr-offer-feedback": "READ",
+        "hr-offer-feedback-from-candidate": "READ",
+        "hr-offer-reject": "READ",
+        "hr-offer-accept-offer": "READ",
+        "hr-offer-reject-offer": "READ"
+      },
+      "offer-additional-chief-role": {
+        "draft": "READ",
+        "hr-offer-approve": "WRITE",
+        "hr-offer-rework": "READ",
+        "hr-offer-feedback": "READ",
+        "hr-offer-feedback-from-candidate": "READ",
+        "hr-offer-reject": "READ",
+        "hr-offer-accept-offer": "READ",
+        "hr-offer-reject-offer": "READ"
+      },
+      "offer-director-role": {
+        "draft": "READ",
+        "hr-offer-approve": "WRITE",
+        "hr-offer-rework": "READ",
+        "hr-offer-feedback": "READ",
+        "hr-offer-feedback-from-candidate": "READ",
+        "hr-offer-reject": "READ",
+        "hr-offer-accept-offer": "READ",
+        "hr-offer-reject-offer": "READ"
+      },
+      "offer-technologist-role": {
+        "draft": "WRITE",
+        "hr-offer-approve": "WRITE",
+        "hr-offer-rework": "WRITE",
+        "hr-offer-feedback": "WRITE",
+        "hr-offer-feedback-from-candidate": "WRITE",
+        "hr-offer-reject": "READ",
+        "hr-offer-accept-offer": "READ",
+        "hr-offer-reject-offer": "READ"
+      }
+    }
+  },
+  "attributes": {
+    "idocs:registrationNumber": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offer_issueDate": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "reg_number_counter": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "idocs:initiator": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerCandidate": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerPosition": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerSubdivision": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerGrade": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerOffice": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerComment": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerChief": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerAdditionalChief": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerFeedback": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerSalaryAndPrize": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerSubordination": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerSalary": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerPrize": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerSchedule": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "cm:content": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerDateWork": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerTaskComment": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-additional-chief-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-director-role": {
+          "draft": "READ",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "READ",
+          "hr-offer-feedback": "READ",
+          "hr-offer-feedback-from-candidate": "READ",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "READ",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "READ",
+          "hr-offer-accept-offer": "READ",
+          "hr-offer-reject-offer": "READ"
+        }
+      },
+      "rules": []
+    },
+    "offerApproveStage": {
+      "matrix": {
+        "offer-initiator-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "WRITE",
+          "hr-offer-reject-offer": "WRITE"
+        },
+        "offer-chief-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "WRITE",
+          "hr-offer-reject-offer": "WRITE"
+        },
+        "offer-additional-chief-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "WRITE",
+          "hr-offer-reject-offer": "WRITE"
+        },
+        "offer-director-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "WRITE",
+          "hr-offer-reject-offer": "WRITE"
+        },
+        "offer-technologist-role": {
+          "draft": "WRITE",
+          "hr-offer-approve": "WRITE",
+          "hr-offer-rework": "WRITE",
+          "hr-offer-feedback": "WRITE",
+          "hr-offer-feedback-from-candidate": "WRITE",
+          "hr-offer-reject": "WRITE",
+          "hr-offer-accept-offer": "WRITE",
+          "hr-offer-reject-offer": "WRITE"
+        }
+      },
+      "rules": []
+    }
+  }
+}
