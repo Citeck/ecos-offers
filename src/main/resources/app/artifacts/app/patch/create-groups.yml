@@ -1,0 +1,35 @@
+---
+id: offer-create-groups
+date: 2022-02-02T00:00:20Z
+type: mutate
+targetApp: emodel
+config:
+  records:
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_director
+        name:
+          ru: Генеральный директор
+          en: CEO
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_chief_accountant
+        name:
+          ru: Главный бухгалтер
+          en: Chief accountant
+
+    - id: emodel/authority-group@
+      attributes:
+        id: hr
+        name:
+          ru: Отдел кадров
+          en: HR
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production_director
+        name:
+          ru: Директор по производству
+          en: Production Director
