@@ -12,6 +12,8 @@ config:
         name:
           ru: Генеральный директор
           en: CEO
+        att_add_authorityGroups:
+          - emodel/authority-group@company
 
     - id: emodel/authority-group@
       attributes:
@@ -19,6 +21,17 @@ config:
         name:
           ru: Главный бухгалтер
           en: Chief accountant
+        att_add_authorityGroups:
+          - emodel/authority-group@company_accountancy
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_accountancy
+        name:
+          ru: Бухгалтерия
+          en: Accountancy
+        att_add_authorityGroups:
+          - emodel/authority-group@company
 
     - id: emodel/authority-group@
       attributes:
@@ -26,6 +39,8 @@ config:
         name:
           ru: Отдел кадров
           en: HR
+        att_add_authorityGroups:
+          - emodel/authority-group@company
 
     - id: emodel/authority-group@
       attributes:
@@ -33,3 +48,14 @@ config:
         name:
           ru: Директор по производству
           en: Production Director
+        att_add_authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company
+        name:
+          ru: Компания
+          en: Company
+        att_add_authorityGroups:
+          - emodel/authority-group@_orgstruct_home_
