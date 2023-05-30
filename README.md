@@ -6,7 +6,7 @@ The `ecos-offers` module provides a comprehensive solution for hiring employees,
 
 ## Get started
 
-If you are new to ECOS platform and would like to load the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/ecos-community-demo).
+If you are new to ECOS platform and would like to run the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/ecos-community-demo).
 
 ## Useful Links
 
