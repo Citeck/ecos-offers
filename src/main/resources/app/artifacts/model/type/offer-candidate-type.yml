@@ -123,10 +123,10 @@ model:
         child: false
     - id: candidateExperience
       name:
-        ru: Релевантыный опыт
+        ru: Релевантный опыт
     - id: candidateExperienceAssoc
       name:
-        ru: Релевантыный опыт
+        ru: Релевантный опыт
       type: ASSOC
       config:
         typeRef: emodel/type@offer-experience-type
@@ -134,10 +134,6 @@ model:
     - id: candidateDesiredSalary
       name:
         ru: Желаемая ЗП
-    - id: candidateResume
-      name:
-        ru: Резюме
-      type: CONTENT
     - id: candidateSalary
       name:
         ru: Оклад
@@ -195,3 +191,5 @@ model:
       name:
         ru: Документ оффера
       type: CONTENT
+contentConfig:
+  path: candidateOfferDocument

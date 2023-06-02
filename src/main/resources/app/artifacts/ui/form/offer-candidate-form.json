@@ -346,19 +346,25 @@
                       },
                       {
                         "label": {
-                          "ru": "candidateResume"
+                          "ru": "Резюме"
                         },
-                        "key": "candidateResume",
+                        "key": "docs:documents",
+                        "multiple": true,
                         "validate": {
                           "required": true
                         },
-                        "storage": "base64",
+                        "reorder": false,
+                        "clearOnHide": false,
+                        "storage": "url",
+                        "onFileClick": "download",
+                        "url": "/gateway/emodel/api/ecos/webapp/content",
                         "fileTypes": [
                           {
                             "label": "Резюме",
                             "value": "offer-candidate-resume"
                           }
                         ],
+                        "options": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "file",
@@ -783,13 +789,17 @@
                           "ru": "candidateOfferDocument"
                         },
                         "key": "candidateOfferDocument",
-                        "storage": "base64",
+                        "clearOnHide": false,
+                        "storage": "url",
+                        "onFileClick": "download",
+                        "url": "/gateway/emodel/api/ecos/webapp/content",
                         "fileTypes": [
                           {
                             "label": "Оффер",
                             "value": "offer-candidate-offer"
                           }
                         ],
+                        "options": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
                         "type": "file",

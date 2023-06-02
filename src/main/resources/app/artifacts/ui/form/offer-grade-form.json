@@ -29,7 +29,7 @@
                   "required": true
                 },
                 "modalTitle": "",
-                "journalId": "orgstruct-simple-role-journal",
+                "journalId": "offer-position-journal",
                 "queryData": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,

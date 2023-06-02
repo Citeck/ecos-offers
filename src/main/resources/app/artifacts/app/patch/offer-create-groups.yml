@@ -1,0 +1,61 @@
+---
+id: offer-create-groups
+date: 2022-02-02T00:00:20Z
+type: mutate
+targetApp: emodel
+config:
+  records:
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_director
+        name:
+          ru: Генеральный директор
+          en: CEO
+        att_add_authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_chief_accountant
+        name:
+          ru: Главный бухгалтер
+          en: Chief accountant
+        att_add_authorityGroups:
+          - emodel/authority-group@company_accountancy
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company_accountancy
+        name:
+          ru: Бухгалтерия
+          en: Accountancy
+        att_add_authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: hr
+        name:
+          ru: Отдел кадров
+          en: HR
+        att_add_authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: production_director
+        name:
+          ru: Директор по производству
+          en: Production Director
+        att_add_authorityGroups:
+          - emodel/authority-group@company
+
+    - id: emodel/authority-group@
+      attributes:
+        id: company
+        name:
+          ru: Компания
+          en: Company
+        att_add_authorityGroups:
+          - emodel/authority-group@_orgstruct_home_
