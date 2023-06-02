@@ -133,14 +133,14 @@
               "elementsDisplayCondition": {},
               "types": [
                 {
-                  "type": "emodel/type@category-document-type/kind-d-scan-documents",
+                  "type": "emodel/type@scan-document",
                   "multiple": false,
                   "mandatory": false,
                   "canUpload": true,
                   "journalId": ""
                 },
                 {
-                  "type": "emodel/type@category-document-type/kind-d-counterparty-documents",
+                  "type": "emodel/type@counterparty-document",
                   "multiple": false,
                   "mandatory": false,
                   "canUpload": true,
