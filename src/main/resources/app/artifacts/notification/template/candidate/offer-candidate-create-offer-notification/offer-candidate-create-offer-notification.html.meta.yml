@@ -3,7 +3,7 @@
   "name": "Offer Candidate Create Offer Notification",
   "notificationTitle": {
     "ru": "Создание оффера кандидату ${title}",
-    "en": "Создание оффера кандидату ${title}"
+    "en": "Offer crating to candidate ${title}"
   },
   "tags": [ ],
   "model": {

@@ -2,6 +2,7 @@
 id: offer-request-journal
 name:
   ru: Заявки на подбор
+  en: Requests for recruitment
 actions:
   - uiserv/action@delete
   - uiserv/action@edit

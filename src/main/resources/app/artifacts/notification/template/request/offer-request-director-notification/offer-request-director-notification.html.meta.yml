@@ -3,7 +3,7 @@
   "name": "Offer Request Director Notification",
   "notificationTitle": {
     "ru": "Согласование заявки №${registrationNumber} на подбор ${position}",
-    "en": "Согласование заявки №${registrationNumber} на подбор ${position}"
+    "en": "Approval request №${registrationNumber} for recruitment ${position}"
   },
   "tags": [ ],
   "model": {

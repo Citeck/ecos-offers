@@ -25,10 +25,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Отправить отказ"
+                  "ru": "Отправить отказ",
+                  "en": "Sent reject"
                 },
                 "key": "outcome_Reject",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -51,10 +58,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Отправить оффер"
+                  "ru": "Отправить оффер",
+                  "en": "Sent offer"
                 },
                 "key": "outcome_Offer",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "theme": "primary",
                 "block": true,
                 "disableOnInvalid": true,
@@ -89,5 +103,6 @@
     ],
     "formId": "offer-form-feedback"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

@@ -2,6 +2,7 @@
 id: offer-position-journal
 name:
   ru: Должности
+  en: Positions
 typeRef: emodel/type@offer-position
 actions:
   - uiserv/action@delete

@@ -1,7 +1,8 @@
 ---
 id: cities-journal
 name:
-  ru: Город
+  ru: Города
+  en: Cities
 typeRef: emodel/type@cities-type
 actions:
   - uiserv/action@delete
@@ -12,4 +13,5 @@ columns:
   - id: cityName
     name:
       ru: Название
+      en: Name
     type: TEXT

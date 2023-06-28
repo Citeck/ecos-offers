@@ -25,7 +25,8 @@
             "components": [
               {
                 "label": {
-                  "ru": "Выполнено"
+                  "ru": "Выполнено",
+                  "en": "Done"
                 },
                 "key": "outcome_Done",
                 "state": "",

@@ -2,6 +2,7 @@
 id: cities-type
 name:
   ru: Город
+  en: City
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@cities-form
@@ -9,9 +10,11 @@ journalRef: uiserv/journal@cities-journal
 inheritActions: false
 dispNameTemplate:
   ru: '${cityName}'
+  en: '${cityName}'
 defaultCreateVariant: true
 model:
   attributes:
     - id: cityName
       name:
         ru: Название
+        en: Name

@@ -2,6 +2,7 @@
 id: offer-grades-journal
 name:
   ru: Грейды
+  en: Grades
 typeRef: emodel/type@offer-grade-type
 actions:
   - uiserv/action@delete

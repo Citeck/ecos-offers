@@ -24,7 +24,8 @@
             },
             "key": "panel5",
             "title": {
-              "ru": "Основная информация"
+              "ru": "Основная информация",
+              "en": "General info"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -327,5 +328,6 @@
     ],
     "formId": "offer-candidate-kanban-form"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

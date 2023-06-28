@@ -2,6 +2,7 @@
 id: offer-experience-journal
 name:
   ru: Опыт работы
+  en: Experience
 typeRef: emodel/type@offer-experience-type
 actions:
   - uiserv/action@delete

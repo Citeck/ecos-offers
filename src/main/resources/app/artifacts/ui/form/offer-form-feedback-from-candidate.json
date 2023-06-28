@@ -25,10 +25,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Оффер отклонен"
+                  "ru": "Оффер отклонен",
+                  "en": "Offer rejected"
                 },
                 "key": "outcome_Reject",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -51,10 +58,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Оффер принят"
+                  "ru": "Оффер принят",
+                  "en": "Offer accepted"
                 },
                 "key": "outcome_Accept",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "theme": "primary",
                 "block": true,
                 "disableOnInvalid": true,
@@ -89,5 +103,6 @@
     ],
     "formId": "offer-form-feedback-from-candidate"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

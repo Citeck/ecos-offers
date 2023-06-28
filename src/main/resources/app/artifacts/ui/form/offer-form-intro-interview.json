@@ -45,10 +45,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Reject"
+                  "ru": "Кандидату отказано",
+                  "en": "Candidate reject"
                 },
                 "key": "outcome_Reject",
                 "state": "draft",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -122,5 +129,6 @@
     ],
     "formId": "offer-form-intro-interview"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

@@ -12,36 +12,48 @@ columns:
   - id: candidate-schedule-intro-interview
     name:
       ru: Назначение вводного интервью
+      en: Intro interview assignment
   - id: candidate-introductory-interview
     name:
       ru: Вводное интервью
+      en: Intro interview
   - id: candidate-tech-interview
     name:
       ru: Техническое интервью
+      en: Tech interview
   - id: candidate-approve-condition
     name:
       ru: Согласование условий оффера
+      en: Offer's terms approval
   - id: candidate-wait-candidate-response
     name:
       ru: Ожидание ответа кандидата
+      en: Waiting candidate's response
   - id: candidate-candidate-response-processing
     name:
       ru: Обработка ответа кандидата
+      en: Processing candidate's response
   - id: candidate-approved
     name:
       ru: Оффер принят
+      en: Offer accepted
   - id: candidate-on-work
     name:
       ru: Вышел на работу
+      en: Went to work
   - id: candidate-not-on-work
     name:
       ru: Не вышел на работу
+      en: Don't went to work
   - id: candidate-reject
     name:
       ru: Отклонена
+      en: Rejected
   - id: candidate-reject-from-candidate
     name:
       ru: Отказано со стороны кандидата
+      en: Rejected by candidate
   - id: candidate-candidate-rejected
     name:
       ru: Кандидату отказано
+      en: Candidate was rejected

@@ -2,6 +2,7 @@
 id: offer-candidate-journal
 name:
   ru: Кандидаты
+  en: Candidates
 typeRef: emodel/type@offer-candidate-type
 actions:
   - uiserv/action@delete

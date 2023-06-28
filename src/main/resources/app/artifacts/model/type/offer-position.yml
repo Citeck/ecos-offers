@@ -2,6 +2,7 @@
 id: offer-position
 name:
   ru: Должность
+  en: Position
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-position-form
@@ -9,13 +10,16 @@ journalRef: uiserv/journal@offer-position-journal
 inheritForm: false
 dispNameTemplate:
   ru: '${offerPositionName}'
+  en: '${offerPositionName}'
 defaultCreateVariant: true
 model:
   attributes:
     - id: offerPositionName
       name:
         ru: Название
+        en: Name
     - id: positionSubdivision
       name:
         ru: Подразделение
+        en: Subdivision
       type: ASSOC

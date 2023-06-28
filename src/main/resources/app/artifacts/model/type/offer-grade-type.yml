@@ -2,6 +2,7 @@
 id: offer-grade-type
 name:
   ru: Грейды
+  en: Grades
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-grade-form
@@ -9,27 +10,32 @@ journalRef: uiserv/journal@offer-grades-journal
 inheritActions: false
 dispNameTemplate:
   ru: Грейд №${gradesNumber}, ${gradesSimpleRoleTypeAssoc?disp}
+  en: Grade №${gradesNumber}, ${gradesSimpleRoleTypeAssoc?disp}
 defaultCreateVariant: true
 model:
   roles:
     - id: hr
       name:
         ru: HR
+        en: HR
       assignees:
         - GROUP_hr
     - id: everyone
       name:
         ru: Все
+        en: Everyone
       assignees:
         - GROUP_EVERYONE
   statuses:
     - id: EMPTY
       name:
         ru: EMPTY
+        en: EMPTY
   attributes:
     - id: gradesSimpleRoleTypeAssoc
       name:
         ru: Должность
+        en: Position
       type: ASSOC
       config:
         typeRef: emodel/type@offer-position
@@ -38,16 +44,21 @@ model:
     - id: gradesNumber
       name:
         ru: Номер
+        en: Number
       mandatory: true
     - id: gradesRequirements
       name:
         ru: Требования к сотруднику
+        en: Requirements
     - id: gradesResponsibilities
       name:
         ru: Обязанности
+        en: Responsibilities
     - id: gradesSalary
       name:
         ru: Вилка оклада
+        en: Salary
     - id: gradesPrize
       name:
         ru: Премия
+        en: Prize

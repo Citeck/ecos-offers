@@ -3,7 +3,7 @@
   "name": "Offer Candidate Approve Offer Notification",
   "notificationTitle": {
     "ru": "Согласование оффера кандидату ${title}",
-    "en": "Согласование оффера кандидату ${title}"
+    "en": "Offer approval to candidate ${title}"
   },
   "tags": [ ],
   "model": {
