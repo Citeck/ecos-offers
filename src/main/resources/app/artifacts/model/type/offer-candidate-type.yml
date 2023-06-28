@@ -2,6 +2,7 @@
 id: offer-candidate-type
 name:
   ru: Кандидат
+  en: Candidate
 storageType: ECOS_MODEL
 parentRef: emodel/type@case
 formRef: uiserv/form@offer-candidate-form
@@ -10,6 +11,7 @@ boardRef: uiserv/board@offer-candidate-kanban
 inheritActions: false
 dispNameTemplate:
   ru: ${candidateLastName} ${candidateFirstName}
+  en: ${candidateLastName} ${candidateFirstName}
 actions:
   - uiserv/action@offer-workflow-reject
   - uiserv/action@delete
@@ -20,103 +22,121 @@ model:
     - id: candidate-director-role
       name:
         ru: Генеральный директор
+        en: General director
       assignees:
         - GROUP_company_director
     - id: candidate-hr-role
       name:
         ru: HR
+        en: HR
       assignees:
         - GROUP_hr
     - id: candidate-accounting-role
       name:
         ru: Главный бухгалтер
+        en: General accountant
       assignees:
         - GROUP_company_chief_accountant
     - id: candidate-tech-interviewrs
       name:
         ru: Интервьюеры тех. интервью
+        en: Tech interviewers
       attributes:
         - candidateTechInterviewrs
     - id: candidate-direction-director
       name:
         ru: Директор по производству
+        en: Direction director
       assignees:
         - GROUP_production_director
   statuses:
     - id: draft
       name:
         ru: Черновик
+        en: Draft
     - id: candidate-reject
       name:
         ru: Отклонена
+        en: Rejected
     - id: candidate-schedule-intro-interview
       name:
         ru: Назначение вводного интервью
+        en: Intro interview assigning
     - id: candidate-reject-from-candidate
       name:
         ru: Отказано со стороны кандидата
+        en: Rejected by candidate
     - id: candidate-introductory-interview
       name:
         ru: Вводное интервью
+        en: Intro interview
     - id: candidate-candidate-rejected
       name:
         ru: Кандидату отказано
+        en: Candidate was rejected
     - id: candidate-tech-interview
       name:
         ru: Техническое интервью
+        en: Tech interview
     - id: candidate-approve-condition
       name:
         ru: Согласование условий оффера
+        en: Agreement offer terms
     - id: candidate-wait-candidate-response
       name:
         ru: Ожидание ответа кандидата
+        en: Candidate's response waiting
     - id: candidate-candidate-response-processing
       name:
         ru: Обработка ответа кандидата
+        en: Candidate's response processing
     - id: candidate-approved
       name:
         ru: Оффер принят
+        en: Offer approved
     - id: candidate-on-work
       name:
         ru: Вышел на работу
+        en: Went to work
     - id: candidate-not-on-work
       name:
         ru: Не вышел на работу
+        en: Didn't went to work
   attributes:
-    - id: candidateRequest
-      name:
-        ru: Запрос
-      type: ASSOC
-      config:
-        typeRef: emodel/type@offer-request-type
-        child: false
-      multiple: true
     - id: candidateTechFeedback
       name:
         ru: Фидбэк по техническому собеседованию
+        en: Tech feedback
       multiple: true
     - id: candidateIntroFeedback
       name:
         ru: Фидбэк по вводному собеседованию
+        en: Intro feedback
     - id: candidateLastName
       name:
         ru: Фамилия
+        en: Last name
     - id: candidateFirstName
       name:
         ru: Имя
+        en: First name
     - id: candidateMiddleName
       name:
         ru: Отчество
+        en: Middle name
     - id: candidateBirthDate
       name:
         ru: Дата рождения
+        en: Birth date
       type: DATE
     - id: candidateGender
       name:
         ru: Пол
+        en: Gender
     - id: candidateCityAssoc
       name:
         ru: Город
+        en: City
       type: ASSOC
       config:
         typeRef: emodel/type@cities-type
@@ -124,9 +144,11 @@ model:
     - id: candidateExperience
       name:
         ru: Релевантный опыт
+        en: Experience
     - id: candidateExperienceAssoc
       name:
         ru: Релевантный опыт
+        en: Experience
       type: ASSOC
       config:
         typeRef: emodel/type@offer-experience-type
@@ -134,17 +156,21 @@ model:
     - id: candidateDesiredSalary
       name:
         ru: Желаемая ЗП
+        en: Desired salary
     - id: candidateSalary
       name:
         ru: Оклад
+        en: Salary
       type: NUMBER
     - id: candidateDateWork
       name:
         ru: Дата выхода на работу
+        en: Work date
       type: DATE
     - id: candidateTechInterviewGrade
       name:
         ru: Грейд по результатам тех. интервью
+        en: Grade based on result tech. interview
       type: ASSOC
       config:
         typeRef: emodel/type@offer-grade-type
@@ -153,6 +179,7 @@ model:
     - id: candidatePosition
       name:
         ru: Должность
+        en: Position
       type: ASSOC
       config:
         typeRef: emodel/type@offer-position
@@ -160,36 +187,45 @@ model:
     - id: candidateIntroInterviewDate
       name:
         ru: Дата вводного интервью
+        en: Intro interview date
       type: DATETIME
     - id: candidateTechInterviewDate
       name:
         ru: Дата технического интервью
+        en: Tech interview date
       type: DATETIME
     - id: candidateResponseExpectedDate
       name:
         ru: Дата ожидаемого ответа
+        en: Response expected date
       type: DATE
     - id: candidateStartDateOnWork
       name:
         ru: Дата выхода на работу
+        en: Start work date
       type: DATE
     - id: candidateTechInterviewrs
       name:
         ru: Технические интервьюеры
+        en: Tech interviewers
       type: PERSON
       multiple: true
     - id: candidateEmail
       name:
         ru: Электронная почта
+        en: Email
     - id: candidateTelegram
       name:
         ru: Telegram
+        en: Telegram
     - id: candidatePhoneNumber
       name:
         ru: Номер телефона
+        en: Phone number
     - id: candidateOfferDocument
       name:
         ru: Документ оффера
+        en: Offer document
       type: CONTENT
 contentConfig:
   path: candidateOfferDocument

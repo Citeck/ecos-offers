@@ -2,7 +2,7 @@
 id: offer-project-journal
 name:
   ru: Проекты
-  en: Project
+  en: Projects
 typeRef: emodel/type@offer-project
 actions:
   - uiserv/action@view-dashboard

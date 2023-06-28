@@ -2,6 +2,7 @@
 id: offer-experience-type
 name:
   ru: Опыт
+  en: Experience
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-experience-form
@@ -9,12 +10,15 @@ journalRef: uiserv/journal@offer-experience-journal
 inheritActions: false
 dispNameTemplate:
   ru: ${experienceStart} - ${experienceEnd}
+  en: ${experienceStart} - ${experienceEnd}
 defaultCreateVariant: true
 model:
   attributes:
     - id: experienceStart
       name:
         ru: От
+        en: Start
     - id: experienceEnd
       name:
         ru: До
+        en: End
