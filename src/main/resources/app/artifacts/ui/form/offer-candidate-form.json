@@ -9,7 +9,16 @@
   "typeRef": "emodel/type@offer-candidate-type",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "en": {
+      "Male": "Male",
+      "Female": "Female"
+    },
+    "ru": {
+      "Male": "Мужской",
+      "Female": "Женский"
+    }
+  },
   "definition": {
     "components": [
       {
@@ -24,7 +33,8 @@
             },
             "key": "panel7",
             "title": {
-              "ru": "Регистрационная информация"
+              "ru": "Регистрационная информация",
+              "en": "Registration info"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -33,71 +43,21 @@
             "components": [
               {
                 "label": {
-                  "ru": "Columns"
+                  "ru": "Статус кандидата",
+                  "en": "Candidate status"
                 },
-                "key": "columns13",
-                "columns": [
-                  {
-                    "components": [
-                      {
-                        "label": {
-                          "ru": "candidateRequest"
-                        },
-                        "key": "candidateRequest",
-                        "multiple": true,
-                        "disableInlineEdit": true,
-                        "modalTitle": "",
-                        "journalId": "offer-request-journal",
-                        "queryData": "",
-                        "customPredicateJs": "value = {\n  \"t\":\"contains\",\n  \"att\": \"_status\",\n  \"val\":\"request-selection-candidates\"\n};",
-                        "presetFilterPredicatesJs": "const { candidateCityAssoc } = data || {};\r\nconst { candidatePosition } = data || {};\r\nconst { candidateExperienceAssoc } = data || {};\r\nconst { candidateTechInterviewGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (Array.isArray(candidateTechInterviewGrade) && candidateTechInterviewGrade.length > 0) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestGrade\",\r\n        \"val\": candidateTechInterviewGrade\r\n    });\r\n}\r\n\r\nif (!!candidateCityAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestCity\",\r\n        \"val\": candidateCityAssoc\r\n    });\r\n}\r\n\r\nif (!!candidatePosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestPosition\",\r\n        \"val\": candidatePosition\r\n    });\r\n}\r\n\r\nif (!!candidateExperienceAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestExperience\",\r\n        \"val\": candidateExperienceAssoc\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}",
-                        "defaultValue": [],
-                        "refreshOn": [
-                          "candidateCityAssoc",
-                          "candidatePosition",
-                          "candidateTechInterviewGrade",
-                          "candidateExperienceAssoc"
-                        ],
-                        "optionalWhenDisabled": false,
-                        "type": "selectJournal",
-                        "input": true
-                      }
-                    ],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "index": 0
-                  },
-                  {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "components": [
-                      {
-                        "label": {
-                          "ru": "Статус кандидата",
-                          "en": "Candidate status"
-                        },
-                        "key": "candidateStatus",
-                        "disabled": true,
-                        "persistent": false,
-                        "defaultValue": "",
-                        "refreshOn": [
-                          "caseStatusName"
-                        ],
-                        "clearOnRefresh": true,
-                        "calculateValue": "const { caseStatusName } = data || {};\nconst { status } = caseStatusName || {};\n\nvalue = status;",
-                        "optionalWhenDisabled": false,
-                        "type": "textfield",
-                        "input": true
-                      }
-                    ]
-                  }
+                "key": "candidateStatus",
+                "disabled": true,
+                "persistent": false,
+                "defaultValue": "",
+                "refreshOn": [
+                  "caseStatusName"
                 ],
-                "oneColumnInViewMode": false,
-                "type": "columns",
-                "input": false
+                "clearOnRefresh": true,
+                "calculateValue": "const { caseStatusName } = data || {};\nconst { status } = caseStatusName || {};\n\nvalue = status;",
+                "optionalWhenDisabled": false,
+                "type": "textfield",
+                "input": true
               }
             ]
           },
@@ -107,7 +67,8 @@
             },
             "key": "panel5",
             "title": {
-              "ru": "Основная информация"
+              "ru": "Основная информация",
+              "en": "General info"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -236,12 +197,18 @@
                         "data": {
                           "values": [
                             {
-                              "label": "Мужской",
-                              "value": "мужской"
+                              "label": "Male",
+                              "value": "male"
                             },
                             {
-                              "label": "Женский",
-                              "value": "женский"
+                              "label": "Female",
+                              "value": "female"
+                            }
+                          ],
+                          "headers": [
+                            {
+                              "key": "",
+                              "value": ""
                             }
                           ]
                         },
@@ -270,9 +237,6 @@
                           "ru": "candidateCityAssoc"
                         },
                         "key": "candidateCityAssoc",
-                        "validate": {
-                          "required": true
-                        },
                         "hideCreateButton": true,
                         "hideEditRowButton": true,
                         "disableInlineEdit": true,
@@ -310,7 +274,8 @@
             },
             "key": "panel6",
             "title": {
-              "ru": "О работе"
+              "ru": "О работе",
+              "en": "About work"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -346,7 +311,8 @@
                       },
                       {
                         "label": {
-                          "ru": "Резюме"
+                          "ru": "Резюме",
+                          "en": "Resume"
                         },
                         "key": "docs:documents",
                         "multiple": true,
@@ -424,7 +390,8 @@
             },
             "key": "panel3",
             "title": {
-              "ru": "Контакты"
+              "ru": "Контакты",
+              "en": "Contacts"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -518,11 +485,12 @@
             },
             "key": "panel",
             "title": {
-              "ru": "Вводное интервью"
+              "ru": "Вводное интервью",
+              "en": "Intro interview"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateIntroInterviewDate } = data || {};\nconst { candidateIntroFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-introductory-interview\"\n  ];\n\nshow = !!candidateIntroInterviewDate ||\n       !!candidateIntroFeedback ||\n       statusesToShow.includes(status);\n       \n       \n",
+            "customConditional": "const { candidateIntroInterviewDate } = data || {};\nconst { candidateIntroFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-introductory-interview\"\n  ];\n\nshow = !!candidateIntroInterviewDate ||\n       !!candidateIntroFeedback ||\n       statusesToShow.includes(status);",
             "type": "panel",
             "input": false,
             "components": [
@@ -611,11 +579,12 @@
             },
             "key": "panel4",
             "title": {
-              "ru": "Техническое интервью"
+              "ru": "Техническое интервью",
+              "en": "Tech interview"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet feedbackCondition = Array.isArray(candidateTechFeedback) && \n                        candidateTechFeedback.length > 0 && \n                        typeof candidateTechFeedback[0] === 'string' && \n                        candidateTechFeedback[0].trim() !== '';\n\nlet gradeCondition = Array.isArray(candidateTechInterviewGrade) && \n                     candidateTechInterviewGrade.length > 0;\n                        \nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                           candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       gradeCondition ||\n       feedbackCondition ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);\n",
+            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet feedbackCondition = Array.isArray(candidateTechFeedback) && \n                        candidateTechFeedback.length > 0 && \n                        typeof candidateTechFeedback[0] === 'string' && \n                        candidateTechFeedback[0].trim() !== '';\n\nlet gradeCondition = Array.isArray(candidateTechInterviewGrade) && \n                     candidateTechInterviewGrade.length > 0;\n                        \nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                           candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       gradeCondition ||\n       feedbackCondition ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);",
             "type": "panel",
             "input": false,
             "components": [
@@ -740,7 +709,8 @@
             },
             "key": "panel1",
             "title": {
-              "ru": "Оффер"
+              "ru": "Оффер",
+              "en": "Offer"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,

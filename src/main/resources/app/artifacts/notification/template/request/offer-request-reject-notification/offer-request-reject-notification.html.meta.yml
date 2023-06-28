@@ -3,7 +3,7 @@
   "name": "Offer Request Reject Notification",
   "notificationTitle": {
     "ru": "Отклонена заявка №${registrationNumber} на подбор ${position}",
-    "en": "Отклонена заявка №${registrationNumber} на подбор ${position}"
+    "en": "Rejected request №${registrationNumber} на подбор ${position}"
   },
   "tags": [ ],
   "model": {
