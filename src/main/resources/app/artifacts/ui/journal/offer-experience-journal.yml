@@ -13,6 +13,8 @@ columns:
   - id: experienceStart
     name:
       ru: От
+      en: From
   - id: experienceEnd
     name:
       ru: До
+      en: Until
