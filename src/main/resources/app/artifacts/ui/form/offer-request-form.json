@@ -596,7 +596,8 @@
             },
             "key": "panel",
             "title": {
-              "ru": "Кандидаты"
+              "ru": "Кандидаты",
+              "en": "Candidates"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,

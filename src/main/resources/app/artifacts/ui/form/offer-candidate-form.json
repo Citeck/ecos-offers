@@ -990,7 +990,8 @@
             "components": [
               {
                 "label": {
-                  "ru": "Сохранить"
+                  "ru": "Сохранить",
+                  "en": "Save"
                 },
                 "key": "save",
                 "state": "",
