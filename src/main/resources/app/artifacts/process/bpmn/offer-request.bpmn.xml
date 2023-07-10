@@ -10,13 +10,13 @@
             <bpmn:outgoing >Flow_0tlaxxz</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="StartEvent_1ew9rff" targetRef="Gateway_146zco6" name="" id="Flow_08ksugo" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Согласование директором&quot;" id="Activity_10ezfvr" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Согласование директором\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-director-approve">
+        <bpmn:task name="" id="Activity_10ezfvr" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-director-approve">
             <bpmn:incoming >Flow_0tlaxxz</bpmn:incoming>
             <bpmn:outgoing >Flow_0rmzwyp</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Gateway_146zco6" targetRef="Activity_10ezfvr" name="" id="Flow_0tlaxxz" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_10ezfvr" targetRef="Activity_1aykj9d" name="" id="Flow_0rmzwyp" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Согласование заявки у директора" id="Activity_0cotdwb" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Согласовать&quot;}},{&quot;id&quot;:&quot;Rework&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;На доработку&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование заявки у директора&quot;}" ecos:formRef="uiserv/form@offer-form-approve" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-director-role&quot;]">
+        <bpmn:userTask name="Request approval by director" id="Activity_0cotdwb" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Согласовать&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}},{&quot;id&quot;:&quot;Rework&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;На доработку&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование заявки у директора&quot;,&quot;en&quot;:&quot;Request approval by director&quot;}" ecos:formRef="uiserv/form@offer-form-approve" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-director-role&quot;]">
             <bpmn:incoming >Flow_12iwtjh</bpmn:incoming>
             <bpmn:outgoing >Flow_0wx6805</bpmn:outgoing>
         </bpmn:userTask>
@@ -27,27 +27,27 @@
             <bpmn:outgoing >Flow_0ki1zsg</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="Activity_0cotdwb" targetRef="Gateway_0fybwsz" name="" id="Flow_0wx6805" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Доработка&quot;" id="Activity_0u8aw5e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Доработка\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-rework">
+        <bpmn:task name="" id="Activity_0u8aw5e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-rework">
             <bpmn:incoming >Flow_01jed7l</bpmn:incoming>
             <bpmn:outgoing >Flow_1fqnkw8</bpmn:outgoing>
         </bpmn:task>
-        <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_0u8aw5e" name="Есть замечания" id="Flow_01jed7l" ecos:name_ml="{&quot;en&quot;:&quot;Есть замечания&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Rework&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_0u8aw5e" name="Have remarks" id="Flow_01jed7l" ecos:name_ml="{&quot;en&quot;:&quot;Have remarks&quot;,&quot;ru&quot;:&quot;Есть замечания&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Rework&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:sequenceFlow sourceRef="Activity_0u8aw5e" targetRef="Activity_02n49h1" name="" id="Flow_1fqnkw8" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Корректировка заявки" id="Activity_0p1tluj" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Корректировка заявки&quot;}" ecos:formRef="uiserv/form@offer-form-rework" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-initiator-role&quot;]">
+        <bpmn:userTask name="Request correction" id="Activity_0p1tluj" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Корректировка заявки&quot;,&quot;en&quot;:&quot;Request correction&quot;}" ecos:formRef="uiserv/form@offer-form-rework" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-initiator-role&quot;]">
             <bpmn:incoming >Flow_1gmif8z</bpmn:incoming>
             <bpmn:outgoing >Flow_01o8ceq</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_0p1tluj" targetRef="Gateway_146zco6" name="" id="Flow_01o8ceq" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:task name="Статус &quot;Подбор кандидатов&quot;" id="Activity_03llb2t" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Подбор кандидатов\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-selection-candidates">
+        <bpmn:task name="" id="Activity_03llb2t" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-selection-candidates">
             <bpmn:incoming >Flow_12yd9nz</bpmn:incoming>
             <bpmn:outgoing >Flow_0h2pwv6</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_15svr9x" name="Ок" id="Flow_03zfgxp" ecos:name_ml="{&quot;en&quot;:&quot;Ок&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Approve&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:task name="Статус &quot;Отклонена&quot;" id="Activity_0h88vzc" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Отклонена\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-reject">
+        <bpmn:task name="" id="Activity_0h88vzc" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-reject">
             <bpmn:incoming >Flow_0ki1zsg</bpmn:incoming>
             <bpmn:outgoing >Flow_0c5qhty</bpmn:outgoing>
         </bpmn:task>
-        <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_0h88vzc" name="Отклонена" id="Flow_0ki1zsg" ecos:name_ml="{&quot;en&quot;:&quot;Отклонена&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Reject&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_0h88vzc" name="Rejected" id="Flow_0ki1zsg" ecos:name_ml="{&quot;en&quot;:&quot;Rejected&quot;,&quot;ru&quot;:&quot;Отклонена&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Reject&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:endEvent name="" id="Event_1v1xtn2" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_16bnxkm</bpmn:incoming>
         </bpmn:endEvent>
@@ -55,33 +55,33 @@
         <bpmn:endEvent name="" id="Event_0rc956j" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_0bn1qo3</bpmn:incoming>
         </bpmn:endEvent>
-        <bpmn:task name="Статус &quot;Вышел на работу&quot;" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{&quot;ru&quot;:&quot;Статус \&quot;Вышел на работу\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-on-work">
+        <bpmn:task name="" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-on-work">
             <bpmn:incoming >Flow_0itatcg</bpmn:incoming>
             <bpmn:outgoing >Flow_0bn1qo3</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Activity_03llb2t" targetRef="Activity_01jmznm" name="" id="Flow_0h2pwv6" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_01jmznm" targetRef="Activity_1g96onh" name="" id="Flow_0itatcg" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Подбор и выбор кандидатов" id="Activity_01jmznm" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Подбор и выбор кандидатов&quot;}" ecos:formRef="uiserv/form@offer-form-done-search" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
+        <bpmn:userTask name="Recruitment and selection candidates" id="Activity_01jmznm" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Подбор и выбор кандидатов&quot;,&quot;en&quot;:&quot;Recruitment and selection candidates&quot;}" ecos:formRef="uiserv/form@offer-form-done-search" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
             <bpmn:incoming >Flow_0h2pwv6</bpmn:incoming>
             <bpmn:outgoing >Flow_0itatcg</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_1g96onh" targetRef="Event_0rc956j" name="" id="Flow_0bn1qo3" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_1aykj9d" targetRef="Activity_0cotdwb" name="" id="Flow_12iwtjh" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sendTask name="Согласование запроса на поиск сотрудника" id="Activity_1aykj9d" ecos:notificationCc="[]" ecos:notificationTitle="Согласование запроса на поиск сотрудника" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование запроса на поиск сотрудника&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationTemplate="notifications/template@offer-request-director-notification" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-director-role&quot;]" ecos:notificationBody="&lt;p&gt;На согласование поступил запрос на поиск сотрудника&lt;/p&gt;">
+        <bpmn:sendTask name="Employee search request approval" id="Activity_1aykj9d" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование запроса на поиск сотрудника&quot;,&quot;en&quot;:&quot;Employee search request approval&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-director-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-director-role&quot;]" ecos:notificationTitle="Согласование запроса на поиск сотрудника" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;На согласование поступил запрос на поиск сотрудника&lt;/p&gt;" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_0rmzwyp</bpmn:incoming>
             <bpmn:outgoing >Flow_12iwtjh</bpmn:outgoing>
         </bpmn:sendTask>
         <bpmn:sequenceFlow sourceRef="Activity_02n49h1" targetRef="Activity_0p1tluj" name="" id="Flow_1gmif8z" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sendTask name="Доработка запроса на поиск сотрудника" id="Activity_02n49h1" ecos:notificationCc="[]" ecos:notificationTitle="Доработка запроса на поиск сотрудника" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Доработка запроса на поиск сотрудника&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationTemplate="notifications/template@offer-request-rework-notification" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-initiator-role&quot;]" ecos:notificationBody="&lt;p&gt;На доработку поступил запрос на поиск сотрудника&lt;/p&gt;">
+        <bpmn:sendTask name="Employee search request rework" id="Activity_02n49h1" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Доработка запроса на поиск сотрудника&quot;,&quot;en&quot;:&quot;Employee search request rework&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-rework-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-initiator-role&quot;]" ecos:notificationTitle="Доработка запроса на поиск сотрудника" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;На доработку поступил запрос на поиск сотрудника&lt;/p&gt;" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_1fqnkw8</bpmn:incoming>
             <bpmn:outgoing >Flow_1gmif8z</bpmn:outgoing>
         </bpmn:sendTask>
-        <bpmn:sendTask name="Прикрепление вакансии" id="Activity_0awkua3" ecos:notificationCc="[]" ecos:notificationTitle="Запрос на поиск сотрудника" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Прикрепление вакансии&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationTemplate="notifications/template@offer-request-attach-vacancy-notification" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-hr-role&quot;]" ecos:notificationBody="&lt;p&gt;Поступил запрос на поиск сотрудника&lt;/p&gt;">
+        <bpmn:sendTask name="Vacancy attaching" id="Activity_0awkua3" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Прикрепление вакансии&quot;,&quot;en&quot;:&quot;Vacancy attaching&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-attach-vacancy-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-hr-role&quot;]" ecos:notificationTitle="Запрос на поиск сотрудника" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;Поступил запрос на поиск сотрудника&lt;/p&gt;" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_11aulzk</bpmn:incoming>
             <bpmn:outgoing >Flow_1stniqu</bpmn:outgoing>
         </bpmn:sendTask>
         <bpmn:sequenceFlow sourceRef="Activity_1vp9of0" targetRef="Event_1v1xtn2" name="" id="Flow_16bnxkm" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sendTask name="Отклонен запрос на поиск сотрудника" id="Activity_1vp9of0" ecos:notificationCc="[]" ecos:notificationTitle="Отклонен запрос на поиск сотрудника" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонен запрос на поиск сотрудника&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationTemplate="notifications/template@offer-request-reject-notification" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-initiator-role&quot;]" ecos:notificationBody="&lt;p&gt;Отклонен запрос на поиск сотрудника&lt;/p&gt;">
+        <bpmn:sendTask name="Employee search request rejected" id="Activity_1vp9of0" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонен запрос на поиск сотрудника&quot;,&quot;en&quot;:&quot;Employee search request rejected&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-reject-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-initiator-role&quot;]" ecos:notificationTitle="Отклонен запрос на поиск сотрудника" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;Отклонен запрос на поиск сотрудника&lt;/p&gt;" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_0c5qhty</bpmn:incoming>
             <bpmn:outgoing >Flow_16bnxkm</bpmn:outgoing>
         </bpmn:sendTask>
@@ -92,7 +92,7 @@
         <bpmn:sequenceFlow sourceRef="Activity_15svr9x" targetRef="Activity_0awkua3" name="" id="Flow_11aulzk" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_0awkua3" targetRef="Activity_0ujdl7j" name="" id="Flow_1stniqu" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Activity_0ujdl7j" targetRef="Activity_03llb2t" name="" id="Flow_12yd9nz" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Прикрепление вакансии" id="Activity_0ujdl7j" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Прикрепление вакансии&quot;}" ecos:formRef="uiserv/form@offer-form-attach-vacancy" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
+        <bpmn:userTask name="Vacancy attaching" id="Activity_0ujdl7j" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Прикрепление вакансии&quot;,&quot;en&quot;:&quot;Vacancy attaching&quot;}" ecos:formRef="uiserv/form@offer-form-attach-vacancy" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
             <bpmn:incoming >Flow_1stniqu</bpmn:incoming>
             <bpmn:outgoing >Flow_12yd9nz</bpmn:outgoing>
         </bpmn:userTask>
@@ -120,20 +120,14 @@
             <bpmndi:BPMNShape bpmnElement="Activity_0p1tluj" isExpanded="true" id="Activity_1pw2lr8_di">
                 <dc:Bounds x="415.0" y="200.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_03llb2t" isExpanded="true" id="Activity_03llb2t_di">
+                <dc:Bounds x="1430.0" y="59.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_0h88vzc" isExpanded="true" id="Activity_0h88vzc_di">
                 <dc:Bounds x="845.0" y="-100.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_1v1xtn2" isExpanded="true" id="Event_1v1xtn2_di">
                 <dc:Bounds x="1142.0" y="-78.0" width="36.0" height="36.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_1aykj9d" isExpanded="true" id="Activity_1wr0d84_di">
-                <dc:Bounds x="550.0" y="59.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_02n49h1" isExpanded="true" id="Activity_12y6c6t_di">
-                <dc:Bounds x="550.0" y="200.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_1vp9of0" isExpanded="true" id="Activity_0gr22kx_di">
-                <dc:Bounds x="985.0" y="-100.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_0rc956j" isExpanded="true" id="Event_0rc956j_di">
                 <dc:Bounds x="1907.0" y="81.0" width="36.0" height="36.0"/>
@@ -144,14 +138,20 @@
             <bpmndi:BPMNShape bpmnElement="Activity_01jmznm" isExpanded="true" id="Activity_12esxig_di">
                 <dc:Bounds x="1595.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_15svr9x" isExpanded="true" id="Activity_15svr9x_di">
-                <dc:Bounds x="986.0" y="59.0" width="100.0" height="80.0"/>
+            <bpmndi:BPMNShape bpmnElement="Activity_1aykj9d" isExpanded="true" id="Activity_1wr0d84_di">
+                <dc:Bounds x="550.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_03llb2t" isExpanded="true" id="Activity_03llb2t_di">
-                <dc:Bounds x="1430.0" y="59.0" width="100.0" height="80.0"/>
+            <bpmndi:BPMNShape bpmnElement="Activity_02n49h1" isExpanded="true" id="Activity_12y6c6t_di">
+                <dc:Bounds x="550.0" y="200.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_0awkua3" isExpanded="true" id="Activity_1f5mjas_di">
                 <dc:Bounds x="1150.0" y="59.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_1vp9of0" isExpanded="true" id="Activity_0gr22kx_di">
+                <dc:Bounds x="985.0" y="-100.0" width="100.0" height="80.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_15svr9x" isExpanded="true" id="Activity_15svr9x_di">
+                <dc:Bounds x="986.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_0ujdl7j" isExpanded="true" id="Activity_0pdpnyf_di">
                 <dc:Bounds x="1290.0" y="59.0" width="100.0" height="80.0"/>
@@ -198,6 +198,18 @@
                 <di:waypoint x="945.0" y="-60.0"/>
                 <di:waypoint x="985.0" y="-60.0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_0h2pwv6" id="Flow_0h2pwv6_di">
+                <di:waypoint x="1530.0" y="99.0"/>
+                <di:waypoint x="1595.0" y="99.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_0itatcg" id="Flow_0itatcg_di">
+                <di:waypoint x="1695.0" y="99.0"/>
+                <di:waypoint x="1755.0" y="99.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_0bn1qo3" id="Flow_0bn1qo3_di">
+                <di:waypoint x="1855.0" y="99.0"/>
+                <di:waypoint x="1907.0" y="99.0"/>
+            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_12iwtjh" id="Flow_12iwtjh_di">
                 <di:waypoint x="650.0" y="99.0"/>
                 <di:waypoint x="705.0" y="99.0"/>
@@ -209,18 +221,6 @@
             <bpmndi:BPMNEdge bpmnElement="Flow_16bnxkm" id="Flow_16bnxkm_di">
                 <di:waypoint x="1085.0" y="-60.0"/>
                 <di:waypoint x="1142.0" y="-60.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_0h2pwv6" id="Flow_0h2pwv6_di">
-                <di:waypoint x="1530.0" y="99.0"/>
-                <di:waypoint x="1595.0" y="99.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_0bn1qo3" id="Flow_0bn1qo3_di">
-                <di:waypoint x="1855.0" y="99.0"/>
-                <di:waypoint x="1907.0" y="99.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_0itatcg" id="Flow_0itatcg_di">
-                <di:waypoint x="1695.0" y="99.0"/>
-                <di:waypoint x="1755.0" y="99.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_11aulzk" id="Flow_11aulzk_di">
                 <di:waypoint x="1086.0" y="99.0"/>
