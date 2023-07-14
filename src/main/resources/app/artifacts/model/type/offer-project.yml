@@ -10,6 +10,7 @@ journalRef: uiserv/journal@offer-project-journal
 inheritForm: false
 dispNameTemplate:
   ru: '${projectName}'
+  en: '${projectName}'
 defaultCreateVariant: true
 model:
   attributes:

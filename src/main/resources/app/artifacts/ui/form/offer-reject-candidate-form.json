@@ -9,7 +9,16 @@
   "typeRef": "",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "en": {
+      "Candidate rejected": "Candidate rejected",
+      "Rejected by candidate": "Rejected by candidate"
+    },
+    "ru": {
+      "Candidate rejected": "Кандидату отказано",
+      "Rejected by candidate": "Отказано со стороны кандидата"
+    }
+  },
   "definition": {
     "components": [
       {
@@ -22,7 +31,8 @@
             "components": [
               {
                 "label": {
-                  "ru": "Комментарий"
+                  "ru": "Комментарий",
+                  "en": "Comment"
                 },
                 "key": "comment",
                 "defaultValue": "",
@@ -34,7 +44,8 @@
               },
               {
                 "label": {
-                  "ru": "Причина"
+                  "ru": "Причина",
+                  "en": "Reason"
                 },
                 "key": "reason",
                 "validate": {
@@ -45,12 +56,18 @@
                 "data": {
                   "values": [
                     {
-                      "label": "Кандидату отказано",
+                      "label": "Candidate rejected",
                       "value": "candidate-candidate-rejected"
                     },
                     {
-                      "label": "Отказано со стороны кандидата",
+                      "label": "Rejected by candidate",
                       "value": "candidate-reject-from-candidate"
+                    }
+                  ],
+                  "headers": [
+                    {
+                      "key": "",
+                      "value": ""
                     }
                   ]
                 },
@@ -160,7 +177,9 @@
         "type": "columns",
         "input": false
       }
-    ]
+    ],
+    "formId": "offer-reject-candidate-form"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }

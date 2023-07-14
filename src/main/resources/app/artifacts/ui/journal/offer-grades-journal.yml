@@ -2,6 +2,7 @@
 id: offer-grades-journal
 name:
   ru: Грейды
+  en: Grades
 typeRef: emodel/type@offer-grade-type
 actions:
   - uiserv/action@delete
@@ -12,16 +13,20 @@ columns:
   - id: gradesSimpleRoleTypeAssoc
     name:
       ru: Должность
+      en: Position
     type: ASSOC
   - id: gradesNumber
     name:
       ru: Номер
+      en: Number
     type: TEXT
   - id: gradesRequirements
     name:
       ru: Требования к сотруднику
+      en: Terms
     type: TEXT
   - id: gradesResponsibilities
     name:
       ru: Обязанности
+      en: Responsibilities
     type: TEXT

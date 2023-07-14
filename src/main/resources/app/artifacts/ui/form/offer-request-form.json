@@ -38,7 +38,10 @@
         "input": false,
         "components": [
           {
-            "title": "Регистрация",
+            "title": {
+              "ru": "Регистрация",
+              "en": "Registration"
+            },
             "key": "panel5",
             "type": "panel",
             "input": false,
@@ -170,7 +173,10 @@
             ]
           },
           {
-            "title": "Основное",
+            "title": {
+              "ru": "Основное",
+              "en": "General"
+            },
             "key": "panel2",
             "type": "panel",
             "input": false,

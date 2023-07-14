@@ -2,6 +2,7 @@
 id: offer-vacancy
 name:
   ru: Вакансия
+  en: Vacancy
 storageType: ECOS_MODEL
 parentRef: emodel/type@data-list
 formRef: uiserv/form@offer-vacancy-form
@@ -9,6 +10,7 @@ journalRef: uiserv/journal@offer-vacancy-journal
 inheritForm: false
 dispNameTemplate:
   ru: '${vacancyName}'
+  en: '${vacancyName}'
 associations:
   - id: vacancyLinkAssoc
     name:
@@ -22,6 +24,7 @@ model:
     - id: hr
       name:
         ru: HR
+        en: HR
       assignees:
         - GROUP_hr
     - id: everyone
@@ -34,6 +37,7 @@ model:
     - id: EMPTY
       name:
         ru: EMPTY
+        en: EMPTY
   attributes:
     - id: vacancyName
       name:
