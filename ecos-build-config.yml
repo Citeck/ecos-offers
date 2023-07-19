@@ -1,5 +1,2 @@
 ---
 type: maven-ecos-apps
-properties:
-  image:
-    registry: citeck
