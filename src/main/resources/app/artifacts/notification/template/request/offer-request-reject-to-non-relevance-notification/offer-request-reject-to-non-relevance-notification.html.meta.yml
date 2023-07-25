@@ -1,0 +1,19 @@
+{
+  "id" : "offer-request-reject-to-non-relevance-notification",
+  "name" : "Offer Request Reject To Non-relevance Notification",
+  "notificationTitle" : {
+    "ru" : "Отклонена заявка №${registrationNumber} на подбор ${position} в связи с неактульностью",
+    "en" : "Rejected request №${registrationNumber} for recruitment ${position} to non-relevance"
+  },
+  "tags" : [ ],
+  "model" : {
+    "title" : "?disp",
+    "registrationNumber" : "registrationNumber",
+    "doc_recordRef" : ".id",
+    "project" : "requestProjectAssoc?disp",
+    "position" : "requestPosition?disp",
+    "date" : "$now?str",
+    "comment" : "$process.comment"
+  },
+  "multiTemplateConfig" : [ ]
+}
