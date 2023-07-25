@@ -1,5 +1,8 @@
 ---
 id: offer-candidate-offer
+name:
+  ru: Оффер
+  en: Offer
 storageType: ECOS_MODEL
 parentRef: emodel/type@attachment
 formRef: uiserv/form@DEFAULT_FORM
