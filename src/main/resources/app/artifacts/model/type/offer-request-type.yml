@@ -218,3 +218,7 @@ model:
         ru: Отклонена в связи с неактуальностью
         en: Rejected to non-relevance
       type: BOOLEAN
+    - id: rejectionComment
+      name:
+        ru: Комментарий отклонения
+        en: Rejection comment

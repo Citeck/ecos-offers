@@ -34,29 +34,7 @@
         "key": "columns2",
         "columns": [
           {
-            "components": [
-              {
-                "label": {
-                  "ru": "Отклонить",
-                  "en": "Reject"
-                },
-                "key": "outcome_reject",
-                "state": "",
-                "headers": [
-                  {
-                    "header": "",
-                    "value": ""
-                  }
-                ],
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true
-              }
-            ],
+            "components": [],
             "type": "column",
             "input": false,
             "key": "column",
@@ -103,7 +81,29 @@
             "input": false,
             "key": "column",
             "index": 3,
-            "components": []
+            "components": [
+              {
+                "label": {
+                  "ru": "Отклонить",
+                  "en": "Reject"
+                },
+                "key": "outcome_reject",
+                "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true
+              }
+            ]
           }
         ],
         "oneColumnInViewMode": false,

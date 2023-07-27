@@ -13,7 +13,7 @@
     "project" : "requestProjectAssoc?disp",
     "position" : "requestPosition?disp",
     "date" : "$now?str",
-    "comment" : "$process.comment"
+    "comment" : "rejectionComment"
   },
   "multiTemplateConfig" : [ ]
 }

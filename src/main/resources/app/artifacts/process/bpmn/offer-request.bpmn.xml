@@ -98,35 +98,27 @@
         </bpmn:userTask>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_0p1tluj" name="Действие &quot;Отклонить&quot;" id="Event_1p3f5n5" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_0e033gn</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_sPPXOsi" id="SignalEventDefinition_1feax6f"/>
+            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1feax6f"/>
         </bpmn:boundaryEvent>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_0ujdl7j" name="Действие &quot;Отклонить&quot;" id="Event_013sxnj" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_11s2gnd</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_sPPXOsi" id="SignalEventDefinition_1l5uf42"/>
+            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1l5uf42"/>
         </bpmn:boundaryEvent>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_01jmznm" name="Действие &quot;Отклонить&quot;" id="Event_0hjmq33" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_1nyxf3o</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_sPPXOsi" id="SignalEventDefinition_1e37lzv"/>
+            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1e37lzv"/>
         </bpmn:boundaryEvent>
-        <bpmn:endEvent name="" id="Event_1oyhvul" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
-            <bpmn:terminateEventDefinition id="TerminateEventDefinition_0bt68q1"/>
-        </bpmn:endEvent>
-        <bpmn:subProcess triggeredByEvent="false" name="Отклонение заявки HR" id="Activity_070ae1e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:false}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонение заявки HR&quot;,&quot;en&quot;:&quot;Rejection request by HR&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:&quot;&quot;}">
+        <bpmn:subProcess triggeredByEvent="false" name="Отклонение заявки HR" id="Activity_070ae1e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонение заявки HR&quot;,&quot;en&quot;:&quot;Rejection request by HR&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_11s2gnd</bpmn:incoming>
             <bpmn:incoming >Flow_1nyxf3o</bpmn:incoming>
             <bpmn:startEvent isInterrupting="true" name="Отклонение начато" id="Event_1tdc3jb" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонение начато&quot;,&quot;en&quot;:&quot;Start rejection&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
                 <bpmn:outgoing >Flow_19v4ywl</bpmn:outgoing>
             </bpmn:startEvent>
-            <bpmn:userTask name="Отклонения заявки HR" id="Activity_08ydsf2" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;,&quot;en&quot;:&quot;Reject&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонения заявки HR&quot;,&quot;en&quot;:&quot;Request rejecting by HR&quot;}" ecos:formRef="uiserv/form@offers-reject-to-non-relevance-form" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-hr-role&quot;]">
-                <bpmn:incoming >Flow_19v4ywl</bpmn:incoming>
-                <bpmn:outgoing >Flow_1b7yfu0</bpmn:outgoing>
-            </bpmn:userTask>
-            <bpmn:sequenceFlow sourceRef="Event_1tdc3jb" targetRef="Activity_08ydsf2" name="" id="Flow_19v4ywl" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
+            <bpmn:sequenceFlow sourceRef="Event_1tdc3jb" targetRef="Activity_1iklay7" name="" id="Flow_19v4ywl" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
             <bpmn:sendTask name="Ув. Директора и Инициатора об отклонении" id="Activity_1iklay7" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Ув. Директора и Инициатора об отклонении&quot;,&quot;en&quot;:&quot;Notification for Director and Initiator about rejection&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-reject-to-non-relevance-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-director-role&quot;,&quot;request-initiator-role&quot;]" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationToExpression="[]">
-                <bpmn:incoming >Flow_1b7yfu0</bpmn:incoming>
+                <bpmn:incoming >Flow_19v4ywl</bpmn:incoming>
                 <bpmn:outgoing >Flow_13g2eth</bpmn:outgoing>
             </bpmn:sendTask>
-            <bpmn:sequenceFlow sourceRef="Activity_08ydsf2" targetRef="Activity_1iklay7" name="" id="Flow_1b7yfu0" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
             <bpmn:task name="" id="Activity_164g2cx" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-reject">
                 <bpmn:incoming >Flow_13g2eth</bpmn:incoming>
                 <bpmn:outgoing >Flow_0crirls</bpmn:outgoing>
@@ -142,16 +134,11 @@
             <bpmn:startEvent isInterrupting="true" name="Отклонение начато" id="Event_1dzbws8" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонение начато&quot;,&quot;en&quot;:&quot;Start rejection&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
                 <bpmn:outgoing >Flow_083gxeq</bpmn:outgoing>
             </bpmn:startEvent>
-            <bpmn:userTask name="Отклонения заявки Инициатором" id="Activity_1uni15i" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;,&quot;en&quot;:&quot;Reject&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонения заявки Инициатором&quot;,&quot;en&quot;:&quot;Request rejecting by Initiator&quot;}" ecos:formRef="uiserv/form@offers-reject-to-non-relevance-form" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;request-initiator-role&quot;]">
-                <bpmn:incoming >Flow_083gxeq</bpmn:incoming>
-                <bpmn:outgoing >Flow_1v20j9d</bpmn:outgoing>
-            </bpmn:userTask>
-            <bpmn:sequenceFlow sourceRef="Event_1dzbws8" targetRef="Activity_1uni15i" name="" id="Flow_083gxeq" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
+            <bpmn:sequenceFlow sourceRef="Event_1dzbws8" targetRef="Activity_1lavo42" name="" id="Flow_083gxeq" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
             <bpmn:sendTask name="Ув. Директора об отклонении" id="Activity_1lavo42" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Ув. Директора об отклонении&quot;,&quot;en&quot;:&quot;Notification for Director about rejection&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-request-reject-to-non-relevance-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;request-director-role&quot;]" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationToExpression="[]">
-                <bpmn:incoming >Flow_1v20j9d</bpmn:incoming>
+                <bpmn:incoming >Flow_083gxeq</bpmn:incoming>
                 <bpmn:outgoing >Flow_1a0r63k</bpmn:outgoing>
             </bpmn:sendTask>
-            <bpmn:sequenceFlow sourceRef="Activity_1uni15i" targetRef="Activity_1lavo42" name="" id="Flow_1v20j9d" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
             <bpmn:task name="" id="Activity_1que68p" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-reject">
                 <bpmn:incoming >Flow_1a0r63k</bpmn:incoming>
                 <bpmn:outgoing >Flow_12ibc2m</bpmn:outgoing>
@@ -166,7 +153,7 @@
         <bpmn:sequenceFlow sourceRef="Event_0hjmq33" targetRef="Activity_070ae1e" name="" id="Flow_1nyxf3o" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Event_1p3f5n5" targetRef="Activity_1ddsdhk" name="" id="Flow_0e033gn" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
     </bpmn:process>
-    <bpmn:signal name="RECORD_CHANGED;${execution.businessKey};ANY;pr_000bbd6076f46f914dc10a4a1ec7f006" id="Signal_sPPXOsi"/>
+    <bpmn:signal name="RECORD_CHANGED;${execution.businessKey};ANY;pr_000bbd6076f46f914dc10a4a1ec7f006" id="Signal_Aeowil2"/>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         <bpmndi:BPMNPlane  bpmnElement="offer-request" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="StartEvent_1ew9rff" isExpanded="true" id="_BPMNShape_StartEvent_2">
@@ -226,76 +213,59 @@
             <bpmndi:BPMNShape bpmnElement="Activity_0ujdl7j" isExpanded="true" id="Activity_0pdpnyf_di">
                 <dc:Bounds x="1290.0" y="59.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Event_1oyhvul" isExpanded="true" id="Event_08hwoen_di">
-                <dc:Bounds x="2442.0" y="472.0" width="36.0" height="36.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_070ae1e" isExpanded="true" id="Activity_070ae1e_di">
-                <dc:Bounds x="1210.0" y="230.0" width="705.0" height="200.0"/>
+                <dc:Bounds x="1210.0" y="230.0" width="580.0" height="200.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_1tdc3jb" isExpanded="true" id="Event_1tdc3jb_di">
                 <dc:Bounds x="1250.0" y="312.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_08ydsf2" isExpanded="true" id="Activity_0qy2zia_di">
-                <dc:Bounds x="1340.0" y="290.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_1iklay7" isExpanded="true" id="Activity_1gnf5p5_di">
-                <dc:Bounds x="1500.0" y="290.0" width="100.0" height="80.0"/>
+                <dc:Bounds x="1350.0" y="290.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_164g2cx" isExpanded="true" id="Activity_164g2cx_di">
-                <dc:Bounds x="1660.0" y="290.0" width="100.0" height="80.0"/>
+                <dc:Bounds x="1510.0" y="290.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_1x7icp9" isExpanded="true" id="Event_1x7icp9_di">
-                <dc:Bounds x="1822.0" y="312.0" width="36.0" height="36.0"/>
+                <dc:Bounds x="1672.0" y="312.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="Flow_19v4ywl" id="Flow_19v4ywl_di">
                 <di:waypoint x="1286.0" y="330.0"/>
-                <di:waypoint x="1340.0" y="330.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_1b7yfu0" id="Flow_1b7yfu0_di">
-                <di:waypoint x="1440.0" y="330.0"/>
-                <di:waypoint x="1500.0" y="330.0"/>
+                <di:waypoint x="1350.0" y="330.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_13g2eth" id="Flow_13g2eth_di">
-                <di:waypoint x="1600.0" y="330.0"/>
-                <di:waypoint x="1660.0" y="330.0"/>
+                <di:waypoint x="1450.0" y="330.0"/>
+                <di:waypoint x="1510.0" y="330.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_0crirls" id="Flow_0crirls_di">
-                <di:waypoint x="1760.0" y="330.0"/>
-                <di:waypoint x="1822.0" y="330.0"/>
+                <di:waypoint x="1610.0" y="330.0"/>
+                <di:waypoint x="1672.0" y="330.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNShape bpmnElement="Activity_1ddsdhk" isExpanded="true" id="Activity_1ddsdhk_di">
-                <dc:Bounds x="1210.0" y="460.0" width="705.0" height="200.0"/>
+                <dc:Bounds x="1210.0" y="460.0" width="580.0" height="200.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_1dzbws8" isExpanded="true" id="Event_1dzbws8_di">
                 <dc:Bounds x="1250.0" y="542.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Activity_1uni15i" isExpanded="true" id="Activity_0xb9jgq_di">
-                <dc:Bounds x="1330.0" y="520.0" width="100.0" height="80.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_1lavo42" isExpanded="true" id="Activity_0ba8gz6_di">
-                <dc:Bounds x="1500.0" y="520.0" width="100.0" height="80.0"/>
+                <dc:Bounds x="1350.0" y="520.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Activity_1que68p" isExpanded="true" id="Activity_1que68p_di">
-                <dc:Bounds x="1660.0" y="520.0" width="100.0" height="80.0"/>
+                <dc:Bounds x="1510.0" y="520.0" width="100.0" height="80.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Event_0t3098j" isExpanded="true" id="Event_0t3098j_di">
-                <dc:Bounds x="1822.0" y="542.0" width="36.0" height="36.0"/>
+                <dc:Bounds x="1672.0" y="542.0" width="36.0" height="36.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="Flow_083gxeq" id="Flow_083gxeq_di">
                 <di:waypoint x="1286.0" y="560.0"/>
-                <di:waypoint x="1330.0" y="560.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="Flow_1v20j9d" id="Flow_1v20j9d_di">
-                <di:waypoint x="1430.0" y="560.0"/>
-                <di:waypoint x="1500.0" y="560.0"/>
+                <di:waypoint x="1350.0" y="560.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_1a0r63k" id="Flow_1a0r63k_di">
-                <di:waypoint x="1600.0" y="560.0"/>
-                <di:waypoint x="1660.0" y="560.0"/>
+                <di:waypoint x="1450.0" y="560.0"/>
+                <di:waypoint x="1510.0" y="560.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="Flow_12ibc2m" id="Flow_12ibc2m_di">
-                <di:waypoint x="1760.0" y="560.0"/>
-                <di:waypoint x="1822.0" y="560.0"/>
+                <di:waypoint x="1610.0" y="560.0"/>
+                <di:waypoint x="1672.0" y="560.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNShape bpmnElement="Event_0hjmq33" isExpanded="true" id="Event_0009q51_di">
                 <dc:Bounds x="1622.0" y="121.0" width="36.0" height="36.0"/>

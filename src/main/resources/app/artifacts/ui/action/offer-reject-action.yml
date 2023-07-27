@@ -3,6 +3,15 @@ id: reject-request
 name:
   ru: Отклонить
   en: Reject
+confirm:
+  title:
+    ru: Отклонение заявки
+    en: Request rejection
+  message: {}
+  formRef: uiserv/form@offers-reject-to-non-relevance-form
+  formAttributes: {}
+  attributesMapping:
+    record.attributes.rejectionComment: comment
 type: mutate
 config:
   record:
