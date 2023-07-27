@@ -22,7 +22,7 @@
             <bpmn:incoming >Flow_0lu7i1l</bpmn:incoming>
             <bpmn:outgoing >Flow_1gw2zx5</bpmn:outgoing>
         </bpmn:userTask>
-        <bpmn:exclusiveGateway name="" id="Gateway_1d0vj02" ecos:name_ml="{}">
+        <bpmn:exclusiveGateway name="Решение?" id="Gateway_1d0vj02" ecos:name_ml="{&quot;ru&quot;:&quot;Решение?&quot;,&quot;en&quot;:&quot;Decision?&quot;}">
             <bpmn:incoming >Flow_1gw2zx5</bpmn:incoming>
             <bpmn:outgoing >Flow_1u2yz7n</bpmn:outgoing>
             <bpmn:outgoing >Flow_1wl5ahb</bpmn:outgoing>
@@ -38,7 +38,7 @@
             <bpmn:outgoing >Flow_1yp6tyh</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Activity_1tai8dn" targetRef="Activity_1tdt266" name="" id="Flow_1yp6tyh" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:userTask name="Assignment of tech interview" id="Activity_1tdt266" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Assignment of tech interview&quot;}" ecos:formRef="uiserv/form@offer-form-tech-interview-appointment" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;candidate-hr-role&quot;]">
+        <bpmn:userTask name="Назначение тех. интервью" id="Activity_1tdt266" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Подтвердить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;en&quot;:&quot;Assignment of tech interview&quot;,&quot;ru&quot;:&quot;Назначение тех. интервью&quot;}" ecos:formRef="uiserv/form@offer-form-tech-interview-appointment" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;candidate-hr-role&quot;]">
             <bpmn:incoming >Flow_1yp6tyh</bpmn:incoming>
             <bpmn:outgoing >Flow_0urz239</bpmn:outgoing>
         </bpmn:userTask>
@@ -103,7 +103,7 @@
             <bpmn:outgoing >Flow_1c0eohz</bpmn:outgoing>
             <bpmn:outgoing >Flow_11mq231</bpmn:outgoing>
         </bpmn:exclusiveGateway>
-        <bpmn:sequenceFlow sourceRef="Gateway_1e8vlhq" targetRef="Activity_0j495op" name="Ок" id="Flow_0peruil" ecos:name_ml="{&quot;ru&quot;:&quot;Ок&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_171mff9:Approve&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_1e8vlhq" targetRef="Activity_0j495op" name="Согласовано" id="Flow_0peruil" ecos:name_ml="{&quot;ru&quot;:&quot;Согласовано&quot;,&quot;en&quot;:&quot;Approved&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_171mff9:Approve&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:sequenceFlow sourceRef="Activity_1tkcvfj" targetRef="Activity_0d833et" name="" id="Flow_1e55baj" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:userTask name="Выход на работу" id="Activity_0d833et" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Вышел на работу&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Не вышел на рабоут&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Выход на работу&quot;,&quot;en&quot;:&quot;Start job&quot;}" ecos:formRef="uiserv/form@offer-form-on-work" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;candidate-hr-role&quot;]">
             <bpmn:incoming >Flow_1e55baj</bpmn:incoming>
@@ -131,12 +131,12 @@
             <bpmn:outgoing >Flow_175d9bb</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Gateway_1e8vlhq" targetRef="Gateway_0eqi8fg" name="Отказ со стороны работодателя" id="Flow_1c0eohz" ecos:name_ml="{&quot;ru&quot;:&quot;Отказ со стороны работодателя&quot;,&quot;en&quot;:&quot;Rejection by employer&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_171mff9:Reject&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:exclusiveGateway name="" id="Gateway_1y794oe" ecos:name_ml="{}">
+        <bpmn:exclusiveGateway name="Решение?" id="Gateway_1y794oe" ecos:name_ml="{&quot;ru&quot;:&quot;Решение?&quot;,&quot;en&quot;:&quot;Decision?&quot;}">
             <bpmn:incoming >Flow_0iplrf3</bpmn:incoming>
             <bpmn:outgoing >Flow_135c5mk</bpmn:outgoing>
             <bpmn:outgoing >Flow_1y41971</bpmn:outgoing>
         </bpmn:exclusiveGateway>
-        <bpmn:sequenceFlow sourceRef="Gateway_1y794oe" targetRef="Gateway_0fe1l55" name="Ок" id="Flow_135c5mk" ecos:name_ml="{&quot;ru&quot;:&quot;Ок&quot;,&quot;en&quot;:&quot;Ok&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0su3xwk:Approve&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_1y794oe" targetRef="Gateway_0fe1l55" name="Тех. интервью пройдено" id="Flow_135c5mk" ecos:name_ml="{&quot;ru&quot;:&quot;Тех. интервью пройдено&quot;,&quot;en&quot;:&quot;Tech. interview completed&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0su3xwk:Approve&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:sequenceFlow sourceRef="Gateway_1pqilwb" targetRef="Gateway_0fe1l55" name="Изменение условий оффера" id="Flow_033dj6t" ecos:name_ml="{&quot;ru&quot;:&quot;Изменение условий оффера&quot;,&quot;en&quot;:&quot;Changing offer's terms&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1mvwih9:Rework&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:sequenceFlow sourceRef="Gateway_1e8vlhq" targetRef="Gateway_0fe1l55" name="Доработка условий оффера" id="Flow_11mq231" ecos:name_ml="{&quot;ru&quot;:&quot;Доработка условий оффера&quot;,&quot;en&quot;:&quot;Rework offer's terms&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_171mff9:Rework&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:exclusiveGateway name="" id="Gateway_0eqi8fg" ecos:name_ml="{}">
@@ -157,16 +157,16 @@
             <bpmn:incoming >Flow_11x8rav</bpmn:incoming>
             <bpmn:outgoing >Flow_1s7vych</bpmn:outgoing>
         </bpmn:userTask>
-        <bpmn:exclusiveGateway name="" id="Gateway_0ucs6d7" ecos:name_ml="{}">
+        <bpmn:exclusiveGateway name="Решение?" id="Gateway_0ucs6d7" ecos:name_ml="{&quot;ru&quot;:&quot;Решение?&quot;,&quot;en&quot;:&quot;Decision?&quot;}">
             <bpmn:incoming >Flow_0vrhf7z</bpmn:incoming>
             <bpmn:outgoing >Flow_1pa3me7</bpmn:outgoing>
             <bpmn:outgoing >Flow_0abhwg2</bpmn:outgoing>
             <bpmn:outgoing >Flow_12whq6b</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="Activity_14o948m" targetRef="Gateway_0ucs6d7" name="" id="Flow_0vrhf7z" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Activity_00lypc3" name="" id="Flow_1pa3me7" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Approve&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Gateway_0eqi8fg" name="" id="Flow_0abhwg2" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Reject&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Gateway_0fe1l55" name="" id="Flow_12whq6b" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Rework&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Activity_00lypc3" name="Согласовано" id="Flow_1pa3me7" ecos:name_ml="{&quot;ru&quot;:&quot;Согласовано&quot;,&quot;en&quot;:&quot;Approved&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Approve&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Gateway_0eqi8fg" name="Отклонено" id="Flow_0abhwg2" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонено&quot;,&quot;en&quot;:&quot;Rejected&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Reject&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0ucs6d7" targetRef="Gateway_0fe1l55" name="Доработка условий оффера" id="Flow_12whq6b" ecos:name_ml="{&quot;ru&quot;:&quot;Доработка условий оффера&quot;,&quot;en&quot;:&quot;Rework offer's terms&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_14o948m:Rework&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:exclusiveGateway name="" id="Gateway_0y9r419" ecos:name_ml="{}">
             <bpmn:incoming >Flow_1s7vych</bpmn:incoming>
             <bpmn:outgoing >Flow_0z4qdbb</bpmn:outgoing>
@@ -174,9 +174,9 @@
             <bpmn:outgoing >Flow_0uw7z26</bpmn:outgoing>
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow sourceRef="Activity_1b66pqo" targetRef="Gateway_0y9r419" name="" id="Flow_1s7vych" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Gateway_0eqi8fg" name="" id="Flow_0z4qdbb" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Reject&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Gateway_0fe1l55" name="" id="Flow_1dw2oyv" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Rework&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Activity_0rl4ykz" name="" id="Flow_0uw7z26" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Approve&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Gateway_0eqi8fg" name="Отклонено" id="Flow_0z4qdbb" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонено&quot;,&quot;en&quot;:&quot;Rejected&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Reject&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Gateway_0fe1l55" name="Доработка условий оффера" id="Flow_1dw2oyv" ecos:name_ml="{&quot;ru&quot;:&quot;Доработка условий оффера&quot;,&quot;en&quot;:&quot;Rework offer's terms&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Rework&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_0y9r419" targetRef="Activity_0rl4ykz" name="Согласовано" id="Flow_0uw7z26" ecos:name_ml="{&quot;ru&quot;:&quot;Согласовано&quot;,&quot;en&quot;:&quot;Approved&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_1b66pqo:Approve&quot;}" ecos:conditionType="OUTCOME"/>
         <bpmn:sequenceFlow sourceRef="Activity_171mff9" targetRef="Gateway_1e8vlhq" name="" id="Flow_1hwkkiu" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:userTask name="Согласование генеральным директором" id="Activity_171mff9" ecos:documentation="{}" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;Approve&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Согласовать&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}},{&quot;id&quot;:&quot;Reject&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Отклонить&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}},{&quot;id&quot;:&quot;Rework&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Доработать&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:name_ml="{&quot;ru&quot;:&quot;Согласование генеральным директором&quot;,&quot;en&quot;:&quot;Approval by general director&quot;}" ecos:formRef="uiserv/form@offer-form-approve" ecos:manualRecipientsMode="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;candidate-director-role&quot;]">
             <bpmn:incoming >Flow_08vuwh5</bpmn:incoming>
@@ -188,7 +188,7 @@
             <bpmn:outgoing >Flow_12kjepw</bpmn:outgoing>
         </bpmn:sendTask>
         <bpmn:sequenceFlow sourceRef="Activity_05veh6y" targetRef="Activity_0l5y31i" name="" id="Flow_16ykvde" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sendTask name="Offer creation is scheduled" id="Activity_05veh6y" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Offer creation is scheduled&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-candidate-create-offer-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;candidate-hr-role&quot;]" ecos:notificationTitle="Назначено создание оффера" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;Назначено создание оффера&lt;/p&gt;" ecos:notificationToExpression="[]">
+        <bpmn:sendTask name="Назначено создание оффера" id="Activity_05veh6y" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;en&quot;:&quot;Offer creation is scheduled&quot;,&quot;ru&quot;:&quot;Назначено создание оффера&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@offer-candidate-create-offer-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;candidate-hr-role&quot;]" ecos:notificationTitle="Назначено создание оффера" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationBody="&lt;p&gt;Назначено создание оффера&lt;/p&gt;" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_077o5vy</bpmn:incoming>
             <bpmn:outgoing >Flow_16ykvde</bpmn:outgoing>
         </bpmn:sendTask>
@@ -244,9 +244,9 @@
             <bpmn:incoming >Flow_1x7uuy0</bpmn:incoming>
         </bpmn:endEvent>
         <bpmn:sequenceFlow sourceRef="Activity_0pyl7bt" targetRef="Event_1jeqtxt" name="" id="Flow_1x7uuy0" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Activity_1tai8dn" name="" id="Flow_1u2yz7n" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:Approve&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Activity_1vyrb57" name="" id="Flow_1wl5ahb" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:CandidateReject&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Gateway_0eqi8fg" name="" id="Flow_13a15jp" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:Reject&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Activity_1tai8dn" name="Подверждено" id="Flow_1u2yz7n" ecos:name_ml="{&quot;ru&quot;:&quot;Подверждено&quot;,&quot;en&quot;:&quot;Accepted&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:Approve&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Activity_1vyrb57" name="Отказано со стороны кандидата" id="Flow_1wl5ahb" ecos:name_ml="{&quot;ru&quot;:&quot;Отказано со стороны кандидата&quot;,&quot;en&quot;:&quot;Rejected by the candidate&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:CandidateReject&quot;}" ecos:conditionType="OUTCOME"/>
+        <bpmn:sequenceFlow sourceRef="Gateway_1d0vj02" targetRef="Gateway_0eqi8fg" name="Отказ со стороны работодателя" id="Flow_13a15jp" ecos:name_ml="{&quot;ru&quot;:&quot;Отказ со стороны работодателя&quot;,&quot;en&quot;:&quot;Rejection by the employer&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0vs27bb:Reject&quot;}" ecos:conditionType="OUTCOME"/>
     </bpmn:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         <bpmndi:BPMNPlane  bpmnElement="offer-candidate-process" id="BPMNPlane_1">
