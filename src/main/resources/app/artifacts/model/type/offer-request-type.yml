@@ -14,7 +14,7 @@ numTemplateRef: emodel/num-template@offer-number-template
 actions:
   - uiserv/action@delete-offer
   - uiserv/action@edit
-  - uiserv/action@offer-workflow-reject
+  - uiserv/action@reject-action
 defaultCreateVariant: true
 model:
   roles:
@@ -213,3 +213,12 @@ model:
         typeRef: emodel/type@offer-link
         child: false
       multiple: true
+    - id: isRejected
+      name:
+        ru: Отклонена в связи с неактуальностью
+        en: Rejected to non-relevance
+      type: BOOLEAN
+    - id: rejectionComment
+      name:
+        ru: Комментарий отклонения
+        en: Rejection comment

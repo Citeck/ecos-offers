@@ -1,0 +1,47 @@
+---
+id: reject-request
+name:
+  ru: Отклонить
+  en: Reject
+confirm:
+  title:
+    ru: Отклонение заявки
+    en: Request rejection
+  message: {}
+  formRef: uiserv/form@offers-reject-to-non-relevance-form
+  formAttributes: {}
+  attributesMapping:
+    record.attributes.rejectionComment: comment
+type: mutate
+config:
+  record:
+    id: ${?id}
+    attributes:
+      isRejected: true
+predicate:
+  t: or
+  val:
+    - t: and
+      val:
+        - t: eq
+          att: _status?str
+          val: request-rework
+        - t: eq
+          att: _roles.isCurrentUserMemberOf.request-initiator-role?bool
+          val: true
+    - t: and
+      val:
+        - t: eq
+          att: _status?str
+          val: request-attach-vacancy
+        - t: eq
+          att: _roles.isCurrentUserMemberOf.request-hr-role?bool
+          val: true
+    - t: and
+      val:
+        - t: eq
+          att: _status?str
+          val: request-selection-candidates
+        - t: eq
+          att: _roles.isCurrentUserMemberOf.request-hr-role?bool
+          val: true
