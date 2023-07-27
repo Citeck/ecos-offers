@@ -1,3 +1,4 @@
+---
 id: reject-request
 name:
   ru: Отклонить
@@ -16,27 +17,22 @@ predicate:
         - t: eq
           att: _status?str
           val: request-rework
-
         - t: eq
           att: _roles.isCurrentUserMemberOf.request-initiator-role?bool
           val: true
-
     - t: and
       val:
         - t: eq
           att: _status?str
           val: request-attach-vacancy
-
         - t: eq
           att: _roles.isCurrentUserMemberOf.request-hr-role?bool
           val: true
-
-        - t: and
-          val:
-            - t: eq
-              att: _status?str
-              val: request-selection-candidates
-
-            - t: eq
-              att: _roles.isCurrentUserMemberOf.request-hr-role?bool
-              val: true
+    - t: and
+      val:
+        - t: eq
+          att: _status?str
+          val: request-selection-candidates
+        - t: eq
+          att: _roles.isCurrentUserMemberOf.request-hr-role?bool
+          val: true
