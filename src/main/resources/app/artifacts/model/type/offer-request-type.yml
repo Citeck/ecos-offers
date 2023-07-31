@@ -14,7 +14,7 @@ numTemplateRef: emodel/num-template@offer-number-template
 actions:
   - uiserv/action@delete-offer
   - uiserv/action@edit
-  - uiserv/action@reject-action
+  - uiserv/action@reject-request
 defaultCreateVariant: true
 model:
   roles:
