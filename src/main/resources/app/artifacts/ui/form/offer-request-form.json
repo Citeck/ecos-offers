@@ -543,6 +543,7 @@
                           "ru": "requestLinkAssoc"
                         },
                         "key": "requestLinkAssoc",
+                        "hideLabel": true,
                         "multiple": true,
                         "disableInlineEdit": true,
                         "reorder": false,
@@ -697,16 +698,16 @@
                 "label": "caseStatus",
                 "source": {
                   "type": "record",
+                  "forceLoad": true,
                   "record": {
                     "id": "{{recordId}}",
                     "attributes": {
                       "status": "_status?str"
                     }
-                  },
-                  "forceLoad": false
+                  }
                 },
                 "update": {
-                  "type": "once"
+                  "type": "any-change"
                 },
                 "key": "caseStatus",
                 "type": "asyncData",
