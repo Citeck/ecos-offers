@@ -43,21 +43,72 @@
             "components": [
               {
                 "label": {
-                  "ru": "Статус кандидата",
-                  "en": "Candidate status"
+                  "ru": "Columns"
                 },
-                "key": "candidateStatus",
-                "disabled": true,
-                "persistent": false,
-                "defaultValue": "",
-                "refreshOn": [
-                  "caseStatusName"
+                "key": "columns13",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "candidateRequest",
+                          "en": "candidateRequest"
+                        },
+                        "key": "candidateRequest",
+                        "multiple": true,
+                        "disableInlineEdit": true,
+                        "modalTitle": "",
+                        "journalId": "offer-request-journal",
+                        "queryData": "",
+                        "customPredicateJs": "value = {\n  \"t\":\"contains\",\n  \"att\": \"_status\",\n  \"val\":\"request-selection-candidates\"\n};",
+                        "presetFilterPredicatesJs": "const { candidateCityAssoc } = data || {};\r\nconst { candidatePosition } = data || {};\r\nconst { candidateExperienceAssoc } = data || {};\r\nconst { candidateTechInterviewGrade } = data || {};\r\n\r\nlet conditions = [];\r\n\r\nif (Array.isArray(candidateTechInterviewGrade) && candidateTechInterviewGrade.length > 0) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestGrade\",\r\n        \"val\": candidateTechInterviewGrade\r\n    });\r\n}\r\n\r\nif (!!candidateCityAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestCity\",\r\n        \"val\": candidateCityAssoc\r\n    });\r\n}\r\n\r\nif (!!candidatePosition) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestPosition\",\r\n        \"val\": candidatePosition\r\n    });\r\n}\r\n\r\nif (!!candidateExperienceAssoc) {\r\n    conditions.push({\r\n        \"t\": \"eq\",\r\n        \"att\": \"requestExperience\",\r\n        \"val\": candidateExperienceAssoc\r\n    });\r\n}\r\n\r\nif (conditions.length > 0) {\r\n    value = conditions;\r\n}",
+                        "defaultValue": [],
+                        "refreshOn": [
+                          "candidateCityAssoc",
+                          "candidatePosition",
+                          "candidateTechInterviewGrade",
+                          "candidateExperienceAssoc"
+                        ],
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Статус кандидата",
+                          "en": "Candidate status"
+                        },
+                        "key": "candidateStatus",
+                        "disabled": true,
+                        "persistent": false,
+                        "defaultValue": "",
+                        "refreshOn": [
+                          "caseStatusName"
+                        ],
+                        "clearOnRefresh": true,
+                        "calculateValue": "const { caseStatusName } = data || {};\nconst { status } = caseStatusName || {};\n\nvalue = status;",
+                        "optionalWhenDisabled": false,
+                        "type": "textfield",
+                        "input": true
+                      }
+                    ]
+                  }
                 ],
-                "clearOnRefresh": true,
-                "calculateValue": "const { caseStatusName } = data || {};\nconst { status } = caseStatusName || {};\n\nvalue = status;",
-                "optionalWhenDisabled": false,
-                "type": "textfield",
-                "input": true
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
               }
             ]
           },
