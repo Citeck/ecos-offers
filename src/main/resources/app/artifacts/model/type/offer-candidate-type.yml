@@ -103,6 +103,14 @@ model:
         ru: Не вышел на работу
         en: Didn't went to work
   attributes:
+    - id: candidateRequest
+      name:
+        ru: Запрос
+      type: ASSOC
+      config:
+        typeRef: emodel/type@offer-request-type
+        child: false
+      multiple: true
     - id: candidateTechFeedback
       name:
         ru: Фидбэк по техническому собеседованию
