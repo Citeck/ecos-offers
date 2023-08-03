@@ -165,7 +165,18 @@
                   "en": "Candidates"
                 },
                 "journalId": "uiserv/journal@offer-candidate-journal",
-                "boardId": "uiserv/board@offer-candidate-kanban"
+                "boardId": "uiserv/board@offer-candidate-kanban",
+                "onlyLinked": true,
+                "attrsToLoad": [
+                  {
+                    "label": "Кандидаты",
+                    "value": "requestCandidates"
+                  },
+                  {
+                    "label": "Выбранный кандидат",
+                    "value": "requestSelectedCandidate"
+                  }
+                ]
               }
             },
             "widgetDisplayCondition": null,
