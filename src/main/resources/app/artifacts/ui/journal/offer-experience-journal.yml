@@ -2,6 +2,7 @@
 id: offer-experience-journal
 name:
   ru: Опыт работы
+  en: Experience
 typeRef: emodel/type@offer-experience-type
 actions:
   - uiserv/action@delete
@@ -12,6 +13,8 @@ columns:
   - id: experienceStart
     name:
       ru: От
+      en: From
   - id: experienceEnd
     name:
       ru: До
+      en: Until

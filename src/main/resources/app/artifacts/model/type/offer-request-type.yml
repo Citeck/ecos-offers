@@ -2,68 +2,80 @@
 id: offer-request-type
 name:
   ru: Заявка на подбор
-  en: Заявка на подбор
+  en: Request for recruitment
 storageType: ECOS_MODEL
 parentRef: emodel/type@case
 formRef: uiserv/form@offer-request-form
 journalRef: uiserv/journal@offer-request-journal
 dispNameTemplate:
   ru: Заявка №${registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
-  en: Заявка №${registrationNumber} на подбор ${requestPosition?disp}, ${requestShowDateRu}
+  en: Request №${registrationNumber} for recruitment ${requestPosition?disp}, ${requestShowDateRu}
 numTemplateRef: emodel/num-template@offer-number-template
 actions:
   - uiserv/action@delete-offer
   - uiserv/action@edit
-  - uiserv/action@offer-workflow-reject
+  - uiserv/action@reject-request
 defaultCreateVariant: true
 model:
   roles:
     - id: request-initiator-role
       name:
         ru: Инициатор
+        en: Initiator
       attributes:
         - initiator
     - id: request-director-role
       name:
         ru: Генеральный директор
+        en: General director
       assignees:
         - GROUP_company_director
     - id: request-hr-role
       name:
         ru: HR
+        en: HR
       assignees:
         - GROUP_hr
     - id: request-manager-subdivision
       name:
         ru: Руководитель подразделения
+        en: Subdivision manager
       attributes:
         - requestManagerSubdivision
   statuses:
     - id: draft
       name:
         ru: Черновик
+        en: Draft
     - id: request-director-approve
       name:
         ru: Согласование директором
+        en: Approval by director
     - id: request-rework
       name:
         ru: Доработка
+        en: Rework
     - id: request-reject
       name:
         ru: Отклонена
+        en: Rejected
     - id: request-attach-vacancy
       name:
         ru: Прикрепление вакансии
+        en: Vacancy attaching
     - id: request-selection-candidates
       name:
         ru: Подбор кандидатов
+        en: Candidates selection
     - id: request-on-work
       name:
         ru: Вышел на работу
+        en: Went to work
   attributes:
     - id: registrationNumber
       name:
         ru: Регистрационный номер
+        en: Registration number
       computed:
         type: TEMPLATE
         config:
@@ -72,18 +84,22 @@ model:
     - id: created
       name:
         ru: Дата создания
+        en: Created
       type: DATETIME
     - id: idocs:initiator
       name:
         ru: Инициатор
+        en: Initiator
       type: ASSOC
     - id: initiator
       name:
         ru: Инициатор
+        en: Initiator
       type: ASSOC
     - id: requestPosition
       name:
         ru: Должность
+        en: Position
       type: ASSOC
       config:
         typeRef: emodel/type@offer-position
@@ -91,10 +107,12 @@ model:
     - id: requestSubdivision
       name:
         ru: Подразделение
+        en: Subdivision
       type: ASSOC
     - id: requestGrade
       name:
         ru: Грейд
+        en: Grade
       type: ASSOC
       config:
         typeRef: emodel/type@offer-grade-type
@@ -102,10 +120,12 @@ model:
     - id: requestCity
       name:
         ru: Город
+        en: City
       type: ASSOC
     - id: requestExperience
       name:
         ru: Опыт работы
+        en: Experience
       type: ASSOC
       config:
         typeRef: emodel/type@offer-experience-type
@@ -113,10 +133,12 @@ model:
     - id: requestManagerSubdivision
       name:
         ru: Руководитель подразделения
+        en: Subdivision manager
       type: ASSOC
     - id: requestSelectedCandidate
       name:
         ru: Выбранный кандидат
+        en: Selected candidate
       type: ASSOC
       config:
         typeRef: emodel/type@offer-candidate-type
@@ -124,21 +146,26 @@ model:
     - id: requestSalaryAndPrize
       name:
         ru: Зарплатная вилка и премия
+        en: Salary and prize
       type: ASSOC
     - id: requestComment
       name:
         ru: Комментарий
+        en: Comment
     - id: requestTerm
       name:
         ru: Планируемая дата выхода
+        en: Term
       type: DATE
     - id: requestApproveStage
       name:
         ru: Номер этапа согласования
+        en: Approve stage number
       type: NUMBER
     - id: requestCandidates
       name:
         ru: Кандидаты
+        en: Candidates
       type: ASSOC
       config:
         typeRef: emodel/type@offer-candidate-type
@@ -147,10 +174,12 @@ model:
     - id: requestUrgentSearch
       name:
         ru: Срочный поиск
+        en: Urgent search
       type: BOOLEAN
     - id: requestShowDateRu
       name:
         ru: Показ даты РУ
+        en: Show RU date
       computed:
         type: SCRIPT
         config:
@@ -168,6 +197,7 @@ model:
     - id: requestShowDateEn
       name:
         ru: Показ даты EN
+        en: Show EN date
       computed:
         type: SCRIPT
         config:
@@ -183,3 +213,12 @@ model:
         typeRef: emodel/type@offer-link
         child: false
       multiple: true
+    - id: isRejected
+      name:
+        ru: Отклонена в связи с неактуальностью
+        en: Rejected to non-relevance
+      type: BOOLEAN
+    - id: rejectionComment
+      name:
+        ru: Комментарий отклонения
+        en: Rejection comment

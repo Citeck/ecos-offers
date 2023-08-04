@@ -38,7 +38,10 @@
         "input": false,
         "components": [
           {
-            "title": "Регистрация",
+            "title": {
+              "ru": "Регистрация",
+              "en": "Registration"
+            },
             "key": "panel5",
             "type": "panel",
             "input": false,
@@ -170,7 +173,10 @@
             ]
           },
           {
-            "title": "Основное",
+            "title": {
+              "ru": "Основное",
+              "en": "General"
+            },
             "key": "panel2",
             "type": "panel",
             "input": false,
@@ -537,6 +543,7 @@
                           "ru": "requestLinkAssoc"
                         },
                         "key": "requestLinkAssoc",
+                        "hideLabel": true,
                         "multiple": true,
                         "disableInlineEdit": true,
                         "reorder": false,
@@ -590,7 +597,8 @@
             },
             "key": "panel",
             "title": {
-              "ru": "Кандидаты"
+              "ru": "Кандидаты",
+              "en": "Candidates"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -690,16 +698,16 @@
                 "label": "caseStatus",
                 "source": {
                   "type": "record",
+                  "forceLoad": true,
                   "record": {
                     "id": "{{recordId}}",
                     "attributes": {
                       "status": "_status?str"
                     }
-                  },
-                  "forceLoad": false
+                  }
                 },
                 "update": {
-                  "type": "once"
+                  "type": "any-change"
                 },
                 "key": "caseStatus",
                 "type": "asyncData",

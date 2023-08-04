@@ -165,7 +165,18 @@
                   "en": "Candidates"
                 },
                 "journalId": "uiserv/journal@offer-candidate-journal",
-                "boardId": "uiserv/board@offer-candidate-kanban"
+                "boardId": "uiserv/board@offer-candidate-kanban",
+                "onlyLinked": true,
+                "attrsToLoad": [
+                  {
+                    "label": "Кандидаты",
+                    "value": "requestCandidates"
+                  },
+                  {
+                    "label": "Выбранный кандидат",
+                    "value": "requestSelectedCandidate"
+                  }
+                ]
               }
             },
             "widgetDisplayCondition": null,
@@ -250,8 +261,8 @@
           "id": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697",
           "tab": {
             "label": {
-              "ru": "Канбан-доска",
-              "en": "Kanban board"
+              "ru": "Доска кандидатов",
+              "en": "Candidates board"
             },
             "idLayout": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697"
           },

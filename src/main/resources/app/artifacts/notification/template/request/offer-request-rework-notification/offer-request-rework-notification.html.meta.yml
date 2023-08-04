@@ -3,7 +3,7 @@
   "name": "Offer Request Rework Notification",
   "notificationTitle": {
     "ru": "Доработка заявки №${registrationNumber} на подбор ${position}",
-    "en": "Доработка заявки №${registrationNumber} на подбор ${position}"
+    "en": "Modification request №${registrationNumber} for recruitment ${position}"
   },
   "tags": [ ],
   "model": {

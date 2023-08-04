@@ -1,0 +1,66 @@
+id: add-offers-in-left-menu
+name: {ru: Добавить раздел "Офферы", en: Add section "Offers" }
+
+target: 'ui/menu$default-menu-v1'
+
+type: json
+config:
+  operations:
+    - op: add
+      path: '$..[?(@.id == "sections")].items'
+      value: {
+        "id": "e09364d6-feb1-4759-9f89-f1e2c99004fb",
+        "label": {
+          "ru": "Офферы",
+          "en": "Offers"
+        },
+        "icon": "ui/icon@i-leftmenu-contracts",
+        "hidden": false,
+        "type": "SECTION",
+        "config": {},
+        "action": {
+          "type": "",
+          "config": {}
+        },
+        "items": [
+          {
+            "id": "ff99d885-8900-4d58-9ef2-e306d338543e",
+            "label": {
+              "ru": "Заявки на подбор",
+              "en": "Requests for recruitment"
+            },
+            "icon": "",
+            "hidden": false,
+            "type": "JOURNAL",
+            "config": {
+              "recordRef": "uiserv/journal@offer-request-journal"
+            },
+            "action": {
+              "type": "",
+              "config": {}
+            },
+            "items": [],
+            "allowedFor": []
+          },
+          {
+            "id": "f506c09b-f695-4f04-a368-e0d91f8af7bd",
+            "label": {
+              "ru": "Кандидаты",
+              "en": "Candidates"
+            },
+            "icon": "",
+            "hidden": false,
+            "type": "JOURNAL",
+            "config": {
+              "recordRef": "uiserv/journal@offer-candidate-journal"
+            },
+            "action": {
+              "type": "",
+              "config": {}
+            },
+            "items": [],
+            "allowedFor": []
+          }
+        ],
+        "allowedFor": []
+      }

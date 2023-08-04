@@ -9,7 +9,16 @@
   "typeRef": "emodel/type@offer-candidate-type",
   "width": "lg",
   "system": false,
-  "i18n": {},
+  "i18n": {
+    "en": {
+      "Male": "Male",
+      "Female": "Female"
+    },
+    "ru": {
+      "Male": "Мужской",
+      "Female": "Женский"
+    }
+  },
   "definition": {
     "components": [
       {
@@ -24,7 +33,8 @@
             },
             "key": "panel7",
             "title": {
-              "ru": "Регистрационная информация"
+              "ru": "Регистрационная информация",
+              "en": "Registration info"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -41,7 +51,8 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "candidateRequest"
+                          "ru": "candidateRequest",
+                          "en": "candidateRequest"
                         },
                         "key": "candidateRequest",
                         "multiple": true,
@@ -107,7 +118,8 @@
             },
             "key": "panel5",
             "title": {
-              "ru": "Основная информация"
+              "ru": "Основная информация",
+              "en": "General info"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -236,12 +248,18 @@
                         "data": {
                           "values": [
                             {
-                              "label": "Мужской",
-                              "value": "мужской"
+                              "label": "Male",
+                              "value": "male"
                             },
                             {
-                              "label": "Женский",
-                              "value": "женский"
+                              "label": "Female",
+                              "value": "female"
+                            }
+                          ],
+                          "headers": [
+                            {
+                              "key": "",
+                              "value": ""
                             }
                           ]
                         },
@@ -270,9 +288,6 @@
                           "ru": "candidateCityAssoc"
                         },
                         "key": "candidateCityAssoc",
-                        "validate": {
-                          "required": true
-                        },
                         "hideCreateButton": true,
                         "hideEditRowButton": true,
                         "disableInlineEdit": true,
@@ -310,7 +325,8 @@
             },
             "key": "panel6",
             "title": {
-              "ru": "О работе"
+              "ru": "О работе",
+              "en": "About work"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -346,7 +362,8 @@
                       },
                       {
                         "label": {
-                          "ru": "Резюме"
+                          "ru": "Резюме",
+                          "en": "Resume"
                         },
                         "key": "docs:documents",
                         "multiple": true,
@@ -424,7 +441,8 @@
             },
             "key": "panel3",
             "title": {
-              "ru": "Контакты"
+              "ru": "Контакты",
+              "en": "Contacts"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -518,11 +536,12 @@
             },
             "key": "panel",
             "title": {
-              "ru": "Вводное интервью"
+              "ru": "Вводное интервью",
+              "en": "Intro interview"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateIntroInterviewDate } = data || {};\nconst { candidateIntroFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-introductory-interview\"\n  ];\n\nshow = !!candidateIntroInterviewDate ||\n       !!candidateIntroFeedback ||\n       statusesToShow.includes(status);\n       \n       \n",
+            "customConditional": "const { candidateIntroInterviewDate } = data || {};\nconst { candidateIntroFeedback } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet statusesToShow = [\n  \"candidate-introductory-interview\"\n  ];\n\nshow = !!candidateIntroInterviewDate ||\n       !!candidateIntroFeedback ||\n       statusesToShow.includes(status);",
             "type": "panel",
             "input": false,
             "components": [
@@ -611,11 +630,12 @@
             },
             "key": "panel4",
             "title": {
-              "ru": "Техническое интервью"
+              "ru": "Техническое интервью",
+              "en": "Tech interview"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
-            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet feedbackCondition = Array.isArray(candidateTechFeedback) && \n                        candidateTechFeedback.length > 0 && \n                        typeof candidateTechFeedback[0] === 'string' && \n                        candidateTechFeedback[0].trim() !== '';\n\nlet gradeCondition = Array.isArray(candidateTechInterviewGrade) && \n                     candidateTechInterviewGrade.length > 0;\n                        \nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                           candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       gradeCondition ||\n       feedbackCondition ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);\n",
+            "customConditional": "const { candidateTechInterviewDate } = data || {};\nconst { candidateTechInterviewGrade } = data || {};\nconst { candidateTechFeedback } = data || {};\nconst { candidateTechInterviewrs } = data || {};\n\nconst { caseStatus } = data || {};\nconst { status } = caseStatus || {};\n\nlet feedbackCondition = Array.isArray(candidateTechFeedback) && \n                        candidateTechFeedback.length > 0 && \n                        typeof candidateTechFeedback[0] === 'string' && \n                        candidateTechFeedback[0].trim() !== '';\n\nlet gradeCondition = Array.isArray(candidateTechInterviewGrade) && \n                     candidateTechInterviewGrade.length > 0;\n                        \nlet statusesToShow = [\n  \"candidate-tech-interview\"\n  ];\n  \nlet interviewrsCondition = Array.isArray(candidateTechInterviewrs) && \n                           candidateTechInterviewrs.length > 0;\n  \nshow = !!candidateTechInterviewDate ||\n       gradeCondition ||\n       feedbackCondition ||\n       interviewrsCondition ||\n       statusesToShow.includes(status);",
             "type": "panel",
             "input": false,
             "components": [
@@ -740,7 +760,8 @@
             },
             "key": "panel1",
             "title": {
-              "ru": "Оффер"
+              "ru": "Оффер",
+              "en": "Offer"
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
@@ -1020,7 +1041,8 @@
             "components": [
               {
                 "label": {
-                  "ru": "Сохранить"
+                  "ru": "Сохранить",
+                  "en": "Save"
                 },
                 "key": "save",
                 "state": "",

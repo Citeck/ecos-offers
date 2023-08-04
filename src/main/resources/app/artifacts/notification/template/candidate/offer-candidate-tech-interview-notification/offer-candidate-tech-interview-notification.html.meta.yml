@@ -3,7 +3,7 @@
   "name": "Offer Candidate Tech Interview Notification",
   "notificationTitle": {
     "ru": "Техническое интервью кандидата ${title}",
-    "en": "Техническое интервью кандидата ${title}"
+    "en": "Candidate's tech interview ${title}"
   },
   "tags": [ ],
   "model": {

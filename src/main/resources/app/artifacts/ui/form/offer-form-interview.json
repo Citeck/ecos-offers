@@ -25,10 +25,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Отказ со стороны работодателя"
+                  "ru": "Отказ со стороны работодателя",
+                  "en": "Reject by candidate"
                 },
                 "key": "outcome_Reject",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -51,10 +58,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Отказ кандидата"
+                  "ru": "Отказ кандидата",
+                  "en": "Candidate reject"
                 },
                 "key": "outcome_CandidateReject",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "block": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -72,10 +86,17 @@
             "components": [
               {
                 "label": {
-                  "ru": "Подтвердить"
+                  "ru": "Подтвердить",
+                  "en": "Approve"
                 },
                 "key": "outcome_Approve",
                 "state": "",
+                "headers": [
+                  {
+                    "header": "",
+                    "value": ""
+                  }
+                ],
                 "theme": "primary",
                 "block": true,
                 "disableOnInvalid": true,
@@ -102,5 +123,6 @@
     ],
     "formId": "offer-form-interview"
   },
-  "attributes": {}
+  "attributes": {},
+  "notExists": false
 }
