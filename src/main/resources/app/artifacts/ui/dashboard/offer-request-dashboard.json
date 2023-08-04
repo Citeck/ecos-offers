@@ -261,8 +261,8 @@
           "id": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697",
           "tab": {
             "label": {
-              "ru": "Канбан-доска",
-              "en": "Kanban board"
+              "ru": "Доска кандидатов",
+              "en": "Candidates board"
             },
             "idLayout": "layout_a43c1481-8634-4de1-85aa-8d3fadc5e697"
           },
