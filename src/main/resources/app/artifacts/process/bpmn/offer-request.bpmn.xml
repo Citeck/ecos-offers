@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ecos="http://www.citeck.ru/ecos/bpmn/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_0hq0c8n" name="Процесс заявки на подбор" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="8.2.0" ecos:name_ml="{&quot;ru&quot;:&quot;Процесс заявки на подбор&quot;,&quot;en&quot;:&quot;Request for recruitment process&quot;}" ecos:formRef="" ecos:enabled="true" ecos:autoStartEnabled="true" ecos:processDefId="offer-request" ecos:ecosType="emodel/type@offer-request-type">
     <bpmn:process isExecutable="true" id="offer-request">
-        <bpmn:startEvent isInterrupting="true" name="" id="StartEvent_1ew9rff" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
+        <bpmn:startEvent isInterrupting="true" name="Начало заявки на подбор" id="StartEvent_1ew9rff" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Начало заявки на подбор&quot;,&quot;en&quot;:&quot;Start recruitment request&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:outgoing >Flow_08ksugo</bpmn:outgoing>
         </bpmn:startEvent>
         <bpmn:exclusiveGateway name="" id="Gateway_146zco6" ecos:name_ml="{}">
@@ -48,11 +48,11 @@
             <bpmn:outgoing >Flow_0c5qhty</bpmn:outgoing>
         </bpmn:task>
         <bpmn:sequenceFlow sourceRef="Gateway_0fybwsz" targetRef="Activity_0h88vzc" name="Отклонена" id="Flow_0ki1zsg" ecos:name_ml="{&quot;en&quot;:&quot;Rejected&quot;,&quot;ru&quot;:&quot;Отклонена&quot;}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;Activity_0cotdwb:Reject&quot;}" ecos:conditionType="OUTCOME"/>
-        <bpmn:endEvent name="" id="Event_1v1xtn2" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
+        <bpmn:endEvent name="Заявка отклонена директором" id="Event_1v1xtn2" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Заявка отклонена директором&quot;,&quot;en&quot;:&quot;Request rejected by director&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_16bnxkm</bpmn:incoming>
         </bpmn:endEvent>
         <bpmn:sequenceFlow sourceRef="Activity_0h88vzc" targetRef="Activity_1vp9of0" name="" id="Flow_0c5qhty" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:endEvent name="" id="Event_0rc956j" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
+        <bpmn:endEvent name="Кандидат вышел на работу" id="Event_0rc956j" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Кандидат вышел на работу&quot;,&quot;en&quot;:&quot;Сandidate went to work&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_0bn1qo3</bpmn:incoming>
         </bpmn:endEvent>
         <bpmn:task name="" id="Activity_1g96onh" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:taskType="setStatus" ecos:name_ml="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:status="request-on-work">
@@ -98,15 +98,15 @@
         </bpmn:userTask>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_0p1tluj" name="Действие &quot;Отклонить&quot;" id="Event_1p3f5n5" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_0e033gn</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1feax6f"/>
+            <bpmn:signalEventDefinition signalRef="Signal_UvSiHY3" id="SignalEventDefinition_1feax6f"/>
         </bpmn:boundaryEvent>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_0ujdl7j" name="Действие &quot;Отклонить&quot;" id="Event_013sxnj" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_11s2gnd</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1l5uf42"/>
+            <bpmn:signalEventDefinition signalRef="Signal_UvSiHY3" id="SignalEventDefinition_1l5uf42"/>
         </bpmn:boundaryEvent>
         <bpmn:boundaryEvent  cancelActivity="true" attachedToRef="Activity_01jmznm" name="Действие &quot;Отклонить&quot;" id="Event_0hjmq33" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{&quot;isReject&quot;:&quot;diff._has.isRejected?bool&quot;}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Действие \&quot;Отклонить\&quot;&quot;,&quot;en&quot;:&quot;Action \&quot;Reject\&quot;&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;isReject&quot;,&quot;val&quot;:true}">
             <bpmn:outgoing>Flow_1nyxf3o</bpmn:outgoing>
-            <bpmn:signalEventDefinition signalRef="Signal_Aeowil2" id="SignalEventDefinition_1e37lzv"/>
+            <bpmn:signalEventDefinition signalRef="Signal_UvSiHY3" id="SignalEventDefinition_1e37lzv"/>
         </bpmn:boundaryEvent>
         <bpmn:subProcess triggeredByEvent="false" name="Отклонение заявки HR" id="Activity_070ae1e" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Отклонение заявки HR&quot;,&quot;en&quot;:&quot;Rejection request by HR&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:incoming >Flow_11s2gnd</bpmn:incoming>
@@ -153,7 +153,7 @@
         <bpmn:sequenceFlow sourceRef="Event_0hjmq33" targetRef="Activity_070ae1e" name="" id="Flow_1nyxf3o" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:sequenceFlow sourceRef="Event_1p3f5n5" targetRef="Activity_1ddsdhk" name="" id="Flow_0e033gn" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;// some script;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
     </bpmn:process>
-    <bpmn:signal name="RECORD_CHANGED;${execution.businessKey};ANY;pr_000bbd6076f46f914dc10a4a1ec7f006" id="Signal_Aeowil2"/>
+    <bpmn:signal name="RECORD_CHANGED;${execution.businessKey};ANY;pr_000bbd6076f46f914dc10a4a1ec7f006" id="Signal_UvSiHY3"/>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         <bpmndi:BPMNPlane  bpmnElement="offer-request" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="StartEvent_1ew9rff" isExpanded="true" id="_BPMNShape_StartEvent_2">
