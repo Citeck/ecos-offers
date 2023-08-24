@@ -13,7 +13,7 @@
     "ru": {
       "candidateTechInterviewGrade": "Грейд по результатам тех. интервью",
       "candidateTechFeedback": "Фидбэк по техническому собеседованию",
-      "Reject": "Отказ",
+      "Reject": "Отказать",
       "Approve": "Подтвердить"
     },
     "en": {
@@ -88,9 +88,6 @@
         },
         "key": "_ECM_candidateTechFeedback",
         "multiple": true,
-        "validate": {
-          "required": true
-        },
         "defaultValue": "",
         "refreshOn": [],
         "optionalWhenDisabled": false,
