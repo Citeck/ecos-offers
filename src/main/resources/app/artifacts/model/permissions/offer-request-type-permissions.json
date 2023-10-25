@@ -1,0 +1,866 @@
+{
+  "id": "offer-request-type-permissions",
+  "typeRef": "emodel/type@offer-request-type",
+  "permissions": {
+    "matrix": {
+      "request-initiator-role": {
+        "draft": "WRITE",
+        "request-director-approve": "READ",
+        "request-rework": "WRITE",
+        "request-reject": "READ",
+        "request-attach-vacancy": "READ",
+        "request-selection-candidates": "READ",
+        "request-on-work": "READ"
+      },
+      "request-director-role": {
+        "draft": "READ",
+        "request-director-approve": "WRITE",
+        "request-rework": "READ",
+        "request-reject": "READ",
+        "request-attach-vacancy": "READ",
+        "request-selection-candidates": "READ",
+        "request-on-work": "READ"
+      },
+      "request-hr-role": {
+        "draft": "READ",
+        "request-director-approve": "READ",
+        "request-rework": "READ",
+        "request-reject": "READ",
+        "request-attach-vacancy": "WRITE",
+        "request-selection-candidates": "WRITE",
+        "request-on-work": "READ"
+      },
+      "request-manager-subdivision": {
+        "draft": "READ",
+        "request-director-approve": "READ",
+        "request-rework": "READ",
+        "request-reject": "READ",
+        "request-attach-vacancy": "READ",
+        "request-selection-candidates": "READ",
+        "request-on-work": "READ"
+      }
+    }
+  },
+  "attributes": {
+    "idocs:initiator": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "initiator": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestPosition": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestSubdivision": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestGrade": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestCity": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestExperience": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestManagerSubdivision": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestSelectedCandidate": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestSalaryAndPrize": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestComment": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestTerm": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestCandidates": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestUrgentSearch": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestShowDateRu": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestProjectAssoc": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestShowDateEn": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "requestLinkAssoc": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "isRejected": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    },
+    "rejectionComment": {
+      "matrix": {
+        "request-initiator-role": {
+          "draft": "WRITE",
+          "request-director-approve": "READ",
+          "request-rework": "WRITE",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-director-role": {
+          "draft": "READ",
+          "request-director-approve": "WRITE",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        },
+        "request-hr-role": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "WRITE",
+          "request-selection-candidates": "WRITE",
+          "request-on-work": "READ"
+        },
+        "request-manager-subdivision": {
+          "draft": "READ",
+          "request-director-approve": "READ",
+          "request-rework": "READ",
+          "request-reject": "READ",
+          "request-attach-vacancy": "READ",
+          "request-selection-candidates": "READ",
+          "request-on-work": "READ"
+        }
+      },
+      "rules": []
+    }
+  }
+}
