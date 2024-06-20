@@ -21,7 +21,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
         },
         {
           "dndId": "9b8f6180-1a68-4c8f-9e21-249ef2f1143d",
@@ -35,7 +38,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
         },
         {
           "dndId": "aa0deb44-527e-4244-85cc-89757c0e07eb",
@@ -49,7 +55,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
         },
         {
           "dndId": "38403ec8-6589-4747-beef-53e182ea14a5",
@@ -63,7 +72,24 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
+        },
+        {
+          "name": "doc-associations",
+          "label": "dashboard-settings.widget.doc-associations",
+          "additionalProps": {},
+          "dndId": "591bcda6-7f6d-4ae0-8e75-7adc46601a9a",
+          "id": "a5d0e190-5275-4c3a-bd96-3ba62153e649",
+          "props": {
+            "id": "a5d0e190-5275-4c3a-bd96-3ba62153e649",
+            "config": {
+              "widgetDisplayCondition": null,
+              "elementsDisplayCondition": {}
+            }
+          }
         },
         {
           "dndId": "68d2228b-5972-4b90-b465-d317e5f3d0a6",
@@ -77,7 +103,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
         },
         {
           "dndId": "8ecb125c-7a47-4d3b-b871-5868fbe76498",
@@ -91,7 +120,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "ru": "Основное",
+            "en": "General"
+          }
         },
         {
           "name": "events-history",
@@ -105,7 +137,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "История"
+          "description": {
+            "ru": "История",
+            "en": "History"
+          }
         },
         {
           "name": "versions-journal",
@@ -119,7 +154,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "История"
+          "description": {
+            "ru": "История",
+            "en": "History"
+          }
         },
         {
           "dndId": "9818c1d8-bc41-464f-9824-8d3cd2cf03f2",
@@ -157,7 +195,10 @@
               "isLoadChecklist": true
             }
           },
-          "description": "Документы"
+          "description": {
+            "ru": "Документы",
+            "en": "Documents"
+          }
         }
       ],
       "desktop": [
@@ -182,6 +223,7 @@
             {
               "widgets": [
                 "b4bcb077-ed4f-498a-b152-97798fddd8fb",
+                "a5d0e190-5275-4c3a-bd96-3ba62153e649",
                 "6d9d1e54-0c77-4990-9aed-228bec1614f4",
                 "6cb0726f-07c2-4388-84bc-6651823e2ba9"
               ],
@@ -248,24 +290,9 @@
               "widgets": [
                 "d5b4372a-cb41-4370-b66e-5580a52aaa6f",
                 "ecbede90-a55d-423a-9b6b-3ac523600335",
-                "b4bcb077-ed4f-498a-b152-97798fddd8fb"
+                "b4bcb077-ed4f-498a-b152-97798fddd8fb",
+                "a5d0e190-5275-4c3a-bd96-3ba62153e649"
               ]
-            }
-          ]
-        },
-        {
-          "id": "layout_4e345aef-8b21-47cb-a653-26e3e897bb5c",
-          "tab": {
-            "label": {
-              "ru": "Просмотр",
-              "en": "View"
-            },
-            "idLayout": "layout_4e345aef-8b21-47cb-a653-26e3e897bb5c"
-          },
-          "type": "mobile",
-          "columns": [
-            {
-              "widgets": []
             }
           ]
         },
@@ -345,7 +372,8 @@
             "label": {
               "ru": "История событий",
               "en": "Events' history"
-            },            "idLayout": "layout_0ae86778-b9a2-4f1b-8bb8-43891c1539cd"
+            },
+            "idLayout": "layout_0ae86778-b9a2-4f1b-8bb8-43891c1539cd"
           },
           "type": "mobile",
           "columns": [
@@ -371,22 +399,6 @@
               "widgets": [
                 "52f3656c-1c8e-48f6-873c-04f14881fc70"
               ]
-            }
-          ]
-        },
-        {
-          "id": "layout_0fe2383d-bce5-4003-b795-9eb284884932",
-          "tab": {
-            "label": {
-              "ru": "Предпросмотр",
-              "en": "Preview"
-            },
-            "idLayout": "layout_0fe2383d-bce5-4003-b795-9eb284884932"
-          },
-          "type": "mobile",
-          "columns": [
-            {
-              "widgets": []
             }
           ]
         }
