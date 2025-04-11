@@ -17,7 +17,6 @@ actions:
   - uiserv/action@delete
   - uiserv/action@edit
 defaultCreateVariant: true
-workspaceScope: PRIVATE
 model:
   roles:
     - id: candidate-director-role
