@@ -4,6 +4,18 @@ name:
   ru: Рекрутинг
   en: Recruiting
 description:
-  en: Recruiting
-  ru: Рекрутинг
-workspaceMembers: []
+  en: A space for hiring and recruitment.
+  ru: Пространство для работы по подбору кадров.
+workspaceMembers:
+  - id: default-users
+    authorities:
+      - emodel/authority-group@company_chief_accountant
+      - emodel/authority-group@company_accountancy
+      - emodel/authority-group@hr
+      - emodel/authority-group@company
+    memberRole: USER
+  - id: default-managers
+    authorities:
+      - emodel/authority-group@company_director
+      - emodel/authority-group@production_director
+    memberRole: MANAGER

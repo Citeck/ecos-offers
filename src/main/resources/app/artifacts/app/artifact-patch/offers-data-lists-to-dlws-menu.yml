@@ -4,6 +4,7 @@ name:
   ru: Добавить справочники рекрутинга в меню рабочей области справочников
   en: Add offers data lists to data lists workspace menu
 
+enabled: false
 target: 'ui/menu$data-lists-menu'
 
 type: json

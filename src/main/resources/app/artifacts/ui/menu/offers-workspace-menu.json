@@ -115,6 +115,144 @@
             }
           ],
           "allowedFor": []
+        },
+        {
+          "id": "data-lists",
+          "label": {
+            "ru": "Справочники",
+            "en": "Data Lists"
+          },
+          "icon": "ui/icon@i-leftmenu-hr-department",
+          "hidden": false,
+          "type": "SECTION",
+          "config": {},
+          "action": {
+            "type": "",
+            "config": {}
+          },
+          "items": [
+            {
+              "id": "offer-experience-type",
+              "label": {
+                "ru": "Опыт",
+                "en": "Experience"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-experience-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            },
+            {
+              "id": "offer-grade-type",
+              "label": {
+                "ru": "Грейды",
+                "en": "Grades"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-grades-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            },
+            {
+              "id": "offer-link",
+              "label": {
+                "ru": "Ссылка",
+                "en": "Link"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-link-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            },
+            {
+              "id": "offer-position",
+              "label": {
+                "ru": "Должность",
+                "en": "Position"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-position-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            },
+            {
+              "id": "offer-project",
+              "label": {
+                "ru": "Проект",
+                "en": "Project"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-project-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            },
+            {
+              "id": "offer-vacancy",
+              "label": {
+                "ru": "Вакансия",
+                "en": "Vacancy"
+              },
+              "icon": "ui/icon@i-leftmenu-groups",
+              "hidden": false,
+              "type": "JOURNAL",
+              "config": {
+                "recordRef": "uiserv/journal@offer-vacancy-journal",
+                "displayCount": false
+              },
+              "action": {
+                "type": "",
+                "config": {}
+              },
+              "items": [],
+              "allowedFor": []
+            }
+          ],
+          "allowedFor": []
         }
       ]
     },
