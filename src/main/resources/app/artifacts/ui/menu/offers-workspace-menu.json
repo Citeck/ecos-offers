@@ -260,27 +260,6 @@
       "config": {},
       "items": [
         {
-          "id": "create-kanban-task",
-          "label": {
-            "ru": "Kanban задача",
-            "en": "Kanban task"
-          },
-          "icon": "",
-          "hidden": false,
-          "type": "LINK-CREATE-CASE",
-          "config": {
-            "typeRef": "emodel/type@kanban-task",
-            "variantId": "DEFAULT",
-            "variantTypeRef": "emodel/type@kanban-task"
-          },
-          "action": {
-            "type": "",
-            "config": {}
-          },
-          "items": [],
-          "allowedFor": []
-        },
-        {
           "id": "create-123",
           "label": {
             "ru": "Разделы",
