@@ -6,10 +6,6 @@
 
 Модуль `ecos-offers` предоставляет комплексное решение для ведения процесса подбора кандидатов, хранения информации по каждому кандидату.
 
-## Get started
-
-If you are new to Citeck platform and would like to load the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/citeck-community).
-
 ## Начало работы
 
 Если вы впервые знакомитесь с платформой Citeck и хотите запустить программное обеспечение локально, мы рекомендуем загрузить Docker-версию из [Demo-репозитория](https://github.com/Citeck/citeck-community).
