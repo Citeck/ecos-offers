@@ -2,7 +2,7 @@
 
 **Read this in other languages: [Русский](README.RU.MD)**
 
-# `Offers`
+# Offers
 
 The `Offers` module provides a comprehensive solution for hiring employees, maintaining a candidate for the recruitment process, storing information for each candidate.
 
