@@ -1,12 +1,14 @@
 ![Citeck ECOS Logo](https://raw.githubusercontent.com/Citeck/ecos-ui/develop/public/img/logo/ecos-logo.png)
 
+**Read this in other languages: [Русский](README.RU.MD)**
+
 # `ecos-offers`
 
 The `ecos-offers` module provides a comprehensive solution for hiring employees, maintaining a candidate for the recruitment process, storing information for each candidate.
 
 ## Get started
 
-If you are new to ECOS platform and would like to run the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/ecos-community-demo).
+If you are new to Citeck platform and would like to load the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/citeck-community).
 
 ## Useful Links
 
