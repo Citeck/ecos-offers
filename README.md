@@ -1,12 +1,14 @@
 ![Citeck ECOS Logo](https://raw.githubusercontent.com/Citeck/ecos-ui/develop/public/img/logo/ecos-logo.png)
 
-# `ecos-offers`
+**Read this in other languages: [Русский](README.RU.MD)**
 
-The `ecos-offers` module provides a comprehensive solution for hiring employees, maintaining a candidate for the recruitment process, storing information for each candidate.
+# Offers
+
+The `Offers` module provides a comprehensive solution for hiring employees, maintaining a candidate for the recruitment process, storing information for each candidate.
 
 ## Get started
 
-If you are new to ECOS platform and would like to run the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/ecos-community-demo).
+If you are new to Citeck platform and would like to load the software locally, we recommend you download the Dockerized version from [Demo repository](https://github.com/Citeck/citeck-community).
 
 ## Useful Links
 
@@ -18,8 +20,8 @@ We welcome contributions from the community to make ECOS even better. Everyone i
 
 ## Support
 
-If you need any assistance or have any questions regarding Citeck `ecos-offers`, please create an issue in this repository or reach out to our [support team](mailto:support@citeck.ru).
+If you need any assistance or have any questions regarding Citeck `Offers`, please create an issue in this repository or reach out to our [support team](mailto:support@citeck.ru).
 
 ## License
 
-Citeck `ecos-offers` is released under the [GNU Lesser General Public License](LICENSE).
+Citeck `Offers` is released under the [GNU Lesser General Public License](LICENSE).
